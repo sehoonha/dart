@@ -41,6 +41,7 @@
 #include <queue>
 #include <string>
 #include <vector>
+#include <map>
 
 #include "dart/common/Console.h"
 #include "dart/math/Geometry.h"
@@ -1246,7 +1247,7 @@ math::Jacobian Skeleton::getJacobian(const BodyNode* _bodyNode) const
     return J;
 
   // Get the spatial Jacobian of the targeting BodyNode
-  const math::Jacobian JBodyNode = _bodyNode->getJacobian();
+  const math::Jacobian& JBodyNode = _bodyNode->getJacobian();
 
   // Assign the BodyNode's Jacobian to the full-sized Jacobian
   assignJacobian<math::Jacobian>(J, _bodyNode, JBodyNode);
@@ -1271,6 +1272,26 @@ math::Jacobian Skeleton::getJacobian(const BodyNode* _bodyNode,
   assignJacobian<math::Jacobian>(J, _bodyNode, JBodyNode);
 
   return J;
+}
+
+//==============================================================================
+math::Jacobian Skeleton::getJacobian(const BodyNode* _bodyNode,
+                                     const BodyNode* _relativeTo,
+                                     const Frame* _inCoordinatesOf) const
+{
+  if (_bodyNode == _relativeTo)
+    return math::Jacobian::Zero(6, getNumDofs());
+
+  const auto J      = getJacobian(_bodyNode);
+  const auto JRelTo = getJacobian(_relativeTo);
+  const auto T      = _relativeTo->getTransform(_bodyNode);
+
+  const auto result = (J - math::AdTJac(T, JRelTo)).eval();
+
+  if (_bodyNode == _inCoordinatesOf)
+    return result;
+
+  return math::AdRJac(_bodyNode->getTransform(_inCoordinatesOf), result);
 }
 
 //==============================================================================
@@ -1314,41 +1335,25 @@ math::Jacobian Skeleton::getJacobian(const BodyNode* _bodyNode,
 }
 
 //==============================================================================
-math::Jacobian Skeleton::getWorldJacobian(const BodyNode* _bodyNode) const
+math::Jacobian Skeleton::getJacobian(const BodyNode* _bodyNode,
+                                     const Eigen::Vector3d& _localOffset,
+                                     const BodyNode* _relativeTo,
+                                     const Frame* _inCoordinatesOf) const
 {
-  math::Jacobian J = math::Jacobian::Zero(6, getNumDofs());
+  if (_bodyNode == _relativeTo)
+    return math::Jacobian::Zero(6, getNumDofs());
 
-  // If _bodyNode is nullptr or not in this Skeleton, return zero Jacobian
-  if (!isValidBodyNode(this, _bodyNode, "spatial Jacobian"))
-    return J;
+  const auto J      = getJacobian(_bodyNode);
+  const auto JRelTo = getJacobian(_relativeTo);
+  const auto T      = _relativeTo->getTransform(_bodyNode);
 
-  // Get the spatial Jacobian of the targeting BodyNode
-  const math::Jacobian JBodyNode = _bodyNode->getWorldJacobian();
+  auto result = (J - math::AdTJac(T, JRelTo)).eval();
+  result.bottomRows<3>() += result.topRows<3>().colwise().cross(_localOffset);
 
-  // Assign the BodyNode's Jacobian to the full-sized Jacobian
-  assignJacobian<math::Jacobian>(J, _bodyNode, JBodyNode);
+  if (_bodyNode == _inCoordinatesOf)
+    return result;
 
-  return J;
-}
-
-//==============================================================================
-math::Jacobian Skeleton::getWorldJacobian(
-    const BodyNode* _bodyNode,
-    const Eigen::Vector3d& _localOffset) const
-{
-  math::Jacobian J = math::Jacobian::Zero(6, getNumDofs());
-
-  // If _bodyNode is nullptr or not in this Skeleton, return zero Jacobian
-  if (!isValidBodyNode(this, _bodyNode, "spatial Jacobian"))
-    return J;
-
-  // Get the spatial Jacobian of the targeting BodyNode
-  const math::Jacobian JBodyNode = _bodyNode->getWorldJacobian(_localOffset);
-
-  // Assign the BodyNode's Jacobian to the full-sized Jacobian
-  assignJacobian<math::Jacobian>(J, _bodyNode, JBodyNode);
-
-  return J;
+  return math::AdRJac(_bodyNode->getTransform(_inCoordinatesOf), result);
 }
 
 //==============================================================================
@@ -1395,6 +1400,26 @@ math::LinearJacobian Skeleton::getLinearJacobian(
 }
 
 //==============================================================================
+math::LinearJacobian Skeleton::getLinearJacobian(
+    const BodyNode* _bodyNode,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  return getJacobian(_bodyNode, _relativeTo, _inCoordinatesOf).bottomRows<3>();
+}
+
+//==============================================================================
+math::LinearJacobian Skeleton::getLinearJacobian(
+    const BodyNode* _bodyNode,
+    const Eigen::Vector3d& _localOffset,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  return getJacobian(
+        _bodyNode, _localOffset, _relativeTo, _inCoordinatesOf).bottomRows<3>();
+}
+
+//==============================================================================
 math::AngularJacobian Skeleton::getAngularJacobian(
     const BodyNode* _bodyNode,
     const Frame* _inCoordinatesOf) const
@@ -1413,6 +1438,15 @@ math::AngularJacobian Skeleton::getAngularJacobian(
   assignJacobian<math::AngularJacobian>(Jw, _bodyNode, JwBodyNode);
 
   return Jw;
+}
+
+//==============================================================================
+math::AngularJacobian Skeleton::getAngularJacobian(
+    const BodyNode* _bodyNode,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  return getJacobian(_bodyNode, _relativeTo, _inCoordinatesOf).topRows<3>();
 }
 
 //==============================================================================
@@ -1499,6 +1533,56 @@ math::Jacobian Skeleton::getJacobianSpatialDeriv(
 }
 
 //==============================================================================
+math::Jacobian Skeleton::getJacobianSpatialDeriv(
+    const BodyNode* _bodyNode,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  if (_bodyNode == _relativeTo)
+    return math::Jacobian::Zero(3, getNumDofs());
+
+  const auto dJ       = getJacobianSpatialDeriv(_bodyNode);
+  const auto JRelTo   = getJacobian(_relativeTo);
+  const auto dJRelTo  = getJacobianSpatialDeriv(_relativeTo);
+  const auto T        = _relativeTo->getTransform(_bodyNode);
+  const auto V        = _relativeTo->getSpatialVelocity(_bodyNode, _relativeTo);
+  const auto adJRelTo = math::adJac(V, JRelTo);
+
+  const auto result = (dJ - math::AdTJac(T, dJRelTo + adJRelTo)).eval();
+
+  if (_bodyNode == _inCoordinatesOf)
+    return result;
+
+  return math::AdRJac(_bodyNode->getTransform(_inCoordinatesOf), result);
+}
+
+//==============================================================================
+math::Jacobian Skeleton::getJacobianSpatialDeriv(
+    const BodyNode* _bodyNode,
+    const Eigen::Vector3d& _localOffset,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  if (_bodyNode == _relativeTo)
+    return math::Jacobian::Zero(3, getNumDofs());
+
+  const auto dJ       = getJacobianSpatialDeriv(_bodyNode);
+  const auto JRelTo   = getJacobian(_relativeTo);
+  const auto dJRelTo  = getJacobianSpatialDeriv(_relativeTo);
+  const auto T        = _relativeTo->getTransform(_bodyNode);
+  const auto V        = _relativeTo->getSpatialVelocity(_bodyNode, _relativeTo);
+  const auto adJRelTo = math::adJac(V, JRelTo);
+
+  auto result = (dJ - math::AdTJac(T, dJRelTo + adJRelTo)).eval();
+  result.bottomRows<3>() += result.topRows<3>().colwise().cross(_localOffset);
+
+  if (_bodyNode == _inCoordinatesOf)
+    return result;
+
+  return math::AdRJac(_bodyNode->getTransform(_inCoordinatesOf), result);
+}
+
+//==============================================================================
 math::Jacobian Skeleton::getJacobianClassicDeriv(
     const BodyNode* _bodyNode) const
 {
@@ -1564,6 +1648,56 @@ math::Jacobian Skeleton::getJacobianClassicDeriv(
 }
 
 //==============================================================================
+math::Jacobian Skeleton::getJacobianClassicDeriv(
+    const BodyNode* _bodyNode,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  if (_bodyNode == _relativeTo)
+    return math::Jacobian::Zero(3, getNumDofs());
+
+  const auto dJ       = getJacobianClassicDeriv(_bodyNode);
+  const auto JRelTo   = getJacobian(_relativeTo);
+  const auto dJRelTo  = getJacobianClassicDeriv(_relativeTo);
+  const auto T        = _relativeTo->getTransform(_bodyNode);
+  const auto V        = _relativeTo->getSpatialVelocity(_bodyNode, _relativeTo);
+  const auto adJRelTo = math::adJac(V, JRelTo);
+
+  const auto result = (dJ - math::AdTJac(T, dJRelTo + adJRelTo)).eval();
+
+  if (_bodyNode == _inCoordinatesOf)
+    return result;
+
+  return math::AdRJac(_bodyNode->getTransform(_inCoordinatesOf), result);
+}
+
+//==============================================================================
+math::Jacobian Skeleton::getJacobianClassicDeriv(
+    const BodyNode* _bodyNode,
+    const Eigen::Vector3d& _localOffset,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  if (_bodyNode == _relativeTo)
+    return math::Jacobian::Zero(3, getNumDofs());
+
+  const auto dJ       = getJacobianClassicDeriv(_bodyNode);
+  const auto JRelTo   = getJacobian(_relativeTo);
+  const auto dJRelTo  = getJacobianClassicDeriv(_relativeTo);
+  const auto T        = _relativeTo->getTransform(_bodyNode);
+  const auto V        = _relativeTo->getSpatialVelocity(_bodyNode, _relativeTo);
+  const auto adJRelTo = math::adJac(V, JRelTo);
+
+  auto result = (dJ - math::AdTJac(T, dJRelTo + adJRelTo)).eval();
+  result.bottomRows<3>() += result.topRows<3>().colwise().cross(_localOffset);
+
+  if (_bodyNode == _inCoordinatesOf)
+    return result;
+
+  return math::AdRJac(_bodyNode->getTransform(_inCoordinatesOf), result);
+}
+
+//==============================================================================
 math::LinearJacobian Skeleton::getLinearJacobianDeriv(
     const BodyNode* _bodyNode,
     const Frame* _inCoordinatesOf) const
@@ -1607,6 +1741,27 @@ math::LinearJacobian Skeleton::getLinearJacobianDeriv(
 }
 
 //==============================================================================
+math::LinearJacobian Skeleton::getLinearJacobianDeriv(
+    const BodyNode* _bodyNode,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  return getJacobianClassicDeriv(
+        _bodyNode, _relativeTo, _inCoordinatesOf).bottomRows<3>();
+}
+
+//==============================================================================
+math::LinearJacobian Skeleton::getLinearJacobianDeriv(
+    const BodyNode* _bodyNode,
+    const Eigen::Vector3d& _localOffset,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  return getJacobianClassicDeriv(
+        _bodyNode, _localOffset, _relativeTo, _inCoordinatesOf).bottomRows<3>();
+}
+
+//==============================================================================
 math::AngularJacobian Skeleton::getAngularJacobianDeriv(
     const BodyNode* _bodyNode, const Frame* _inCoordinatesOf) const
 {
@@ -1624,6 +1779,16 @@ math::AngularJacobian Skeleton::getAngularJacobianDeriv(
   assignJacobian<math::AngularJacobian>(dJw, _bodyNode, JwBodyNode);
 
   return dJw;
+}
+
+//==============================================================================
+math::AngularJacobian Skeleton::getAngularJacobianDeriv(
+    const BodyNode* _bodyNode,
+    const BodyNode* _relativeTo,
+    const Frame* _inCoordinatesOf) const
+{
+  return getJacobianClassicDeriv(
+        _bodyNode, _relativeTo, _inCoordinatesOf).topRows<3>();
 }
 
 //==============================================================================
