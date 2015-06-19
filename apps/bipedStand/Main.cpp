@@ -37,90 +37,26 @@
 
 #include <iostream>
 #include <vector>
+#include <thread>
+#include <future>
 
 #include "dart/dart.h"
 
 #include "apps/bipedStand/MyWindow.h"
 
 const bool runTest = true;
+const bool multiThreaded = true;
 
-int main(int argc, char* argv[]) {
+const size_t numIterationsPerThread = 5000;
 
-  // create and initialize the world
-  dart::simulation::WorldPtr myWorld
-      = dart::utils::SkelParser::readWorld(
-          DART_DATA_PATH"skel/fullbody1.skel");
-  assert(myWorld != nullptr);
+typedef std::vector< std::vector<dart::collision::Contact> > CollisionData;
 
-  Eigen::Vector3d gravity(0.0, -9.81, 0.0);
-  myWorld->setGravity(gravity);
-
-  // create controller
-  Controller* myController = new Controller(myWorld->getSkeleton(1),
-                                            myWorld->getTimeStep());
-  dart::dynamics::MetaSkeletonPtr group = myController->getSkel();
-
-  std::vector<size_t> genCoordIds;
-  genCoordIds.push_back(1);
-  genCoordIds.push_back(6);   // left hip
-  genCoordIds.push_back(14);  // left knee
-  genCoordIds.push_back(17);  // left ankle
-  genCoordIds.push_back(9);   // right hip
-  genCoordIds.push_back(15);  // right knee
-  genCoordIds.push_back(19);  // right ankle
-  genCoordIds.push_back(13);  // lower back
-  Eigen::VectorXd initConfig(8);
-  initConfig << -0.2, 0.15, -0.4, 0.25, 0.15, -0.4, 0.25, 0.0;
-  group->setPositions(genCoordIds, initConfig);
-
-  myController->resetDesiredDofs();
-
-  const dart::dynamics::SkeletonPtr& skel = myWorld->getSkeleton(1);
-  for(size_t i=1; i<skel->getNumJoints(); ++i)
-  {
-    skel->getJoint(i)->setActuatorType(dart::dynamics::Joint::VELOCITY);
-  }
-
-  std::vector<dart::simulation::WorldPtr> worlds;
-
-  // Using cloning
-  worlds.push_back(myWorld);
-  worlds.push_back(myWorld->clone());
-  worlds.push_back(myWorld->clone());
-  size_t numClones = worlds.size();
-
-  // Using reloading
-  worlds.push_back(dart::utils::SkelParser::readWorld(DART_DATA_PATH"skel/fullbody1.skel"));
-  worlds.back()->setGravity(gravity);
-  worlds.push_back(dart::utils::SkelParser::readWorld(DART_DATA_PATH"skel/fullbody1.skel"));
-  worlds.back()->setGravity(gravity);
-
-  for(size_t i=1; i<worlds.size(); ++i)
-  {
-    const dart::simulation::WorldPtr& world = worlds[i];
-    for(size_t j=0; j<world->getNumSkeletons(); ++j)
-    {
-      const dart::dynamics::SkeletonPtr& cloneSkel = world->getSkeleton(j);
-      const dart::dynamics::SkeletonPtr& originalSkel = worlds[0]->getSkeleton(j);
-
-      cloneSkel->setPositions(originalSkel->getPositions());
-      cloneSkel->setVelocities(originalSkel->getVelocities());
-      cloneSkel->setAccelerations(originalSkel->getAccelerations());
-      cloneSkel->setForces(originalSkel->getForces());
-
-      // Note: this for loop is only needed for the worlds that were reloaded
-      // from the file instead of being cloned
-      for(size_t k=0; k<cloneSkel->getNumJoints(); ++k)
-      {
-        cloneSkel->getJoint(k)->setActuatorType(
-              originalSkel->getJoint(k)->getActuatorType());
-      }
-    }
-  }
-
+void singleThreadedTest(const std::vector<dart::simulation::WorldPtr>& worlds, size_t numClones)
+{
   size_t singleForceCount = 0;
   size_t inconsistentForceCount = 0;
   size_t iterations = 0;
+
   while(runTest)
   {
     ++iterations;
@@ -208,6 +144,245 @@ int main(int argc, char* argv[]) {
                 << "\t\tsingle force count: " << singleForceCount << std::endl;
     }
   } // while true
+}
+
+CollisionData runThread(const dart::simulation::WorldPtr& world, size_t index)
+{
+  CollisionData myData;
+  myData.resize(numIterationsPerThread);
+
+  for(size_t i=0; i<numIterationsPerThread; ++i)
+  {
+    std::vector<dart::collision::Contact>& contacts = myData[i];
+
+    world->step();
+
+    dart::collision::CollisionDetector* cd =
+        world->getConstraintSolver()->getCollisionDetector();
+    size_t colCount = cd->getNumContacts();
+
+    contacts.reserve(colCount);
+    for(size_t j=0; j<colCount; ++j)
+    {
+      contacts.push_back(cd->getContact(j));
+    }
+  }
+
+  return myData;
+}
+
+void multiThreadedTest(const std::vector<dart::simulation::WorldPtr>& worlds,
+                       size_t numClones)
+{
+  size_t singleForceCount = 0;
+  size_t inconsistentForceCount = 0;
+
+  while(true)
+  {
+    bool inconsistentForce = false;
+
+    std::vector< std::future<CollisionData> > futures;
+
+    for(size_t i=0; i<worlds.size(); ++i)
+    {
+      futures.push_back(std::async(std::launch::async, &runThread, worlds[i], i));
+    }
+
+    for(size_t i=0; i<futures.size(); ++i)
+      futures[i].wait();
+
+    std::vector<CollisionData> allData;
+    allData.reserve(futures.size());
+    for(auto& future : futures)
+      allData.push_back(future.get());
+
+    for(size_t i=1; i<worlds.size(); ++i)
+    {
+      const CollisionData& originalData = allData[0];
+      const CollisionData& worldData = allData[i];
+
+      if(originalData.size() != worldData.size())
+      {
+        std::cout << "Mismatch in number of iterations ( " << worldData.size()
+                  << " : " << originalData.size() << "). This is a bug!! These "
+                  << "values should always be " << numIterationsPerThread
+                  << std::endl;
+        inconsistentForce = true;
+        break;
+      }
+
+      for(size_t j=0; j<originalData.size(); ++j)
+      {
+        const std::vector<dart::collision::Contact>& originalContacts =
+            originalData[j];
+        const std::vector<dart::collision::Contact>& contacts = worldData[j];
+
+        if(originalContacts.size() != contacts.size())
+        {
+          std::cout << "difference in number of contacts (" << i << ":" << j
+                    << ")" << std::endl;
+          inconsistentForce = true;
+          break;
+        }
+
+        for(size_t k=0; k<originalContacts.size(); ++k)
+        {
+          const dart::collision::Contact& originalContact = originalContacts[k];
+          const dart::collision::Contact& contact = contacts[k];
+
+          if(contact.bodyNode1.lock()->getName() != originalContact.bodyNode1.lock()->getName() ||
+             contact.bodyNode2.lock()->getName() != originalContact.bodyNode2.lock()->getName())
+          {
+            std::cout << "section 1 violation" << std::endl;
+            inconsistentForce = true;
+          }
+
+          if(contact.force != originalContact.force ||
+             contact.normal != originalContact.normal ||
+             contact.penetrationDepth != originalContact.penetrationDepth ||
+             contact.point != originalContact.point)
+          {
+            std::cout << "section 2 violation" << std::endl;
+            inconsistentForce = true;
+          }
+
+          if(i < numClones && // only check this for clones
+             (contact.shape1 != originalContact.shape1 ||
+              contact.shape2 != originalContact.shape2) )
+          {
+            std::cout << "section 3 violation" << std::endl;
+            inconsistentForce = true;
+          }
+        } // for contacts
+      } // for time step
+    } // for world
+
+    if(inconsistentForce)
+      ++inconsistentForceCount;
+
+    const CollisionData& originalData = allData[0];
+    for(size_t i=0; i<originalData.size(); ++i)
+    {
+      const std::vector<dart::collision::Contact>& originalContacts =
+          originalData[i];
+
+      std::unordered_map<dart::dynamics::BodyNode*, size_t> forceTally;
+
+      for(size_t j=0; j<originalContacts.size(); ++j)
+      {
+        const dart::collision::Contact& contact = originalContacts[j];
+
+        auto it = forceTally.find(contact.bodyNode1.lock());
+        if(it == forceTally.end())
+          forceTally[contact.bodyNode1.lock()] = 1;
+        else
+          ++it->second;
+
+        it = forceTally.find(contact.bodyNode2.lock());
+        if(it == forceTally.end())
+          forceTally[contact.bodyNode2.lock()] = 1;
+        else
+          ++it->second;
+      }
+
+      bool singleForcePerBody = true;
+      for(const auto& tally : forceTally)
+      {
+        if(tally.second > 1)
+          singleForcePerBody = false;
+      }
+
+      if(singleForcePerBody)
+        ++singleForceCount;
+    }
+
+    std::cout << "inconsistent force count: " << inconsistentForceCount
+              << "\t\tsingle force count: " << singleForceCount << std::endl;
+
+  } // while true
+}
+
+int main(int argc, char* argv[]) {
+
+  // create and initialize the world
+  dart::simulation::WorldPtr myWorld
+      = dart::utils::SkelParser::readWorld(
+          DART_DATA_PATH"skel/fullbody1.skel");
+  assert(myWorld != nullptr);
+
+  Eigen::Vector3d gravity(0.0, -9.81, 0.0);
+  myWorld->setGravity(gravity);
+
+  // create controller
+  Controller* myController = new Controller(myWorld->getSkeleton(1),
+                                            myWorld->getTimeStep());
+  dart::dynamics::MetaSkeletonPtr group = myController->getSkel();
+
+  std::vector<size_t> genCoordIds;
+  genCoordIds.push_back(1);
+  genCoordIds.push_back(6);   // left hip
+  genCoordIds.push_back(14);  // left knee
+  genCoordIds.push_back(17);  // left ankle
+  genCoordIds.push_back(9);   // right hip
+  genCoordIds.push_back(15);  // right knee
+  genCoordIds.push_back(19);  // right ankle
+  genCoordIds.push_back(13);  // lower back
+  Eigen::VectorXd initConfig(8);
+  initConfig << -0.2, 0.15, -0.4, 0.25, 0.15, -0.4, 0.25, 0.0;
+  group->setPositions(genCoordIds, initConfig);
+
+  myController->resetDesiredDofs();
+
+  const dart::dynamics::SkeletonPtr& skel = myWorld->getSkeleton(1);
+  for(size_t i=1; i<skel->getNumJoints(); ++i)
+  {
+    skel->getJoint(i)->setActuatorType(dart::dynamics::Joint::VELOCITY);
+  }
+
+  std::vector<dart::simulation::WorldPtr> worlds;
+
+  // Using cloning
+  worlds.push_back(myWorld);
+  worlds.push_back(myWorld->clone());
+  worlds.push_back(myWorld->clone());
+  size_t numClones = worlds.size();
+
+  // Using reloading
+//  worlds.push_back(dart::utils::SkelParser::readWorld(DART_DATA_PATH"skel/fullbody1.skel"));
+//  worlds.back()->setGravity(gravity);
+//  worlds.push_back(dart::utils::SkelParser::readWorld(DART_DATA_PATH"skel/fullbody1.skel"));
+//  worlds.back()->setGravity(gravity);
+
+  for(size_t i=1; i<worlds.size(); ++i)
+  {
+    const dart::simulation::WorldPtr& world = worlds[i];
+    for(size_t j=0; j<world->getNumSkeletons(); ++j)
+    {
+      const dart::dynamics::SkeletonPtr& cloneSkel = world->getSkeleton(j);
+      const dart::dynamics::SkeletonPtr& originalSkel = worlds[0]->getSkeleton(j);
+
+      cloneSkel->setPositions(originalSkel->getPositions());
+      cloneSkel->setVelocities(originalSkel->getVelocities());
+      cloneSkel->setAccelerations(originalSkel->getAccelerations());
+      cloneSkel->setForces(originalSkel->getForces());
+
+      // Note: this for loop is only needed for the worlds that were reloaded
+      // from the file instead of being cloned
+      for(size_t k=0; k<cloneSkel->getNumJoints(); ++k)
+      {
+        cloneSkel->getJoint(k)->setActuatorType(
+              originalSkel->getJoint(k)->getActuatorType());
+      }
+    }
+  }
+
+  if(runTest)
+  {
+    if(multiThreaded)
+      multiThreadedTest(worlds, numClones);
+    else
+      singleThreadedTest(worlds, numClones);
+  }
 
   // create a window and link it to the world
   MyWindow window;
