@@ -17,5 +17,7 @@ var dir_10253f68b8645be175f3db557703e448 =
     [ "misc.h", "d4/d08/misc_8h.html", "d4/d08/misc_8h" ],
     [ "odeconfig.h", "da/dd5/odeconfig_8h.html", "da/dd5/odeconfig_8h" ],
     [ "ODELCPSolver.cpp", "da/d53/ODELCPSolver_8cpp.html", null ],
-    [ "ODELCPSolver.h", "d0/d1a/ODELCPSolver_8h.html", "d0/d1a/ODELCPSolver_8h" ]
+    [ "ODELCPSolver.h", "d0/d1a/ODELCPSolver_8h.html", [
+      [ "ODELCPSolver", "d4/d65/classdart_1_1lcpsolver_1_1ODELCPSolver.html", "d4/d65/classdart_1_1lcpsolver_1_1ODELCPSolver" ]
+    ] ]
 ];

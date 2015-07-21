@@ -1,9 +1,9 @@
 var classdart_1_1utils_1_1SoftSdfParser =
 [
-    [ "readSkeleton", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#adc0e322042af53e466e8a1a4d60b1882", null ],
-    [ "readSkeleton", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#ab3880c425505a2528d156bab8e984749", null ],
-    [ "readSoftBodyNode", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#ad7dd676ebe22da4e5fd37d4b6386cdb7", null ],
-    [ "readSoftJoint", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#a41c178d0118bba5de5a0ffba061623fa", null ],
-    [ "readSoftSdfFile", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#a7f72fe86171c909ca262d37ead4ecf57", null ],
-    [ "readWorld", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#a117832abd1bc5790990a0ff59904cbb7", null ]
+    [ "createSoftPair", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#a6d1dfd3e0619264315431cf941003724", null ],
+    [ "readSkeleton", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#a23a34288932a7275c5d014f1480ba125", null ],
+    [ "readSkeleton", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#a7ceb5acbc6349dffe84575ef2cd16a45", null ],
+    [ "readSoftBodyNode", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#aa2926845e87948f127f3c92bab1d593e", null ],
+    [ "readSoftSdfFile", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#aafbafa15a7b45ec20cdd2bf52bd0fcef", null ],
+    [ "readWorld", "d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#a0b5c64e933c4718607cb84ce27151b72", null ]
 ];

@@ -17,6 +17,7 @@ var Parser_8h =
     [ "getValueVector3d", "d6/d0c/Parser_8h.html#a481966f03ae3e71fdc05b780ffbc1290", null ],
     [ "getValueVector3i", "d6/d0c/Parser_8h.html#aa3c7147db1299ae932ef30f4be0604a6", null ],
     [ "getValueVector6d", "d6/d0c/Parser_8h.html#ac27f0a57398cc8c5bab9370d9ef8e326", null ],
+    [ "getValueVectorXd", "d6/d0c/Parser_8h.html#aff0f194e5ccc3ec7612d96a8b9f574a4", null ],
     [ "hasAttribute", "d6/d0c/Parser_8h.html#a026d75f4787ac5d023b0bcca062005c2", null ],
     [ "hasElement", "d6/d0c/Parser_8h.html#a0ae82898f2f145b583baf7ed0685fd08", null ],
     [ "openXMLFile", "d6/d0c/Parser_8h.html#a58b9989f820bb5e26397ca32db1d77c0", null ],
@@ -35,10 +36,14 @@ var Parser_8h =
     [ "toString", "d6/d0c/Parser_8h.html#a9d37bf27a103909e5abece14bdd8c735", null ],
     [ "toString", "d6/d0c/Parser_8h.html#a2995c2dcb0f83bbd270ba163a02a89f4", null ],
     [ "toString", "d6/d0c/Parser_8h.html#a45e2e9d3aee166ab6914032c778eff5d", null ],
+    [ "toString", "d6/d0c/Parser_8h.html#ab0de436afc4afd5a9f82557404960dad", null ],
+    [ "toString", "d6/d0c/Parser_8h.html#a1b933aa8f1988ba5bf6a23d46e069464", null ],
+    [ "toString", "d6/d0c/Parser_8h.html#af43136bbba82d5dbac5034cb2ae4f12e", null ],
     [ "toString", "d6/d0c/Parser_8h.html#acf5a708e849fa6d3e94dba3bf6e4324f", null ],
     [ "toUInt", "d6/d0c/Parser_8h.html#a0c535789d981d0d0d9ddea672a2e86d7", null ],
     [ "toVector2d", "d6/d0c/Parser_8h.html#abe18b26db9233ea027ea3bef776d075d", null ],
     [ "toVector3d", "d6/d0c/Parser_8h.html#ae1a82cacfc9f1c91a8d28b360bb64997", null ],
     [ "toVector3i", "d6/d0c/Parser_8h.html#a731b2fc422c1638869b2b50d5fcba9a7", null ],
-    [ "toVector6d", "d6/d0c/Parser_8h.html#a608ad2461cdb0be1e3f77e39993c268c", null ]
+    [ "toVector6d", "d6/d0c/Parser_8h.html#a608ad2461cdb0be1e3f77e39993c268c", null ],
+    [ "toVectorXd", "d6/d0c/Parser_8h.html#ad2d09deadaca7d83fd72068a37c5a97b", null ]
 ];

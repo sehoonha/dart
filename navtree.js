@@ -1,74 +1,3 @@
-var NAVTREE =
-[
-  [ "DART", "index.html", [
-    [ "DART - Dynamic Animation and Robotics Toolkits", "index.html", [
-      [ "Introduction", "index.html#intro", null ]
-    ] ],
-    [ "Todo List", "dd/da0/todo.html", null ],
-    [ "Namespaces", null, [
-      [ "Namespace List", "namespaces.html", "namespaces" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
-        [ "Functions", "namespacemembers_func.html", null ],
-        [ "Variables", "namespacemembers_vars.html", null ],
-        [ "Typedefs", "namespacemembers_type.html", null ],
-        [ "Enumerations", "namespacemembers_enum.html", null ],
-        [ "Enumerator", "namespacemembers_eval.html", null ]
-      ] ]
-    ] ],
-    [ "Classes", null, [
-      [ "Class List", "annotated.html", "annotated" ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", "functions_vars" ],
-        [ "Typedefs", "functions_type.html", null ],
-        [ "Enumerations", "functions_enum.html", null ],
-        [ "Enumerator", "functions_eval.html", null ],
-        [ "Related Functions", "functions_rela.html", null ]
-      ] ]
-    ] ],
-    [ "Files", null, [
-      [ "File List", "files.html", "files" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", "globals_func" ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
-      ] ]
-    ] ]
-  ] ]
-];
-
-var NAVTREEINDEX =
-[
-"annotated.html",
-"d1/db9/PGSLCPSolver_8cpp.html#a7f8d7fb96da573afb60cada093143fb4",
-"d2/ddf/lodepng_8h.html#a14a4dc4c26e03acb5ab36880aacbd85a",
-"d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ab87eb505caa8e482baf5f216ea8a896a",
-"d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a5ae11cdaaa4da575bbbea677d8c989dd",
-"d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a72b3c7f939b667861cb6c3342c8977af",
-"d5/d55/classdart_1_1dynamics_1_1PointMass.html#acc85afcbd17949e2846415f061911460",
-"d6/d5b/classdart_1_1dynamics_1_1Joint.html#a7e7b2480982fec7911e35c1fba5a88e5",
-"d6/df6/structdLCP.html#a8d2ee24665a18974d9c44f85314e9c68",
-"d7/d5f/misc_8cpp.html#a6c509fb4e134251f819453542517f345",
-"d8/da3/singletondart_1_1dynamics_1_1MultiDofJoint.html#a3aa632b638c4c6ff014b0682b55ff41c",
-"d9/d4f/classdart_1_1dynamics_1_1PlaneShape.html#a7c230525392881caca21dfe584c71c7d",
-"da/ddb/classdart_1_1renderer_1_1RenderInterface.html#aadec9f50441c0302e2fef67d8559f4c9",
-"db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#afaca58018997d1d6b687743d86d158ff",
-"dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a62e0808f268515b0941de5edb559b826",
-"dd/dc0/lodepng_8cpp.html#a3cfe255ed4a1264dafcdb689a11cbe66",
-"dd/df4/matrix_8h.html#aacf50c130f37a00c24873704fecee30f",
-"df/d29/classdart_1_1constraint_1_1ConstraintBase.html#a35d0145b5d67a0fb1e9f3fc972795596",
-"globals_e.html"
-];
-
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
 var navTreeSubIndices = new Array();
 
 function getData(varName)
@@ -176,7 +105,7 @@ function createIndent(o,domNode,node,level)
     node.expandToggle.onclick = function() {
       if (node.expanded) {
         $(node.getChildrenUL()).slideUp("fast");
-        node.plus_img.src = node.relpath+"ftv2pnode.png";
+        node.plus_img.src = node.relpath+"arrowright.png";
         node.expanded = false;
       } else {
         expandNode(o, node, false, false);
@@ -184,7 +113,7 @@ function createIndent(o,domNode,node,level)
     }
     node.expandToggle.appendChild(imgNode);
     domNode.appendChild(node.expandToggle);
-    imgNode.src = node.relpath+"ftv2pnode.png";
+    imgNode.src = node.relpath+"arrowright.png";
   } else {
     var span = document.createElement("span");
     span.style.display = 'inline-block';
@@ -340,9 +269,9 @@ function expandNode(o, node, imm, showRoot)
         $(node.getChildrenUL()).slideDown("fast");
       }
       if (node.isLast) {
-        node.plus_img.src = node.relpath+"ftv2mlastnode.png";
+        node.plus_img.src = node.relpath+"arrowdown.png";
       } else {
-        node.plus_img.src = node.relpath+"ftv2mnode.png";
+        node.plus_img.src = node.relpath+"arrowdown.png";
       }
       node.expanded = true;
     }
@@ -412,11 +341,7 @@ function showNode(o, node, index, hash)
         getNode(o, node);
       }
       $(node.getChildrenUL()).css({'display':'block'});
-      if (node.isLast) {
-        node.plus_img.src = node.relpath+"ftv2mlastnode.png";
-      } else {
-        node.plus_img.src = node.relpath+"ftv2mnode.png";
-      }
+      node.plus_img.src = node.relpath+"arrowdown.png";
       node.expanded = true;
       var n = node.children[o.breadcrumbs[index]];
       if (index+1<o.breadcrumbs.length) {
@@ -554,7 +479,7 @@ function initNavTree(toroot,relpath)
   o.node.expanded = false;
   o.node.isLast = true;
   o.node.plus_img = document.createElement("img");
-  o.node.plus_img.src = relpath+"ftv2pnode.png";
+  o.node.plus_img.src = relpath+"arrowright.png";
   o.node.plus_img.width = 16;
   o.node.plus_img.height = 22;
 

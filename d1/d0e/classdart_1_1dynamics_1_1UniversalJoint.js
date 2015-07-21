@@ -1,14 +1,27 @@
 var classdart_1_1dynamics_1_1UniversalJoint =
 [
-    [ "UniversalJoint", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#ad3fbbd2cc3373645eefcaec65384fcd1", null ],
+    [ "Properties", "df/df6/structdart_1_1dynamics_1_1UniversalJoint_1_1Properties.html", "df/df6/structdart_1_1dynamics_1_1UniversalJoint_1_1Properties" ],
+    [ "UniqueProperties", "d9/dd5/structdart_1_1dynamics_1_1UniversalJoint_1_1UniqueProperties.html", "d9/dd5/structdart_1_1dynamics_1_1UniversalJoint_1_1UniqueProperties" ],
     [ "~UniversalJoint", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#aab541e098b35a5d0051ff803e89cab96", null ],
+    [ "UniversalJoint", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a83993bef3cc9008c7acbe726ac0ac8f4", null ],
+    [ "clone", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a8259d065fee5ebc71c93c127b91b1d21", null ],
+    [ "copy", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a12162592af48bd3b41ac1095614aad35", null ],
+    [ "copy", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#aba73be458b1dc6226d4f493c560b2fd4", null ],
     [ "getAxis1", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a1fcfebe31b1460305adff7db4966411f", null ],
     [ "getAxis2", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#aaede6c7d0049bd1bcaba0cd5e8db3586", null ],
+    [ "getLocalJacobianStatic", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a2954a57c0094b6912c96395897bb54f6", null ],
+    [ "getStaticType", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a9ff29d3abe8c6c3c50dcb5fffc53d7bf", null ],
+    [ "getType", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a3a67ed6e9ad933ffea31c25719cab61c", null ],
+    [ "getUniversalJointProperties", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a9b878e08c5f53575a0d474604e1cee3e", null ],
+    [ "operator=", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a77fdff992ff87aab5d542303748e0e06", null ],
     [ "setAxis1", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#adda6d32cb67d0d0fd944f7bd2035d5e5", null ],
     [ "setAxis2", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#af727af82848346e26eb1bf0b6fb687b0", null ],
-    [ "updateDegreeOfFreedomNames", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a5edc9a22bfcdf2550f5b1c434df4b169", null ],
-    [ "updateLocalJacobian", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a2d8e91305d0623f029a603e2d56d60bc", null ],
-    [ "updateLocalJacobianTimeDeriv", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a8c52ecfae2f262b6f1b39f61c1dbe711", null ],
-    [ "updateLocalTransform", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#aba4260743339af80e2683f54ca8e420b", null ],
-    [ "mAxis", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#abd2e02fe3790017d5df4c97d8c34cc93", null ]
+    [ "setProperties", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#af578d4c0f724af4ce32ceab20f103651", null ],
+    [ "setProperties", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a2fcc8db95de4e02e65a0bb0659d14ff7", null ],
+    [ "updateDegreeOfFreedomNames", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a5f3680d7d45dd0ce9bbd367592ea219e", null ],
+    [ "updateLocalJacobian", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a766bcaeae3c7b8b4a289b436607444dd", null ],
+    [ "updateLocalJacobianTimeDeriv", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a90d27a6c1dcc72e5bfc6ccdfa14c0e48", null ],
+    [ "updateLocalTransform", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#aa4881e539d8747725119dcfb23f7e3af", null ],
+    [ "Skeleton", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a6a11291b70c2cbded85d321ce539c62f", null ],
+    [ "mUniversalP", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a57abd4f742755cc735f1971fd73c15f1", null ]
 ];

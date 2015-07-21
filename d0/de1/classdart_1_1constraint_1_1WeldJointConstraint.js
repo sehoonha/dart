@@ -7,7 +7,7 @@ var classdart_1_1constraint_1_1WeldJointConstraint =
     [ "applyUnitImpulse", "d0/de1/classdart_1_1constraint_1_1WeldJointConstraint.html#acc15519f11bbca45851f5c755686b8b0", null ],
     [ "excite", "d0/de1/classdart_1_1constraint_1_1WeldJointConstraint.html#a3973c3933209af0ff2f1a1bc6d9c8f48", null ],
     [ "getInformation", "d0/de1/classdart_1_1constraint_1_1WeldJointConstraint.html#a2319b25ae152bd78ded570aa783db58a", null ],
-    [ "getRootSkeleton", "d0/de1/classdart_1_1constraint_1_1WeldJointConstraint.html#a2cc043b2720f1b5b3e359c05648b4755", null ],
+    [ "getRootSkeleton", "d0/de1/classdart_1_1constraint_1_1WeldJointConstraint.html#a5419af38d4b938ae2e83636018bd85ce", null ],
     [ "getVelocityChange", "d0/de1/classdart_1_1constraint_1_1WeldJointConstraint.html#ad5eda60a3e34eadbd1b517578543a3af", null ],
     [ "isActive", "d0/de1/classdart_1_1constraint_1_1WeldJointConstraint.html#a4fbefd472a2a09bb427f1befb0d2b39c", null ],
     [ "unexcite", "d0/de1/classdart_1_1constraint_1_1WeldJointConstraint.html#a4e925c2f4cb48d3bfc17b04191daa0a9", null ],

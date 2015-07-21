@@ -1,6 +1,5 @@
 var classdart_1_1constraint_1_1SoftContactConstraint =
 [
-    [ "SoftContactConstraint", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#abec7473423d33f5020b9070fa28eea25", null ],
     [ "SoftContactConstraint", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#ae71f85a57f40d8a74d8cf5a91d8fc763", null ],
     [ "~SoftContactConstraint", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a3527295292088e8d0bdfe5de85c20e73", null ],
     [ "applyImpulse", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#afc4bf02b761fa6813984f21cf43e7a85", null ],
@@ -13,7 +12,7 @@ var classdart_1_1constraint_1_1SoftContactConstraint =
     [ "getInformation", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a5a859a0e8279aefb9f0ff0ef1ee60bea", null ],
     [ "getMaxErrorReductionVelocity", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a84d09707ed79e0cefa09b9fdbebd5432", null ],
     [ "getRelVelocity", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a6b39189e60d459724bbf4ae356696607", null ],
-    [ "getRootSkeleton", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#abe5fdf980f03e742510fd243969dbfee", null ],
+    [ "getRootSkeleton", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#ad6268d6016d1ae8dc631216ced4e25c2", null ],
     [ "getTangentBasisMatrixODE", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a946f65bb672d46b6f0e62a4160cc0e4a", null ],
     [ "getVelocityChange", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#adf23882261275d46f078496430df5838", null ],
     [ "isActive", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#ad7fee406ef32001d2fc1577a73fabc12", null ],
@@ -44,8 +43,8 @@ var classdart_1_1constraint_1_1SoftContactConstraint =
     [ "mFrictionCoeff", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a46fa5a0834d928d83965c4af08d0dbae", null ],
     [ "mIsBounceOn", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a142b792b432327d948c6a8237064cdf0", null ],
     [ "mIsFrictionOn", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a4398bccf13f09f1934e72aa72bf92a66", null ],
-    [ "mJacobians1", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#acecca811544feb9a958fffcc290bf0af", null ],
-    [ "mJacobians2", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a3ffa6655b517c06aa69cd97d00089325", null ],
+    [ "mJacobians1", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a9b5fd9b020ce6fe3933c91c3f8496dfc", null ],
+    [ "mJacobians2", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a7d22be7e40989d66c69aeecb5f4c1cc4", null ],
     [ "mMaxErrorReductionVelocity", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a56db82dbbea4b9f883efe985cef2e9e0", null ],
     [ "mPointMass1", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a4e8b35796cd19804ce440b2d7451d94d", null ],
     [ "mPointMass2", "d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a0a8ddfae70dfd4875c349f25494608e1", null ],

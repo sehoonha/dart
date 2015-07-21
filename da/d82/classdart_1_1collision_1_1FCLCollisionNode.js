@@ -2,9 +2,9 @@ var classdart_1_1collision_1_1FCLCollisionNode =
 [
     [ "FCLCollisionNode", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#a3920bacd59fa3a250ab1514dc02ccdaf", null ],
     [ "~FCLCollisionNode", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#ac9a103da8ba1c97c192c326a740514e4", null ],
-    [ "getCollisionGeometry", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#a697dd08f5d859a33fdf1cc04b62eaa5e", null ],
-    [ "getFCLTransform", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#a793b28637dcda8f2bd2871ca9024b957", null ],
-    [ "getNumCollisionGeometries", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#ab16e9fc42d40d53ac753d5dc935f93f6", null ],
-    [ "mCollisionGeometries", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#a5f43ea35653bdf5b7a2893bbcfb03c4f", null ],
-    [ "mShapes", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#afbbcc42e9ba64d7ff5c69f954f32e5c6", null ]
+    [ "getCollisionObject", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#ad6246454c5244c042fb8dc69b5e26d80", null ],
+    [ "getFCLTransform", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#a39a40334ddbd633f5dd12ad878ead9aa", null ],
+    [ "getNumCollisionObjects", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#af974ed83e8ed2f05ea1014a3bdcb88e1", null ],
+    [ "updateFCLCollisionObjects", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#ab36d3f8675edb642915eb8c2b8b2123c", null ],
+    [ "mCollisionObjects", "da/d82/classdart_1_1collision_1_1FCLCollisionNode.html#ad14622108e78b2cb3ab8ba142bd04ffb", null ]
 ];

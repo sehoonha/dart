@@ -19,6 +19,8 @@ var MathTypes_8h =
     [ "DART_PI_HALF", "d5/d55/MathTypes_8h.html#a22667ed403070f423866bafe66e3f659", null ],
     [ "DART_PI_SQR", "d5/d55/MathTypes_8h.html#a766f93ef25be94beec0d504d3cf213d4", null ],
     [ "DART_RADIAN", "d5/d55/MathTypes_8h.html#ae0d1c778a3c37257476ed9cf97407af6", null ],
+    [ "aligned_map", "d5/d55/MathTypes_8h.html#ac7d9b3d70dd2fee4a4e69d3328060c79", null ],
+    [ "aligned_vector", "d5/d55/MathTypes_8h.html#a8dfe4f733de0543cf4067932f2ce7efa", null ],
     [ "AngularJacobian", "d5/d55/MathTypes_8h.html#abd5ac0d14d2fd0c60fa633b16723f71a", null ],
     [ "EIGEN_V_VEC3D", "d5/d55/MathTypes_8h.html#a425d7eb71fbda74251b39a56d77483a6", null ],
     [ "EIGEN_VV_VEC3D", "d5/d55/MathTypes_8h.html#a375d47fcb4f2d2215ba09c82fcc8f23c", null ],
@@ -26,5 +28,6 @@ var MathTypes_8h =
     [ "Jacobian", "d5/d55/MathTypes_8h.html#acc30f8840c232e09c8dbaed44de40742", null ],
     [ "LinearJacobian", "d5/d55/MathTypes_8h.html#acaf385e0537db2db2df04bf8baf7543b", null ],
     [ "Matrix6d", "d5/d55/MathTypes_8h.html#a1690c3b787f33c899925ec8ed093dfdd", null ],
-    [ "Vector6d", "d5/d55/MathTypes_8h.html#ac27ace7c50a658d3a07238110fa51a2f", null ]
+    [ "Vector6d", "d5/d55/MathTypes_8h.html#ac27ace7c50a658d3a07238110fa51a2f", null ],
+    [ "make_aligned_shared", "d5/d55/MathTypes_8h.html#ab5662ca881d3d41dc8716964a2a9f5ac", null ]
 ];

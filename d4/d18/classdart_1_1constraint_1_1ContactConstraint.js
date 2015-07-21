@@ -1,6 +1,5 @@
 var classdart_1_1constraint_1_1ContactConstraint =
 [
-    [ "ContactConstraint", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#afc399985fd83a9fdacfdf837f5540770", null ],
     [ "ContactConstraint", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a66bca42c356f4abf4c2ad9aed72e6b33", null ],
     [ "~ContactConstraint", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#aaf3c7a8112196bbf7ac789993fe1327f", null ],
     [ "applyImpulse", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a3775be2587ea337ce39eab9b25547e73", null ],
@@ -13,7 +12,7 @@ var classdart_1_1constraint_1_1ContactConstraint =
     [ "getInformation", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#ad0419647866dad77771c0ae4cdb4e8c1", null ],
     [ "getMaxErrorReductionVelocity", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#aac2a88e3abc71908fca94f828c4a55b0", null ],
     [ "getRelVelocity", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#aaec44384b85e77de9ad43db356c18b98", null ],
-    [ "getRootSkeleton", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a42ad4597062d601e1fe43d9af1b30045", null ],
+    [ "getRootSkeleton", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#af97071d84e9aa2bbbd44bdfface420ba", null ],
     [ "getTangentBasisMatrixODE", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a352d4ddc9e78ae80379b2e81ea615972", null ],
     [ "getVelocityChange", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a517cccf7a41f308669d11ffa7dafd728", null ],
     [ "isActive", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#ad5805eee32c91c737d0b215d8189c94b", null ],
@@ -40,8 +39,8 @@ var classdart_1_1constraint_1_1ContactConstraint =
     [ "mFrictionCoeff", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a78184d0b4419fa5ca282d12cbbe0e0b5", null ],
     [ "mIsBounceOn", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#acc66b2e883e3594cb881f55aec5a47f5", null ],
     [ "mIsFrictionOn", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a1750b2aa46be0183946e8ab33b5383f3", null ],
-    [ "mJacobians1", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#ac225b6f9f518d9d87b300d85ea68beb9", null ],
-    [ "mJacobians2", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a039527ef52f807254f897d0990390467", null ],
+    [ "mJacobians1", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a487e1b58c9ccdbfa9fea3c88631bee38", null ],
+    [ "mJacobians2", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#aa7d6bff44643e12415cf55e2f6da5903", null ],
     [ "mMaxErrorReductionVelocity", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a338edeef87a4de654fba0253021d4a39", null ],
     [ "mRestitutionCoeff", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#acf84778e25fc924fb6bfb89f206abe7b", null ],
     [ "mTimeStep", "d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a0a87147294ce818cecebcbbbef593c73", null ]

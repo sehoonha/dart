@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['_5faddpitoartinertia',['_addPiToArtInertia',['../dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#a80852aab96ba1f864e617fcf2e5f1497',1,'dart::dynamics::SoftBodyNode']]],
-  ['_5faddpitoartinertiaimplicit',['_addPiToArtInertiaImplicit',['../dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#a906ddf3f485f8c615a8915e298d3eed7',1,'dart::dynamics::SoftBodyNode']]],
+  ['_5faddpitoartinertia',['_addPiToArtInertia',['../dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#ad610ebad95ea72f695c945479fba44c4',1,'dart::dynamics::SoftBodyNode']]],
+  ['_5faddpitoartinertiaimplicit',['_addPiToArtInertiaImplicit',['../dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#a59785f71951fcc96ae1f79222e9c8ecb',1,'dart::dynamics::SoftBodyNode']]],
   ['_5fbuildmesh',['_buildMesh',['../d6/dae/classdart_1_1dynamics_1_1SoftMeshShape.html#a452a2cf0f63fd385f4357bbdd6f606e2',1,'dart::dynamics::SoftMeshShape']]],
   ['_5fcreatemesh',['_createMesh',['../da/dcd/namespacedart_1_1collision.html#a22ce5b24dfd6140e14b45be5caf79b2d',1,'dart::collision']]],
   ['_5fddot',['_dDot',['../d3/df0/fastdot_8cpp.html#a9383e149442f07aa49f7c85a50c0e8c3',1,'_dDot(const dReal *a, const dReal *b, int n):&#160;fastdot.cpp'],['../dd/df4/matrix_8h.html#a9383e149442f07aa49f7c85a50c0e8c3',1,'_dDot(const dReal *a, const dReal *b, int n):&#160;fastdot.cpp']]],
@@ -31,8 +31,5 @@ var searchData=
   ['_5fgeta',['_GETA',['../d5/d84/matrix_8cpp.html#a662193bf1a21c471ae0d0f03769f6bb8',1,'matrix.cpp']]],
   ['_5fnlopt_5ffunc',['_nlopt_func',['../d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#ac10965b50628d80818145a367e7adc02',1,'dart::optimizer::NloptSolver']]],
   ['_5fnlopt_5fmfunc',['_nlopt_mfunc',['../d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#ad92a4904738b4402da3d516481f51898',1,'dart::optimizer::NloptSolver']]],
-  ['_5fupdatebodyjacobian',['_updateBodyJacobian',['../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a63ee25d1c3719f1f22aaf17573de14b1',1,'dart::dynamics::BodyNode']]],
-  ['_5fupdatebodyjacobianderiv',['_updateBodyJacobianDeriv',['../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a5d22f1627a696fda212e38b59e5f156b',1,'dart::dynamics::BodyNode']]],
-  ['_5fupdateboundingboxdim',['_updateBoundingBoxDim',['../d3/d73/classdart_1_1dynamics_1_1CylinderShape.html#a35c9bea18129341834775fd7c172ca6f',1,'dart::dynamics::CylinderShape::_updateBoundingBoxDim()'],['../d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a0708cd3afedbc00f99ef9d90dccae3d9',1,'dart::dynamics::MeshShape::_updateBoundingBoxDim()']]],
-  ['_5fupdatespatialinertia',['_updateSpatialInertia',['../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#af3d8567a59503c129adaa07b633657c3',1,'dart::dynamics::BodyNode']]]
+  ['_5fupdateboundingboxdim',['_updateBoundingBoxDim',['../d3/d73/classdart_1_1dynamics_1_1CylinderShape.html#a35c9bea18129341834775fd7c172ca6f',1,'dart::dynamics::CylinderShape::_updateBoundingBoxDim()'],['../d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a0708cd3afedbc00f99ef9d90dccae3d9',1,'dart::dynamics::MeshShape::_updateBoundingBoxDim()']]]
 ];

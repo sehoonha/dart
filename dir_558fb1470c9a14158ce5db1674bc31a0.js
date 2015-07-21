@@ -18,10 +18,10 @@ var dir_558fb1470c9a14158ce5db1674bc31a0 =
     ] ],
     [ "Parser.cpp", "dc/df5/Parser_8cpp.html", "dc/df5/Parser_8cpp" ],
     [ "Parser.h", "d6/d0c/Parser_8h.html", "d6/d0c/Parser_8h" ],
-    [ "Paths.h", "d4/d6c/Paths_8h.html", null ],
     [ "SkelParser.cpp", "d8/d35/SkelParser_8cpp.html", "d8/d35/SkelParser_8cpp" ],
     [ "SkelParser.h", "de/ded/SkelParser_8h.html", [
       [ "SkelParser", "dd/d87/classdart_1_1utils_1_1SkelParser.html", "dd/d87/classdart_1_1utils_1_1SkelParser" ],
-      [ "SkelBodyNode", "da/d74/structdart_1_1utils_1_1SkelParser_1_1SkelBodyNode.html", "da/d74/structdart_1_1utils_1_1SkelParser_1_1SkelBodyNode" ]
+      [ "SkelBodyNode", "da/d74/structdart_1_1utils_1_1SkelParser_1_1SkelBodyNode.html", "da/d74/structdart_1_1utils_1_1SkelParser_1_1SkelBodyNode" ],
+      [ "SkelJoint", "d4/d2a/structdart_1_1utils_1_1SkelParser_1_1SkelJoint.html", "d4/d2a/structdart_1_1utils_1_1SkelParser_1_1SkelJoint" ]
     ] ]
 ];

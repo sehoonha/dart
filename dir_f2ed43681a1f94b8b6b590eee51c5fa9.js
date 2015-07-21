@@ -9,7 +9,10 @@ var dir_f2ed43681a1f94b8b6b590eee51c5fa9 =
       [ "ConstrainedGroup", "d6/db4/classdart_1_1constraint_1_1ConstrainedGroup.html", "d6/db4/classdart_1_1constraint_1_1ConstrainedGroup" ]
     ] ],
     [ "ConstraintBase.cpp", "df/de2/ConstraintBase_8cpp.html", null ],
-    [ "ConstraintBase.h", "db/da5/ConstraintBase_8h.html", "db/da5/ConstraintBase_8h" ],
+    [ "ConstraintBase.h", "db/da5/ConstraintBase_8h.html", [
+      [ "ConstraintInfo", "dc/d9c/structdart_1_1constraint_1_1ConstraintInfo.html", "dc/d9c/structdart_1_1constraint_1_1ConstraintInfo" ],
+      [ "ConstraintBase", "df/d29/classdart_1_1constraint_1_1ConstraintBase.html", "df/d29/classdart_1_1constraint_1_1ConstraintBase" ]
+    ] ],
     [ "ConstraintSolver.cpp", "d7/dc0/ConstraintSolver_8cpp.html", null ],
     [ "ConstraintSolver.h", "da/db5/ConstraintSolver_8h.html", [
       [ "ConstraintSolver", "d6/dc9/classdart_1_1constraint_1_1ConstraintSolver.html", "d6/dc9/classdart_1_1constraint_1_1ConstraintSolver" ]

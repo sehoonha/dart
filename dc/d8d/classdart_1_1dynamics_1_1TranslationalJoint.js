@@ -1,9 +1,16 @@
 var classdart_1_1dynamics_1_1TranslationalJoint =
 [
-    [ "TranslationalJoint", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a79e3dce8e675039075bdea1e98be591d", null ],
+    [ "Properties", "da/dbc/structdart_1_1dynamics_1_1TranslationalJoint_1_1Properties.html", "da/dbc/structdart_1_1dynamics_1_1TranslationalJoint_1_1Properties" ],
     [ "~TranslationalJoint", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a39eea79d09ecaf8c9eb883a8ffc4a740", null ],
-    [ "updateDegreeOfFreedomNames", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a1e55902392a595a9553b5039c3a9ead5", null ],
-    [ "updateLocalJacobian", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a8a13ca8f1f936dfc1b0b214e47975410", null ],
-    [ "updateLocalJacobianTimeDeriv", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a62e0808f268515b0941de5edb559b826", null ],
-    [ "updateLocalTransform", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a45ca9111fc6d7631600736c8a7183237", null ]
+    [ "TranslationalJoint", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a7b2a641dc124a0063c5ef9b63d83923f", null ],
+    [ "clone", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a21e2cab4edac54cfc82a9f098d90fae0", null ],
+    [ "getLocalJacobianStatic", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#af7802e159abd6c92a25869275324fd05", null ],
+    [ "getStaticType", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#af26e0b45eba444c686c54a6eadd4a21b", null ],
+    [ "getTranslationalJointProperties", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a7af5081361f09076073c0230dfebafcc", null ],
+    [ "getType", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#af40657610916e18a8a2f621e0a0c6434", null ],
+    [ "updateDegreeOfFreedomNames", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a9a2d1cccc9e64a1f17885d586c37b599", null ],
+    [ "updateLocalJacobian", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a0d9be9d2117bf8a433b0051f7c1c305b", null ],
+    [ "updateLocalJacobianTimeDeriv", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a32a1337715114573adfbe848237cf343", null ],
+    [ "updateLocalTransform", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#aaae11fafbdc1792f984b90918cb47b08", null ],
+    [ "Skeleton", "dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a6a11291b70c2cbded85d321ce539c62f", null ]
 ];

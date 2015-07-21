@@ -43,6 +43,7 @@ var Geometry_8cpp =
     [ "matrixToEulerYZX", "d7/def/Geometry_8cpp.html#ac6b7603b1f1331d7325d4f839d5b9f94", null ],
     [ "matrixToEulerZXY", "d7/def/Geometry_8cpp.html#a300bb57a417ec13fea861862d5fc515c", null ],
     [ "matrixToEulerZYX", "d7/def/Geometry_8cpp.html#ad2b40ea6672026a84497098ac5cb1397", null ],
+    [ "parallelAxisTheorem", "d7/def/Geometry_8cpp.html#a81735893e4f6d1cf950a0aa181db367e", null ],
     [ "quatDeriv", "d7/def/Geometry_8cpp.html#abb994d2ee6ea73bb6cbe905cd1315b84", null ],
     [ "quatSecondDeriv", "d7/def/Geometry_8cpp.html#abe977fd6ccd95a05f68c80d4b33cdae7", null ],
     [ "quatToExp", "d7/def/Geometry_8cpp.html#a141d99b2112e9037173869b04db2f2f1", null ],

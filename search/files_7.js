@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['integrator_2ecpp',['Integrator.cpp',['../d6/d08/Integrator_8cpp.html',1,'']]],
-  ['integrator_2eh',['Integrator.h',['../d8/d97/Integrator_8h.html',1,'']]],
-  ['ipoptsolver_2ecpp',['IpoptSolver.cpp',['../d7/d7b/IpoptSolver_8cpp.html',1,'']]],
-  ['ipoptsolver_2eh',['IpoptSolver.h',['../d6/de7/IpoptSolver_8h.html',1,'']]]
+  ['helpers_2eh',['Helpers.h',['../db/df1/Helpers_8h.html',1,'']]]
 ];
