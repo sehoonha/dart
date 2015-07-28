@@ -14,7 +14,7 @@ var classdart_1_1utils_1_1SdfParser =
     ] ],
     [ "createJointAndNodePair", "d2/d42/classdart_1_1utils_1_1SdfParser.html#a3935b436cdac3dc727bee84dba5cf824", null ],
     [ "createPair", "d2/d42/classdart_1_1utils_1_1SdfParser.html#ae81742d117be83f12ae831dd72232ea4", null ],
-    [ "getNextJointAndNodePair", "d2/d42/classdart_1_1utils_1_1SdfParser.html#ad078bfda2e9621a15edf677dbcebe2bc", null ],
+    [ "getNextJointAndNodePair", "d2/d42/classdart_1_1utils_1_1SdfParser.html#a827f6416a66671d0b3b248fdf7f90c4b", null ],
     [ "makeSkeleton", "d2/d42/classdart_1_1utils_1_1SdfParser.html#a3fe7242b35216de4146a961bde8e8347", null ],
     [ "readAllBodyNodes", "d2/d42/classdart_1_1utils_1_1SdfParser.html#ae513371684700daea538106375bd9185", null ],
     [ "readAllBodyNodes", "d2/d42/classdart_1_1utils_1_1SdfParser.html#ab0034d977571d2bd7b794b76b51db036", null ],

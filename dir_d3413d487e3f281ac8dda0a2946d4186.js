@@ -15,6 +15,6 @@ var dir_d3413d487e3f281ac8dda0a2946d4186 =
       [ "TemplateJointPtr", "d0/d2f/classdart_1_1dynamics_1_1TemplateJointPtr.html", "d0/d2f/classdart_1_1dynamics_1_1TemplateJointPtr" ],
       [ "TemplateWeakJointPtr", "d8/d37/classdart_1_1dynamics_1_1TemplateWeakJointPtr.html", "d8/d37/classdart_1_1dynamics_1_1TemplateWeakJointPtr" ]
     ] ],
-    [ "MultiDofJoint.h", "db/dc9/detail_2MultiDofJoint_8h.html", null ],
+    [ "MultiDofJoint.h", "db/dc9/detail_2MultiDofJoint_8h.html", "db/dc9/detail_2MultiDofJoint_8h" ],
     [ "Skeleton.h", "d5/d35/detail_2Skeleton_8h.html", null ]
 ];

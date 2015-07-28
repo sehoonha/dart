@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.0</span>
+   &#160;<span id="projectnumber">5.0.1</span>
    </div>
   </td>
  </tr>
@@ -121,7 +121,7 @@ $(document).ready(function(){initNavTree('d6/d87/classdart_1_1utils_1_1SoftSdfPa
   <tr><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a3935b436cdac3dc727bee84dba5cf824">createJointAndNodePair</a>(dynamics::SkeletonPtr skeleton, dynamics::BodyNode *parent, const SDFJoint &amp;joint, const SDFBodyNode &amp;node)</td><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html">dart::utils::SdfParser</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#ae81742d117be83f12ae831dd72232ea4">createPair</a>(dynamics::SkeletonPtr skeleton, dynamics::BodyNode *parent, const SDFJoint &amp;newJoint, const SDFBodyNode &amp;newBody)</td><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html">dart::utils::SdfParser</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d6/d87/classdart_1_1utils_1_1SoftSdfParser.html#a6d1dfd3e0619264315431cf941003724">createSoftPair</a>(dynamics::SkeletonPtr skeleton, dynamics::BodyNode *parent, const SDFJoint &amp;newJoint, const SDFBodyNode &amp;newBody)</td><td class="entry"><a class="el" href="../../d6/d87/classdart_1_1utils_1_1SoftSdfParser.html">dart::utils::SoftSdfParser</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#ad078bfda2e9621a15edf677dbcebe2bc">getNextJointAndNodePair</a>(JointMap::iterator &amp;it, BodyMap::const_iterator &amp;child, dynamics::BodyNode *&amp;parent, const dynamics::SkeletonPtr skeleton, JointMap &amp;sdfJoints, const BodyMap &amp;sdfBodyNodes)</td><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html">dart::utils::SdfParser</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a827f6416a66671d0b3b248fdf7f90c4b">getNextJointAndNodePair</a>(BodyMap::iterator &amp;body, JointMap::const_iterator &amp;parentJoint, dynamics::BodyNode *&amp;parentBody, const dynamics::SkeletonPtr skeleton, BodyMap &amp;sdfBodyNodes, const JointMap &amp;sdfJoints)</td><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html">dart::utils::SdfParser</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a734d0081510a6f86d14f88beaf57ede0">JointMap</a> typedef</td><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html">dart::utils::SdfParser</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a46b1adbc11a87566bfe9534d8586dd1b">JointPropPtr</a> typedef</td><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html">dart::utils::SdfParser</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a3fe7242b35216de4146a961bde8e8347">makeSkeleton</a>(tinyxml2::XMLElement *_skeletonElement, Eigen::Isometry3d &amp;skeletonFrame)</td><td class="entry"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html">dart::utils::SdfParser</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
@@ -158,7 +158,7 @@ $(document).ready(function(){initNavTree('d6/d87/classdart_1_1utils_1_1SoftSdfPa
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Jul 20 2015 22:12:32 for DART by
+    <li class="footer">Generated on Tue Jul 28 2015 02:56:54 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

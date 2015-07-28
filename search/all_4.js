@@ -125,7 +125,7 @@ var searchData=
   ['degreeoffreedomptr_2eh',['DegreeOfFreedomPtr.h',['../de/d2c/DegreeOfFreedomPtr_8h.html',1,'']]],
   ['delta',['delta',['../d8/d96/namespacedart_1_1math.html#ae6aede87f5eb5a1e43f0c8421dc237fa',1,'dart::math']]],
   ['dependson',['dependsOn',['../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aeaa91c1e2ed1676f888fbea1dfbd2588',1,'dart::dynamics::BodyNode']]],
-  ['deprecated',['DEPRECATED',['../d9/db7/Deprecated_8h.html#a8c2405e88b68ac98d7bb65f491bf5daa',1,'Deprecated.h']]],
+  ['deprecated',['DEPRECATED',['../d5/d40/classdart_1_1common_1_1Signal_3_01__Res_07__ArgTypes_8_8_8_08_00_01Combiner_01_4.html#a5cafc26d35f95a85d9073ea15ac35293',1,'dart::common::Signal&lt; _Res(_ArgTypes...), Combiner &gt;::DEPRECATED()'],['../d4/de2/classdart_1_1common_1_1Signal_3_01void_07__ArgTypes_8_8_8_08_4.html#a442e4c6985f837ca967204b4b08210de',1,'dart::common::Signal&lt; void(_ArgTypes...)&gt;::DEPRECATED()'],['../d9/db7/Deprecated_8h.html#a8c2405e88b68ac98d7bb65f491bf5daa',1,'DEPRECATED():&#160;Deprecated.h']]],
   ['deprecated_2eh',['Deprecated.h',['../d9/db7/Deprecated_8h.html',1,'']]],
   ['depth',['depth',['../d9/dea/structdart_1_1collision_1_1dContactGeom.html#a347c892ff69b225e76ca4a7295254606',1,'dart::collision::dContactGeom']]],
   ['derror',['dError',['../dd/db1/error_8cpp.html#a272d253167aaedf308efe7dbe1ec0461',1,'dError(int num, const char *msg,...):&#160;error.cpp'],['../da/d41/error_8h.html#ad8b330627b1371adbd12d0b4c8b0a996',1,'dError(int num, const char *msg,...):&#160;error.cpp']]],

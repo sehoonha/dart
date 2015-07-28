@@ -10,6 +10,8 @@ var Helpers_8h =
     [ "Black", "db/df1/Helpers_8h.html#ad94ba7c65abc6fd92af64a0db7df6f35", null ],
     [ "Blue", "db/df1/Helpers_8h.html#a506bd8873182731f88cb7e1c7821b79b", null ],
     [ "Blue", "db/df1/Helpers_8h.html#a57f3def52e94e339f925a8e201ff19aa", null ],
+    [ "clip", "db/df1/Helpers_8h.html#a245be608b49628752ed042179cd818fc", null ],
+    [ "clip", "db/df1/Helpers_8h.html#ac03ac59520bf6338921471e34af439bb", null ],
     [ "CR", "db/df1/Helpers_8h.html#a016887264359b2adec638f50b2f521d9", null ],
     [ "delta", "db/df1/Helpers_8h.html#ae6aede87f5eb5a1e43f0c8421dc237fa", null ],
     [ "Gray", "db/df1/Helpers_8h.html#a04e0e028617699c7bef41185553f647f", null ],

@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.0</span>
+   &#160;<span id="projectnumber">5.0.1</span>
    </div>
   </td>
  </tr>
@@ -173,8 +173,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a841181725e3533258d5975332cb461e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae81742d117be83f12ae831dd72232ea4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#ae81742d117be83f12ae831dd72232ea4">createPair</a> (dynamics::SkeletonPtr skeleton, <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">dynamics::BodyNode</a> *parent, const <a class="el" href="../../d6/d4b/structdart_1_1utils_1_1SdfParser_1_1SDFJoint.html">SDFJoint</a> &amp;newJoint, const <a class="el" href="../../d2/da2/structdart_1_1utils_1_1SdfParser_1_1SDFBodyNode.html">SDFBodyNode</a> &amp;newBody)</td></tr>
 <tr class="separator:ae81742d117be83f12ae831dd72232ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad078bfda2e9621a15edf677dbcebe2bc"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a87dc15818fc719447fd863ea8cff14a8">NextResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#ad078bfda2e9621a15edf677dbcebe2bc">getNextJointAndNodePair</a> (JointMap::iterator &amp;it, BodyMap::const_iterator &amp;child, <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">dynamics::BodyNode</a> *&amp;parent, const dynamics::SkeletonPtr skeleton, <a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a734d0081510a6f86d14f88beaf57ede0">JointMap</a> &amp;sdfJoints, const <a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a15d27ebd5d2405a6cca68b527f898495">BodyMap</a> &amp;sdfBodyNodes)</td></tr>
-<tr class="separator:ad078bfda2e9621a15edf677dbcebe2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827f6416a66671d0b3b248fdf7f90c4b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a87dc15818fc719447fd863ea8cff14a8">NextResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a827f6416a66671d0b3b248fdf7f90c4b">getNextJointAndNodePair</a> (BodyMap::iterator &amp;body, JointMap::const_iterator &amp;parentJoint, <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">dynamics::BodyNode</a> *&amp;parentBody, const dynamics::SkeletonPtr skeleton, <a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a15d27ebd5d2405a6cca68b527f898495">BodyMap</a> &amp;sdfBodyNodes, const <a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a734d0081510a6f86d14f88beaf57ede0">JointMap</a> &amp;sdfJoints)</td></tr>
+<tr class="separator:a827f6416a66671d0b3b248fdf7f90c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fe7242b35216de4146a961bde8e8347"><td class="memItemLeft" align="right" valign="top">static dynamics::SkeletonPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a3fe7242b35216de4146a961bde8e8347">makeSkeleton</a> (tinyxml2::XMLElement *_skeletonElement, Eigen::Isometry3d &amp;skeletonFrame)</td></tr>
 <tr class="separator:a3fe7242b35216de4146a961bde8e8347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3935b436cdac3dc727bee84dba5cf824"><td class="memTemplParams" colspan="2">template&lt;class NodeType &gt; </td></tr>
@@ -378,7 +378,7 @@ template&lt;class NodeType &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ad078bfda2e9621a15edf677dbcebe2bc"></a>
+<a class="anchor" id="a827f6416a66671d0b3b248fdf7f90c4b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -388,20 +388,20 @@ template&lt;class NodeType &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a87dc15818fc719447fd863ea8cff14a8">SdfParser::NextResult</a> dart::utils::SdfParser::getNextJointAndNodePair </td>
           <td>(</td>
-          <td class="paramtype">JointMap::iterator &amp;&#160;</td>
-          <td class="paramname"><em>it</em>, </td>
+          <td class="paramtype">BodyMap::iterator &amp;&#160;</td>
+          <td class="paramname"><em>body</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">BodyMap::const_iterator &amp;&#160;</td>
-          <td class="paramname"><em>child</em>, </td>
+          <td class="paramtype">JointMap::const_iterator &amp;&#160;</td>
+          <td class="paramname"><em>parentJoint</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">dynamics::BodyNode</a> *&amp;&#160;</td>
-          <td class="paramname"><em>parent</em>, </td>
+          <td class="paramname"><em>parentBody</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -412,14 +412,14 @@ template&lt;class NodeType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a734d0081510a6f86d14f88beaf57ede0">JointMap</a> &amp;&#160;</td>
-          <td class="paramname"><em>sdfJoints</em>, </td>
+          <td class="paramtype"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a15d27ebd5d2405a6cca68b527f898495">BodyMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>sdfBodyNodes</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a15d27ebd5d2405a6cca68b527f898495">BodyMap</a> &amp;&#160;</td>
-          <td class="paramname"><em>sdfBodyNodes</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html#a734d0081510a6f86d14f88beaf57ede0">JointMap</a> &amp;&#160;</td>
+          <td class="paramname"><em>sdfJoints</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1375,8 +1375,8 @@ template&lt;class NodeType &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/js/Downloads/dart-5.0.0/dart/utils/sdf/<a class="el" href="../../d2/d3d/SdfParser_8h_source.html">SdfParser.h</a></li>
-<li>/home/js/Downloads/dart-5.0.0/dart/utils/sdf/<a class="el" href="../../d6/d24/SdfParser_8cpp.html">SdfParser.cpp</a></li>
+<li>/home/js/DRC/dart_5.0_gazebo/dart/utils/sdf/<a class="el" href="../../d2/d3d/SdfParser_8h_source.html">SdfParser.h</a></li>
+<li>/home/js/DRC/dart_5.0_gazebo/dart/utils/sdf/<a class="el" href="../../d6/d24/SdfParser_8cpp.html">SdfParser.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -1384,7 +1384,7 @@ template&lt;class NodeType &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html">utils</a></li><li class="navelem"><a class="el" href="../../d2/d42/classdart_1_1utils_1_1SdfParser.html">SdfParser</a></li>
-    <li class="footer">Generated on Mon Jul 20 2015 22:12:32 for DART by
+    <li class="footer">Generated on Tue Jul 28 2015 02:56:54 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

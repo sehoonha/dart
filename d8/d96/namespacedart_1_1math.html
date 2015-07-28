@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.0</span>
+   &#160;<span id="projectnumber">5.0.1</span>
    </div>
   </td>
  </tr>
@@ -325,6 +325,12 @@ Functions</h2></td></tr>
 <tr class="separator:aa69de55cf8cae77bea99419a278bf436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a897a62e960b3fe0f95a529fe911eff7d"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a897a62e960b3fe0f95a529fe911eff7d">round2</a> (double _x)</td></tr>
 <tr class="separator:a897a62e960b3fe0f95a529fe911eff7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a245be608b49628752ed042179cd818fc"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a245be608b49628752ed042179cd818fc"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a245be608b49628752ed042179cd818fc">clip</a> (const T &amp;val, const T &amp;lower, const T &amp;upper)</td></tr>
+<tr class="separator:a245be608b49628752ed042179cd818fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac03ac59520bf6338921471e34af439bb"><td class="memTemplParams" colspan="2">template&lt;typename DerivedA , typename DerivedB &gt; </td></tr>
+<tr class="memitem:ac03ac59520bf6338921471e34af439bb"><td class="memTemplItemLeft" align="right" valign="top">DerivedA::PlainObject&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#ac03ac59520bf6338921471e34af439bb">clip</a> (const Eigen::MatrixBase&lt; DerivedA &gt; &amp;val, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;lower, const Eigen::MatrixBase&lt; DerivedB &gt; &amp;upper)</td></tr>
+<tr class="separator:ac03ac59520bf6338921471e34af439bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3660a2b791e39ec186f8632c94ba0dbb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a3660a2b791e39ec186f8632c94ba0dbb">isEqual</a> (double _x, double _y)</td></tr>
 <tr class="separator:a3660a2b791e39ec186f8632c94ba0dbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecdb589c0ea301a4d55e79780479b0b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#aecdb589c0ea301a4d55e79780479b0b3">isInt</a> (double _x)</td></tr>
@@ -942,6 +948,90 @@ template&lt;typename Derived &gt; </div>
           <td class="paramtype">double&#160;</td>
           <td class="paramname"><em>_X</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a245be608b49628752ed042179cd818fc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T dart::math::clip </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>upper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac03ac59520bf6338921471e34af439bb"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DerivedA , typename DerivedB &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DerivedA::PlainObject dart::math::clip </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedA &gt; &amp;&#160;</td>
+          <td class="paramname"><em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
+          <td class="paramname"><em>lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixBase&lt; DerivedB &gt; &amp;&#160;</td>
+          <td class="paramname"><em>upper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -2388,7 +2478,7 @@ template&lt;int N&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../d8/d96/namespacedart_1_1math.html">math</a></li>
-    <li class="footer">Generated on Mon Jul 20 2015 22:12:32 for DART by
+    <li class="footer">Generated on Tue Jul 28 2015 02:56:54 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

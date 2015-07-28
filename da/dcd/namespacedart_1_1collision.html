@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.0</span>
+   &#160;<span id="projectnumber">5.0.1</span>
    </div>
   </td>
  </tr>
@@ -192,6 +192,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a08bd57b99fd849714e3055df554b04bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/namespacedart_1_1collision.html#a08bd57b99fd849714e3055df554b04bc">btGetInfinityMask</a> ()</td></tr>
 <tr class="memdesc:a08bd57b99fd849714e3055df554b04bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy inline function to suppress unused-variable warning from bullet.  <a href="#a08bd57b99fd849714e3055df554b04bc">More...</a><br /></td></tr>
 <tr class="separator:a08bd57b99fd849714e3055df554b04bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33f6efb853aab20a67e08c7f58e16ae5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/namespacedart_1_1collision.html#a33f6efb853aab20a67e08c7f58e16ae5">isValidIndex</a> (const std::vector&lt; std::vector&lt; bool &gt;&gt; &amp;_collidablePairs, const std::size_t _index1, const std::size_t _index2)</td></tr>
+<tr class="separator:a33f6efb853aab20a67e08c7f58e16ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ba103455befd217da9a68983578bd34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/namespacedart_1_1collision.html#a2ba103455befd217da9a68983578bd34">convVector</a> (const Eigen::Vector3d &amp;p0, <a class="el" href="../../da/dcd/namespacedart_1_1collision.html#a06cbc8d8bf1b517485a30f5fb5f59c7e">dVector3</a> &amp;p1)</td></tr>
 <tr class="separator:a2ba103455befd217da9a68983578bd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5963bdaf13514a32a6a6ca2927e7fa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/namespacedart_1_1collision.html#ae5963bdaf13514a32a6a6ca2927e7fa4">convMatrix</a> (const Eigen::Isometry3d &amp;T0, <a class="el" href="../../da/dcd/namespacedart_1_1collision.html#a41017ac8839d38f79668c697222cddbb">dMatrix3</a> &amp;R0)</td></tr>
@@ -1674,6 +1676,38 @@ template&lt;class BV &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a33f6efb853aab20a67e08c7f58e16ae5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dart::collision::isValidIndex </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; bool &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>_collidablePairs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::size_t&#160;</td>
+          <td class="paramname"><em>_index1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::size_t&#160;</td>
+          <td class="paramname"><em>_index2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a class="anchor" id="a80ba017c7bf196a9663e0a9d3cd8578b"></a>
 <div class="memitem">
@@ -1741,7 +1775,7 @@ template&lt;class BV &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../da/dcd/namespacedart_1_1collision.html">collision</a></li>
-    <li class="footer">Generated on Mon Jul 20 2015 22:12:30 for DART by
+    <li class="footer">Generated on Tue Jul 28 2015 02:56:53 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
