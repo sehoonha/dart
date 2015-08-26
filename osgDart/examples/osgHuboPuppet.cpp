@@ -729,9 +729,66 @@ public:
       l_hand(_robot->getEndEffector("l_hand")),
       r_hand(_robot->getEndEffector("r_hand"))
   {
+    for(size_t i=0; i < 3; ++i)
+    {
+      mHubo->getDof(i)->setPositionLimits(-90.0*M_PI/180.0, 90.0*M_PI/180.0);
+      mHubo->getDof(i)->setVelocityLimits(-100, 100);
+    }
+
+    for(size_t i=3; i < 6; ++i)
+    {
+      mHubo->getDof(i)->setPositionLimits(-2.0, 2.0);
+      mHubo->getDof(i)->setVelocityLimits(-100, 100);
+    }
+
     mMoveComponents.resize(NUM_MOVE, false);
     mAnyMovement = false;
     mAmplifyMovement = false;
+
+    mSavedState = createClone(mHubo, Eigen::Vector4d(0.0, 0.67, 0.66, 0.2));
+    mWorld->addSkeleton(mSavedState);
+    mWorld->getConstraintSolver()->getCollisionDetector()->removeSkeleton(mSavedState);
+
+    mMaxVelocities.resize(mHubo->getNumDofs());
+    mMaxAccelerations.resize(mHubo->getNumDofs());
+    for(size_t i=0; i < mHubo->getNumDofs(); ++i)
+    {
+      mDofs.push_back(i);
+      DegreeOfFreedom* dof = mHubo->getDof(i);
+      mMaxVelocities[i] = dof->getVelocityUpperLimit();
+      mMaxAccelerations[i] = dof->getAccelerationUpperLimit();
+    }
+
+    mPlanner.world = mWorld;
+    mPlanner.solver = mHubo->getIK(true)->getSolver();
+    mPlayTrajectory = false;
+  }
+
+  SkeletonPtr createClone(const SkeletonPtr& original,
+                          const Eigen::Vector4d& color)
+  {
+    SkeletonPtr clone = original->clone();
+
+    for(size_t i=0; i < clone->getNumBodyNodes(); ++i)
+    {
+      BodyNode* bn = clone->getBodyNode(i);
+      for(int j=bn->getNumVisualizationShapes()-1; j >= 0; --j)
+      {
+        ShapePtr shape = bn->getVisualizationShape(j);
+        bn->removeVisualizationShape(shape);
+
+        if(MeshShapePtr mesh = std::dynamic_pointer_cast<MeshShape>(shape))
+        {
+          MeshShapePtr newMesh = std::make_shared<MeshShape>(
+                mesh->getScale(), mesh->getMesh(), mesh->getMeshPath(), nullptr);
+          newMesh->setColor(color);
+          newMesh->setColorMode(MeshShape::SHAPE_COLOR);
+          bn->addVisualizationShape(newMesh);
+        }
+      }
+    }
+
+    return clone;
   }
 
   void setMovement(const std::vector<bool>& moveComponents)
@@ -750,8 +807,56 @@ public:
     }
   }
 
+  void resetSavedState()
+  {
+    mSavedState->setPositions(mHubo->getPositions());
+  }
+
+  void generateTrajectory()
+  {
+    std::cout << "Planning path..." << std::endl;
+    Eigen::VectorXd original = mHubo->getPositions();
+
+    mRawPath.clear();
+    if(!mPlanner.planPath(mHubo, mDofs, mSavedState->getPositions(),
+                          original, mRawPath))
+    {
+      std::cerr << "Failed to plan a path!" << std::endl;
+      mHubo->setPositions(original);
+      mPlayTrajectory = false;
+      return;
+    }
+
+    std::cout << "Generating trajectory..." << std::endl;
+    mPath = std::unique_ptr<dart::planning::Path>(
+          new dart::planning::Path(mRawPath, 0.1));
+
+    mTraj = std::unique_ptr<dart::planning::PathFollowingTrajectory>(
+          new dart::planning::PathFollowingTrajectory(
+            *mPath, mMaxVelocities, mMaxAccelerations));
+
+    mPlayTrajectory = true;
+    mTimer.setStartTick();
+    std::cout << "Finished generating trajectory!\n" << std::endl;
+  }
+
   void customPreRefresh() override
   {
+    if(mPlayTrajectory)
+    {
+      double time = mTimer.time_s();
+      if(time >= mTraj->getDuration())
+      {
+        if(!mRawPath.empty())
+          mHubo->setPositions(mRawPath.back());
+
+        mPlayTrajectory = false;
+        return;
+      }
+
+      mHubo->setPositions(mTraj->getPosition(time));
+    }
+
     if(mAnyMovement)
     {
       Eigen::Isometry3d old_tf = mHubo->getBodyNode(0)->getWorldTransform();
@@ -821,6 +926,7 @@ public:
 protected:
 
   SkeletonPtr mHubo;
+  SkeletonPtr mSavedState;
   size_t iter;
 
   EndEffectorPtr l_foot;
@@ -831,12 +937,23 @@ protected:
 
   std::vector<IK::Analytical::Solution> mSolutions;
 
-  Eigen::VectorXd grad;
-
   // Order: q, w, e, a, s, d
   std::vector<bool> mMoveComponents;
 
   bool mAnyMovement;
+
+  std::vector<size_t> mDofs;
+  dart::planning::PathPlanner<> mPlanner;
+  std::unique_ptr<dart::planning::Path> mPath;
+  std::unique_ptr<dart::planning::PathFollowingTrajectory> mTraj;
+  std::list<Eigen::VectorXd> mRawPath;
+
+  Eigen::VectorXd mMaxVelocities;
+  Eigen::VectorXd mMaxAccelerations;
+
+  bool mPlayTrajectory;
+
+  osg::Timer mTimer;
 };
 
 class InputHandler : public osgGA::GUIEventHandler
@@ -892,12 +1009,14 @@ public:
     {
       if( ea.getKey() == osgGA::GUIEventAdapter::KEY_Tab )
       {
-        if(mViewer->isRecording())
-          mViewer->pauseRecording();
-        else
-          mViewer->record("/home/grey/dump");
+        mTeleop->resetSavedState();
+        return true;
+      }
 
-        mViewer->captureScreen("/home/grey/dump/capture.png");
+      if( ea.getKey() == ' ' )
+      {
+        mTeleop->generateTrajectory();
+        return true;
       }
 
       if( ea.getKey() == 'p' )
