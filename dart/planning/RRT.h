@@ -35,15 +35,17 @@
 
 /** 
  * @file RRT.h
- * @author Tobias Kunz, Can Erdogan
+ * @author Tobias Kunz, Can Erdogan, Michael X. Grey
  * @date Jan 31, 2013
  * @brief The generic RRT implementation. It can be inherited for modifications to collision
  * checking, sampling and etc.
  */
 
-#pragma once
+#ifndef DART_PLANNER_RRT
+#define DART_PLANNER_RRT
 
 #include <vector>
+#include <random>
 #include <list>
 #include <Eigen/Core>
 
@@ -71,38 +73,55 @@ public:
 	EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
 	/// The result of attempting to create a new node to reach a target node
-	typedef enum {
+  enum StepResult {
 		STEP_COLLISION, // Collided with obstacle. No node added.
 		STEP_REACHED,	 // The target node is closer than step size (so reached). No node added.
 		STEP_PROGRESS	 // One node added.
-	} StepResult;
+  };
 
 public:
-	// Initialization constants and search variables
+  // Initialization constants and search variables
+  double mStepSize;	///< Step size at each node creation
 
-	const int ndim;				 ///< Number of dof we can manipulate (may be less than robot's)
-	const double stepSize;	///< Step size at each node creation
-
-	int activeNode;	 								///< Last added node or the nearest node found after a search
-	std::vector<int> parentVector;		///< The ith node in configVector has parent with index pV[i]
+  int mActiveNode;	 								///< Last added node or the nearest node found after a search
+  std::vector<int> mParentVectors;		///< The ith node in configVector has parent with index pV[i]
 
 	/// All visited configs
 	// NOTE We are using pointers for the VectorXd's because flann copies the pointers for the
 	// data points and we give it the copies made in the heap
-	std::vector<const Eigen::VectorXd*> configVector; 	
+  std::vector< std::unique_ptr<const Eigen::VectorXd> > mConfigs;
 
 public:
 
-	//// Constructor with a single root 
-    RRT(dart::simulation::WorldPtr world, dart::dynamics::SkeletonPtr robot, const std::vector<size_t> &dofs, const Eigen::VectorXd &root,
-      double stepSize = 0.02);
+  /// Default constructor
+  RRT();
+
+  /// Constructor with a single root
+  RRT(const dart::simulation::WorldPtr& mWorld,
+      const dart::dynamics::SkeletonPtr& mRobot,
+      const std::vector<size_t>& mDofs,
+      const Eigen::VectorXd& root,
+      double mStepSize = 0.02,
+      const std::shared_ptr<optimizer::Solver>& solver = nullptr);
 
 	/// Constructor with multiple roots (so, multiple trees)
-    RRT(simulation::WorldPtr world, dynamics::SkeletonPtr robot, const std::vector<size_t> &dofs,
-			const std::vector<Eigen::VectorXd> &roots, double stepSize = 0.02);
+  RRT(const simulation::WorldPtr& mWorld,
+      const dynamics::SkeletonPtr& mRobot,
+      const std::vector<size_t>& mDofs,
+      const std::vector<Eigen::VectorXd>& roots,
+      double mStepSize = 0.02,
+      const std::shared_ptr<optimizer::Solver>& solver = nullptr);
 
 	/// Destructor
-	virtual ~RRT() {}
+  virtual ~RRT();
+
+  /// Reset this RRT so that it can be reused
+  void reset(const dart::simulation::WorldPtr& mWorld,
+             const dart::dynamics::SkeletonPtr& mRobot,
+             const std::vector<size_t>& mDofs,
+             const std::vector<Eigen::VectorXd>& roots,
+             double mStepSize = 0.02,
+             const std::shared_ptr<optimizer::Solver>& solver = nullptr);
 
 	/// Reach for a random node by repeatedly extending nodes from the nearest neighbor in the tree.
 	/// Stop if there is a collision.
@@ -156,12 +175,21 @@ public:
 
 protected:
 
-  simulation::WorldPtr world;                 ///< The world that the robot is in
-  dynamics::SkeletonPtr robot;        ///< The ID of the robot for which a plan is generated
-	std::vector<size_t> dofs;                    ///< The dofs of the robot the planner can manipulate
+  simulation::WorldPtr mWorld;                 ///< The world that the robot is in
+  dynamics::SkeletonPtr mRobot;        ///< The ID of the robot for which a plan is generated
+  std::vector<size_t> mDofs;                    ///< The dofs of the robot the planner can manipulate
+
+  /// Randomization device
+  std::random_device mRD;
+
+  /// Mersene twister method
+  mutable std::mt19937 mMT;
+
+  /// Distribution
+  mutable std::uniform_real_distribution<double> mDistribution;
 
 	/// The underlying flann data structure for fast nearest neighbor searches 
-	flann::Index<flann::L2<double> >* index;
+  std::unique_ptr< flann::Index< flann::L2<double> > > mIndex;
 
 	/// Returns a random value between the given minimum and maximum value
   double randomInRange(double min, double max) const;
@@ -170,7 +198,7 @@ protected:
 	virtual int getNearestNeighbor(const Eigen::VectorXd &qsamp);
 
 	/// Adds a new node to the tree
-	virtual int addNode(const Eigen::VectorXd &qnew, int parentId);
+  virtual int addNode(const Eigen::VectorXd& qnew, int parentId);
 
   std::shared_ptr<optimizer::Solver> mSolver;
 
@@ -178,3 +206,5 @@ protected:
 
 } // namespace planning
 } // namespace dart
+
+#endif // DART_PLANNER_RRT

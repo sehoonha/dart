@@ -35,7 +35,7 @@
 
 /** 
  * @file RRT.cpp
- * @author Tobias Kunz, Can Erdogan, Michael Grey
+ * @author Tobias Kunz, Can Erdogan, Michael X. Grey
  * @date Jan 31, 2013
  * @brief The generic RRT implementation. It can be inherited for modifications to collision
  * checking, sampling and etc.
@@ -57,36 +57,61 @@ namespace dart {
 namespace planning {
 
 /* ********************************************************************************************* */
-RRT::RRT(WorldPtr world, SkeletonPtr robot, const std::vector<size_t> &dofs,
-  const VectorXd &root, double stepSize) :
-  ndim(dofs.size()),
-  stepSize(stepSize),
-	world(world),
-	robot(robot),
-	dofs(dofs),
-  index(new flann::Index<flann::L2<double> >(flann::KDTreeSingleIndexParams()))
+RRT::RRT(const WorldPtr& world, const SkeletonPtr& robot,
+         const std::vector<size_t>& dofs,
+         const VectorXd& root, double stepSize,
+         const std::shared_ptr<optimizer::Solver>& solver)
+  : mRD(),
+    mMT(mRD()),
+    mDistribution(0.0, std::nextafter(1.0, 2.0)) // This allows mDistribution to produce numbers in the range [0,1] inclusive
 {
-  mSolver = std::make_shared<optimizer::GradientDescentSolver>();
-	// Reset the random number generator and add the given start configuration to the flann structure
-  srand(time(nullptr));
-	addNode(root, -1);
+  std::vector<Eigen::VectorXd> roots;
+  roots.push_back(root);
+  reset(world, robot, dofs, roots, stepSize, solver);
 }
 
 /* ********************************************************************************************* */
-RRT::RRT(WorldPtr world, SkeletonPtr robot, const std::vector<size_t> &dofs, const vector<VectorXd> &roots, double stepSize) :
-  ndim(dofs.size()),
-  stepSize(stepSize),
-	world(world),
-	robot(robot),
-	dofs(dofs),
-	index(new flann::Index<flann::L2<double> >(flann::KDTreeSingleIndexParams()))
+RRT::RRT(const WorldPtr& world, const SkeletonPtr& robot,
+         const std::vector<size_t>& dofs,
+         const vector<VectorXd>& roots, double stepSize,
+         const std::shared_ptr<optimizer::Solver>& solver)
+  : mRD(),
+    mMT(mRD()),
+    mDistribution(0.0, std::nextafter(1.0, 2.0)) // This allows mDistribution to produce numbers in the range [0,1] inclusive
 {
-	// Reset the random number generator and add the given start configurations to the flann structure
-  srand(time(nullptr));
-  for(size_t i = 0; i < roots.size(); i++) {
-		addNode(roots[i], -1);
-	}
+  reset(world, robot, dofs, roots, stepSize, solver);
 }
+
+/* ********************************************************************************************* */
+RRT::~RRT()
+{
+  // Do nothing
+}
+
+/* ********************************************************************************************* */
+void RRT::reset(const WorldPtr& world, const SkeletonPtr& robot,
+                const std::vector<size_t>& dofs,
+                const std::vector<VectorXd>& roots, double stepSize,
+                const std::shared_ptr<optimizer::Solver>& solver)
+{
+  mIndex = std::unique_ptr< flann::Index< flann::L2<double> > >(
+        new flann::Index<flann::L2<double> >(flann::KDTreeSingleIndexParams()));
+
+  mWorld = world;
+  mRobot = robot;
+  mDofs = dofs;
+  mStepSize = stepSize;
+  mSolver = solver;
+
+  mParentVectors.clear();
+  mConfigs.clear();
+
+  for(size_t i = 0; i < roots.size(); i++)
+  {
+    addNode(roots[i], -1);
+  }
+}
+
 
 /* ********************************************************************************************* */
 bool RRT::connect() {
@@ -104,7 +129,7 @@ bool RRT::connect(const VectorXd &target) {
 	StepResult result = STEP_PROGRESS;
 	while(result == STEP_PROGRESS) {
 		result = tryStepFromNode(target, NNidx);
-		NNidx = configVector.size() - 1;
+    NNidx = mConfigs.size() - 1;
 	}
 	return (result == STEP_REACHED);
 }
@@ -125,13 +150,13 @@ RRT::StepResult RRT::tryStep(const VectorXd &qtry) {
 RRT::StepResult RRT::tryStepFromNode(const VectorXd &qtry, int NNidx) {
 
 	// Get the configuration of the nearest neighbor and check if already reached
-	const VectorXd& qnear = *(configVector[NNidx]);
-	if((qtry - qnear).norm() < stepSize) {
+  const VectorXd& qnear = *(mConfigs[NNidx]);
+  if((qtry - qnear).norm() < mStepSize) {
 		return STEP_REACHED;
 	}
 
 	// Create the new node: scale the direction vector to stepSize and add to qnear
-	VectorXd qnew = qnear + stepSize * (qtry - qnear).normalized();
+  VectorXd qnew = qnear + mStepSize * (qtry - qnear).normalized();
 
 	// Check for collision, make changes to the qNew and create intermediate points if necessary
 	// NOTE: This is largely implementation dependent and in default, no points are created.
@@ -148,7 +173,8 @@ RRT::StepResult RRT::tryStepFromNode(const VectorXd &qtry, int NNidx) {
 }
 
 /* ********************************************************************************************* */
-bool RRT::newConfig(list<VectorXd> &intermediatePoints, VectorXd &qnew, const VectorXd &qnear, const VectorXd &qtarget) {
+bool RRT::newConfig(list<VectorXd>& /*intermediatePoints*/, VectorXd& qnew,
+                    const VectorXd& /*qnear*/, const VectorXd& /*qtarget*/) {
 
   if(mSolver && mSolver->getProblem())
   {
@@ -173,61 +199,70 @@ bool RRT::newConfig(list<VectorXd> &intermediatePoints, VectorXd &qnew, const Ve
 }
 
 /* ********************************************************************************************* */
-int RRT::addNode(const VectorXd &qnew, int parentId) {
-	
-	// Update the graph vector
-	VectorXd* temp = new VectorXd(qnew);
-	configVector.push_back(temp);
-	parentVector.push_back(parentId);
+int RRT::addNode(const VectorXd& qnew, int parentId)
+{
+  // Update the graph vector
+  mConfigs.push_back(std::unique_ptr<VectorXd>(new VectorXd(qnew)));
+  mParentVectors.push_back(parentId);
+
+  const std::unique_ptr<const Eigen::VectorXd>& vec = mConfigs.back();
 
 	// Update the underlying flann structure (the kdtree)
-	unsigned int id = configVector.size() - 1;
-	if(id == 0) 
-		index->buildIndex(flann::Matrix<double>((double*)temp->data(), 1, temp->size()));
-	else 
-		index->addPoints(flann::Matrix<double>((double*)temp->data(), 1, temp->size()));
-	
-	activeNode = id;
+  unsigned int id = mConfigs.size() - 1;
+  if(id == 0)
+    mIndex->buildIndex(flann::Matrix<double>((double*)vec->data(), 1, vec->size()));
+  else
+    mIndex->addPoints(flann::Matrix<double>((double*)vec->data(), 1, vec->size()));
+
+  mActiveNode = id;
 	return id;
 }
 
 /* ********************************************************************************************* */
-inline int RRT::getNearestNeighbor(const VectorXd &qsamp) {
+inline int RRT::getNearestNeighbor(const VectorXd& qsamp)
+{
 	int nearest;
 	double distance;
 	const flann::Matrix<double> queryMatrix((double*)qsamp.data(), 1, qsamp.size());
 	flann::Matrix<int> nearestMatrix(&nearest, 1, 1);
 	flann::Matrix<double> distanceMatrix(flann::Matrix<double>(&distance, 1, 1));
-	index->knnSearch(queryMatrix, nearestMatrix, distanceMatrix, 1, 
+  mIndex->knnSearch(queryMatrix, nearestMatrix, distanceMatrix, 1,
 		flann::SearchParams(flann::FLANN_CHECKS_UNLIMITED));
-	activeNode = nearest;
+  mActiveNode = nearest;
 	return nearest;
 }
 
 /* ********************************************************************************************* */
 // random # between min & max
-inline double RRT::randomInRange(double min, double max) const {
+inline double RRT::randomInRange(double min, double max) const
+{
 	assert(max - min >= 0.0);
 	assert(max - min < numeric_limits<double>::infinity());
 
-	if(min == max) return min;
-	return min + ((max-min) * ((double)rand() / ((double)RAND_MAX + 1)));
+  if(min == max)
+    return min;
+
+  return min + ((max-min) * mDistribution(mMT));
 }
 
 /* ********************************************************************************************* */
 VectorXd RRT::getRandomConfig() const {
 	// Samples a random point for qtmp in the configuration space, bounded by the provided 
 	// configuration vectors (and returns ref to it)
-	VectorXd config(ndim);
-	for (int i = 0; i < ndim; ++i) {
-    config[i] = randomInRange(robot->getPositionLowerLimit(dofs[i]), robot->getPositionUpperLimit(dofs[i]));
+  VectorXd config(mDofs.size());
+  for (size_t i = 0; i < mDofs.size(); ++i)
+  {
+    config[i] = randomInRange(mRobot->getPositionLowerLimit(mDofs[i]),
+                              mRobot->getPositionUpperLimit(mDofs[i]));
 	}
+
 	return config;
 }
 
 /* ********************************************************************************************* */
-double RRT::getGap(const VectorXd &target) {
-	return (target - *(configVector[activeNode])).norm();
+double RRT::getGap(const VectorXd& target)
+{
+  return (target - *(mConfigs[mActiveNode])).norm();
 }
 
 /* ********************************************************************************************* */
@@ -236,21 +271,22 @@ void RRT::tracePath(int node, std::list<VectorXd> &path, bool reverse) {
 	// Keep following the "linked list" in the given direction
 	int x = node;
 	while(x != -1) {
-		if(!reverse) path.push_front(*(configVector[x]));	
-		else path.push_back(*(configVector[x]));
-		x = parentVector[x];
+    if(!reverse) path.push_front(*(mConfigs[x]));
+    else path.push_back(*(mConfigs[x]));
+    x = mParentVectors[x];
 	}
 }
 
 /* ********************************************************************************************* */
 bool RRT::checkCollisions(const VectorXd &c) const {
-  robot->setPositions(dofs, c);
-	return world->checkCollision();
+  mRobot->setPositions(mDofs, c);
+  return mWorld->checkCollision();
 }
 
 /* ********************************************************************************************* */
-size_t RRT::getSize() const {
-	return configVector.size();
+size_t RRT::getSize() const
+{
+  return mConfigs.size();
 }
 
 } // namespace planning
