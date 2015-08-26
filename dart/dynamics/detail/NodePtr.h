@@ -222,7 +222,7 @@ public:
     }
 
     mWeakBodyNodePtr = _ptr->getBodyNodePtr();
-    mWeakCleaner = _ptr->mCleaner;
+    mWeakCleaner = _ptr->generateCleaner();
     mNode = _ptr;
   }
 

@@ -43,6 +43,7 @@
 #include "dart/dynamics/MetaSkeleton.h"
 #include "dart/dynamics/SmartPointer.h"
 #include "dart/dynamics/HierarchicalIK.h"
+#include "dart/dynamics/EndEffector.h"
 
 namespace dart {
 namespace renderer {
@@ -53,12 +54,13 @@ class RenderInterface;
 namespace dart {
 namespace dynamics {
 
-class EndEffector;
-
 /// class Skeleton
 class Skeleton : public MetaSkeleton
 {
 public:
+
+  using NodeMap = std::map<std::type_index, std::vector<Node*> >;
+  using NodeNameMgrMap = std::map< std::type_index, common::NameManager<Node*> >;
 
   struct Properties
   {
@@ -326,20 +328,44 @@ public:
   /// Get the DegreesOfFreedom belonging to a tree in this Skeleton
   const std::vector<const DegreeOfFreedom*>& getTreeDofs(size_t _treeIdx) const;
 
-  /// Get the number of EndEffectors on this Skeleton
-  size_t getNumEndEffectors() const;
+  /// Get the number of Nodes of the specified type in this Skeleton
+  template <class NodeType>
+  size_t getNumNodes() const;
 
-  /// Get EndEffector whose index is _idx
-  EndEffector* getEndEffector(size_t _idx);
+  /// Get the number of Nodes of the specified type that are in a tree within
+  /// this Skeleton
+  template <class NodeType>
+  size_t getNumNodes(size_t treeIndex) const;
 
-  /// Get EndEffector whose index is _idx
-  const EndEffector* getEndEffector(size_t _idx) const;
+  /// Get the indexth Node of the specified type within this Skeleton
+  template <class NodeType>
+  NodeType* getNode(size_t index);
 
-  /// Get EndEffector whose name is _name
-  EndEffector* getEndEffector(const std::string& _name);
+  /// Get the nodeIndexth Node of the specified type within the the tree of
+  /// treeIndex
+  template <class NodeType>
+  NodeType* getNode(size_t nodeIndex, size_t treeIndex);
 
-  /// Get EndEffector whose name is _name
-  const EndEffector* getEndEffector(const std::string &_name) const;
+  /// Get the indexth Node of the specified type within this Skeleton
+  template <class NodeType>
+  const NodeType* getNode(size_t index) const;
+
+  /// Get the nodeIndexth Node of the specified type within the the tree of
+  /// treeIndex
+  template <class NodeType>
+  const NodeType* getNode(size_t nodeIndex, size_t treeIndex) const;
+
+  /// Get the Node of the specified type within this Skeleton that has the
+  /// specified name
+  template <class NodeType>
+  NodeType* getNode(const std::string& name);
+
+  /// Get the Node of the specified type within this Skeleton that has the
+  /// specified name
+  template <class NodeType>
+  const NodeType* getNode(const std::string& name) const;
+
+  DART_SKEL_SPECIALIZE_NODE_INTERNAL( EndEffector )
 
   /// Get a pointer to a WholeBodyIK module for this Skeleton. If _createIfNull
   /// is true, then the IK module will be generated if one does not already
@@ -820,6 +846,7 @@ public:
   friend class SingleDofJoint;
   template<size_t> friend class MultiDofJoint;
   friend class DegreeOfFreedom;
+  friend class Node;
   friend class EndEffector;
 
 protected:
@@ -831,14 +858,23 @@ protected:
   /// Setup this Skeleton with its shared_ptr
   void setPtr(const SkeletonPtr& _ptr);
 
+  /// Construct a new tree in the Skeleton
+  void constructNewTree();
+
   /// Register a BodyNode with the Skeleton. Internal use only.
   void registerBodyNode(BodyNode* _newBodyNode);
 
   /// Register a Joint with the Skeleton. Internal use only.
   void registerJoint(Joint* _newJoint);
 
-  /// Register an EndEffector with the Skeleton. Internal use only.
-  void registerEndEffector(EndEffector* _newEndEffector);
+  /// Register a Node with the Skeleton. Internal use only.
+  void registerNode(DataCache& cache, Node* _newNode, size_t& _index);
+
+  /// Register a Node with the Skeleton. Internal use only.
+  void registerNode(Node* _newNode);
+
+  /// Remove an old tree from the Skeleton
+  void destructOldTree(size_t tree);
 
   /// Remove a BodyNode from the Skeleton. Internal use only.
   void unregisterBodyNode(BodyNode* _oldBodyNode);
@@ -846,8 +882,11 @@ protected:
   /// Remove a Joint from the Skeleton. Internal use only.
   void unregisterJoint(Joint* _oldJoint);
 
-  /// Remove an EndEffector from the Skeleton. Internal use only.
-  void unregisterEndEffector(EndEffector* _oldEndEffector);
+  /// Remove a Node from the Skeleton. Internal use only.
+  void unregisterNode(DataCache& cache, Node* _oldNode, size_t& _index);
+
+  /// Remove a Node from the Skeleton. Internal use only.
+  void unregisterNode(Node* _oldNode);
 
   /// Move a subtree of BodyNodes from this Skeleton to another Skeleton
   bool moveBodyNodeTree(Joint* _parentJoint, BodyNode* _bodyNode,
@@ -972,9 +1011,6 @@ protected:
   /// Add a Joint to to the Joint NameManager
   const std::string& addEntryToJointNameMgr(Joint* _newJoint, bool _updateDofNames=true);
 
-  /// Add an EndEffector to the EndEffector NameManager
-  void addEntryToEndEffectorNameMgr(EndEffector* _ee);
-
   /// Add a SoftBodyNode to the SoftBodyNode NameManager
   void addEntryToSoftBodyNodeNameMgr(SoftBodyNode* _newNode);
 
@@ -1017,7 +1053,7 @@ protected:
   dart::common::NameManager<Marker*> mNameMgrForMarkers;
 
   /// NameManager for tracking EndEffectors
-  dart::common::NameManager<EndEffector*> mNameMgrForEndEffectors;
+  NodeNameMgrMap mNodeNameMgrMap;
 
   /// WholeBodyIK module for this Skeleton
   std::shared_ptr<WholeBodyIK> mWholeBodyIK;
@@ -1081,6 +1117,9 @@ protected:
     /// Cache for const Degrees of Freedom, for the sake of the API
     std::vector<const DegreeOfFreedom*> mConstDofs;
 
+    /// Map that retrieves the Nodes of a specified type
+    NodeMap mNodeMap;
+
     /// Mass matrix cache
     Eigen::MatrixXd mM;
 
@@ -1131,6 +1170,10 @@ protected:
 
   mutable DataCache mSkelCache;
 
+  using SpecializedTreeNodes = std::map<std::type_index, std::vector<NodeMap::iterator>*>;
+
+  SpecializedTreeNodes mSpecializedTreeNodes;
+
   /// Total mass.
   double mTotalMass;
 
@@ -1165,9 +1208,11 @@ public:
   EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 };
 
-#include "dart/dynamics/detail/Skeleton.h"
+DART_SKEL_SPECIALIZE_NODE_EXTERNAL( Skeleton, EndEffector )
 
 }  // namespace dynamics
 }  // namespace dart
+
+#include "dart/dynamics/detail/Skeleton.h"
 
 #endif  // DART_DYNAMICS_SKELETON_H_

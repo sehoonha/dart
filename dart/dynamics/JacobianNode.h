@@ -53,15 +53,9 @@ class InverseKinematics;
 /// The JacobianNode class serves as a common interface for BodyNodes and
 /// EndEffectors to both be used as references for IK modules. This is a pure
 /// abstract class.
-class JacobianNode : public virtual Frame, public virtual Node
+class JacobianNode : public virtual Frame, public Node
 {
 public:
-
-  /// This constructor only exists as a formality, because Entity and Frame
-  /// require it. Since this class is pure abstract and virutally inherits
-  /// Frame, the most derived class needs to call the constructor of Entity and
-  /// Frame anyway.
-  JacobianNode();
 
   /// Virtual destructor
   virtual ~JacobianNode();
@@ -86,6 +80,12 @@ public:
   //----------------------------------------------------------------------------
   /// \{ \name Structural Properties
   //----------------------------------------------------------------------------
+
+  // Documentation inherited
+  const std::string& setName(const std::string& _name) override = 0;
+
+  // Documentation inherited
+  const std::string& getName() const override final;
 
   /// Return the Skeleton this JacobianNode is attached to
   virtual std::shared_ptr<Skeleton> getSkeleton() = 0;
@@ -270,6 +270,9 @@ public:
   /// \}
 
 protected:
+
+  /// Constructor
+  JacobianNode(BodyNode* bn);
 
   /// Inverse kinematics module which gets lazily created upon request
   mutable std::shared_ptr<InverseKinematics> mIK;

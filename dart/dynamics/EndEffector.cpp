@@ -43,22 +43,89 @@ namespace dart {
 namespace dynamics {
 
 //==============================================================================
+Support::State::Data::Data(bool active)
+  : mActive(active)
+{
+  // Do nothing
+}
+
+//==============================================================================
+Support::State::State(bool active)
+  : mData(active)
+{
+  // Do nothing
+}
+
+//==============================================================================
 Support::Support(EndEffector* _ee)
-  : mActive(false),
+  : common::Addon(_ee, "Support"),
     mEndEffector(_ee)
 {
   if(nullptr == mEndEffector)
   {
-    dterr << "[Support::Support] It is not permissible to construct a Support "
-          << "with a nullptr EndEffector!\n";
+    dterr << "[Support::constructor] It is not permissible to construct a "
+          << "Support with a nullptr EndEffector!\n";
     assert(false);
   }
+
+  setStatePtr(&mState);
+  setPropertiesPtr(&mProperties);
+}
+
+//==============================================================================
+Support::Support(EndEffector *_ee, const Support& otherSupport)
+  : common::Addon(_ee, "Support"),
+    mEndEffector(_ee)
+{
+  if(nullptr == mEndEffector)
+  {
+    dterr << "[Support::constructor] It is not permissible to construct a "
+          << "Support with a nullptr EndEffector!\n";
+    assert(false);
+  }
+
+  mState = otherSupport.mState;
+  mProperties = otherSupport.mProperties;
+
+  setStatePtr(&mState);
+  setPropertiesPtr(&mProperties);
+}
+
+//==============================================================================
+std::unique_ptr<common::Addon> Support::clone(
+    common::AddonManager* newManager) const
+{
+  EndEffector* ee = dynamic_cast<EndEffector*>(newManager);
+  if(nullptr == ee)
+  {
+    dterr << "[Support::clone] Attempting to clone a Support class into an "
+          << "AddonManager which is not an EndEffector. This is not allowed!\n";
+    assert(false);
+    return nullptr;
+  }
+
+  return std::unique_ptr<common::Addon>(new Support(ee, *this));
+}
+
+//==============================================================================
+void Support::setState(const std::unique_ptr<common::Addon::State>& otherState)
+{
+  if(otherState)
+    mState = *static_cast<const State*>(otherState.get());
+}
+
+//==============================================================================
+void Support::setProperties(
+    const std::unique_ptr<common::Addon::Properties>& otherProperties)
+{
+  if(otherProperties)
+    mProperties = *static_cast<const Properties*>(otherProperties.get());
 }
 
 //==============================================================================
 void Support::setGeometry(const math::SupportGeometry& _newSupport)
 {
-  mGeometry = _newSupport;
+  mProperties.mData.mGeometry = _newSupport;
   mEndEffector->getSkeleton()->notifySupportUpdate(
         mEndEffector->getTreeIndex());
 }
@@ -66,16 +133,16 @@ void Support::setGeometry(const math::SupportGeometry& _newSupport)
 //==============================================================================
 const math::SupportGeometry& Support::getGeometry() const
 {
-  return mGeometry;
+  return mProperties.mData.mGeometry;
 }
 
 //==============================================================================
 void Support::setActive(bool _supporting)
 {
-  if(mActive == _supporting)
+  if(mState.mData.mActive == _supporting)
     return;
 
-  mActive = _supporting;
+  mState.mData.mActive = _supporting;
   mEndEffector->getSkeleton()->notifySupportUpdate(
         mEndEffector->getTreeIndex());
 }
@@ -83,12 +150,21 @@ void Support::setActive(bool _supporting)
 //==============================================================================
 bool Support::isActive() const
 {
-  return mActive;
+  return mState.mData.mActive;
 }
 
 //==============================================================================
-EndEffector::UniqueProperties::UniqueProperties(const Eigen::Isometry3d& _defaultTransform,
-    const math::SupportGeometry& _supportGeometry, bool _supporting)
+EndEffector::State::Data::Data(const Eigen::Isometry3d& relativeTransform)
+  : mRelativeTransform(relativeTransform)
+{
+  // Do nothing
+}
+
+//==============================================================================
+EndEffector::UniqueProperties::UniqueProperties(
+    const Eigen::Isometry3d& _defaultTransform,
+    const math::SupportGeometry& _supportGeometry,
+    bool _supporting)
   : mDefaultTransform(_defaultTransform)
 {
   // Do nothing
@@ -102,24 +178,6 @@ EndEffector::Properties::Properties(
     UniqueProperties(_effectorProperties)
 {
   // Do nothing
-}
-
-//==============================================================================
-EndEffector::~EndEffector()
-{
-  size_t index = mIndexInBodyNode;
-  assert(mBodyNode->mEndEffectors[index] == this);
-  mBodyNode->mEndEffectors.erase(mBodyNode->mEndEffectors.begin() + index);
-
-  for(size_t i=index; i<mBodyNode->mEndEffectors.size(); ++i)
-  {
-    EndEffector* ee = mBodyNode->mEndEffectors[i];
-    ee->mIndexInBodyNode = i;
-  }
-
-  SkeletonPtr skel = getSkeleton();
-  if(skel)
-    skel->unregisterEndEffector(this);
 }
 
 //==============================================================================
@@ -178,13 +236,29 @@ const std::string& EndEffector::setName(const std::string& _name)
   if(mEntityP.mName == _name && !_name.empty())
     return mEntityP.mName;
 
-  // Remove the current name entry and add a new name entry
-  getSkeleton()->mNameMgrForEndEffectors.removeName(mEntityP.mName);
-  mEntityP.mName = _name;
-  getSkeleton()->addEntryToEndEffectorNameMgr(this);
+  mEntityP.mName = registerNameChange(_name);
 
   // Return the resulting name, after it has been checked for uniqueness
   return mEntityP.mName;
+}
+
+//==============================================================================
+void EndEffector::setNodeState(
+    const std::unique_ptr<Node::State>& otherState)
+{
+  const State* state = static_cast<const State*>(otherState.get());
+
+  setRelativeTransform(state->mData.mRelativeTransform);
+  setAddonStates(state->mData.mAddonStates);
+}
+
+//==============================================================================
+const Node::State* EndEffector::getNodeState() const
+{
+  mStateCache.mData.mRelativeTransform = getRelativeTransform();
+  getAddonStates(mStateCache.mData.mAddonStates);
+
+  return &mStateCache;
 }
 
 //==============================================================================
@@ -213,29 +287,10 @@ void EndEffector::resetRelativeTransform()
 //==============================================================================
 Support* EndEffector::getSupport(bool _createIfNull)
 {
-  if(nullptr == mSupport && _createIfNull)
+  if(nullptr == getSupport() && _createIfNull)
     createSupport();
 
-  return mSupport.get();
-}
-
-//==============================================================================
-const Support* EndEffector::getSupport() const
-{
-  return mSupport.get();
-}
-
-//==============================================================================
-Support* EndEffector::createSupport()
-{
-  mSupport = std::unique_ptr<Support>(new Support(this));
-  return mSupport.get();
-}
-
-//==============================================================================
-void EndEffector::eraseSupport()
-{
-  mSupport = nullptr;
+  return getSupport();
 }
 
 //==============================================================================
@@ -401,27 +456,28 @@ void EndEffector::notifyVelocityUpdate()
 EndEffector::EndEffector(BodyNode* _parent, const Properties& _properties)
   : Entity(ConstructFrame),
     Frame(_parent, ""),
-    Node(ConstructNode, _parent),
     FixedFrame(_parent, "", _properties.mDefaultTransform),
+    TemplatedJacobianNode<EndEffector>(_parent),
     mIndexInSkeleton(0),
-    mIndexInBodyNode(0),
     mIsEffectorJacobianDirty(true),
     mIsWorldJacobianDirty(true),
     mIsEffectorJacobianSpatialDerivDirty(true),
     mIsWorldJacobianClassicDerivDirty(true)
-
 {
+  DART_INSTANTIATE_SPECIALIZED_ADDON(Support)
   setProperties(_properties);
-
-  _parent->mEndEffectors.push_back(this);
-  mIndexInBodyNode = _parent->mEndEffectors.size()-1;
 }
 
 //==============================================================================
-EndEffector* EndEffector::clone(BodyNode* _parent) const
+Node* EndEffector::cloneNode(BodyNode* _parent) const
 {
   EndEffector* ee = new EndEffector(_parent, Properties());
   ee->copy(this);
+
+  ee->duplicateAddons(this);
+
+  if(mIK)
+    ee->mIK = mIK->clone(ee);
 
   return ee;
 }

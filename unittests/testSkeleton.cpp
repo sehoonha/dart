@@ -560,41 +560,73 @@ TEST(Skeleton, Persistence)
   EXPECT_TRUE(weakSkel.lock() == nullptr);
 }
 
+class GenericNode final : public dart::dynamics::Node,
+                          public AccessoryNode<GenericNode>
+{
+public:
+
+  GenericNode(BodyNode* bn, const std::string& name)
+    : Node(bn), mName(name) { }
+
+  const std::string& setName(const std::string& newName) override
+  {
+    mName = registerNameChange(newName);
+    return mName;
+  }
+
+  const std::string& getName() const override
+  {
+    return mName;
+  }
+
+protected:
+
+  Node* cloneNode(BodyNode* bn) const override
+  {
+    return new GenericNode(bn, mName);
+  }
+
+  std::string mName;
+};
+
 TEST(Skeleton, NodePersistence)
 {
   SkeletonPtr skel = Skeleton::create();
   skel->createJointAndBodyNodePair<FreeJoint>(nullptr);
 
+  //--------------------------------------------------------------------------
+  // Testing EndEffector, which is a specialized Node type
+  //--------------------------------------------------------------------------
   {
     EndEffector* manip =
         skel->getBodyNode(0)->createEndEffector(Entity::Properties("manip"));
 
-    EXPECT_TRUE(skel->getEndEffector("manip") == manip);
-    EXPECT_TRUE(skel->getEndEffector(0) == manip);
-    EXPECT_TRUE(skel->getBodyNode(0)->getEndEffector(0) == manip);
+    EXPECT_EQ(skel->getEndEffector("manip"), manip);
+    EXPECT_EQ(skel->getEndEffector(0), manip);
+    EXPECT_EQ(skel->getBodyNode(0)->getEndEffector(0), manip);
 
     WeakEndEffectorPtr weakManip = manip;
 
-    EXPECT_FALSE(weakManip.lock() == nullptr);
+    EXPECT_NE(weakManip.lock(), nullptr);
 
     manip->remove();
 
     // The Node has been removed, and no strong reference to it exists, so it
     // should be gone from the Skeleton
-    EXPECT_TRUE(skel->getEndEffector("manip") == nullptr);
-    EXPECT_TRUE(skel->getNumEndEffectors() == 0);
-    EXPECT_TRUE(skel->getBodyNode(0)->getNumEndEffectors() == 0);
+    EXPECT_EQ(skel->getEndEffector("manip"), nullptr);
+    EXPECT_EQ(skel->getNumEndEffectors(), 0u);
+    EXPECT_EQ(skel->getBodyNode(0)->getNumEndEffectors(), 0u);
 
-    EXPECT_TRUE(weakManip.lock() == nullptr);
+    EXPECT_EQ(weakManip.lock(), nullptr);
   }
 
   {
     EndEffector* manip =
         skel->getBodyNode(0)->createEndEffector(Entity::Properties("manip"));
 
-    EXPECT_TRUE(skel->getEndEffector("manip") == manip);
-    EXPECT_TRUE(skel->getEndEffector(0) == manip);
-    EXPECT_TRUE(skel->getBodyNode(0)->getEndEffector(0) == manip);
+    EXPECT_EQ(skel->getEndEffector("manip"), manip);
+    EXPECT_EQ(skel->getEndEffector(0), manip);
+    EXPECT_EQ(skel->getBodyNode(0)->getEndEffector(0), manip);
 
     EndEffectorPtr strongManip = manip;
     WeakEndEffectorPtr weakManip = strongManip;
@@ -603,23 +635,110 @@ TEST(Skeleton, NodePersistence)
 
     manip->remove();
 
-    // The Node has been removed, but a strong reference to it still exists, so
-    // it will remain in the Skeleton for now
-    EXPECT_TRUE(skel->getEndEffector("manip") == manip);
-    EXPECT_TRUE(skel->getEndEffector(0) == manip);
-    EXPECT_TRUE(skel->getBodyNode(0)->getEndEffector(0) == manip);
+    // The Node has been removed, so no reference to it will exist in the
+    // Skeleton
+#ifdef NDEBUG // Release Mode
+    EXPECT_NE(skel->getEndEffector("manip"), manip);
+    EXPECT_EQ(skel->getEndEffector("manip"), nullptr);
 
-    EXPECT_FALSE(weakManip.lock() == nullptr);
+    EXPECT_NE(skel->getEndEffector(0), manip);
+    EXPECT_EQ(skel->getEndEffector(0), nullptr);
+#endif        // Release Mode
+
+#ifdef NDEBUG // Release Mode
+    // But it will not remain in the BodyNode's indexing.
+    // Note: We should only run this test in release mode, because otherwise it
+    // will trigger an assertion.
+    EXPECT_NE(skel->getBodyNode(0)->getEndEffector(0), manip);
+    EXPECT_EQ(skel->getBodyNode(0)->getEndEffector(0), nullptr);
+#endif        // Release Mode
+
+    EXPECT_NE(weakManip.lock(), nullptr);
 
     strongManip = nullptr;
 
     // The Node has been removed, and no strong reference to it exists any
     // longer, so it should be gone from the Skeleton
-    EXPECT_TRUE(skel->getEndEffector("manip") == nullptr);
-    EXPECT_TRUE(skel->getNumEndEffectors() == 0);
-    EXPECT_TRUE(skel->getBodyNode(0)->getNumEndEffectors() == 0);
+    EXPECT_EQ(skel->getEndEffector("manip"), nullptr);
+    EXPECT_EQ(skel->getNumEndEffectors(), 0u);
+    EXPECT_EQ(skel->getBodyNode(0)->getNumEndEffectors(), 0u);
 
-    EXPECT_TRUE(weakManip.lock() == nullptr);
+    EXPECT_EQ(weakManip.lock(), nullptr);
+  }
+
+
+  using GenericNodePtr = TemplateNodePtr<GenericNode, BodyNode>;
+  using WeakGenericNodePtr = TemplateWeakNodePtr<GenericNode, BodyNode>;
+  //--------------------------------------------------------------------------
+  // Testing GenericNode, which is NOT a specialized Node type
+  //--------------------------------------------------------------------------
+  {
+    GenericNode* node =
+        skel->getBodyNode(0)->createNode<GenericNode>("node");
+
+    EXPECT_EQ(skel->getNode<GenericNode>("node"), node);
+    EXPECT_EQ(skel->getNode<GenericNode>(0), node);
+    EXPECT_EQ(skel->getBodyNode(0)->getNode<GenericNode>(0), node);
+
+    WeakGenericNodePtr weakNode = node;
+
+    EXPECT_NE(weakNode.lock(), nullptr);
+
+    node->remove();
+
+    // The Node has been removed, and no strong reference to it exists, so it
+    // should be gone from the Skeleton
+    EXPECT_EQ(skel->getNode<GenericNode>("node"), nullptr);
+    EXPECT_EQ(skel->getNumNodes<GenericNode>(), 0u);
+    EXPECT_EQ(skel->getBodyNode(0)->getNumNodes<GenericNode>(), 0u);
+
+    EXPECT_EQ(weakNode.lock(), nullptr);
+  }
+
+  {
+    GenericNode* node =
+        skel->getBodyNode(0)->createNode<GenericNode>("node");
+
+    EXPECT_EQ(skel->getNode<GenericNode>("node"), node);
+    EXPECT_EQ(skel->getNode<GenericNode>(0), node);
+    EXPECT_EQ(skel->getBodyNode(0)->getNode<GenericNode>(0), node);
+
+    GenericNodePtr strongNode = node;
+    WeakGenericNodePtr weakNode = strongNode;
+
+    EXPECT_FALSE(weakNode.lock() == nullptr);
+
+    node->remove();
+
+    // The Node has been removed, so no reference to it will exist in the
+    // Skeleton
+#ifdef NDEBUG // Release Mode
+    EXPECT_NE(skel->getNode<GenericNode>("node"), node);
+    EXPECT_EQ(skel->getNode<GenericNode>("node"), nullptr);
+
+    EXPECT_NE(skel->getNode<GenericNode>(0), node);
+    EXPECT_EQ(skel->getNode<GenericNode>(0), nullptr);
+#endif        // Release Mode
+
+#ifdef NDEBUG // Release Mode
+    // But it will not remain in the BodyNode's indexing.
+    // Note: We should only run this test in release mode, because otherwise it
+    // will trigger an assertion.
+    EXPECT_NE(skel->getBodyNode(0)->getNode<GenericNode>(0), node);
+    EXPECT_EQ(skel->getBodyNode(0)->getNode<GenericNode>(0), nullptr);
+#endif        // Release Mode
+
+    EXPECT_NE(weakNode.lock(), nullptr);
+
+    strongNode = nullptr;
+
+    // The Node has been removed, and no strong reference to it exists any
+    // longer, so it should be gone from the Skeleton
+    EXPECT_EQ(skel->getNode<GenericNode>("node"), nullptr);
+    EXPECT_EQ(skel->getNumNodes<GenericNode>(), 0u);
+    EXPECT_EQ(skel->getBodyNode(0)->getNumNodes<GenericNode>(), 0u);
+
+    EXPECT_EQ(weakNode.lock(), nullptr);
   }
 }
 
