@@ -59,6 +59,7 @@ namespace dart {
 
 namespace simulation { class World; }
 namespace dynamics { class Skeleton; }
+namespace optimizer { class Solver; }
 
 namespace planning {
 
@@ -136,13 +137,22 @@ public:
 	void tracePath(int node, std::list<Eigen::VectorXd> &path, bool reverse = false);
 
 	/// Returns the number of nodes in the tree.
-	size_t getSize();
+  size_t getSize() const;
 
 	/// Implementation-specific function for checking collisions 
-	virtual bool checkCollisions(const Eigen::VectorXd &c);
+  virtual bool checkCollisions(const Eigen::VectorXd &c) const;
 
 	/// Returns a random configuration with the specified node IDs 
-	virtual Eigen::VectorXd getRandomConfig();
+  virtual Eigen::VectorXd getRandomConfig() const;
+
+  /// Set the solver that should be used to solve constraints at each step
+  void setConstraintSolver(const std::shared_ptr<optimizer::Solver>& solver);
+
+  /// Get the solver that will be used to solve constraints at each step
+  std::shared_ptr<optimizer::Solver> getConstraintSolver();
+
+  /// Get the solver that will be used to solve constraints at each step
+  std::shared_ptr<const optimizer::Solver> getConstraintSolver() const;
 
 protected:
 
@@ -154,13 +164,16 @@ protected:
 	flann::Index<flann::L2<double> >* index;
 
 	/// Returns a random value between the given minimum and maximum value
-	double randomInRange(double min, double max);
+  double randomInRange(double min, double max) const;
 
 	/// Returns the nearest neighbor to query point
 	virtual int getNearestNeighbor(const Eigen::VectorXd &qsamp);
 
 	/// Adds a new node to the tree
 	virtual int addNode(const Eigen::VectorXd &qnew, int parentId);
+
+  std::shared_ptr<optimizer::Solver> mSolver;
+
 };
 
 } // namespace planning

@@ -35,7 +35,7 @@
 
 /** 
  * @file RRT.cpp
- * @author Tobias Kunz, Can Erdogan
+ * @author Tobias Kunz, Can Erdogan, Michael Grey
  * @date Jan 31, 2013
  * @brief The generic RRT implementation. It can be inherited for modifications to collision
  * checking, sampling and etc.
@@ -44,6 +44,7 @@
 #include "RRT.h"
 #include "dart/simulation/World.h"
 #include "dart/dynamics/Skeleton.h"
+#include "dart/optimizer/GradientDescentSolver.h"
 #include <flann/flann.hpp>
 
 using namespace std;
@@ -65,6 +66,7 @@ RRT::RRT(WorldPtr world, SkeletonPtr robot, const std::vector<size_t> &dofs,
 	dofs(dofs),
   index(new flann::Index<flann::L2<double> >(flann::KDTreeSingleIndexParams()))
 {
+  mSolver = std::make_shared<optimizer::GradientDescentSolver>();
 	// Reset the random number generator and add the given start configuration to the flann structure
   srand(time(nullptr));
 	addNode(root, -1);
@@ -147,6 +149,26 @@ RRT::StepResult RRT::tryStepFromNode(const VectorXd &qtry, int NNidx) {
 
 /* ********************************************************************************************* */
 bool RRT::newConfig(list<VectorXd> &intermediatePoints, VectorXd &qnew, const VectorXd &qnear, const VectorXd &qtarget) {
+
+  if(mSolver && mSolver->getProblem())
+  {
+    const int dim = mSolver->getProblem()->getDimension();
+    if(dim != qnew.size())
+    {
+      dterr << "[RRT::newConfig] Mismatch between configuration size ("
+            << qnew.size() << ") and Problem size (" << dim << ")\n";
+      assert(false);
+      return false;
+    }
+
+    mSolver->getProblem()->setInitialGuess(qnew);
+
+    if(!mSolver->solve())
+      return false;
+
+    qnew = mSolver->getProblem()->getOptimalSolution();
+  }
+
 	return !checkCollisions(qnew);
 }
 
@@ -184,7 +206,7 @@ inline int RRT::getNearestNeighbor(const VectorXd &qsamp) {
 
 /* ********************************************************************************************* */
 // random # between min & max
-inline double RRT::randomInRange(double min, double max) {
+inline double RRT::randomInRange(double min, double max) const {
 	assert(max - min >= 0.0);
 	assert(max - min < numeric_limits<double>::infinity());
 
@@ -193,7 +215,7 @@ inline double RRT::randomInRange(double min, double max) {
 }
 
 /* ********************************************************************************************* */
-VectorXd RRT::getRandomConfig() {
+VectorXd RRT::getRandomConfig() const {
 	// Samples a random point for qtmp in the configuration space, bounded by the provided 
 	// configuration vectors (and returns ref to it)
 	VectorXd config(ndim);
@@ -221,13 +243,13 @@ void RRT::tracePath(int node, std::list<VectorXd> &path, bool reverse) {
 }
 
 /* ********************************************************************************************* */
-bool RRT::checkCollisions(const VectorXd &c) {
+bool RRT::checkCollisions(const VectorXd &c) const {
   robot->setPositions(dofs, c);
 	return world->checkCollision();
 }
 
 /* ********************************************************************************************* */
-size_t RRT::getSize() {
+size_t RRT::getSize() const {
 	return configVector.size();
 }
 
