@@ -36,6 +36,8 @@
  *   POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include "dart/common/Console.h"
+
 #include "PathFollowingTrajectory.h"
 #include <limits>
 #include <iostream>
@@ -271,8 +273,8 @@ bool PathFollowingTrajectory::integrateForward(list<TrajectoryStep> &trajectory,
 			return true;
 		}
 		else if(pathVel < 0.0) {
-			valid = false;
-            cout << "error" << endl;
+      valid = false;
+      dtwarn << "[PathFollowingTrajectory::integrateForward] Negative speed\n";
 			return true;
 		}
 
@@ -350,7 +352,8 @@ void PathFollowingTrajectory::integrateBackward(list<TrajectoryStep> &trajectory
 
 		if(pathVel < 0.0 || pathPos < 0.0) {
 			valid = false;
-            cout << "error " << pathPos << " " << pathVel << endl;
+      dtwarn << "[PathFollowiwngTrajectory::integrateBackward] Invalid values. "
+             << "pathPos:" << pathPos << " | pathVel:" << pathVel << "\n";
 			return;
 		}
 
@@ -407,21 +410,7 @@ void PathFollowingTrajectory::integrateBackward(list<TrajectoryStep> &trajectory
 				}
 			}
 			
-		}
-
-		if(error) {
-			ofstream file("trajectory.txt");
-      for(list<TrajectoryStep>::iterator it = startTrajectory.begin(); it != startTrajectory.end(); ++it) {
-				file << it->pathPos << "  " << it->pathVel << endl;
-			}
-      for(list<TrajectoryStep>::iterator it = trajectory.begin(); it != trajectory.end(); ++it) {
-				file << it->pathPos << "  " << it->pathVel << endl;
-			}
-			file.close();
-			cout << "error" << endl;
-			valid = false;
-			return;
-		}
+    }
 	}
 }
 
