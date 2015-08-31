@@ -108,11 +108,26 @@ public:
   /// Returns true if the center of mass is being displayed
   bool isCenterOfMassDisplayed() const;
 
+  /// Display the zero moment point
+  ///
+  /// Note: This currently only works for entire Skeletons.
+  /// TODO(MXG): Implement this for individual trees within the Skeleton
+  void displayZeroMomentPoint(bool display);
+
+  /// Returns true if the zero moment point is being displayed
+  bool isZeroMomentPointDisplayed() const;
+
   /// Set the radius of the center of mass visualization
   void setCenterOfMassRadius(double radius);
 
   /// Get the radius of the center of mass visualization
   double getCenterOfMassRadius() const;
+
+  /// Set the radius of the zero moment point visualization
+  void setZeroMomentPointRadius(double radius);
+
+  /// Get the radius of the zero moment point visualization
+  double getZeroMomentPointRadius() const;
 
   /// Set the color that will be used for the center of mass if its projection
   /// is on the support polygon
@@ -122,6 +137,14 @@ public:
   /// is on the support polygon
   const Eigen::Vector4d& getValidCOMColor() const;
 
+  /// Set the color that will be used for the zero moment point if its
+  /// projection is on the support polygon
+  void setValidZMPColor(const Eigen::Vector4d& color);
+
+  /// Get the color that will be used for the zero moment point if its
+  /// projection is on the support polygon
+  const Eigen::Vector4d& getValidZMPColor() const;
+
   /// Set the color that will be used for the center of mass if its projection
   /// is NOT on the support polygon
   void setInvalidCOMColor(const Eigen::Vector4d& color);
@@ -129,6 +152,14 @@ public:
   /// Get the color that will be used for the center of mass if its projection
   /// is NOT on the support polygon
   const Eigen::Vector4d& getInvalidCOMColor() const;
+
+  /// Set the color that will be used for the zero moment point if its
+  /// projection is NOT on the support polygon
+  void setInvalidZMPColor(const Eigen::Vector4d& color);
+
+  /// Get the color that will be used for the zero moment point if its
+  /// projection is NOT on the support polygon
+  const Eigen::Vector4d& getInvalidZMPColor(const Eigen::Vector4d& color);
 
   /// Update the support polygon visual
   void refresh() override final;
@@ -162,17 +193,32 @@ protected:
   /// Whether to display the center of mass
   bool mDisplayCOM;
 
+  /// Whether to display the zero moment point
+  bool mDisplayZMP;
+
   /// SimpleFrame for the center of mass
   dart::dynamics::SimpleFramePtr mCom;
+
+  /// SimpleFrame for the zero moment point
+  dart::dynamics::SimpleFramePtr mZmp;
 
   /// Radius to be used by the center of mass
   double mComRadius;
 
+  /// Radius to be used by the zero moment point
+  double mZmpRadius;
+
   /// Color to be used when COM is valid
-  Eigen::Vector4d mValidColor;
+  Eigen::Vector4d mValidComColor;
+
+  /// Color to be used when the ZMP is valid
+  Eigen::Vector4d mValidZmpColor;
 
   /// Color to be used when COM is invalid
-  Eigen::Vector4d mInvalidColor;
+  Eigen::Vector4d mInvalidComColor;
+
+  /// Color to be used when ZMP is invalid
+  Eigen::Vector4d mInvalidZmpColor;
 
   /// Color for the polygon
   osg::ref_ptr<osg::Vec4Array> mPolygonColor;
@@ -194,6 +240,9 @@ protected:
 
   /// Node to render the COM
   osg::ref_ptr<FrameNode> mComNode;
+
+  /// Node to render the ZMP
+  osg::ref_ptr<FrameNode> mZmpNode;
 };
 
 } // namespace osgDart

@@ -645,6 +645,31 @@ Eigen::Vector6d AdR(const Eigen::Isometry3d& _T, const Eigen::Vector6d& _V) {
   return res;
 }
 
+Eigen::Vector3d AdR(const Eigen::Isometry3d& _T, const Eigen::Vector3d& _V) {
+  //--------------------------------------------------------------------------
+  // v' = R*v
+  //--------------------------------------------------------------------------
+
+  return _T.linear() * _V;
+}
+
+Eigen::Vector6d AdInvR(const Eigen::Isometry3d& _T, const Eigen::Vector6d& _V) {
+
+  const Eigen::Matrix3d& Rinv = _T.linear().transpose();
+
+  Eigen::Vector6d res;
+  res.head<3>().noalias() = Rinv * _V.head<3>();
+  res.tail<3>().noalias() = Rinv * _V.tail<3>();
+
+  return res;
+}
+
+Eigen::Vector3d AdInvR(const Eigen::Isometry3d& _T, const Eigen::Vector3d& _V) {
+
+  return _T.linear().transpose() * _V;
+
+}
+
 Eigen::Vector6d AdTAngular(const Eigen::Isometry3d& _T,
                            const Eigen::Vector3d& _w) {
   //--------------------------------------------------------------------------
@@ -720,6 +745,7 @@ Eigen::Vector6d AdInvT(const Eigen::Isometry3d& _T, const Eigen::Vector6d& _V) {
 
 //     return ret;
 // }
+
 
 Eigen::Vector6d AdInvRLinear(const Eigen::Isometry3d& _T,
                              const Eigen::Vector3d& _v) {

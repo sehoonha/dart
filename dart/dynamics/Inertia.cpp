@@ -183,6 +183,12 @@ Eigen::Matrix3d Inertia::getMoment() const
 }
 
 //==============================================================================
+Eigen::Matrix3d Inertia::getMomentAboutOrigin() const
+{
+  return mSpatialTensor.block<3,3>(0,0);
+}
+
+//==============================================================================
 void Inertia::setSpatialTensor(const Eigen::Matrix6d& _spatial)
 {
   if(!verifySpatialTensor(_spatial, true))

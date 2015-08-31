@@ -3139,6 +3139,176 @@ double Skeleton::getPotentialEnergy() const
 }
 
 //==============================================================================
+template <
+    typename VecType,
+    typename InertiaType,
+    class VecBaseClass,
+    VecType (VecBaseClass::*getVecFn)(const Frame*, const Frame*) const,
+    InertiaType (BodyNode::*getInertiaFn)() const>
+VecType getMomentumTemplate(const Skeleton* _skel,
+                            const Frame* _withRespectTo,
+                            const Frame* _inCoordinatesOf)
+{
+  VecType h(VecType::Zero());
+
+  // TODO: Move these computations into BodyNode
+  const size_t numBodies = _skel->getNumBodyNodes();
+  for(size_t i=0; i < numBodies; ++i)
+  {
+    const BodyNode* bn = _skel->getBodyNode(i);
+    h += (bn->*getInertiaFn)()
+         * (bn->*getVecFn)(_withRespectTo, Frame::World());
+  }
+
+  if(_inCoordinatesOf->isWorld())
+    return h;
+
+  return math::AdInvR(_inCoordinatesOf->getWorldTransform(), h);
+}
+
+
+//==============================================================================
+Eigen::Vector6d Skeleton::getSpatialMomentum(
+    const Frame* _relativeTo, const Frame* _inCoordinatesOf) const
+{
+  return getMomentumTemplate<Eigen::Vector6d, const Eigen::Matrix6d&,
+      Frame, &Frame::getSpatialVelocity, &BodyNode::getSpatialInertia>(
+        this, _relativeTo, _inCoordinatesOf);
+}
+
+//==============================================================================
+Eigen::Vector3d Skeleton::getLinearMomentum(
+    const Frame* _relativeTo, const Frame* _inCoordinatesOf) const
+{
+  return getMomentumTemplate<Eigen::Vector3d, double,
+      BodyNode, &BodyNode::getCOMLinearVelocity, &BodyNode::getMass>(
+        this, _relativeTo, _inCoordinatesOf);
+}
+
+//==============================================================================
+Eigen::Vector3d Skeleton::getAngularMomentum(
+    const Frame* _relativeTo, const Frame* _inCoordinatesOf) const
+{
+  Eigen::Vector3d h(Eigen::Vector3d::Zero());
+
+  const size_t numBodies = getNumBodyNodes();
+  for(size_t i=0; i < numBodies; ++i)
+  {
+    // TODO(MXG): Move these computations into BodyNode with the next major
+    // version (6.0)
+    const BodyNode* bn = getBodyNode(i);
+    const Eigen::Vector3d& h_intrinsic =
+        bn->getInertia().getMoment() * bn->getAngularVelocity(_relativeTo);
+
+    const Eigen::Vector3d& h_linear =
+        bn->getMass() * bn->getCOMLinearVelocity(_relativeTo);
+
+    const Eigen::Vector3d& com =
+        bn->getCOM() - _relativeTo->getWorldTransform().translation();
+
+    h += bn->getInertia().getMoment() * h_intrinsic + com.cross(h_linear);
+  }
+
+  if(_inCoordinatesOf->isWorld())
+    return h;
+
+  return math::AdInvR(_inCoordinatesOf->getWorldTransform(), h);
+}
+
+//==============================================================================
+Eigen::Vector3d Skeleton::getAngularMomentum(const Eigen::Vector3d& _pivot, const Frame* _inCoordinatesOf) const
+{
+  Eigen::Vector3d h(Eigen::Vector3d::Zero());
+
+   const size_t numBodies = getNumBodyNodes();
+   for(size_t i=0; i < numBodies; ++i)
+   {
+     // TODO(MXG): Move these computations into BodyNode with the next major
+     // version (6.0)
+     const BodyNode* bn = getBodyNode(i);
+     const Eigen::Vector3d& h_intrinsic =
+         bn->getInertia().getMoment() * bn->getAngularVelocity();
+
+     const Eigen::Vector3d& h_linear =
+         bn->getMass() * bn->getCOMLinearVelocity();
+
+     const Eigen::Vector3d& com = bn->getCOM() - _pivot;
+
+     h += bn->getInertia().getMoment() * h_intrinsic + com.cross(h_linear);
+   }
+
+   if(_inCoordinatesOf->isWorld())
+     return h;
+
+   return math::AdInvR(_inCoordinatesOf->getWorldTransform(), h);
+}
+
+//==============================================================================
+Eigen::Vector6d Skeleton::getSpatialMomentumDeriv(
+    const Frame* _relativeTo, const Frame* _inCoordinatesOf) const
+{
+  Eigen::Vector6d h_dot(Eigen::Vector6d::Zero());
+
+  const size_t numBodies = getNumBodyNodes();
+  for(size_t i=0; i < numBodies; ++i)
+  {
+    // TODO(MXG): Move these computations into BodyNode with the next major
+    // version (6.0)
+    const BodyNode* bn = getBodyNode(i);
+    const Eigen::Vector6d& a =
+        bn->getSpatialAcceleration(_relativeTo, Frame::World());
+
+    const Eigen::Vector6d& v =
+        bn->getSpatialVelocity(_relativeTo, Frame::World());
+
+    const math::Inertia& I = bn->getSpatialInertia();
+
+    h_dot += I*a + math::dad(v, I*v);
+  }
+
+  if(_inCoordinatesOf->isWorld())
+    return h_dot;
+
+  return math::AdInvR(_inCoordinatesOf->getWorldTransform(), h_dot);
+}
+
+//==============================================================================
+Eigen::Vector3d Skeleton::getLinearMomentumDeriv(
+    const Frame* _relativeTo, const Frame* _inCoordinatesOf) const
+{
+  return getMomentumTemplate<Eigen::Vector3d, double,
+      BodyNode, &BodyNode::getCOMLinearAcceleration, &BodyNode::getMass>(
+        this, _relativeTo, _inCoordinatesOf);
+}
+
+//==============================================================================
+Eigen::Vector3d Skeleton::getAngularMomentumDeriv(
+    const Frame* _relativeTo, const Frame* _inCoordinatesOf) const
+{
+  Eigen::Vector3d h_dot(Eigen::Vector3d::Zero());
+
+  const size_t numBodies = getNumBodyNodes();
+  for(size_t i=0; i < numBodies; ++i)
+  {
+    const BodyNode* bn = getBodyNode(i);
+    const Eigen::Vector3d& w_dot =
+        bn->getAngularAcceleration(_relativeTo, Frame::World());
+
+    const Eigen::Vector3d& w =
+        bn->getAngularVelocity(_relativeTo, Frame::World());
+
+    const Eigen::Matrix3d& I = bn->getInertia().getMoment();
+
+    h_dot += I*w_dot + w.cross(I*w);
+  }
+
+  if(_inCoordinatesOf->isWorld())
+    return h_dot;
+
+  return math::AdInvR(_inCoordinatesOf->getWorldTransform(), h_dot);
+}
+
+//==============================================================================
 Eigen::Vector3d Skeleton::getCOM(const Frame* _withRespectTo) const
 {
   Eigen::Vector3d com = Eigen::Vector3d::Zero();
@@ -3152,6 +3322,47 @@ Eigen::Vector3d Skeleton::getCOM(const Frame* _withRespectTo) const
 
   assert(mTotalMass != 0.0);
   return com / mTotalMass;
+}
+
+//==============================================================================
+Eigen::Vector3d Skeleton::getZMP(const Frame* _withRespectTo) const
+{
+  const Eigen::Vector3d& normal = -getGravity();
+  if(normal.norm() == 0.0)
+  {
+    dtwarn << "[Skeleton::getZMP] Unable to infer a floor surface normal "
+           << "for the Skeleton [" << getName() << "] because there is no "
+           << "gravity. We will return NaN.\n"
+           << " -- Try using getZMP(const Eigen::Vector3d&, const Frame*) "
+           << "instead.\n";
+    return Eigen::Vector3d::Constant(std::nan(""));
+  }
+
+  return getZMP(normal.normalized(), _withRespectTo);
+}
+
+//==============================================================================
+Eigen::Vector3d Skeleton::getZMP(const Eigen::Vector3d& _normal,
+                                 const Frame* _withRespectTo) const
+{
+  const double mass = getMass();
+  const Eigen::Vector3d& gravity = getGravity();
+  const Eigen::Vector3d& com = getCOM();
+  const Eigen::Vector3d& a = getCOMLinearAcceleration();
+  const Eigen::Vector3d& H_dot = getAngularMomentumDeriv();
+  const Eigen::Vector3d& n = _normal;
+
+  const Eigen::Vector3d& Mgi =
+      com.cross(mass*gravity) - com.cross(mass*a) - H_dot;
+
+  const Eigen::Vector3d& Rgi = mass*gravity - mass*a;
+
+  const Eigen::Vector3d zmp = n.cross(Mgi) / Rgi.dot(n);
+
+  if(_withRespectTo->isWorld())
+    return zmp;
+
+  return _withRespectTo->getWorldTransform().inverse() * zmp;
 }
 
 //==============================================================================

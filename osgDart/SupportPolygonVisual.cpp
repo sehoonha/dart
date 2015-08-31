@@ -45,8 +45,8 @@
 namespace osgDart {
 
 //==============================================================================
-SupportPolygonVisual::SupportPolygonVisual(const dart::dynamics::SkeletonPtr& skeleton,
-                             double elevation)
+SupportPolygonVisual::SupportPolygonVisual(
+    const dart::dynamics::SkeletonPtr& skeleton, double elevation)
   : mSkeleton(skeleton),
     mTreeIndex(dart::dynamics::INVALID_INDEX),
     mElevation(elevation)
@@ -55,8 +55,9 @@ SupportPolygonVisual::SupportPolygonVisual(const dart::dynamics::SkeletonPtr& sk
 }
 
 //==============================================================================
-SupportPolygonVisual::SupportPolygonVisual(const dart::dynamics::SkeletonPtr& skeleton,
-                             size_t treeIndex, double elevation)
+SupportPolygonVisual::SupportPolygonVisual(
+    const dart::dynamics::SkeletonPtr& skeleton,
+    size_t treeIndex, double elevation)
   : mSkeleton(skeleton),
     mTreeIndex(treeIndex),
     mElevation(elevation)
@@ -188,6 +189,26 @@ bool SupportPolygonVisual::isCenterOfMassDisplayed() const
 }
 
 //==============================================================================
+void SupportPolygonVisual::displayZeroMomentPoint(bool display)
+{
+  if(mDisplayZMP == display)
+    return;
+
+  mDisplayZMP = display;
+
+  if(mDisplayZMP)
+    addChild(mZmpNode);
+  else
+    removeChild(mZmpNode);
+}
+
+//==============================================================================
+bool SupportPolygonVisual::isZeroMomentPointDisplayed() const
+{
+  return mDisplayZMP;
+}
+
+//==============================================================================
 void SupportPolygonVisual::setCenterOfMassRadius(double radius)
 {
   if(mComRadius == radius)
@@ -207,27 +228,46 @@ double SupportPolygonVisual::getCenterOfMassRadius() const
 }
 
 //==============================================================================
+void SupportPolygonVisual::setZeroMomentPointRadius(double radius)
+{
+  if(mZmpRadius == radius)
+    return;
+
+  mZmpRadius = radius;
+  const dart::dynamics::ShapePtr& shape = mZmp->getVisualizationShape(0);
+  std::static_pointer_cast<dart::dynamics::EllipsoidShape>(shape)->setSize(
+        mZmpRadius/2.0*Eigen::Vector3d::Ones());
+  shape->addDataVariance(dart::dynamics::Shape::DYNAMIC_PRIMITIVE);
+}
+
+//==============================================================================
+double SupportPolygonVisual::getZeroMomentPointRadius() const
+{
+  return mZmpRadius;
+}
+
+//==============================================================================
 void SupportPolygonVisual::setValidCOMColor(const Eigen::Vector4d& color)
 {
-  mValidColor = color;
+  mValidComColor = color;
 }
 
 //==============================================================================
 const Eigen::Vector4d& SupportPolygonVisual::getValidCOMColor() const
 {
-  return mValidColor;
+  return mValidComColor;
 }
 
 //==============================================================================
 void SupportPolygonVisual::setInvalidCOMColor(const Eigen::Vector4d& color)
 {
-  mInvalidColor = color;
+  mInvalidComColor = color;
 }
 
 //==============================================================================
 const Eigen::Vector4d& SupportPolygonVisual::getInvalidCOMColor() const
 {
-  return mInvalidColor;
+  return mInvalidComColor;
 }
 
 //==============================================================================
@@ -329,9 +369,9 @@ void SupportPolygonVisual::refresh()
     mCom->setTransform(tf);
 
     if(dart::math::isInsideSupportPolygon(Cproj, poly))
-      mCom->getVisualizationShape(0)->setColor(mValidColor);
+      mCom->getVisualizationShape(0)->setColor(mValidComColor);
     else
-      mCom->getVisualizationShape(0)->setColor(mInvalidColor);
+      mCom->getVisualizationShape(0)->setColor(mInvalidComColor);
 
     mComNode->refresh(false, true);
 
@@ -339,11 +379,34 @@ void SupportPolygonVisual::refresh()
     mCom->getVisualizationShape(0)->removeDataVariance(
           dart::dynamics::Shape::DYNAMIC_PRIMITIVE);
   }
+
+  if(mDisplayZMP)
+  {
+    const Eigen::Vector3d zmp = skel->getZMP() + up*mElevation;
+
+    Eigen::Isometry3d tf(Eigen::Isometry3d::Identity());
+    tf.translation() = zmp;
+    mZmp->setTransform(tf);
+
+    const Eigen::Vector2d& Zproj = Eigen::Vector2d(zmp.dot(axes.first),
+                                                   zmp.dot(axes.second));
+
+    if(dart::math::isInsideSupportPolygon(Zproj, poly))
+      mZmp->getVisualizationShape(0)->setColor(mValidZmpColor);
+    else
+      mZmp->getVisualizationShape(0)->setColor(mInvalidZmpColor);
+
+    mZmpNode->refresh(false, true);
+
+    mZmp->getVisualizationShape(0)->removeDataVariance(
+          dart::dynamics::Shape::DYNAMIC_PRIMITIVE);
+  }
 }
 
 //==============================================================================
 void SupportPolygonVisual::initialize()
 {
+  // Set up polygon visualization
   mDisplayPolygon = true;
   mPolygonGeode = new osg::Geode;
   mPolygonGeode->getOrCreateStateSet()->setMode(GL_LIGHTING, osg::StateAttribute::OFF);
@@ -367,6 +430,7 @@ void SupportPolygonVisual::initialize()
   mPolygonGeom->addPrimitiveSet(mFaces);
   mPolygonGeom->setColorArray(mPolygonColor, osg::Array::BIND_OVERALL);
 
+  // Set up centroid visualization
   mDisplayCentroid = true;
   mCentroid = std::make_shared<dart::dynamics::SimpleFrame>(
         dart::dynamics::Frame::World(), "centroid");
@@ -382,8 +446,9 @@ void SupportPolygonVisual::initialize()
   mCentroidNode = new FrameNode(mCentroid.get(), nullptr, false, false);
   addChild(mCentroidNode);
 
-  mValidColor = dart::Color::Blue(1.0);
-  mInvalidColor = dart::Color::Red(1.0);
+  // Set up center of mass visualization
+  mValidComColor = Eigen::Vector4d(0.53, 0.81, 0.98, 1.0); // TODO(MXG): Replace with Color::LightBlue(1.0)
+  mInvalidComColor = Eigen::Vector4d(1.0, 0.65, 0.0, 1.0); // TODO(MXG): Replace with Color::Orange(1.0)
 
   mDisplayCOM = true;
   mCom = std::make_shared<dart::dynamics::SimpleFrame>(
@@ -397,6 +462,22 @@ void SupportPolygonVisual::initialize()
 
   mComNode = new FrameNode(mCom.get(), nullptr, false, false);
   addChild(mComNode);
+
+  // Set up zero moment point visualization
+  mValidZmpColor = Eigen::Vector4d(0.54, 0.17, 0.89, 1.0);
+  mInvalidZmpColor = dart::Color::Red(1.0);
+
+  mDisplayZMP = true;
+  mZmp = std::make_shared<dart::dynamics::SimpleFrame>(
+        dart::dynamics::Frame::World(), "zmp");
+  mZmpRadius = mCentroidRadius;
+  mZmp->addVisualizationShape(std::make_shared<dart::dynamics::EllipsoidShape>(
+                                mZmpRadius/2.0*Eigen::Vector3d::Ones()));
+  mZmp->getVisualizationShape(0)->addDataVariance(
+        dart::dynamics::Shape::DYNAMIC_COLOR);
+
+  mZmpNode = new FrameNode(mZmp.get(), nullptr, false, false);
+  addChild(mZmpNode);
 }
 
 } // namespace osgDart

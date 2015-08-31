@@ -100,8 +100,11 @@ public:
   void setMoment(double _Ixx, double _Iyy, double _Izz,
                  double _Ixy, double _Ixz, double _Iyz);
 
-  /// Get the moment of inertia
+  /// Get the moment of inertia about the center of mass
   Eigen::Matrix3d getMoment() const;
+
+  /// Get the moment of inertia about the body's origin
+  Eigen::Matrix3d getMomentAboutOrigin() const;
 
   /// Set the spatial tensor
   void setSpatialTensor(const Eigen::Matrix6d& _spatial);

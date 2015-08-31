@@ -759,6 +759,42 @@ public:
   // Documentation inherited
   double getPotentialEnergy() const override;
 
+  /// Get the spatial momentum of the Skeleton
+  Eigen::Vector6d getSpatialMomentum(
+      const Frame* _relativeTo = Frame::World(),
+      const Frame* _inCoordinatesOf = Frame::World()) const;
+
+  /// Get the linear momentum of the Skeleton
+  Eigen::Vector3d getLinearMomentum(
+      const Frame* _relativeTo = Frame::World(),
+      const Frame* _inCoordinatesOf = Frame::World()) const;
+
+  /// Get the angular momentum of the Skeleton
+  Eigen::Vector3d getAngularMomentum(
+      const Frame* _relativeTo = Frame::World(),
+      const Frame* _inCoordinatesOf = Frame::World()) const;
+
+  /// Get the angular momentum of the Skeleton about the point specified by
+  /// _pivot, which must be a translation in the World Frame.
+  Eigen::Vector3d getAngularMomentum(
+      const Eigen::Vector3d& _pivot,
+      const Frame* _inCoordinatesOf = Frame::World()) const;
+
+  /// Get the time derivative of spatial momentum of the Skeleton
+  Eigen::Vector6d getSpatialMomentumDeriv(
+      const Frame* _relativeTo = Frame::World(),
+      const Frame* _inCoordinatesOf = Frame::World()) const;
+
+  /// Get the time derivative of linear momentum of this Skeleton
+  Eigen::Vector3d getLinearMomentumDeriv(
+      const Frame* _relativeTo = Frame::World(),
+      const Frame* _inCoordinatesOf = Frame::World()) const;
+
+  /// Get the time derivative of angular momentum of this Skeleton
+  Eigen::Vector3d getAngularMomentumDeriv(
+      const Frame* _relativeTo = Frame::World(),
+      const Frame* _inCoordinatesOf = Frame::World()) const;
+
   /// \}
 
   //----------------------------------------------------------------------------
@@ -768,6 +804,17 @@ public:
   /// Get the Skeleton's COM with respect to any Frame (default is World Frame)
   Eigen::Vector3d getCOM(
       const Frame* _withRespectTo = Frame::World()) const override;
+
+  /// Get the Skeleton's ZMP with respect to any Frame (default is World Frame)
+  /// for a surface whose normal vector is parallel to gravity.
+  Eigen::Vector3d getZMP(
+      const Frame* _withRespectTo = Frame::World()) const;
+
+  /// Get the Skeleton's ZMP with respect to any Frame (default is World Frame)
+  /// for a surface with an arbitrary surface normal.
+  Eigen::Vector3d getZMP(
+      const Eigen::Vector3d& _normal,
+      const Frame* _withRespectTo = Frame::World()) const;
 
   /// Get the Skeleton's COM spatial velocity in terms of any Frame (default is
   /// World Frame)
