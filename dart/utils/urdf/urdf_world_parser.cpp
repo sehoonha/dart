@@ -51,16 +51,27 @@
 
 const bool debug = false;
 
-namespace urdf{
+namespace dart {
+namespace utils {
+namespace urdf_parsing {
+
+Entity::Entity(const urdf::Entity& urdfEntity)
+  : model(urdfEntity.model),
+    origin(urdfEntity.origin),
+    twist(urdfEntity.twist)
+{
+  // Do nothing
+}
 
 // Implemented in urdf_parser/src/pose.cpp, for some reason nobody thought of putting it in the header
-bool parsePose(Pose &pose, TiXmlElement* xml);
+//bool parsePose(urdf::Pose& pose, TiXmlElement* xml);
 
 /**
  * @function parseWorldURDF
  */
-std::shared_ptr<World> parseWorldURDF(const std::string& _xml_string,
-                                      std::string _root_to_world_path)
+std::shared_ptr<World> parseWorldURDF(
+    const std::string& _xml_string,
+    const dart::common::Uri& _baseUri)
 {
   TiXmlDocument xml_doc;
   xml_doc.Parse( _xml_string.c_str() );
@@ -109,7 +120,7 @@ std::shared_ptr<World> parseWorldURDF(const std::string& _xml_string,
        entity_xml = entity_xml->NextSiblingElement("entity") )
   {
     count++;
-    Entity entity;
+    dart::utils::urdf_parsing::Entity entity;
     try
     {
       const char* entity_model = entity_xml->Attribute("model");
@@ -124,10 +135,18 @@ std::shared_ptr<World> parseWorldURDF(const std::string& _xml_string,
       else
       {
         std::string fileName = includedFiles.find( string_entity_model )->second;
-        std::string fileFullName = _root_to_world_path;
-        fileFullName.append( fileName );
-        if(debug) std::cout<< "Entity full filename: "<< fileFullName << std::endl;
 
+        dart::common::Uri absoluteUri;
+        if(!absoluteUri.fromRelativeUri(_baseUri, fileName))
+        {
+          dtwarn << "[parseWorldURDF] Failed resolving mesh URI '"
+                 << fileName << "' relative to '" << _baseUri.toString()
+                 << "'. We will exit without loading!\n";
+          return nullptr;
+        }
+
+        const std::string fileFullName = absoluteUri.toString();
+        entity.uri = absoluteUri;
         // Parse model
         std::string xml_model_string;
         std::fstream xml_file( fileFullName.c_str(), std::fstream::in );
@@ -138,7 +157,7 @@ std::shared_ptr<World> parseWorldURDF(const std::string& _xml_string,
           xml_model_string += (line + "\n");
         }
         xml_file.close();
-        entity.model = parseURDF( xml_model_string );
+        entity.model = urdf::parseURDF( xml_model_string );
 
         if( !entity.model )
         {
@@ -174,7 +193,7 @@ std::shared_ptr<World> parseWorldURDF(const std::string& _xml_string,
 
 
     }
-    catch( ParseError& e )
+    catch( urdf::ParseError& e )
     {
       if(debug) std::cout << "Entity xml not initialized correctly \n";
       //entity->reset();
@@ -188,4 +207,6 @@ std::shared_ptr<World> parseWorldURDF(const std::string& _xml_string,
   return world;
 }
 
-} // end namespace
+} // namesapce dart
+} // namespace utils
+} // namespace urdf_parsing
