@@ -776,6 +776,54 @@ bool Viewer::disableDragAndDrop(BodyNodeDnD* _dnd)
 }
 
 //==============================================================================
+void Viewer::disableInteraction(dart::dynamics::Entity* entity)
+{
+  // TODO(MXG): Subscribe to this Entity and remove this entry when the Entity
+  // is destroyed.
+  mEntityBlacklist.insert(entity);
+}
+
+//==============================================================================
+void Viewer::enableInteraction(dart::dynamics::Entity* entity)
+{
+  EntityBlacklist::iterator it = mEntityBlacklist.find(entity);
+
+  if(it != mEntityBlacklist.end())
+    mEntityBlacklist.erase(it);
+}
+
+//==============================================================================
+bool Viewer::isInteractionEnabled(dart::dynamics::Entity* entity) const
+{
+  return (mEntityBlacklist.find(entity) == mEntityBlacklist.end());
+}
+
+//==============================================================================
+void Viewer::disableInteraction(const dart::dynamics::SkeletonPtr& skel)
+{
+  // TODO(MXG): Subscribe to this Skeleton and remove this entry when the
+  // Skeleton is destroyed.
+  std::cout << "inserting Skeleton into blacklist" << std::endl;
+  mSkeletonBlacklist.insert(skel.get());
+  std::cout << "Skeleton is inserted in blacklist" << std::endl;
+}
+
+//==============================================================================
+void Viewer::enableInteraction(const dart::dynamics::SkeletonPtr& skel)
+{
+  SkeletonBlacklist::iterator it = mSkeletonBlacklist.find(skel.get());
+
+  if(it != mSkeletonBlacklist.end())
+    mSkeletonBlacklist.erase(it);
+}
+
+//==============================================================================
+bool Viewer::isInteractionEnabled(const dart::dynamics::SkeletonPtr& skel) const
+{
+  return (mSkeletonBlacklist.find(skel.get()) == mSkeletonBlacklist.end());
+}
+
+//==============================================================================
 const std::string& Viewer::getInstructions() const
 {
   return mInstructions;

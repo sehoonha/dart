@@ -44,7 +44,8 @@
 #include "osgDart/utils.h"
 
 #include "dart/dynamics/Entity.h"
-
+#include "dart/dynamics/Node.h"
+#include "dart/dynamics/BodyNode.h"
 
 #include <iostream>
 
@@ -232,6 +233,18 @@ void DefaultEventHandler::pick(std::vector<PickInfo>& infoVector,
         PickInfo info;
         info.shape = shape->getShape();
         info.entity = shape->getParentEntityNode()->getEntity();
+
+        // Ignore the object if it's on the blacklist
+        if(!mViewer->isInteractionEnabled(info.entity))
+          continue;
+
+        // Ignore the object if it is part of a blacklisted Skeleton
+        if(dart::dynamics::Node* node = dynamic_cast<dart::dynamics::Node*>(info.entity))
+        {
+          if(!mViewer->isInteractionEnabled(node->getBodyNodePtr()->getSkeleton()))
+            continue;
+        }
+
         info.normal = osgToEigVec3(intersect.getWorldIntersectNormal());
         info.position = osgToEigVec3(intersect.getWorldIntersectPoint());
 

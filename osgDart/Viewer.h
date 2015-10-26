@@ -46,6 +46,7 @@
 #include <Eigen/Core>
 
 #include "dart/common/Subject.h"
+#include "dart/dynamics/SmartPointer.h"
 
 namespace dart {
 
@@ -55,9 +56,6 @@ class World;
 
 namespace dynamics {
 class Entity;
-class SimpleFrame;
-class Shape;
-class BodyNode;
 } // namespace dynamics
 
 } // namespace dart
@@ -275,6 +273,31 @@ public:
   /// deleted
   bool disableDragAndDrop(BodyNodeDnD* _dnd);
 
+  /// Put this Entity on a blacklist of objects that will be removed from
+  /// the list of picked objects.
+  void disableInteraction(dart::dynamics::Entity* entity);
+
+  /// Allow this Entity to be interacted with (i.e. remove it from the
+  /// blacklist). By default, all objects can be interacted with.
+  void enableInteraction(dart::dynamics::Entity* entity);
+
+  /// Check if interaction is enabled for this Entity.
+  bool isInteractionEnabled(dart::dynamics::Entity* entity) const;
+
+  /// Put this entire Skeleton on a blacklist of objects that will be removed
+  /// from the list of picked objects.
+  void disableInteraction(const dart::dynamics::SkeletonPtr& skel);
+
+  /// Allow the Skeleton to be interacted with (i.e. remove it from the
+  /// blacklist). By default, all objects can be interacted with.
+  ///
+  /// Note: This will NOT remove any individual BodyNodes from the BodyNode
+  /// blacklist.
+  void enableInteraction(const dart::dynamics::SkeletonPtr& skel);
+
+  /// Check if interaction is enabled for this Skeleton.
+  bool isInteractionEnabled(const dart::dynamics::SkeletonPtr& skel) const;
+
   /// Get a string containing the user interface constructions for this Viewer
   const std::string& getInstructions() const;
 
@@ -357,6 +380,7 @@ protected:
   /// iff it is currently active
   std::map<WorldNode*,bool> mWorldNodes;
 
+  /// Attachments that are currently present in this Viewer
   std::unordered_set<ViewerAttachment*> mAttachments;
 
   /// string of instructions for this Viewer
@@ -378,6 +402,16 @@ protected:
 
   /// Map from BodyNode ptrs to BodyNodeDnD ptrs
   std::map<dart::dynamics::BodyNode*,BodyNodeDnD*> mBodyNodeDnDMap;
+
+  using EntityBlacklist = std::unordered_set<dart::dynamics::Entity*>;
+
+  /// Blacklist that blocks interaction with these BodyNodes
+  EntityBlacklist mEntityBlacklist;
+
+  using SkeletonBlacklist = std::unordered_set<dart::dynamics::Skeleton*>;
+
+  /// Blacklist that blocks interaction with anything in these Skeletons
+  SkeletonBlacklist mSkeletonBlacklist;
 };
 
 }

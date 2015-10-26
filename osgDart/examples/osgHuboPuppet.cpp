@@ -1033,6 +1033,12 @@ public:
 
 protected:
 
+  void setupViewer() override
+  {
+    mViewer->disableInteraction(mSavedState);
+    mViewer->disableInteraction(mMidpoint);
+  }
+
   SkeletonPtr mEndpoint;
   SkeletonPtr mSavedState;
   SkeletonPtr mMidpoint;
