@@ -17,6 +17,8 @@
 #include <vector>
 #include "dart/dynamics/Skeleton.h"
 #include "dart/simulation/World.h"
+#include "dart/collision/CollisionDetector.h"
+#include "dart/constraint/ConstraintSolver.h"
 #include "dart/planning/RRT.h"
 #include <cstdio>
 
@@ -31,26 +33,28 @@ public:
 
   bool connect;            ///< Whether we take a small step or shoot for the target node
   bool bidirectional;      ///< Whether two trees try to meet each other or one goes for the goal
-  double stepSize;        ///< Step size from a node in the tree to the random/goal node
-  double goalBias;        ///< Choose btw goal and random value (for goal-biased search)
-  size_t maxNodes;        ///< Maximum number of iterations the sampling would continue
-  simulation::WorldPtr world;  ///< The world that the robot is in (for obstacles and etc.)
-  std::shared_ptr<optimizer::Solver> solver; ///< A problem which should be solved by each configuration
+  typename R::Properties mProperties;  ///< Properties for the RRT object
+  double mGoalBias;         ///< Choose btw goal and random value (for goal-biased search)
+  size_t mMaxNodes;         ///< Maximum number of iterations the sampling would continue
+  simulation::WorldPtr mWorld;  ///< The world that the robot is in (for obstacles and etc.)
 
   // NOTE: It is useful to keep the rrts around after planning for reuse, analysis, and etc.
-  std::unique_ptr<R> start_rrt;            ///< The rrt for unidirectional search
-  std::unique_ptr<R> goal_rrt;              ///< The second rrt if bidirectional search is executed
+  std::unique_ptr<R> start_rrt;  ///< The rrt for unidirectional search
+  std::unique_ptr<R> goal_rrt;   ///< The second rrt if bidirectional search is executed
 
 public:
 
   /// The default constructor
-  PathPlanner() : world(nullptr), mRD(), mMT(mRD()), mDistribution(0.0, std::nextafter(1.0, 2.0)) {}
+  PathPlanner() : mWorld(nullptr), mRD(), mMT(mRD()), mDistribution(0.0, std::nextafter(1.0, 2.0)) {}
 
   /// The desired constructor - you should use this one.
-  PathPlanner(simulation::World& world, bool bidirectional_ = true, bool connect_ = true, double stepSize_ = 0.1,
-    size_t maxNodes_ = 1e6, double goalBias_ = 0.3) : world(&world), bidirectional(bidirectional_),
-    connect(connect_), stepSize(stepSize_), maxNodes(maxNodes_), goalBias(goalBias_),
-    mRD(), mMT(mRD()), mDistribution(0.0, std::nextafter(1.0, 2.0))
+  PathPlanner(const simulation::WorldPtr& world, bool bidirectional_ = true,
+              bool connect_ = true, const typename R::Properties& properties = R::Properties(),
+              size_t maxNodes_ = 1e6, double goalBias_ = 0.3)
+    : connect(connect_), bidirectional(bidirectional_),
+      mProperties(properties), mGoalBias(goalBias_), mMaxNodes(maxNodes_),
+      mWorld(world),
+      mRD(), mMT(mRD()), mDistribution(0.0, std::nextafter(1.0, 2.0))
   {
     // Do nothing
   }
@@ -125,13 +129,15 @@ bool PathPlanner<R>::planPath(const dynamics::SkeletonPtr& robot,
   for(unsigned int i = 0; i < start.size(); i++)
   {
     robot->setPositions(dofs, start[i]);
-    if(!world->checkCollision()) feasibleStart.push_back(start[i]);
+    if(!mWorld->checkCollision())
+      feasibleStart.push_back(start[i]);
   }
 
   // Return false if there are no feasible start configurations
   if(feasibleStart.empty())
   {
-    dtwarn << "WARNING: PathPlanner: Feasible start points are empty!\n";
+    dtwarn << "[PathPlanner::planPath] You have not provided any feasible "
+           << "starting configurations!\n";
     return false;
   }
 
@@ -140,7 +146,8 @@ bool PathPlanner<R>::planPath(const dynamics::SkeletonPtr& robot,
   for(unsigned int i = 0; i < goal.size(); i++)
   {
     robot->setPositions(dofs, goal[i]);
-    if(!world->checkCollision()) feasibleGoal.push_back(goal[i]);
+    if(!mWorld->checkCollision())
+      feasibleGoal.push_back(goal[i]);
   }
 
   // Return false if there are no feasible goal configurations
@@ -182,18 +189,18 @@ bool PathPlanner<R>::planSingleTreeRrt(
 
   // Initialize the RRT
   if(nullptr == start_rrt)
-    start_rrt = std::unique_ptr<R>(new R(world, robot, dofs, start, stepSize, solver));
+    start_rrt = std::unique_ptr<R>(new R(mWorld, robot, dofs, start, mProperties));
   else
-    start_rrt->reset(world, robot, dofs, start, stepSize, solver);
+    start_rrt->reset(mWorld, robot, dofs, start, mProperties);
 
   // Expand the tree until the goal is reached or the max # nodes is passed
   size_t numNodes = start_rrt->getSize();
-  while(numNodes <= maxNodes)
+  while(numNodes <= mMaxNodes)
   {
     // Get the target node based on the bias
     Eigen::VectorXd target;
     double randomValue = mDistribution(mMT);
-    if(randomValue < goalBias)
+    if(randomValue < mGoalBias)
       target = goal;
     else
       target = start_rrt->getRandomConfig();
@@ -206,7 +213,7 @@ bool PathPlanner<R>::planSingleTreeRrt(
 
     // Check if the goal is reached and create the path, if so
     double gap = start_rrt->getGap(goal);
-    if(gap < stepSize)
+    if(gap < mProperties.mStepSize)
     {
       if(debug) std::cout << "Returning true, reached the goal" << std::endl;
       start_rrt->tracePath(start_rrt->mActiveNode, path);
@@ -239,14 +246,14 @@ bool PathPlanner<R>::planBidirectionalRrt(
   // (random or goal) node.
 
   if(nullptr == start_rrt)
-    start_rrt = std::unique_ptr<R>(new R(world, robot, dofs, start, stepSize, solver));
+    start_rrt = std::unique_ptr<R>(new R(mWorld, robot, dofs, start, mProperties));
   else
-    start_rrt->reset(world, robot, dofs, start, stepSize, solver);
+    start_rrt->reset(mWorld, robot, dofs, start, mProperties);
 
   if(nullptr == goal_rrt)
-    goal_rrt = std::unique_ptr<R>(new R(world, robot, dofs, goal, stepSize, solver));
+    goal_rrt = std::unique_ptr<R>(new R(mWorld, robot, dofs, goal, mProperties));
   else
-    goal_rrt->reset(world, robot, dofs, goal, stepSize, solver);
+    goal_rrt->reset(mWorld, robot, dofs, goal, mProperties);
 
   R* rrt1 = start_rrt.get();
   R* rrt2 = goal_rrt.get();
@@ -254,7 +261,7 @@ bool PathPlanner<R>::planBidirectionalRrt(
   // Expand the tree until the trees meet or the max # nodes is passed
   double smallestGap = std::numeric_limits<double>::infinity();
   size_t numNodes = rrt1->getSize() + rrt2->getSize();
-  while(numNodes < maxNodes) {
+  while(numNodes < mMaxNodes) {
 
     // Swap the roles of the two RRTs. Remember, the first rrt reaches out to a target node and
     // creates a new node and the second rrt reaches to _the new node_.
@@ -263,7 +270,7 @@ bool PathPlanner<R>::planBidirectionalRrt(
      // Get the target node based on the bias
     Eigen::VectorXd target;
     double randomValue = mDistribution(mMT);
-    if(randomValue < goalBias)
+    if(randomValue < mGoalBias)
       target = goal[0];
     else
       target = rrt1->getRandomConfig();

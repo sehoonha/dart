@@ -56,43 +56,65 @@ using namespace dynamics;
 namespace dart {
 namespace planning {
 
-/* ********************************************************************************************* */
+RRT::Properties::Properties(double stepSize,
+                            double maxStepSize,
+                            size_t maxConstraintSolveAttempts,
+                            double minDistanceBetweenConfigs,
+                            const std::shared_ptr<optimizer::Solver>& solver)
+  : mStepSize(stepSize),
+    mMaxStepSize(maxStepSize),
+    mMaxConstraintSolveAttempts(maxConstraintSolveAttempts),
+    mMinDistanceBetweenConfigs(minDistanceBetweenConfigs),
+    mSolver(solver)
+{
+  // Do nothing
+}
+
+//==============================================================================
 RRT::RRT(const WorldPtr& world, const SkeletonPtr& robot,
          const std::vector<size_t>& dofs,
-         const VectorXd& root, double stepSize,
-         const std::shared_ptr<optimizer::Solver>& solver)
+         const VectorXd& root,
+         const Properties& properties)
   : mRD(),
     mMT(mRD()),
     mDistribution(0.0, std::nextafter(1.0, 2.0)) // This allows mDistribution to produce numbers in the range [0,1] inclusive
 {
   std::vector<Eigen::VectorXd> roots;
   roots.push_back(root);
-  reset(world, robot, dofs, roots, stepSize, solver);
+  reset(world, robot, dofs, roots, properties);
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 RRT::RRT(const WorldPtr& world, const SkeletonPtr& robot,
          const std::vector<size_t>& dofs,
-         const vector<VectorXd>& roots, double stepSize,
-         const std::shared_ptr<optimizer::Solver>& solver)
+         const vector<VectorXd>& roots,
+         const Properties& properties)
   : mRD(),
     mMT(mRD()),
     mDistribution(0.0, std::nextafter(1.0, 2.0)) // This allows mDistribution to produce numbers in the range [0,1] inclusive
 {
-  reset(world, robot, dofs, roots, stepSize, solver);
+  reset(world, robot, dofs, roots, properties);
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 RRT::~RRT()
 {
   // Do nothing
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 void RRT::reset(const WorldPtr& world, const SkeletonPtr& robot,
                 const std::vector<size_t>& dofs,
-                const std::vector<VectorXd>& roots, double stepSize,
-                const std::shared_ptr<optimizer::Solver>& solver)
+                const std::vector<VectorXd>& roots)
+{
+  reset(world, robot, dofs, roots, mProperties);
+}
+
+//==============================================================================
+void RRT::reset(const WorldPtr& world, const SkeletonPtr& robot,
+                const std::vector<size_t>& dofs,
+                const std::vector<VectorXd>& roots,
+                const Properties& properties)
 {
   mIndex = std::unique_ptr< flann::Index< flann::L2<double> > >(
         new flann::Index<flann::L2<double> >(flann::KDTreeSingleIndexParams()));
@@ -100,8 +122,7 @@ void RRT::reset(const WorldPtr& world, const SkeletonPtr& robot,
   mWorld = world;
   mRobot = robot;
   mDofs = dofs;
-  mStepSize = stepSize;
-  mSolver = solver;
+  mProperties = properties;
 
   mParentVectors.clear();
   mConfigs.clear();
@@ -113,13 +134,13 @@ void RRT::reset(const WorldPtr& world, const SkeletonPtr& robot,
 }
 
 
-/* ********************************************************************************************* */
+//==============================================================================
 bool RRT::connect() {
 	VectorXd qtry = getRandomConfig();
 	return connect(qtry);
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 bool RRT::connect(const VectorXd &target) {
 
 	// Get the index of the nearest neighbor in the tree to the given target
@@ -134,29 +155,29 @@ bool RRT::connect(const VectorXd &target) {
 	return (result == STEP_REACHED);
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 RRT::StepResult RRT::tryStep() {
 	VectorXd qtry = getRandomConfig();
 	return tryStep(qtry);
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 RRT::StepResult RRT::tryStep(const VectorXd &qtry) {
 	int NNidx = getNearestNeighbor(qtry);
 	return tryStepFromNode(qtry, NNidx);
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 RRT::StepResult RRT::tryStepFromNode(const VectorXd &qtry, int NNidx) {
 
 	// Get the configuration of the nearest neighbor and check if already reached
   const VectorXd& qnear = *(mConfigs[NNidx]);
-  if((qtry - qnear).norm() < mStepSize) {
+  if((qtry - qnear).norm() < mProperties.mStepSize) {
 		return STEP_REACHED;
 	}
 
 	// Create the new node: scale the direction vector to stepSize and add to qnear
-  VectorXd qnew = qnear + mStepSize * (qtry - qnear).normalized();
+  VectorXd qnew = qnear + mProperties.mStepSize * (qtry - qnear).normalized();
 
 	// Check for collision, make changes to the qNew and create intermediate points if necessary
 	// NOTE: This is largely implementation dependent and in default, no points are created.
@@ -172,13 +193,13 @@ RRT::StepResult RRT::tryStepFromNode(const VectorXd &qtry, int NNidx) {
 	return STEP_PROGRESS;
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 bool RRT::newConfig(list<VectorXd>& /*intermediatePoints*/, VectorXd& qnew,
-                    const VectorXd& /*qnear*/, const VectorXd& /*qtarget*/) {
+                    const VectorXd& qnear, const VectorXd& /*qtarget*/) {
 
-  if(mSolver && mSolver->getProblem())
+  if(mProperties.mSolver && mProperties.mSolver->getProblem())
   {
-    const int dim = mSolver->getProblem()->getDimension();
+    const int dim = mProperties.mSolver->getProblem()->getDimension();
     if(dim != qnew.size())
     {
       dterr << "[RRT::newConfig] Mismatch between configuration size ("
@@ -187,18 +208,37 @@ bool RRT::newConfig(list<VectorXd>& /*intermediatePoints*/, VectorXd& qnew,
       return false;
     }
 
-    mSolver->getProblem()->setInitialGuess(qnew);
+    size_t attempts = 0;
+    while(attempts < mProperties.mMaxConstraintSolveAttempts)
+    {
+      mProperties.mSolver->getProblem()->setInitialGuess(qnew);
 
-    if(!mSolver->solve())
+      if(!mProperties.mSolver->solve())
+        return false;
+
+      qnew = mProperties.mSolver->getProblem()->getOptimalSolution();
+
+      if( (qnear - qnew).norm() <= mProperties.mMinDistanceBetweenConfigs )
+        return false;
+
+      if( (qnear - qnew).norm() <= mProperties.mMaxStepSize )
+        break;
+
+      qnew = qnear + mProperties.mStepSize*(qnew-qnear).normalized();
+      ++attempts;
+    }
+
+    if(attempts == mProperties.mMaxConstraintSolveAttempts)
+    {
+//      std::cout << "Failed to find nearby valid solution" << std::endl;
       return false;
-
-    qnew = mSolver->getProblem()->getOptimalSolution();
+    }
   }
 
 	return !checkCollisions(qnew);
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 int RRT::addNode(const VectorXd& qnew, int parentId)
 {
   // Update the graph vector
@@ -218,7 +258,7 @@ int RRT::addNode(const VectorXd& qnew, int parentId)
 	return id;
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 inline int RRT::getNearestNeighbor(const VectorXd& qsamp)
 {
 	int nearest;
@@ -232,7 +272,7 @@ inline int RRT::getNearestNeighbor(const VectorXd& qsamp)
 	return nearest;
 }
 
-/* ********************************************************************************************* */
+//==============================================================================
 // random # between min & max
 inline double RRT::randomInRange(double min, double max) const
 {
@@ -245,7 +285,8 @@ inline double RRT::randomInRange(double min, double max) const
   return min + ((max-min) * mDistribution(mMT));
 }
 
-/* ********************************************************************************************* */
+
+//==============================================================================
 VectorXd RRT::getRandomConfig() const {
 	// Samples a random point for qtmp in the configuration space, bounded by the provided 
 	// configuration vectors (and returns ref to it)
@@ -259,13 +300,15 @@ VectorXd RRT::getRandomConfig() const {
 	return config;
 }
 
-/* ********************************************************************************************* */
+
+//==============================================================================
 double RRT::getGap(const VectorXd& target)
 {
   return (target - *(mConfigs[mActiveNode])).norm();
 }
 
-/* ********************************************************************************************* */
+
+//==============================================================================
 void RRT::tracePath(int node, std::list<VectorXd> &path, bool reverse) {
 
 	// Keep following the "linked list" in the given direction
@@ -277,13 +320,15 @@ void RRT::tracePath(int node, std::list<VectorXd> &path, bool reverse) {
 	}
 }
 
-/* ********************************************************************************************* */
+
+//==============================================================================
 bool RRT::checkCollisions(const VectorXd &c) const {
   mRobot->setPositions(mDofs, c);
   return mWorld->checkCollision();
 }
 
-/* ********************************************************************************************* */
+
+//==============================================================================
 size_t RRT::getSize() const
 {
   return mConfigs.size();

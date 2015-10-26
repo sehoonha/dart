@@ -65,6 +65,11 @@ namespace optimizer { class Solver; }
 
 namespace planning {
 
+const double DefaultStepSize = 0.02;
+const double DefaultMaxStepSize = 0.06;
+const size_t DefaultMaxConstraintSolveAttempts = 10;
+const double DefaultMinDistanceBetweenConfigs = 1e-8;
+
 /// The rapidly-expanding random tree implementation
 class RRT {
 public:
@@ -80,8 +85,32 @@ public:
   };
 
 public:
-  // Initialization constants and search variables
-  double mStepSize;	///< Step size at each node creation
+  //  Initialization constants and search variables
+
+  struct Properties
+  {
+    /// Step size at each node creation
+    double mStepSize;
+
+    /// Largest allowable step size
+    double mMaxStepSize;
+
+    /// Maximum number of attempts to solve a constraint when performing CBiRRT
+    size_t mMaxConstraintSolveAttempts;
+
+    /// The smallest permissible distance between two consecutive configurations
+    double mMinDistanceBetweenConfigs;
+
+    std::shared_ptr<optimizer::Solver> mSolver;
+
+    Properties(double stepSize = DefaultStepSize,
+               double maxStepSize = DefaultMaxStepSize,
+               size_t maxConstraintSolveAttempts = DefaultMaxConstraintSolveAttempts,
+               double minDistanceBetweenConfigs = DefaultMinDistanceBetweenConfigs,
+               const std::shared_ptr<optimizer::Solver>& solver = nullptr);
+  };
+
+  Properties mProperties;
 
   int mActiveNode;	 								///< Last added node or the nearest node found after a search
   std::vector<int> mParentVectors;		///< The ith node in configVector has parent with index pV[i]
@@ -93,73 +122,73 @@ public:
 
 public:
 
-  /// Default constructor
-  RRT();
-
   /// Constructor with a single root
   RRT(const dart::simulation::WorldPtr& mWorld,
       const dart::dynamics::SkeletonPtr& mRobot,
       const std::vector<size_t>& mDofs,
       const Eigen::VectorXd& root,
-      double mStepSize = 0.02,
-      const std::shared_ptr<optimizer::Solver>& solver = nullptr);
+      const Properties& properties = Properties());
 
 	/// Constructor with multiple roots (so, multiple trees)
   RRT(const simulation::WorldPtr& mWorld,
       const dynamics::SkeletonPtr& mRobot,
       const std::vector<size_t>& mDofs,
       const std::vector<Eigen::VectorXd>& roots,
-      double mStepSize = 0.02,
-      const std::shared_ptr<optimizer::Solver>& solver = nullptr);
+      const Properties& properties = Properties());
 
 	/// Destructor
   virtual ~RRT();
 
+  /// Reset this RRT without changing its properties, so that it can be reused
+  void reset(const dart::simulation::WorldPtr& world,
+             const dart::dynamics::SkeletonPtr& robot,
+             const std::vector<size_t>& dofs,
+             const std::vector<Eigen::VectorXd>& roots);
+
   /// Reset this RRT so that it can be reused
-  void reset(const dart::simulation::WorldPtr& mWorld,
-             const dart::dynamics::SkeletonPtr& mRobot,
-             const std::vector<size_t>& mDofs,
+  void reset(const dart::simulation::WorldPtr& world,
+             const dart::dynamics::SkeletonPtr& robot,
+             const std::vector<size_t>& dofs,
              const std::vector<Eigen::VectorXd>& roots,
-             double mStepSize = 0.02,
-             const std::shared_ptr<optimizer::Solver>& solver = nullptr);
+             const Properties& properties);
 
 	/// Reach for a random node by repeatedly extending nodes from the nearest neighbor in the tree.
 	/// Stop if there is a collision.
 	bool connect();
 
 	/// Reach for a target by repeatedly extending nodes from the nearest neighbor. Stop if collide.
-	bool connect(const Eigen::VectorXd &target);
+  bool connect(const Eigen::VectorXd& target);
 
 	/// Try a single step with the given "stepSize" to a random configuration. Fail if collide.
 	StepResult tryStep();
 	
 	/// Try a single step with the given "stepSize" to the given configuration. Fail if collide.
-	StepResult tryStep(const Eigen::VectorXd &qtry);
+  StepResult tryStep(const Eigen::VectorXd& qtry);
 
 	/// Tries to extend tree towards provided sample
-	virtual StepResult tryStepFromNode(const Eigen::VectorXd &qtry, int NNidx);
+  virtual StepResult tryStepFromNode(const Eigen::VectorXd& qtry, int NNidx);
 
 	/// Checks if the given new configuration is in collision with an obstacle. Moreover, it is a
 	/// an opportunity for child classes to change the new configuration if there is a need. For 
 	/// instance, task constrained planners might want to sample around this point and replace it with
 	/// a better (less erroroneous due to constraint) node.
-	virtual bool newConfig(std::list<Eigen::VectorXd> &intermediatePoints, Eigen::VectorXd &qnew, 
-			const Eigen::VectorXd &qnear, const Eigen::VectorXd &qtarget);
+  virtual bool newConfig(std::list<Eigen::VectorXd>& intermediatePoints, Eigen::VectorXd& qnew,
+      const Eigen::VectorXd& qnear, const Eigen::VectorXd& qtarget);
 
 	/// Returns the distance between the current active node and the given node.
 	/// TODO This might mislead the users to thinking returning the distance between the given target
 	/// and the nearest neighbor.
-	double getGap(const Eigen::VectorXd &target);
+  double getGap(const Eigen::VectorXd& target);
 
 	/// Traces the path from some node to the initConfig node - useful in creating the full path
 	/// after the goal is reached.
-	void tracePath(int node, std::list<Eigen::VectorXd> &path, bool reverse = false);
+  void tracePath(int node, std::list<Eigen::VectorXd>& path, bool reverse = false);
 
 	/// Returns the number of nodes in the tree.
   size_t getSize() const;
 
 	/// Implementation-specific function for checking collisions 
-  virtual bool checkCollisions(const Eigen::VectorXd &c) const;
+  virtual bool checkCollisions(const Eigen::VectorXd& c) const;
 
 	/// Returns a random configuration with the specified node IDs 
   virtual Eigen::VectorXd getRandomConfig() const;
@@ -199,8 +228,6 @@ protected:
 
 	/// Adds a new node to the tree
   virtual int addNode(const Eigen::VectorXd& qnew, int parentId);
-
-  std::shared_ptr<optimizer::Solver> mSolver;
 
 };
 

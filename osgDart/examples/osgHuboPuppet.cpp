@@ -722,7 +722,7 @@ public:
 
   TeleoperationWorld(WorldPtr _world, SkeletonPtr _robot)
     : osgDart::WorldNode(_world),
-      mHubo(_robot),
+      mEndpoint(_robot),
       iter(0),
       l_foot(_robot->getEndEffector("l_foot")),
       r_foot(_robot->getEndEffector("r_foot")),
@@ -731,37 +731,88 @@ public:
   {
     for(size_t i=0; i < 3; ++i)
     {
-      mHubo->getDof(i)->setPositionLimits(-90.0*M_PI/180.0, 90.0*M_PI/180.0);
-      mHubo->getDof(i)->setVelocityLimits(-100, 100);
+      mEndpoint->getDof(i)->setPositionLimits(-90.0*M_PI/180.0, 90.0*M_PI/180.0);
+      mEndpoint->getDof(i)->setVelocityLimits(-1, 1);
     }
 
     for(size_t i=3; i < 6; ++i)
     {
-      mHubo->getDof(i)->setPositionLimits(-2.0, 2.0);
-      mHubo->getDof(i)->setVelocityLimits(-100, 100);
+      mEndpoint->getDof(i)->setPositionLimits(-2.0, 2.0);
+      mEndpoint->getDof(i)->setVelocityLimits(-1, 1);
     }
 
     mMoveComponents.resize(NUM_MOVE, false);
     mAnyMovement = false;
     mAmplifyMovement = false;
 
-    mSavedState = createClone(mHubo, Eigen::Vector4d(0.0, 0.67, 0.66, 0.2));
-    mWorld->addSkeleton(mSavedState);
-    mWorld->getConstraintSolver()->getCollisionDetector()->removeSkeleton(mSavedState);
+    mSavedState = createClone(mEndpoint, Eigen::Vector4d(0.0, 0.67, 0.66, 0.2));
+    mMidpoint = createClone(mEndpoint, Eigen::Vector4d(0.1, 0.1, 1.0, 0.5));
 
-    mMaxVelocities.resize(mHubo->getNumDofs());
-    mMaxAccelerations.resize(mHubo->getNumDofs());
-    for(size_t i=0; i < mHubo->getNumDofs(); ++i)
+    toggleMidpointVisibility(false);
+
+    mMaxVelocities.resize(mEndpoint->getNumDofs());
+    mMaxAccelerations.resize(mEndpoint->getNumDofs());
+    for(size_t i=0; i < mEndpoint->getNumDofs(); ++i)
     {
       mDofs.push_back(i);
-      DegreeOfFreedom* dof = mHubo->getDof(i);
+      DegreeOfFreedom* dof = mEndpoint->getDof(i);
       mMaxVelocities[i] = dof->getVelocityUpperLimit();
       mMaxAccelerations[i] = dof->getAccelerationUpperLimit();
     }
 
-    mPlanner.world = mWorld;
-    mPlanner.solver = mHubo->getIK(true)->getSolver();
+    mPlanner.mWorld = mWorld;
+    mPlanner.mProperties.mSolver = mEndpoint->getIK(true)->getSolver();
+    mPathShortener.mWorld = mWorld;
+    mPathShortener.mProperties.mSolver = mEndpoint->getIK(true)->getSolver();
+
     mPlayTrajectory = false;
+
+    for(size_t i=0; i < mEndpoint->getNumEndEffectors(); ++i)
+    {
+      const InverseKinematicsPtr ik = mEndpoint->getEndEffector(i)->getIK();
+      if(ik)
+      {
+        mDefaultBounds.push_back(ik->getErrorMethod().getBounds());
+        mDefaultTargetTf.push_back(ik->getTarget()->getRelativeTransform());
+        mConstraintActive.push_back(false);
+        mEndEffectorIndex.push_back(i);
+      }
+    }
+
+    toggleEndEffector(2);
+    toggleEndEffector(3);
+  }
+
+  void hideHubo(const SkeletonPtr& hubo, bool hide=true)
+  {
+    for(size_t i=0; i < hubo->getNumBodyNodes(); ++i)
+    {
+      BodyNode* bn = hubo->getBodyNode(i);
+      for(size_t j=0; j < bn->getNumVisualizationShapes(); ++j)
+        bn->getVisualizationShape(j)->setHidden(hide);
+    }
+  }
+
+  void toggleEndpointVisibility()
+  {
+    mViewEndpoint = !mViewEndpoint;
+    toggleEndpointVisibility(mViewEndpoint);
+  }
+
+  void toggleEndpointVisibility(bool show)
+  {
+    hideHubo(mEndpoint, !show);
+  }
+
+  void toggleMidpointVisibility()
+  {
+    mViewMidpoint = !mViewMidpoint;
+    toggleMidpointVisibility(mViewMidpoint);
+  }
+
+  void toggleMidpointVisibility(bool show)
+  {
+    hideHubo(mMidpoint, !show);
   }
 
   SkeletonPtr createClone(const SkeletonPtr& original,
@@ -788,6 +839,10 @@ public:
       }
     }
 
+    clone->setPositions(original->getPositions());
+    mWorld->addSkeleton(clone);
+    mWorld->getConstraintSolver()->getCollisionDetector()->removeSkeleton(clone);
+
     return clone;
   }
 
@@ -809,23 +864,55 @@ public:
 
   void resetSavedState()
   {
-    mSavedState->setPositions(mHubo->getPositions());
+    mSavedState->setPositions(mEndpoint->getPositions());
+  }
+
+  size_t getNumEndEffectors() const
+  {
+    return mConstraintActive.size();
+  }
+
+  void toggleEndEffector(size_t index)
+  {
+    EndEffector* ee = mEndpoint->getEndEffector(mEndEffectorIndex[index]);
+    const InverseKinematicsPtr& ik = ee->getIK();
+    if(ik && mConstraintActive[index])
+    {
+      mConstraintActive[index] = false;
+
+      ik->getErrorMethod().setBounds(mDefaultBounds[index]);
+      ik->getTarget()->setRelativeTransform(mDefaultTargetTf[index]);
+      mWorld->removeSimpleFrame(ik->getTarget());
+    }
+    else if(ik)
+    {
+      mConstraintActive[index] = true;
+
+      // Use the standard default bounds instead of our custom default
+      // bounds
+      ik->getErrorMethod().setBounds();
+      ik->getTarget()->setTransform(ee->getTransform());
+      mWorld->addSimpleFrame(ik->getTarget());
+    }
   }
 
   void generateTrajectory()
   {
     std::cout << "Planning path..." << std::endl;
-    Eigen::VectorXd original = mHubo->getPositions();
+    Eigen::VectorXd original = mEndpoint->getPositions();
 
     mRawPath.clear();
-    if(!mPlanner.planPath(mHubo, mDofs, mSavedState->getPositions(),
+    if(!mPlanner.planPath(mEndpoint, mDofs, mSavedState->getPositions(),
                           original, mRawPath))
     {
       std::cerr << "Failed to plan a path!" << std::endl;
-      mHubo->setPositions(original);
+      mEndpoint->setPositions(original);
       mPlayTrajectory = false;
       return;
     }
+
+    std::cout << "Shortening..." << std::endl;
+    mPathShortener.shortenPath(mEndpoint, mDofs, mRawPath);
 
     std::cout << "Generating trajectory..." << std::endl;
     mPath = std::unique_ptr<dart::planning::Path>(
@@ -836,8 +923,11 @@ public:
             *mPath, mMaxVelocities, mMaxAccelerations));
 
     mPlayTrajectory = true;
+    toggleMidpointVisibility(true);
     mTimer.setStartTick();
-    std::cout << "Finished generating trajectory!\n" << std::endl;
+    std::cout << "Finished generating trajectory!\n"
+              << "Waypoints: " << mTraj->getDuration()*200.0 << " | Time: "
+              << mTraj->getDuration() << "\n" << std::endl;
   }
 
   void customPreRefresh() override
@@ -848,18 +938,18 @@ public:
       if(time >= mTraj->getDuration())
       {
         if(!mRawPath.empty())
-          mHubo->setPositions(mRawPath.back());
+          mMidpoint->setPositions(mRawPath.back());
 
         mPlayTrajectory = false;
         return;
       }
 
-      mHubo->setPositions(mTraj->getPosition(time));
+      mMidpoint->setPositions(mTraj->getPosition(time));
     }
 
     if(mAnyMovement)
     {
-      Eigen::Isometry3d old_tf = mHubo->getBodyNode(0)->getWorldTransform();
+      Eigen::Isometry3d old_tf = mEndpoint->getBodyNode(0)->getWorldTransform();
       Eigen::Isometry3d new_tf = Eigen::Isometry3d::Identity();
       Eigen::Vector3d forward = old_tf.linear().col(0);
       forward[2] = 0.0;
@@ -915,18 +1005,19 @@ public:
       new_tf.pretranslate(old_tf.translation());
       new_tf.rotate(old_tf.rotation());
 
-      mHubo->getJoint(0)->setPositions(FreeJoint::convertToPositions(new_tf));
+      mEndpoint->getJoint(0)->setPositions(FreeJoint::convertToPositions(new_tf));
     }
 
-    mHubo->getIK(true)->solve();
+    mEndpoint->getIK(true)->solve();
   }
 
   bool mAmplifyMovement;
 
 protected:
 
-  SkeletonPtr mHubo;
+  SkeletonPtr mEndpoint;
   SkeletonPtr mSavedState;
+  SkeletonPtr mMidpoint;
   size_t iter;
 
   EndEffectorPtr l_foot;
@@ -937,6 +1028,14 @@ protected:
 
   std::vector<IK::Analytical::Solution> mSolutions;
 
+  std::vector<bool> mConstraintActive;
+
+  std::vector<size_t> mEndEffectorIndex;
+
+  std::vector< std::pair<Eigen::Vector6d, Eigen::Vector6d> > mDefaultBounds;
+
+  Eigen::aligned_vector<Eigen::Isometry3d> mDefaultTargetTf;
+
   // Order: q, w, e, a, s, d
   std::vector<bool> mMoveComponents;
 
@@ -944,6 +1043,7 @@ protected:
 
   std::vector<size_t> mDofs;
   dart::planning::PathPlanner<> mPlanner;
+  dart::planning::PathShortener<> mPathShortener;
   std::unique_ptr<dart::planning::Path> mPath;
   std::unique_ptr<dart::planning::PathFollowingTrajectory> mTraj;
   std::list<Eigen::VectorXd> mRawPath;
@@ -952,6 +1052,9 @@ protected:
   Eigen::VectorXd mMaxAccelerations;
 
   bool mPlayTrajectory;
+
+  bool mViewEndpoint;
+  bool mViewMidpoint;
 
   osg::Timer mTimer;
 };
@@ -973,18 +1076,6 @@ public:
   void initialize()
   {
     mRestConfig = mHubo->getPositions();
-
-    for(size_t i=0; i < mHubo->getNumEndEffectors(); ++i)
-    {
-      const InverseKinematicsPtr ik = mHubo->getEndEffector(i)->getIK();
-      if(ik)
-      {
-        mDefaultBounds.push_back(ik->getErrorMethod().getBounds());
-        mDefaultTargetTf.push_back(ik->getTarget()->getRelativeTransform());
-        mConstraintActive.push_back(false);
-        mEndEffectorIndex.push_back(i);
-      }
-    }
 
     mPosture = std::dynamic_pointer_cast<RelaxedPosture>(
           mHubo->getIK(true)->getObjective());
@@ -1041,28 +1132,9 @@ public:
       if( '1' <= ea.getKey() && ea.getKey() <= '9' )
       {
         size_t index = ea.getKey() - '1';
-        if(index < mConstraintActive.size())
+        if(index < mTeleop->getNumEndEffectors())
         {
-          EndEffector* ee = mHubo->getEndEffector(mEndEffectorIndex[index]);
-          const InverseKinematicsPtr& ik = ee->getIK();
-          if(ik && mConstraintActive[index])
-          {
-            mConstraintActive[index] = false;
-
-            ik->getErrorMethod().setBounds(mDefaultBounds[index]);
-            ik->getTarget()->setRelativeTransform(mDefaultTargetTf[index]);
-            mWorld->removeSimpleFrame(ik->getTarget());
-          }
-          else if(ik)
-          {
-            mConstraintActive[index] = true;
-
-            // Use the standard default bounds instead of our custom default
-            // bounds
-            ik->getErrorMethod().setBounds();
-            ik->getTarget()->setTransform(ee->getTransform());
-            mWorld->addSimpleFrame(ik->getTarget());
-          }
+          mTeleop->toggleEndEffector(index);
         }
         return true;
       }
@@ -1148,7 +1220,7 @@ public:
 
       switch(ea.getKey())
       {
-        case 'w': case 'a': case 's': case 'd': case 'q': case'e': case 'f': case 'z':
+        case 'w': case 'a': case 's': case 'd': case 'q': case 'e': case 'f': case 'z':
         case 'W': case 'A': case 'S': case 'D': case 'Q': case 'E': case 'F': case 'Z':
         {
           mTeleop->setMovement(mMoveComponents);
@@ -1171,14 +1243,6 @@ protected:
   WorldPtr mWorld;
 
   Eigen::VectorXd mRestConfig;
-
-  std::vector<bool> mConstraintActive;
-
-  std::vector<size_t> mEndEffectorIndex;
-
-  std::vector< std::pair<Eigen::Vector6d, Eigen::Vector6d> > mDefaultBounds;
-
-  Eigen::aligned_vector<Eigen::Isometry3d> mDefaultTargetTf;
 
   std::shared_ptr<RelaxedPosture> mPosture;
 
@@ -1205,7 +1269,7 @@ SkeletonPtr createGround()
   groundShape->setColor(dart::Color::Blue(0.2));
 
   ground->getBodyNode(0)->addVisualizationShape(groundShape);
-  ground->getBodyNode(0)->addCollisionShape(groundShape);
+//  ground->getBodyNode(0)->addCollisionShape(groundShape);
 
   return ground;
 }
@@ -1226,6 +1290,13 @@ SkeletonPtr createHubo()
       bn->remove();
       --i;
     }
+  }
+
+  for(size_t i=0; i < hubo->getNumDofs(); ++i)
+  {
+    DegreeOfFreedom* dof = hubo->getDof(i);
+    dof->setVelocityLimits(-1.0, 1.0);
+    dof->setAccelerationLimits(-1.0, 1.0);
   }
 
   return hubo;
