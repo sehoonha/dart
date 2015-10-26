@@ -732,13 +732,15 @@ public:
     for(size_t i=0; i < 3; ++i)
     {
       mEndpoint->getDof(i)->setPositionLimits(-90.0*M_PI/180.0, 90.0*M_PI/180.0);
-      mEndpoint->getDof(i)->setVelocityLimits(-1, 1);
+      mEndpoint->getDof(i)->setVelocityLimits(-0.5, 0.5);
+      mEndpoint->getDof(i)->setAccelerationLimits(-0.1, 0.1);
     }
 
     for(size_t i=3; i < 6; ++i)
     {
-      mEndpoint->getDof(i)->setPositionLimits(-2.0, 2.0);
-      mEndpoint->getDof(i)->setVelocityLimits(-1, 1);
+      mEndpoint->getDof(i)->setPositionLimits(-10, 10);
+      mEndpoint->getDof(i)->setVelocityLimits(-0.1, 0.1);
+      mEndpoint->getDof(i)->setAccelerationLimits(-0.1, 0.1);
     }
 
     mMoveComponents.resize(NUM_MOVE, false);
@@ -1319,8 +1321,8 @@ SkeletonPtr createHubo()
   for(size_t i=0; i < hubo->getNumDofs(); ++i)
   {
     DegreeOfFreedom* dof = hubo->getDof(i);
-    dof->setVelocityLimits(-1.0, 1.0);
-    dof->setAccelerationLimits(-1.0, 1.0);
+    dof->setVelocityLimits(-0.5, 0.5);
+    dof->setAccelerationLimits(-0.1, 0.1);
   }
 
   hubo->enableSelfCollision();
