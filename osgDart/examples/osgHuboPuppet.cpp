@@ -781,6 +781,24 @@ public:
 
     toggleEndEffector(2);
     toggleEndEffector(3);
+
+    dart::collision::CollisionDetector* cd = mWorld->getConstraintSolver()->
+        getCollisionDetector();
+#define DISABLE_PAIR( X1, X2 ) cd->disablePair(mEndpoint->getBodyNode( #X1 ), mEndpoint->getBodyNode( #X2 ))
+    DISABLE_PAIR(Body_LHY,Body_LHP);
+    DISABLE_PAIR(Body_LKP,Body_LAR);
+    DISABLE_PAIR(Body_RHY,Body_RHP);
+    DISABLE_PAIR(Body_RKP,Body_RAR);
+    DISABLE_PAIR(Body_LSP,Body_LSY);
+    DISABLE_PAIR(Body_RSP,Body_RSY);
+
+    cd->detectCollision(true, true);
+    for(size_t i=0; i < cd->getNumContacts(); ++i)
+    {
+      const dart::collision::Contact& contact = cd->getContact(i);
+      std::cout << contact.bodyNode1.lock()->getName() << " : "
+                << contact.bodyNode2.lock()->getName() << std::endl;
+    }
   }
 
   void hideHubo(const SkeletonPtr& hubo, bool hide=true)
@@ -1299,6 +1317,7 @@ SkeletonPtr createHubo()
     dof->setAccelerationLimits(-1.0, 1.0);
   }
 
+  hubo->enableSelfCollision();
   return hubo;
 }
 
@@ -1399,10 +1418,10 @@ void setupEndEffectors(const SkeletonPtr& hubo)
 
 
   dart::math::SupportGeometry foot_support;
-  foot_support.push_back(Eigen::Vector3d(-0.08,  0.05, 0.0));
-  foot_support.push_back(Eigen::Vector3d(-0.18,  0.05, 0.0));
-  foot_support.push_back(Eigen::Vector3d(-0.18, -0.05, 0.0));
-  foot_support.push_back(Eigen::Vector3d(-0.08, -0.05, 0.0));
+  foot_support.push_back(Eigen::Vector3d(-0.08,  0.001, 0.0));
+  foot_support.push_back(Eigen::Vector3d(-0.18,  0.001, 0.0));
+  foot_support.push_back(Eigen::Vector3d(-0.18, -0.001, 0.0));
+  foot_support.push_back(Eigen::Vector3d(-0.08, -0.001, 0.0));
 
   Eigen::Isometry3d tf_foot(Eigen::Isometry3d::Identity());
   double ground_dist = 0.01;
