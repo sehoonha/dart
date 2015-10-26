@@ -38,6 +38,7 @@
 
 #include <osgDart/osgDart.h>
 
+#include <fstream>
 
 using namespace dart::dynamics;
 using namespace dart::simulation;
@@ -801,6 +802,8 @@ public:
       std::cout << contact.bodyNode1.lock()->getName() << " : "
                 << contact.bodyNode2.lock()->getName() << std::endl;
     }
+
+    clearDump();
   }
 
   void hideHubo(const SkeletonPtr& hubo, bool hide=true)
@@ -950,6 +953,45 @@ public:
               << mTraj->getDuration() << "\n" << std::endl;
   }
 
+  void dumpTrajectory()
+  {
+    generateTrajectory();
+
+    const double dt = 1.0/200.0;
+    double time = 0.0;
+
+    std::vector<Eigen::VectorXd> raw_traj;
+    while( time <= mTraj->getDuration() )
+    {
+      raw_traj.push_back(mTraj->getPosition(time));
+      time += dt;
+    }
+
+    raw_traj.push_back(mRawPath.back());
+//    raw_traj.push_back(mTraj->getPosition(mTraj->getDuration()));
+
+    std::cout << "Dumping trajectory of size " << raw_traj.size() << " to "
+              << dumpfile << std::endl;
+
+    std::ofstream dump;
+    dump.open(dumpfile, std::ofstream::out | std::ofstream::app);
+    for(size_t i=0; i < raw_traj.size(); ++i)
+    {
+      const Eigen::VectorXd& pos = raw_traj[i];
+      for(int j=0; j < pos.size(); ++j)
+        dump << pos[j] << "\t";
+      dump << "\n";
+    }
+    dump.close();
+  }
+
+  void clearDump()
+  {
+    std::ofstream dump;
+    dump.open(dumpfile, std::ofstream::out);
+    dump.close();
+  }
+
   void customPreRefresh() override
   {
     if(mPlayTrajectory)
@@ -1040,6 +1082,8 @@ protected:
     mViewer->disableInteraction(mSavedState);
     mViewer->disableInteraction(mMidpoint);
   }
+
+  const std::string dumpfile = "/home/grey/projects/protoHuboGUI/trajectory.dat";
 
   SkeletonPtr mEndpoint;
   SkeletonPtr mSavedState;
@@ -1133,6 +1177,25 @@ public:
       if( ea.getKey() == ' ' )
       {
         mTeleop->generateTrajectory();
+        return true;
+      }
+
+      if( ea.getKey() == '`' )
+      {
+        mTeleop->toggleMidpointVisibility();
+        return true;
+      }
+
+      if( ea.getKey() == osgGA::GUIEventAdapter::KEY_Return )
+      {
+        mTeleop->dumpTrajectory();
+        mTeleop->resetSavedState();
+        return true;
+      }
+
+      if( ea.getKey() == osgGA::GUIEventAdapter::KEY_BackSpace )
+      {
+        mTeleop->clearDump();
         return true;
       }
 
@@ -1311,12 +1374,16 @@ SkeletonPtr createHubo()
   {
     BodyNode* bn = hubo->getBodyNode(i);
     if(bn->getName().substr(0, 7) == "Body_LF"
-       || bn->getName().substr(0, 7) == "Body_RF")
+       || bn->getName().substr(0, 7) == "Body_RF"
+       || bn->getName().substr(0, 7) == "Body_NK")
     {
       bn->remove();
       --i;
     }
   }
+
+  hubo->getDof("REP")->setPositionUpperLimit(0.0);
+  hubo->getDof("LEP")->setPositionUpperLimit(0.0);
 
   for(size_t i=0; i < hubo->getNumDofs(); ++i)
   {
