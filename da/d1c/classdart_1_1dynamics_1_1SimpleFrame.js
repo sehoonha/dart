@@ -1,6 +1,6 @@
 var classdart_1_1dynamics_1_1SimpleFrame =
 [
-    [ "SimpleFrame", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#ab1ef60dacd4c8ca53fae73717111cc58", null ],
+    [ "SimpleFrame", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#aab9efa74dd656f705a47f3bdb2e29d91", null ],
     [ "SimpleFrame", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#aca0b006d018f83ebac1733d7567cc3ab", null ],
     [ "~SimpleFrame", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a58534f500cb604ec927435afc18e8f3c", null ],
     [ "clone", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a624e53d5ab5c34b3b7781041aa5fee35", null ],
@@ -18,7 +18,7 @@ var classdart_1_1dynamics_1_1SimpleFrame =
     [ "setRelativeSpatialVelocity", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a3651848b70865a6f3f67f0f49b8e603a", null ],
     [ "setRelativeSpatialVelocity", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a12923f50bb38efd65355c1e1829f7121", null ],
     [ "setRelativeTransform", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a4319dc693d8cc4fd03b8da3c0fb32d9a", null ],
-    [ "setTransform", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a5b449f2ddaa676d3bc5f0f238395c42f", null ],
+    [ "setTransform", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a7df0bb20e4899db888f5530a4ec0810e", null ],
     [ "mPartialAcceleration", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a53692ad9c9028f3b974f1cde6fc523ca", null ],
     [ "mRelativeAcceleration", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a3a93a3d3bba79ca298d86c85d583f832", null ],
     [ "mRelativeTf", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a34ebb6e624c61af6356ce5587fbfe48b", null ],

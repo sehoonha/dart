@@ -29,5 +29,6 @@ var MathTypes_8h =
     [ "LinearJacobian", "d5/d55/MathTypes_8h.html#acaf385e0537db2db2df04bf8baf7543b", null ],
     [ "Matrix6d", "d5/d55/MathTypes_8h.html#a1690c3b787f33c899925ec8ed093dfdd", null ],
     [ "Vector6d", "d5/d55/MathTypes_8h.html#ac27ace7c50a658d3a07238110fa51a2f", null ],
+    [ "compose", "d5/d55/MathTypes_8h.html#a5ddf9ce6ff40e8e0a562b80953064149", null ],
     [ "make_aligned_shared", "d5/d55/MathTypes_8h.html#ab5662ca881d3d41dc8716964a2a9f5ac", null ]
 ];

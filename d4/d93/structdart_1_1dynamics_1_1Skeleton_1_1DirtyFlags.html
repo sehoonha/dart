@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -155,6 +155,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a875af7e762d69bbacae3c7eb80e61225"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a875af7e762d69bbacae3c7eb80e61225">mDampingForces</a></td></tr>
 <tr class="memdesc:a875af7e762d69bbacae3c7eb80e61225"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dirty flag for the damping force vector.  <a href="#a875af7e762d69bbacae3c7eb80e61225">More...</a><br /></td></tr>
 <tr class="separator:a875af7e762d69bbacae3c7eb80e61225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7547258b9ce46afe8674c53b1e7793e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a7547258b9ce46afe8674c53b1e7793e3">mSupport</a></td></tr>
+<tr class="memdesc:a7547258b9ce46afe8674c53b1e7793e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dirty flag for the support polygon.  <a href="#a7547258b9ce46afe8674c53b1e7793e3">More...</a><br /></td></tr>
+<tr class="separator:a7547258b9ce46afe8674c53b1e7793e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a071c6726ed1f0ffbd4f46d4c8a260866"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a071c6726ed1f0ffbd4f46d4c8a260866">mSupportVersion</a></td></tr>
+<tr class="memdesc:a071c6726ed1f0ffbd4f46d4c8a260866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments each time a new support polygon is computed to help keep track of changes in the support polygon.  <a href="#a071c6726ed1f0ffbd4f46d4c8a260866">More...</a><br /></td></tr>
+<tr class="separator:a071c6726ed1f0ffbd4f46d4c8a260866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a911be711833ce675d90b5d1cf34b11b2"></a>
@@ -315,17 +321,41 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/dynamics/<a class="el" href="../../d1/ded/Skeleton_8h_source.html">Skeleton.h</a></li>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/dynamics/<a class="el" href="../../d2/d7c/Skeleton_8cpp.html">Skeleton.cpp</a></li>
-</ul>
+<a class="anchor" id="a7547258b9ce46afe8674c53b1e7793e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dart::dynamics::Skeleton::DirtyFlags::mSupport</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dirty flag for the support polygon. </p>
+
+</div>
+</div>
+<a class="anchor" id="a071c6726ed1f0ffbd4f46d4c8a260866"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t dart::dynamics::Skeleton::DirtyFlags::mSupportVersion</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increments each time a new support polygon is computed to help keep track of changes in the support polygon. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../d7/d5a/namespacedart_1_1dynamics.html">dynamics</a></li><li class="navelem"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html">Skeleton</a></li><li class="navelem"><a class="el" href="../../d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html">DirtyFlags</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:54 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:33 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

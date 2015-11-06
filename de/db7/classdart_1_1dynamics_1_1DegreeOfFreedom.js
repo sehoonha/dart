@@ -1,5 +1,6 @@
 var classdart_1_1dynamics_1_1DegreeOfFreedom =
 [
+    [ "DegreeOfFreedom", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a38e97f9a4dc7b48e01d113337038533f", null ],
     [ "DegreeOfFreedom", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#ad46ce8d6846dc961e611aaeb4652447c", null ],
     [ "getAcceleration", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a4d78fb7b3fcb3ec99a2a13ae263265cf", null ],
     [ "getAccelerationLimits", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a04db2de533eb15877236b1f7ad0fd2ab", null ],
@@ -18,6 +19,8 @@ var classdart_1_1dynamics_1_1DegreeOfFreedom =
     [ "getIndexInJoint", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a6c0fa6b7fdbba7b7d3fa655c26834b76", null ],
     [ "getIndexInSkeleton", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#add2ec1d2f979e9056b466b1be5ee1a86", null ],
     [ "getIndexInTree", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a40090e1bfc2e61901e6d653962f1409d", null ],
+    [ "getInitialPosition", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a4a4699ee543de7622c66adba258c63ba", null ],
+    [ "getInitialVelocity", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a0c6c2e19a709bebff600dff10f79dd34", null ],
     [ "getJoint", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a4f9166e956300af431447aceab442962", null ],
     [ "getJoint", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#ae7cd13f1918bb01ce25ef29a60aeae0b", null ],
     [ "getName", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a374ff502cd4202bb9760f742ba936af2", null ],
@@ -37,6 +40,8 @@ var classdart_1_1dynamics_1_1DegreeOfFreedom =
     [ "getVelocityLimits", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a7cabc34efae4746de269fdbecfcbd352", null ],
     [ "getVelocityLowerLimit", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a858d56b746321957562a03184066de91", null ],
     [ "getVelocityUpperLimit", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a6d7efcf7546e9061f984735fcf1891ad", null ],
+    [ "hasPositionLimit", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#aba515d30d1a6fc66af1cb0a7400468e3", null ],
+    [ "isCyclic", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a5ca795f03e3511f1dcb52dd75bf228e2", null ],
     [ "isNamePreserved", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#aea2cf2c1f4b29003ebc6542a5ca64f99", null ],
     [ "preserveName", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#abb0fc08e06e8523d5bc09726d90e1089", null ],
     [ "resetAcceleration", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#ae834277a05318c8adea9a7550649f0f7", null ],
@@ -60,6 +65,8 @@ var classdart_1_1dynamics_1_1DegreeOfFreedom =
     [ "setForceLimits", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#ad86e51df5b0f5231f37e58b88ef72811", null ],
     [ "setForceLowerLimit", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#acad847eec2661de425fe40d4d7d2449e", null ],
     [ "setForceUpperLimit", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#af1d1d893f68ac3eec65b1223e7ab2967", null ],
+    [ "setInitialPosition", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a8fed3479888c351bfb851202021afd4e", null ],
+    [ "setInitialVelocity", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#ada1d0fe302361c430148c1232e0ad050", null ],
     [ "setName", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#aeb4b5f50c9a12054c1ec7a47a508f330", null ],
     [ "setPosition", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#aec9e528d91a9c09c174ed8a7d60ab9cc", null ],
     [ "setPositionLimits", "de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a8f3ad68159541dee8bafef10b0f8dc8d", null ],

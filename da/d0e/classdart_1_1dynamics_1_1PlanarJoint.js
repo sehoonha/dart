@@ -8,6 +8,7 @@ var classdart_1_1dynamics_1_1PlanarJoint =
       [ "PT_ZX", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#ac5eacbdd8bd47fa946ce7dd6e0477f78aa110f6d853fc567456de59f30b221f0d", null ],
       [ "PT_ARBITRARY", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#ac5eacbdd8bd47fa946ce7dd6e0477f78a93b0b423401c92649d42a49c6a28f899", null ]
     ] ],
+    [ "PlanarJoint", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a40185fc29c7fb48dfa9d2c61d629d445", null ],
     [ "~PlanarJoint", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#af85cf4a3097b1d64dc7c83e6e80bd41a", null ],
     [ "PlanarJoint", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a1b07a03d94a6dc3d0a87817f4d4a674e", null ],
     [ "clone", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a6205110329a5206938cb49d663adbcc7", null ],
@@ -21,6 +22,7 @@ var classdart_1_1dynamics_1_1PlanarJoint =
     [ "getTranslationalAxis1", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#aa9a822c23707c0d545d55c4142b6eb8c", null ],
     [ "getTranslationalAxis2", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a32504b4025081d4d6b70022caf57044e", null ],
     [ "getType", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a971596c917c26818d31e8afc0deaf838", null ],
+    [ "isCyclic", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#ad0e9e94d76d54e9d011b8b2e8b2bd6f4", null ],
     [ "operator=", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a6d8c4310c2722f1810386981bcea22c9", null ],
     [ "setArbitraryPlane", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#af21c664ccfa1fdad5b240866dcf1eca3", null ],
     [ "setProperties", "da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a26d7e67a09a44b9e0d4e2893068e11df", null ],

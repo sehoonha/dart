@@ -1,8 +1,29 @@
 var classdart_1_1optimizer_1_1Solver =
 [
-    [ "Solver", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a2ce1ee2736ba6f5f931f99d6c79f4a77", null ],
-    [ "~Solver", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a2b6b8e739e84fd1043ecb6e2513c3a11", null ],
-    [ "getProblem", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a5db65d3e9fd39492897ccbc1d7b2e644", null ],
+    [ "Properties", "db/d48/structdart_1_1optimizer_1_1Solver_1_1Properties.html", "db/d48/structdart_1_1optimizer_1_1Solver_1_1Properties" ],
+    [ "Solver", "d0/d68/classdart_1_1optimizer_1_1Solver.html#af480f5200ed42551a9f1392545aa772a", null ],
+    [ "Solver", "d0/d68/classdart_1_1optimizer_1_1Solver.html#aee36c5d2b25195ef86a08759274e1a27", null ],
+    [ "~Solver", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a69bd13c0d9ad96746697909fb4ae1d7b", null ],
+    [ "clone", "d0/d68/classdart_1_1optimizer_1_1Solver.html#af81a4a4f69a787883fa2c13c46a85237", null ],
+    [ "copy", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a34042a8350719ae993014080da507b84", null ],
+    [ "getIterationsPerPrint", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a2cb4a4709ec67d1c3b9cf077387e5bbb", null ],
+    [ "getNumMaxIterations", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a976b9858e906623e573bcd967dd3b1af", null ],
+    [ "getOutStream", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a26213fddc87b237d26d0d9c10f8c77be", null ],
+    [ "getPrintFinalResult", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a2b8822485d72a57260bca897323812a6", null ],
+    [ "getProblem", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a41ebe9ea5dd127a939a63f4473c25f5a", null ],
+    [ "getResultFileName", "d0/d68/classdart_1_1optimizer_1_1Solver.html#ac4b4febb53a738891172acaa5e2530d3", null ],
+    [ "getSolverProperties", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a16387723a2325619c709b8b92ce7030f", null ],
+    [ "getTolerance", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a910fab01853329b0fb05384a98e889d2", null ],
+    [ "getType", "d0/d68/classdart_1_1optimizer_1_1Solver.html#af5bce8c03145ba5fca2a9756960f4c5e", null ],
+    [ "operator=", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a3f963399dad37543faa3bc71bb62b72a", null ],
+    [ "setIterationsPerPrint", "d0/d68/classdart_1_1optimizer_1_1Solver.html#ad47d862f1ec5ac4b3cbe9acd206ce10c", null ],
+    [ "setNumMaxIterations", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a28a7899c1fff9e54c3708772736a8e08", null ],
+    [ "setOutStream", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a246afc16ee8bbec331187e709b1a2e02", null ],
+    [ "setPrintFinalResult", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a196a3118b57acfb70848e6498ee0943d", null ],
+    [ "setProblem", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a28c784c676becce01d7c4392478102dc", null ],
+    [ "setProperties", "d0/d68/classdart_1_1optimizer_1_1Solver.html#ab13e2b57c01c5da82f131166797ba6c7", null ],
+    [ "setResultFileName", "d0/d68/classdart_1_1optimizer_1_1Solver.html#ab48523a7f3a48333fbdd2b5ae5ddc9e5", null ],
+    [ "setTolerance", "d0/d68/classdart_1_1optimizer_1_1Solver.html#ab049613cfaed036f0bd2e1187ade5bce", null ],
     [ "solve", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a9621b9518a482293b035e234a796efa9", null ],
-    [ "mProblem", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a2f871e1ea43104debb0cd26e214e0133", null ]
+    [ "mProperties", "d0/d68/classdart_1_1optimizer_1_1Solver.html#a4eba45b7e2fe9a3585c918a0483f1753", null ]
 ];

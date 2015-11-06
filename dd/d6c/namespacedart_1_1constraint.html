@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -115,6 +115,9 @@ $(document).ready(function(){initNavTree('dd/d6c/namespacedart_1_1constraint.htm
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html">BalanceConstraint</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html" title="BalanceConstraint is a kinematic constraint function designed to be passed into a HierarchicalIK modu...">BalanceConstraint</a> is a kinematic constraint function designed to be passed into a HierarchicalIK module.  <a href="../../da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4e/classdart_1_1constraint_1_1BallJointConstraint.html">BallJointConstraint</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/d4e/classdart_1_1constraint_1_1BallJointConstraint.html" title="BallJointConstraint represents ball joint constraint between a body and the world or between two bodi...">BallJointConstraint</a> represents ball joint constraint between a body and the world or between two bodies.  <a href="../../d9/d4e/classdart_1_1constraint_1_1BallJointConstraint.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +165,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ab1ca16fdd4b156f83993421c1f0c11df"><td class="memTemplParams" colspan="2">template&lt;typename JacType &gt; </td></tr>
+<tr class="memitem:ab1ca16fdd4b156f83993421c1f0c11df"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/d6c/namespacedart_1_1constraint.html#ab1ca16fdd4b156f83993421c1f0c11df">addDampedPseudoInverseToGradient</a> (Eigen::Map&lt; Eigen::VectorXd &gt; &amp;grad, const JacType &amp;J, const Eigen::MatrixXd &amp;nullspace, const Eigen::Vector3d &amp;error, double damping)</td></tr>
+<tr class="separator:ab1ca16fdd4b156f83993421c1f0c11df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2488681e6db07eb614b77f7715eac2c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d6c/namespacedart_1_1constraint.html#a2488681e6db07eb614b77f7715eac2c1">solvePGS</a> (int n, int nskip, int, double *A, double *x, double *b, double *lo, double *hi, int *findex, <a class="el" href="../../d8/d55/structdart_1_1constraint_1_1PGSOption.html">PGSOption</a> *option)</td></tr>
 <tr class="separator:a2488681e6db07eb614b77f7715eac2c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a638541c0a4b2f8e00d73f873393ffa5f"><td class="memTemplParams" colspan="2">template&lt;typename PointMassT , typename SoftBodyNodeT &gt; </td></tr>
@@ -169,6 +175,60 @@ Functions</h2></td></tr>
 <tr class="separator:a638541c0a4b2f8e00d73f873393ffa5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ab1ca16fdd4b156f83993421c1f0c11df"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename JacType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void dart::constraint::addDampedPseudoInverseToGradient </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::Map&lt; Eigen::VectorXd &gt; &amp;&#160;</td>
+          <td class="paramname"><em>grad</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const JacType &amp;&#160;</td>
+          <td class="paramname"><em>J</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>nullspace</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::Vector3d &amp;&#160;</td>
+          <td class="paramname"><em>error</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>damping</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a638541c0a4b2f8e00d73f873393ffa5f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -291,7 +351,7 @@ template&lt;typename PointMassT , typename SoftBodyNodeT &gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../dd/d6c/namespacedart_1_1constraint.html">constraint</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:53 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:33 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

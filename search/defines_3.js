@@ -25,6 +25,8 @@ var searchData=
   ['dart_5fdegree',['DART_DEGREE',['../d5/d55/MathTypes_8h.html#ad73b3c93777ad9c2531c1f0430729367',1,'MathTypes.h']]],
   ['dart_5fdynamics_5fmake_5fbn_5fdependent_5fptr',['DART_DYNAMICS_MAKE_BN_DEPENDENT_PTR',['../dd/d4a/SmartPointer_8h.html#a660a98f95ab4c939d746eeca7d873d09',1,'SmartPointer.h']]],
   ['dart_5fdynamics_5fmake_5fbodynodeptr',['DART_DYNAMICS_MAKE_BODYNODEPTR',['../dd/d4a/SmartPointer_8h.html#ab97cb6ca79847b58b9e862f916bb3a8a',1,'SmartPointer.h']]],
+  ['dart_5fdynamics_5fmake_5fik_5fptr',['DART_DYNAMICS_MAKE_IK_PTR',['../dd/d4a/SmartPointer_8h.html#a6a7079f2f5fe96fc0d05f315fbdb0e79',1,'SmartPointer.h']]],
+  ['dart_5fdynamics_5fmake_5fnodeptr',['DART_DYNAMICS_MAKE_NODEPTR',['../dd/d4a/SmartPointer_8h.html#a3e63e076d7030d20e90c41457294d90d',1,'SmartPointer.h']]],
   ['dart_5fdynamics_5fmake_5fshared_5fweak',['DART_DYNAMICS_MAKE_SHARED_WEAK',['../dd/d4a/SmartPointer_8h.html#a3b88c4ed56a52f4428ebe193ef7a8f2e',1,'SmartPointer.h']]],
   ['dart_5fepsilon',['DART_EPSILON',['../d5/d55/MathTypes_8h.html#a965dd71b99bacf40a89e0acf48b2e6e5',1,'MathTypes.h']]],
   ['dart_5ferp',['DART_ERP',['../d7/d27/ContactConstraint_8cpp.html#ac12c507c1b5d92519e5929d66d57ca7d',1,'DART_ERP():&#160;ContactConstraint.cpp'],['../db/d4f/JointConstraint_8cpp.html#ac12c507c1b5d92519e5929d66d57ca7d',1,'DART_ERP():&#160;JointConstraint.cpp'],['../db/d5d/JointLimitConstraint_8cpp.html#ac12c507c1b5d92519e5929d66d57ca7d',1,'DART_ERP():&#160;JointLimitConstraint.cpp'],['../d2/d9e/SoftContactConstraint_8cpp.html#ac12c507c1b5d92519e5929d66d57ca7d',1,'DART_ERP():&#160;SoftContactConstraint.cpp']]],

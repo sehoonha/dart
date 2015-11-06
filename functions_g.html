@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -154,19 +154,28 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>get()
 : <a class="el" href="d5/dfd/classdart_1_1common_1_1sub__ptr.html#ad6423021bae31d4c33fa842467c4b1dc">dart::common::sub_ptr&lt; T &gt;</a>
+, <a class="el" href="d6/d65/classdart_1_1common_1_1UriComponent.html#a13c6071cfc1a7a0fa4dd598c1fc1a8b7">dart::common::UriComponent</a>
 , <a class="el" href="d1/d01/classdart_1_1dynamics_1_1TemplateBodyNodePtr.html#a010bb70b67700bab234f929d5a1a5fe0">dart::dynamics::TemplateBodyNodePtr&lt; BodyNodeT &gt;</a>
 , <a class="el" href="d2/d70/classdart_1_1dynamics_1_1TemplateDegreeOfFreedomPtr.html#a2df1c111d2f1f224a7a37478c49d0084">dart::dynamics::TemplateDegreeOfFreedomPtr&lt; DegreeOfFreedomT, BodyNodeT &gt;</a>
+, <a class="el" href="dd/dbc/classdart_1_1dynamics_1_1TemplateInverseKinematicsPtr.html#a9125c8a5ab7e8549cf2879bc582c1d40">dart::dynamics::TemplateInverseKinematicsPtr&lt; IkType, JacobianNodePtrT &gt;</a>
 , <a class="el" href="d0/d2f/classdart_1_1dynamics_1_1TemplateJointPtr.html#aa50a858f1dac04af69c7defa8338479c">dart::dynamics::TemplateJointPtr&lt; JointT, BodyNodeT &gt;</a>
+, <a class="el" href="d9/dff/classdart_1_1dynamics_1_1TemplateNodePtr.html#ade65dbb1e0c02495fa324bb9bd5a1e28">dart::dynamics::TemplateNodePtr&lt; NodeT, BodyNodeT &gt;</a>
 , <a class="el" href="dd/dc3/classdart_1_1utils_1_1ElementEnumerator.html#a8657e9a6151230a7ed06d9ca6cb55843">dart::utils::ElementEnumerator</a>
 </li>
 <li>get_bounds_info()
-: <a class="el" href="df/d64/classdart_1_1optimizer_1_1DartTNLP.html#af2489c0db8da605bdb7e34b0bb9dae6f">dart::optimizer::DartTNLP</a>
+: <a class="el" href="df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a66fc616b7334e54e73284d1aff004499">dart::optimizer::DartTNLP</a>
 </li>
 <li>get_nlp_info()
-: <a class="el" href="df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a9f11d2b431e1da3452a8a6ea595a5a58">dart::optimizer::DartTNLP</a>
+: <a class="el" href="df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a420f807cbc8b6c72407aefa8e2609d5d">dart::optimizer::DartTNLP</a>
+</li>
+<li>get_shared()
+: <a class="el" href="dd/dbc/classdart_1_1dynamics_1_1TemplateInverseKinematicsPtr.html#a5c1f192c11f7b96b676de2a758cfbe61">dart::dynamics::TemplateInverseKinematicsPtr&lt; IkType, JacobianNodePtrT &gt;</a>
 </li>
 <li>get_starting_point()
-: <a class="el" href="df/d64/classdart_1_1optimizer_1_1DartTNLP.html#afc234a4219deb153a0b7a7c31e23a2c8">dart::optimizer::DartTNLP</a>
+: <a class="el" href="df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a0eb8a6e43c309bffeb869358856f2265">dart::optimizer::DartTNLP</a>
+</li>
+<li>get_value_or()
+: <a class="el" href="d6/d65/classdart_1_1common_1_1UriComponent.html#a62996d1f949dccb50a340e300c032bda">dart::common::UriComponent</a>
 </li>
 <li>getAcceleration()
 : <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a4d78fb7b3fcb3ec99a2a13ae263265cf">dart::dynamics::DegreeOfFreedom</a>
@@ -219,26 +228,44 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getActuatorType()
 : <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a6d4a95679808c7620b599235cde5bfd4">dart::dynamics::Joint</a>
 </li>
+<li>getAffiliation()
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a88c8ab69f688a4ceec7d39b3dd789573">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a5c4f418c60eeb5c37bfdd883c8bbf893">dart::dynamics::InverseKinematics</a>
+</li>
+<li>getAlgorithm()
+: <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#ab2f5308303039e63b60893c817917cf0">dart::optimizer::NloptSolver</a>
+</li>
 <li>getAngularAcceleration()
 : <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#af2aea6060c7be8408001d82ad654f062">dart::dynamics::Frame</a>
 </li>
+<li>getAngularBounds()
+: <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#a6f14ffc75f303a020fbc702dadbf6687">dart::dynamics::InverseKinematics::ErrorMethod</a>
+</li>
+<li>getAngularErrorWeights()
+: <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#ae9e99faa5d368687b71aae010c88e2d0">dart::dynamics::InverseKinematics::ErrorMethod</a>
+</li>
 <li>getAngularJacobian()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aa85ef77e02245d5d95d28ee38dad08b6">dart::dynamics::BodyNode</a>
-, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a998d7bac215ae8267cd325e06e515b3b">dart::dynamics::MetaSkeleton</a>
-, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a8bcc2728bf652cd3047cb34271f75e16">dart::dynamics::ReferentialSkeleton</a>
-, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a8f44e115c36149a87c8f9e6995ffb73d">dart::dynamics::Skeleton</a>
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a178448beac27bb12e3fd4b961da694ba">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ab3d19408ad580c9df1644fcb8c2ce7de">dart::dynamics::MetaSkeleton</a>
+, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a8407f5b662dbedad44d3bf4b37ab7ec4">dart::dynamics::ReferentialSkeleton</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a69bcf8e161095692f8e960baae037bb8">dart::dynamics::Skeleton</a>
+, <a class="el" href="d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode.html#aabb89db808e85b02daf5139e2bcfd819">dart::dynamics::TemplatedJacobianNode&lt; EntityType &gt;</a>
 </li>
 <li>getAngularJacobianDeriv()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aaa07371c990b1f2b247d03cfac196ebe">dart::dynamics::BodyNode</a>
-, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a3bc99feee27beb0c85cbd416fa45bbf9">dart::dynamics::MetaSkeleton</a>
-, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#abedaa48fda2e9385a45a375c0c4ee11e">dart::dynamics::ReferentialSkeleton</a>
-, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a4a0773a871d79761eb0881a79a72d60a">dart::dynamics::Skeleton</a>
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#aab6a9362137222bee00ed382c919e136">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a3c6aafc7051580ddb48e928d935c09a9">dart::dynamics::MetaSkeleton</a>
+, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a150e8479bf2195bd4985f657cc984a91">dart::dynamics::ReferentialSkeleton</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a323fc3c63b9053f3a2bca654c3f328cf">dart::dynamics::Skeleton</a>
+, <a class="el" href="d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode.html#af57f99782db722f589751f88e1065d6b">dart::dynamics::TemplatedJacobianNode&lt; EntityType &gt;</a>
 </li>
 <li>getAngularMomentum()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ac1ca4998f971b35ea16a2a3455f92e03">dart::dynamics::BodyNode</a>
 </li>
 <li>getAngularVelocity()
 : <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a55d2e26a410701f1ad9d00a7ce596e2d">dart::dynamics::Frame</a>
+</li>
+<li>getApplication()
+: <a class="el" href="dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html#a56d63ee6a99d1332859b64659d37fd5b">dart::optimizer::IpoptSolver</a>
 </li>
 <li>getArticulatedInertia()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ab7e760fa3b69166dfabe6d6718a5b580">dart::dynamics::BodyNode</a>
@@ -268,6 +295,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getAxisOrder()
 : <a class="el" href="d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a0608b7cc9cabf06b70907db8650a7c1d">dart::dynamics::EulerJoint</a>
 </li>
+<li>getBalanceMethod()
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a3f5254cc472d49fc4c881725a9e3b520">dart::constraint::BalanceConstraint</a>
+</li>
 <li>getBallJointProperties()
 : <a class="el" href="d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a32b8ca5079bf2df36939f6816826c195">dart::dynamics::BallJoint</a>
 </li>
@@ -293,11 +323,18 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a110a338439749c11dfdcec0754a86957">dart::dynamics::ReferentialSkeleton</a>
 , <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af0908071ae4c782cf3bcf18cefc8acc1">dart::dynamics::Skeleton</a>
 </li>
+<li>getBodyNode1()
+: <a class="el" href="dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#afed7f1ee8390c70707b23b73f80a9d7a">dart::constraint::JointConstraint</a>
+</li>
+<li>getBodyNode2()
+: <a class="el" href="dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#abbf3f3ca0549a6933c1dd5ca7eabce43">dart::constraint::JointConstraint</a>
+</li>
 <li>getBodyNodeProperties()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#acf152618191ce3ea2ac701bfb4b3f6d5">dart::dynamics::BodyNode</a>
 </li>
 <li>getBodyNodePtr()
-: <a class="el" href="d2/d70/classdart_1_1dynamics_1_1TemplateDegreeOfFreedomPtr.html#a966d2959495f1b9081023b51e0de1f95">dart::dynamics::TemplateDegreeOfFreedomPtr&lt; DegreeOfFreedomT, BodyNodeT &gt;</a>
+: <a class="el" href="db/dc8/classdart_1_1dynamics_1_1Node.html#a0083d0d8e79a5be14d5a01b5686af09b">dart::dynamics::Node</a>
+, <a class="el" href="d2/d70/classdart_1_1dynamics_1_1TemplateDegreeOfFreedomPtr.html#a966d2959495f1b9081023b51e0de1f95">dart::dynamics::TemplateDegreeOfFreedomPtr&lt; DegreeOfFreedomT, BodyNodeT &gt;</a>
 </li>
 <li>getBodyNodes()
 : <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#aa39e76de5829c06168e653062d5db7e1">dart::dynamics::MetaSkeleton</a>
@@ -314,6 +351,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getBoundingBoxDim()
 : <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a9e83cd0732a160c608fb67b1d666bd67">dart::dynamics::Shape</a>
 </li>
+<li>getBounds()
+: <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#ae5bc5df362a7ec1e468e7d6f5aac9a87">dart::dynamics::InverseKinematics::ErrorMethod</a>
+</li>
 <li>getBulletCollisionObject()
 : <a class="el" href="d6/dc0/classdart_1_1collision_1_1BulletCollisionNode.html#aed9ff18c1e1eba179d9e4fec797a5ba1">dart::collision::BulletCollisionNode</a>
 </li>
@@ -322,6 +362,11 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getCenter()
 : <a class="el" href="de/d9b/classdart_1_1gui_1_1Trackball.html#a33d4112d811dbfe241dc0c0ef0a6a3bd">dart::gui::Trackball</a>
+</li>
+<li>getChainDofs()
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a8d5f63662b1c8fc5183ff68a8e0191b1">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#af24d5f1893b8329984b5f25906a7437c">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#aef3b25dce4a40b8b9c670ceca750725d">dart::dynamics::JacobianNode</a>
 </li>
 <li>getChildBodyNode()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ada4389c15d8ce510e636706a78ed5687">dart::dynamics::BodyNode</a>
@@ -351,6 +396,12 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getColor()
 : <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a3c976e9f3f431935fed64645f7757598">dart::dynamics::Shape</a>
+</li>
+<li>getColorIndex()
+: <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a3cb5fb3edac0ee4ef3dd251b546d81af">dart::dynamics::MeshShape</a>
+</li>
+<li>getColorMode()
+: <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#ae08d3e757629b70b60351dac3963f176">dart::dynamics::MeshShape</a>
 </li>
 <li>getCOM()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a975844aaa7320e157c81caa478f60f71">dart::dynamics::BodyNode</a>
@@ -404,6 +455,12 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ab9d418428de330f652228f267be8dfaf">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 , <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#acfad9739c635a1770103a637dd234829">dart::dynamics::SingleDofJoint</a>
 , <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a83a11f559ea4463d880915acd5cf9372">dart::dynamics::ZeroDofJoint</a>
+</li>
+<li>getComponentWeights()
+: <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#a4d8887e76943852ff02a4423afae4aaa">dart::dynamics::InverseKinematics::GradientMethod</a>
+</li>
+<li>getComponentWiseClamp()
+: <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#a2be888a28d1b4d4319f95115b0f48989">dart::dynamics::InverseKinematics::GradientMethod</a>
 </li>
 <li>getCOMSpatialAcceleration()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a98635b410291ff0692672f746ac1b7ff">dart::dynamics::BodyNode</a>
@@ -506,6 +563,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getDampingCoefficient()
 : <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a71be56982c293c99977c6232e06362ea">dart::dynamics::DegreeOfFreedom</a>
+, <a class="el" href="d6/dd1/classdart_1_1dynamics_1_1InverseKinematics_1_1JacobianDLS.html#a53af1ee157817fd569e4109a140bdac4">dart::dynamics::InverseKinematics::JacobianDLS</a>
 , <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#ac3c918037d16f934e1d9503ea4408842">dart::dynamics::Joint</a>
 , <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#aa597a7c4a2b5f00f73ad2200424d1ee8">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 , <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a4e8559fbf0a27b1148ba7a47e42287c0">dart::dynamics::SingleDofJoint</a>
@@ -515,17 +573,34 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getDataAt()
 : <a class="el" href="de/db6/classdart_1_1utils_1_1FileInfoC3D.html#a43e2a31cee5dc5c539d2ad452be66300">dart::utils::FileInfoC3D</a>
 </li>
+<li>getDataVariance()
+: <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a709cc0dc204d0c086f10ac4d1200c10f">dart::dynamics::Shape</a>
+</li>
+<li>getDefaultConstraintWeight()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a41577e77b2c9f1660ef433f9a74b5bba">dart::optimizer::GradientDescentSolver</a>
+</li>
 <li>getDefaultName()
 : <a class="el" href="d9/dc9/classdart_1_1common_1_1NameManager.html#a21d1177beb6af61d9e5a763d469d3f83">dart::common::NameManager&lt; T &gt;</a>
 </li>
+<li>getDependentDof()
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a7cf9bb88c698fd22436903edda3bb132">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#ac47d2c664f318026e008e982165c23fb">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a4ffa705dfba57696a5c25e65775837ea">dart::dynamics::JacobianNode</a>
+</li>
 <li>getDependentDofs()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ab5d07ee94778174d4763a2c7379c3bb7">dart::dynamics::BodyNode</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#af5e97ff03bc4c44d7db63d6fbe09dba7">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#afd52a163b67e7bdcdbc019a702c028c3">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#aa14105863155c2c01b3dce610b36e89f">dart::dynamics::JacobianNode</a>
 </li>
 <li>getDependentGenCoordIndex()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aca9cd7740d2d56436735e26d6d0ef4f6">dart::dynamics::BodyNode</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ab76616819ff2a790530c808450903083">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a9ceb67afd42a4eeee29a4e04eecaf854">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a648c93a8c3a081b4a03989f4c8ff787f">dart::dynamics::JacobianNode</a>
 </li>
 <li>getDependentGenCoordIndices()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a1440603a8026bec5acf3eb7dc4509b93">dart::dynamics::BodyNode</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a564cf93546d59dbe098b94d0b19fb9a4">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#ace4d9bf0d85f83cffbcefdf4c4e2215e">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a7b7c6b3201710ab32fcc3eae769ecd0e">dart::dynamics::JacobianNode</a>
 </li>
 <li>GetDiffuse()
 : <a class="el" href="d7/d86/classdart_1_1renderer_1_1Light.html#a8687209ac5fa934a93624f0e298f821a">dart::renderer::Light</a>
@@ -549,6 +624,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getDofAt()
 : <a class="el" href="d9/dbf/classdart_1_1utils_1_1FileInfoDof.html#a3d1fd2ea5b2393cbffb22b40a99372b1">dart::utils::FileInfoDof</a>
 </li>
+<li>getDofMap()
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a2d2cd08ce9bfe4919e57b1a3fe70ab69">dart::dynamics::InverseKinematics</a>
+</li>
 <li>getDofName()
 : <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a722b4c649a4dac75e27944ac1b223c87">dart::dynamics::Joint</a>
 , <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a2a516155574e94f8a72008e68b1ef2a4">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
@@ -556,7 +634,8 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#ae88b4d1591618be6fa39239895961b0e">dart::dynamics::ZeroDofJoint</a>
 </li>
 <li>getDofs()
-: <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a17a262fcf000113dab82e95a7e8ed870">dart::dynamics::MetaSkeleton</a>
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a2993851458c4710d905b1d76da8be364">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a17a262fcf000113dab82e95a7e8ed870">dart::dynamics::MetaSkeleton</a>
 , <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a239cafbed2d21c762f85001b01c7f088">dart::dynamics::ReferentialSkeleton</a>
 , <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af8fbb9cdb6861f7f8637e6490a1b2f21">dart::dynamics::Skeleton</a>
 </li>
@@ -570,11 +649,21 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getElapsedTime()
 : <a class="el" href="d9/d32/classdart_1_1common_1_1Timer.html#ad51c53568b450568990193eadf2151c7">dart::common::Timer</a>
 </li>
+<li>getEndEffector()
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a08a9a4267a16f25e94abb6ee7403c4ad">dart::dynamics::BodyNode</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ac5656fc64e533dfdf818846e2c868465">dart::dynamics::Skeleton</a>
+</li>
+<li>getEndEffectorProperties()
+: <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a5c0681c332f07f32462a023baa9355d5">dart::dynamics::EndEffector</a>
+</li>
 <li>getEntityProperties()
 : <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#a89d0c0c84ec66c109753c18b8ab9453c">dart::dynamics::Entity</a>
 </li>
 <li>getEqConstraint()
-: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a2170bef529de782caf13c9e8c5c54891">dart::optimizer::Problem</a>
+: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#afcfa7990ea329e8dcf73c8586bf3aa1a">dart::optimizer::Problem</a>
+</li>
+<li>getEqConstraintWeights()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#ad9ef0c4501c91f1dc8a7d7cc81b6f7b8">dart::optimizer::GradientDescentSolver</a>
 </li>
 <li>getErrorAllowance()
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a8dd26662822ac4bab4582a39cc3f54d5">dart::constraint::ContactConstraint</a>
@@ -582,11 +671,21 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="d4/dbf/classdart_1_1constraint_1_1JointLimitConstraint.html#ac360e927f70e639d620e3e898fe6db96">dart::constraint::JointLimitConstraint</a>
 , <a class="el" href="d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#aa064c45d81acbdbf0a39fe72b37b5866">dart::constraint::SoftContactConstraint</a>
 </li>
+<li>getErrorLengthClamp()
+: <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#ae56d9edac0e2787938969021bf7b6252">dart::dynamics::InverseKinematics::ErrorMethod</a>
+</li>
+<li>getErrorMethod()
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#aac7b2ae72e698c28ff33429e2ea0e163">dart::constraint::BalanceConstraint</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#adf232faf6e1246cea8bd1e1b64976105">dart::dynamics::InverseKinematics</a>
+</li>
 <li>getErrorReductionParameter()
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#ac3be100d9c2755b451222eb72e828c6d">dart::constraint::ContactConstraint</a>
 , <a class="el" href="dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#a1f2313e32006d7ed6c492d233934c2a7">dart::constraint::JointConstraint</a>
 , <a class="el" href="d4/dbf/classdart_1_1constraint_1_1JointLimitConstraint.html#a0d974a41683719aca5a542b40dbbb0b2">dart::constraint::JointLimitConstraint</a>
 , <a class="el" href="d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a0a0954c7591b4752a1140cfefdd78161">dart::constraint::SoftContactConstraint</a>
+</li>
+<li>getErrorWeights()
+: <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#a9763541ef90f73a47569584a4ade8df1">dart::dynamics::InverseKinematics::ErrorMethod</a>
 </li>
 <li>getEulerJointProperties()
 : <a class="el" href="d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a4a45578f7093db57ecf61a8f57a5ccb0">dart::dynamics::EulerJoint</a>
@@ -616,6 +715,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getFclTransform()
 : <a class="el" href="d9/d3b/classdart_1_1collision_1_1FCLMeshCollisionNode.html#aa1f5a773fb49c846569069ad2b717152">dart::collision::FCLMeshCollisionNode</a>
+</li>
+<li>getFilesystemPath()
+: <a class="el" href="d8/d07/structdart_1_1common_1_1Uri.html#a2d00a6358a6f6511508b064812d29971">dart::common::Uri</a>
 </li>
 <li>getForce()
 : <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a601029faf95673798ba1ec5b96d66047">dart::dynamics::DegreeOfFreedom</a>
@@ -667,9 +769,6 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a54fea08f3d30aa6d09a78c4cbd44ba05">dart::constraint::ContactConstraint</a>
 , <a class="el" href="d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#af28e32c8e00524f9ab849ffcc8ed419c">dart::constraint::SoftContactConstraint</a>
 </li>
-<li>getFullFilePath()
-: <a class="el" href="d8/d29/classdart_1_1utils_1_1DartLoader.html#ad4e4efec620a17c950889b1d5f75cf1e">dart::utils::DartLoader</a>
-</li>
 <li>getGap()
 : <a class="el" href="d7/dd6/classdart_1_1planning_1_1RRT.html#a648b7c4079feeaf67419d4fbbdc68bde">dart::planning::RRT</a>
 </li>
@@ -678,6 +777,15 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getGenVels()
 : <a class="el" href="d1/ddb/classdart_1_1integration_1_1IntegrableSystem.html#a5ab08d4449cb3ef37dc6a08a2300a152">dart::integration::IntegrableSystem</a>
+</li>
+<li>getGeometry()
+: <a class="el" href="d9/d4f/classdart_1_1dynamics_1_1Support.html#aef735a3564f29ca4f259115ab197a38d">dart::dynamics::Support</a>
+</li>
+<li>getGradientDescentProperties()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#abb7c5916501ccd752e1328dfb4aaca38">dart::optimizer::GradientDescentSolver</a>
+</li>
+<li>getGradientMethod()
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#ad6517c7bf7335f893825d0f28d76005d">dart::dynamics::InverseKinematics</a>
 </li>
 <li>getGravity()
 : <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a2fc44de3b4b5d927bded17657284d1db">dart::dynamics::Skeleton</a>
@@ -698,9 +806,19 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d3/d73/classdart_1_1dynamics_1_1CylinderShape.html#ac580922aa36bfcf93b197a26bd1fe703">dart::dynamics::CylinderShape</a>
 , <a class="el" href="db/d67/classdart_1_1renderer_1_1Camera.html#a77cb2d7d7a35d963a65c4b2471772bb9">dart::renderer::Camera</a>
 </li>
+<li>getHierarchyLevel()
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#abf93018dd767639a57bdf6db0d2c58d3">dart::dynamics::InverseKinematics</a>
+</li>
 <li>getID()
 : <a class="el" href="db/d20/classdart_1_1dynamics_1_1Marker.html#abb94ae64171cede1b442517f18f01f9e">dart::dynamics::Marker</a>
 , <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a59f9401d81166f53d2f72baa73ac392e">dart::dynamics::Shape</a>
+</li>
+<li>getIK()
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#ad625e8db7a649bd9c9d6502add43fb55">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af9e9308fb0e458bd96c899955dfc345a">dart::dynamics::Skeleton</a>
+</li>
+<li>getIKHierarchy()
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a433cc2ee10a47aeaa9f682a4d67dfca7">dart::dynamics::HierarchicalIK</a>
 </li>
 <li>getImplicitPi()
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#abf16bf697753e4904282a3bcc9d8a824">dart::dynamics::PointMass</a>
@@ -718,6 +836,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getIndexInSkeleton()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aa3fb9940c1c00572c34cd180304853a7">dart::dynamics::BodyNode</a>
 , <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#add2ec1d2f979e9056b466b1be5ee1a86">dart::dynamics::DegreeOfFreedom</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a4e6ccdcac2a2d2be06bfb941fd230cc5">dart::dynamics::EndEffector</a>
 , <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#afc4480e9216556ff93a48345e88c63ef">dart::dynamics::Joint</a>
 , <a class="el" href="db/d20/classdart_1_1dynamics_1_1Marker.html#aa36106e528a94af325dbf23f7d5d0ba2">dart::dynamics::Marker</a>
 , <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#aa17ed0219109c8ae2431a6e5739d9244">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
@@ -741,7 +860,10 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#adfb4645fd4adbd2cec8808af53cde741">dart::dynamics::Skeleton</a>
 </li>
 <li>getIneqConstraint()
-: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a5cdbee48d92365f7c7c978c9e15b9d1d">dart::optimizer::Problem</a>
+: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a5747fde66592a051981ae6b4091614ff">dart::optimizer::Problem</a>
+</li>
+<li>getIneqConstraintWeights()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a0cd5a88a9e989e642ec5aadf6c9f7e0d">dart::optimizer::GradientDescentSolver</a>
 </li>
 <li>getInertia()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a6c14b9cca4d2914db86055aa5546f862">dart::dynamics::BodyNode</a>
@@ -757,6 +879,32 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getInitialGuess()
 : <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a8183e5c497241df121934d391d752a0b">dart::optimizer::Problem</a>
+</li>
+<li>getInitialPosition()
+: <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a4a4699ee543de7622c66adba258c63ba">dart::dynamics::DegreeOfFreedom</a>
+, <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#ab2e3afd5f8654474977f329917f042e8">dart::dynamics::Joint</a>
+, <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a4262578db4f2978f17f351c2f51de7df">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
+, <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ae2971949e42179a9927a02c552357a29">dart::dynamics::SingleDofJoint</a>
+, <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#abdfcbd3e7c46796ac49ef154033269ea">dart::dynamics::ZeroDofJoint</a>
+</li>
+<li>getInitialPositions()
+: <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a70a06c94d9ccd8809a8983a130f4564e">dart::dynamics::Joint</a>
+, <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#addd227452dd8a5e65add41c1756262cb">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
+, <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ae2a87a61fd5b7b0b1f055fb4a7dc2fa8">dart::dynamics::SingleDofJoint</a>
+, <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#ad9fbe4e435b4c0c02fd97c04d8925226">dart::dynamics::ZeroDofJoint</a>
+</li>
+<li>getInitialVelocities()
+: <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a6917d9b8e35ea21256986e7ffcd67e14">dart::dynamics::Joint</a>
+, <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a34c8c9aabd08674a66a87ea6c37ccc7c">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
+, <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a90c46399114a8e643e6d4e9dbff2bb79">dart::dynamics::SingleDofJoint</a>
+, <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#af2795eecad5ccb8051f6695f078c0705">dart::dynamics::ZeroDofJoint</a>
+</li>
+<li>getInitialVelocity()
+: <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a0c6c2e19a709bebff600dff10f79dd34">dart::dynamics::DegreeOfFreedom</a>
+, <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a2fb383a14b44593bab493fa033f9e337">dart::dynamics::Joint</a>
+, <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a6c4f2e641f513bffdcf1c1cace017928">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
+, <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ae2e58d5c289c19d198787e872dcb1ded">dart::dynamics::SingleDofJoint</a>
+, <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a892ef30f9449d08d336c14d97b50fc52">dart::dynamics::ZeroDofJoint</a>
 </li>
 <li>getIntersection()
 : <a class="el" href="d8/ddd/classdart_1_1planning_1_1PathFollowingTrajectory.html#aad6318e64edb777e668cc2ccf98ccf69">dart::planning::PathFollowingTrajectory</a>
@@ -791,23 +939,35 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a75ee9b5c626bd4b1c6d7d682aad5642b">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 , <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a4dc691a02e9fe864132029beeb55a3a0">dart::dynamics::SingleDofJoint</a>
 </li>
+<li>getIterationsPerPrint()
+: <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a2cb4a4709ec67d1c3b9cf077387e5bbb">dart::optimizer::Solver</a>
+</li>
 <li>getJacobian()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ad95ceabcf99ba7aada05ef94b09a2c23">dart::dynamics::BodyNode</a>
-, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a571b3238bba76bdf42fa886b256271d0">dart::dynamics::MetaSkeleton</a>
-, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#af3b46335c1a05218e147d89bd221e4dd">dart::dynamics::ReferentialSkeleton</a>
-, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a847c6d9f9840822b77c81a0c1c7e24ac">dart::dynamics::Skeleton</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aa7e99dc0e6eeb4d062c0997b50508884">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#ada25581b2c5ee3012bbc79a074d56b73">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a0036014d7653b055726cf73769e07806">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a912cf17de72c50a9bfe31b52f2a1a75e">dart::dynamics::MetaSkeleton</a>
+, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a5170a2f0c7daf8304e67a9b38629acf6">dart::dynamics::ReferentialSkeleton</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aff119bb9d386b73d6c986a6107e18769">dart::dynamics::Skeleton</a>
+, <a class="el" href="d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode.html#a8fd81cc04ada6b02ed7c4842fc30f7f8">dart::dynamics::TemplatedJacobianNode&lt; EntityType &gt;</a>
 </li>
 <li>getJacobianClassicDeriv()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a3dba07ae8849fee1ea2d053581c3bdfa">dart::dynamics::BodyNode</a>
-, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a22015203b834d768b335cd71edffc077">dart::dynamics::MetaSkeleton</a>
-, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a0cfa8517647f89847bc8f5961b8ce56f">dart::dynamics::ReferentialSkeleton</a>
-, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a4156d8e3cac215793f5fb899fb21f00e">dart::dynamics::Skeleton</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a14c15810af75be3294baa7da00614967">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#ad973c974c0aced185c5d3a17f75679fe">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a59dc435aead2076e41188c04f9bc5d39">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a662748d70921bdfb0156b263f9d10f22">dart::dynamics::MetaSkeleton</a>
+, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#afb85fa6e8bd17d4c266fd1854152ce46">dart::dynamics::ReferentialSkeleton</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af7f3c1ff7cef2845fb16ec54bd3129ba">dart::dynamics::Skeleton</a>
+, <a class="el" href="d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode.html#ab733691474b95a7dbec5e31dca1f6b35">dart::dynamics::TemplatedJacobianNode&lt; EntityType &gt;</a>
 </li>
 <li>getJacobianSpatialDeriv()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a35b5dd58645ab96ce3168fd0e1ec3768">dart::dynamics::BodyNode</a>
-, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a3ed00d3d6176bd420d9613ae7a2a9d15">dart::dynamics::MetaSkeleton</a>
-, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a808639cb926d1b83e95d9991b9d49258">dart::dynamics::ReferentialSkeleton</a>
-, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a81945ae0ee38937de3da9171da4a2298">dart::dynamics::Skeleton</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aaefb42c9da73712f4498f7c0c2deeb1b">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#abae8da06ef5b351d2fac6263609c3843">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#aa3cbcd072f6485b98cd9c63d82884025">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#acb50bb8bed6cfc0a865a02a23f5afd26">dart::dynamics::MetaSkeleton</a>
+, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a86e1948d4eb91796b0d510eb89f9a7ed">dart::dynamics::ReferentialSkeleton</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a6c26bcc60a7ac9f4fb5844d28a1cecd0">dart::dynamics::Skeleton</a>
+, <a class="el" href="d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode.html#a700632cc2ff39a87c2d6e065f2c0084c">dart::dynamics::TemplatedJacobianNode&lt; EntityType &gt;</a>
 </li>
 <li>getJoint()
 : <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a4f9166e956300af431447aceab442962">dart::dynamics::DegreeOfFreedom</a>
@@ -833,8 +993,18 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#af43100e2f5edae4e250a91679b53f406">dart::dynamics::ReferentialSkeleton</a>
 , <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a9b1aa386c6648866d21b4870624b7af7">dart::dynamics::Skeleton</a>
 </li>
+<li>getLastConfiguration()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#aac0865feb998704f5d073867f614d712">dart::optimizer::GradientDescentSolver</a>
+, <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#a7a491ca0a6459504f029b6e2183a0069">dart::optimizer::NloptSolver</a>
+</li>
 <li>getLastElapsedTime()
 : <a class="el" href="d9/d32/classdart_1_1common_1_1Timer.html#aad41f3ba4699cc9babce0a15c9de9b76">dart::common::Timer</a>
+</li>
+<li>getLastError()
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a778ca94dc73acf01564571563f524870">dart::constraint::BalanceConstraint</a>
+</li>
+<li>getLastNumIterations()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#ab35b823d119c9ea69b247acf4531aaa8">dart::optimizer::GradientDescentSolver</a>
 </li>
 <li>getLength()
 : <a class="el" href="d6/de6/classdart_1_1planning_1_1Path.html#ac95a615ab3db4afe04a13cea16695639">dart::planning::Path</a>
@@ -843,17 +1013,25 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getLinearAcceleration()
 : <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a0b2c43c79b40ef5d7d19be39ed7094b0">dart::dynamics::Frame</a>
 </li>
+<li>getLinearBounds()
+: <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#a06409e1723cfa9263a33e569be3dac7e">dart::dynamics::InverseKinematics::ErrorMethod</a>
+</li>
+<li>getLinearErrorWeights()
+: <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#afccee8b918a6087b86e500ece9d07338">dart::dynamics::InverseKinematics::ErrorMethod</a>
+</li>
 <li>getLinearJacobian()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ada95c70d80d21c558742aeea3423a3b5">dart::dynamics::BodyNode</a>
-, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#acb3d50344ab2b9557a3a27ee10db85d0">dart::dynamics::MetaSkeleton</a>
-, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a37b89ebd43706d6ca01fa335071de845">dart::dynamics::ReferentialSkeleton</a>
-, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ac1257690fa7a52b79c4805cf3232bae0">dart::dynamics::Skeleton</a>
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#aa583425e2e63a9fe41b5fb8dd9ffc799">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a28925ae0bc27d473bf9e6aa8a1431ac5">dart::dynamics::MetaSkeleton</a>
+, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#abafab57306b3061ca1623c1c18185003">dart::dynamics::ReferentialSkeleton</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a667794e8f5180b52c8352433a5b6dd1f">dart::dynamics::Skeleton</a>
+, <a class="el" href="d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode.html#ac89ab3e414a897d2b4920b02b06956ee">dart::dynamics::TemplatedJacobianNode&lt; EntityType &gt;</a>
 </li>
 <li>getLinearJacobianDeriv()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a5f5367420d628badf2da65e3c387049c">dart::dynamics::BodyNode</a>
-, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a6473663f34f8d24e1ebd760085531d1c">dart::dynamics::MetaSkeleton</a>
-, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#ac5a48b604ec7ee32803307c8c343d17c">dart::dynamics::ReferentialSkeleton</a>
-, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ae5945265f0763100b374e75d1e9ffac1">dart::dynamics::Skeleton</a>
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#aae9efffa9ace1e90749d050a2fc8338a">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a05c24b46eddd0beebd0487641a6ba0c6">dart::dynamics::MetaSkeleton</a>
+, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#ad20a2c806d772e064a896660d34b5b0d">dart::dynamics::ReferentialSkeleton</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a63f1c29d0f2de46678d7998422ef10ea">dart::dynamics::Skeleton</a>
+, <a class="el" href="d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode.html#ab1510f2aa590dfb41eebd761d242792e">dart::dynamics::TemplatedJacobianNode&lt; EntityType &gt;</a>
 </li>
 <li>getLinearMomentum()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a69296995610fc03fdba7611ba49d8c92">dart::dynamics::BodyNode</a>
@@ -921,7 +1099,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d9/dc9/classdart_1_1common_1_1NameManager.html#ae49b3c6102a3f27304dac5184508c207">dart::common::NameManager&lt; T &gt;</a>
 </li>
 <li>getMarker()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aa0b63da79eda69709972d1324ef8a06a">dart::dynamics::BodyNode</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aa3d0f89fe9345f170426d43a749a7dd8">dart::dynamics::BodyNode</a>
 , <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a8b798e061955fe39a57e7a1e8303d1ae">dart::dynamics::Skeleton</a>
 </li>
 <li>getMass()
@@ -936,7 +1114,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getMassMatrix()
 : <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ae1035dc055fc0371a828dc0c6c81a602">dart::dynamics::MetaSkeleton</a>
 , <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a95530f3dc4152df4ed81560db1d0a6e1">dart::dynamics::ReferentialSkeleton</a>
-, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a09779bd989e6d54ec02ae16b9525b632">dart::dynamics::Skeleton</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a4cc134b7ce602c54c4663564af4c3468">dart::dynamics::Skeleton</a>
 </li>
 <li>getMaterial()
 : <a class="el" href="de/d27/classdart_1_1renderer_1_1OpenGLRenderInterface.html#a79ddb6b4cb81a96f7ab2a5085017c28a">dart::renderer::OpenGLRenderInterface</a>
@@ -945,11 +1123,17 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getMaxAccelerationError()
 : <a class="el" href="d8/ddd/classdart_1_1planning_1_1PathFollowingTrajectory.html#a51c4a2eeda3ac2c42fed73458c411beb">dart::planning::PathFollowingTrajectory</a>
 </li>
+<li>getMaxAttempts()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#ad692d08b8acb2f6ea2d78a5f55174167">dart::optimizer::GradientDescentSolver</a>
+</li>
 <li>getMaxErrorReductionVelocity()
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#aac2a88e3abc71908fca94f828c4a55b0">dart::constraint::ContactConstraint</a>
 , <a class="el" href="dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#a5a1df3d25fdc8736ee0a471289e08a0a">dart::constraint::JointConstraint</a>
 , <a class="el" href="d4/dbf/classdart_1_1constraint_1_1JointLimitConstraint.html#a8c8de2f6fa791647e2d4c7b7d30ae945">dart::constraint::JointLimitConstraint</a>
 , <a class="el" href="d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a84d09707ed79e0cefa09b9fdbebd5432">dart::constraint::SoftContactConstraint</a>
+</li>
+<li>getMaxPerturbationFactor()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a1eb571e12f67953c0bb9a4becfbd1844">dart::optimizer::GradientDescentSolver</a>
 </li>
 <li>getMesh()
 : <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a831a1062b1d160cd8301fe441e64499d">dart::dynamics::MeshShape</a>
@@ -957,11 +1141,21 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getMeshPath()
 : <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#aa6a43b8e6799ca11d4926f25796b1c1a">dart::dynamics::MeshShape</a>
 </li>
+<li>getMeshUri()
+: <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a820603a0d1353c9e70a4be249f769204">dart::dynamics::MeshShape</a>
+</li>
+<li>getMethodName()
+: <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#a6de3f56a3bbca885cf3e26f7cfd92f0a">dart::dynamics::InverseKinematics::ErrorMethod</a>
+, <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#a8b0d66d0a9586a32a9ce4257c0c10b29">dart::dynamics::InverseKinematics::GradientMethod</a>
+</li>
 <li>getMinMaxPathAcceleration()
 : <a class="el" href="d8/ddd/classdart_1_1planning_1_1PathFollowingTrajectory.html#a9ebfffa0ec292d1cfe31fcb36461fc76">dart::planning::PathFollowingTrajectory</a>
 </li>
 <li>getMinMaxPhaseSlope()
 : <a class="el" href="d8/ddd/classdart_1_1planning_1_1PathFollowingTrajectory.html#a43c091c8a05ffd77bfaed3a116864132">dart::planning::PathFollowingTrajectory</a>
+</li>
+<li>getModuleSet()
+: <a class="el" href="d4/de6/classdart_1_1dynamics_1_1CompositeIK.html#acc5a840583a9447cba54e3133aaa3387">dart::dynamics::CompositeIK</a>
 </li>
 <li>getMoment()
 : <a class="el" href="d6/d91/classdart_1_1dynamics_1_1Inertia.html#a5ff08f7cab0a1dc6ad847ec6f658ae15">dart::dynamics::Inertia</a>
@@ -972,9 +1166,11 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getMultiDofJointProperties()
 : <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a3a9870bdfc370aa7326c759e462979f3">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 </li>
+<li>getMutex()
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a66684ec6fcdb259228f63f7f13714947">dart::dynamics::Skeleton</a>
+</li>
 <li>getName()
 : <a class="el" href="d9/dc9/classdart_1_1common_1_1NameManager.html#afc70fd20cf56b550aa66e2434f2d4332">dart::common::NameManager&lt; T &gt;</a>
-, <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a09b46acc37016dfba21c23c366b087cb">dart::dynamics::BodyNode</a>
 , <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a374ff502cd4202bb9760f742ba936af2">dart::dynamics::DegreeOfFreedom</a>
 , <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#af2d2a856387f1462d1040fda6e537c74">dart::dynamics::Entity</a>
 , <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a1a0f23c04b9c1348d9bf2187bb58e252">dart::dynamics::Joint</a>
@@ -982,6 +1178,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ad9d0dc2c7f004dfb71d6fee0683ca6e2">dart::dynamics::MetaSkeleton</a>
 , <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a3636f5137b591ca4f388cf04b5088231">dart::dynamics::ReferentialSkeleton</a>
 , <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a583867ed1a17d3f2397562d68b860a7b">dart::dynamics::Skeleton</a>
+, <a class="el" href="d9/dae/classdart_1_1optimizer_1_1Function.html#afc47660e5f3588d3d52f525073b9d65b">dart::optimizer::Function</a>
 , <a class="el" href="d7/d41/classdart_1_1simulation_1_1World.html#a779a1d947049192ff99abd22344eec9f">dart::simulation::World</a>
 </li>
 <li>getNearDistance()
@@ -1003,6 +1200,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getNextVelocitySwitchingPoint()
 : <a class="el" href="d8/ddd/classdart_1_1planning_1_1PathFollowingTrajectory.html#ab0bab10102e00b75db1a24f8bf26a823">dart::planning::PathFollowingTrajectory</a>
 </li>
+<li>getNode()
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a66857342fba0b96111a14fd775975c36">dart::dynamics::InverseKinematics</a>
+</li>
 <li>getNormal()
 : <a class="el" href="d9/d4f/classdart_1_1dynamics_1_1PlaneShape.html#a7feaeaaaa43f788750abf11ea926823c">dart::dynamics::PlaneShape</a>
 </li>
@@ -1011,6 +1211,10 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getNub()
 : <a class="el" href="d6/df6/structdLCP.html#abe30b77743ce93543853859df167bc6b">dLCP</a>
+</li>
+<li>getNullSpaceObjective()
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#ab9bc37e2bbe855f281d3d7f1d351b60e">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a11ba16183479a663d9e25cbe1784dc9d">dart::dynamics::InverseKinematics</a>
 </li>
 <li>getNumBodyNodes()
 : <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#aaaa690d296ab136cd760baf1ee9f0a5d">dart::dynamics::MetaSkeleton</a>
@@ -1053,8 +1257,15 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d6/de8/classdart_1_1collision_1_1CollisionDetector.html#acd74a660fdb273995fd40ee95c36792b">dart::collision::CollisionDetector</a>
 , <a class="el" href="dd/d87/classdart_1_1simulation_1_1Recording.html#abb0f68eb663a57780bf507f96cbfda9f">dart::simulation::Recording</a>
 </li>
+<li>getNumDependentDofs()
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a64a602f7d7389fb72b2a5aebb5b0e3c1">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a0d52d883f31950a597c15e4cad280a61">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a1bad8aeaa31b6d5d90432b22f4f6a9e9">dart::dynamics::JacobianNode</a>
+</li>
 <li>getNumDependentGenCoords()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#abc5362a7cff01fe75b94c874f8060bd7">dart::dynamics::BodyNode</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a51388927fd95b3706aced3cd1b2918c5">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a0d0c01030436002bcb8f214d58833613">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#aefc74bc494741220b5cac98e00418484">dart::dynamics::JacobianNode</a>
 </li>
 <li>getNumDofs()
 : <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a7118a12e0e06def4c1ca653b55ceb666">dart::dynamics::Joint</a>
@@ -1067,6 +1278,10 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a0841d1743ecc0ca8fc7d9004d1b9b67d">dart::dynamics::ZeroDofJoint</a>
 , <a class="el" href="dd/d87/classdart_1_1simulation_1_1Recording.html#a0d0f4e17455cc4a5dbb70a311642fc3c">dart::simulation::Recording</a>
 </li>
+<li>getNumEndEffectors()
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a6cc97706441c6f112dfbe90eb6e13418">dart::dynamics::BodyNode</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a712df892e919d807eefa78545205992d">dart::dynamics::Skeleton</a>
+</li>
 <li>getNumEqConstraints()
 : <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a7b6ea83d4d1090a111a570aafd9e1d93">dart::optimizer::Problem</a>
 </li>
@@ -1074,7 +1289,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#aaeb4a8515a15e656c98c634d6a59717e">dart::optimizer::NloptSolver</a>
 </li>
 <li>getNumFaces()
-: <a class="el" href="dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#ad61899208d740872d2d10e7ea617add5">dart::dynamics::SoftBodyNode</a>
+: <a class="el" href="dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#af495dd5d492caaecb6af86baf2353137">dart::dynamics::SoftBodyNode</a>
 </li>
 <li>getNumFrames()
 : <a class="el" href="dd/d87/classdart_1_1simulation_1_1Recording.html#aaddd24f208ff7e95e21ae192b6e0013b">dart::simulation::Recording</a>
@@ -1095,6 +1310,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getNumMaxContacts()
 : <a class="el" href="d6/de8/classdart_1_1collision_1_1CollisionDetector.html#ac02ef34a12905bb7a7c584ef4719049c">dart::collision::CollisionDetector</a>
+</li>
+<li>getNumMaxIterations()
+: <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a976b9858e906623e573bcd967dd3b1af">dart::optimizer::Solver</a>
 </li>
 <li>getNumPointMasses()
 : <a class="el" href="dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#ad5ad2fbfff59fd7aa5b49efbf26be0e9">dart::dynamics::SoftBodyNode</a>
@@ -1122,17 +1340,39 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d9/dc9/classdart_1_1common_1_1NameManager.html#a49695528319e74db8aa66f52559245cb">dart::common::NameManager&lt; T &gt;</a>
 </li>
 <li>getObjective()
-: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a0bfb96314ca8e067bb869a9d7dc6f2e9">dart::optimizer::Problem</a>
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a6e3a5559d97ffa5223b0af5f7b20571c">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a4d0cb55497185e378c7d3bf42c65fde0">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#af10b216be34ea08421aacacd40a50b46">dart::optimizer::Problem</a>
 </li>
 <li>getOffset()
-: <a class="el" href="d9/d4f/classdart_1_1dynamics_1_1PlaneShape.html#ae2542f2bb10f09b5e12a93b25f145291">dart::dynamics::PlaneShape</a>
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a83cea02fe68a05471fa6a96cfe490e02">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="d9/d4f/classdart_1_1dynamics_1_1PlaneShape.html#ae2542f2bb10f09b5e12a93b25f145291">dart::dynamics::PlaneShape</a>
 , <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a19e94d3a019bc76e77478c4b48940c11">dart::dynamics::Shape</a>
 </li>
 <li>getOptimalSolution()
 : <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#aae4169e7cb4b073f270cd9f90bc8e515">dart::optimizer::Problem</a>
 </li>
+<li>getOptimizationTolerance()
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a45fd1c22e4d11c235bb5f4df4d0d186c">dart::constraint::BalanceConstraint</a>
+</li>
 <li>getOptimumValue()
 : <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a02f20bc31c21bf502bc7dbd9d06cfda5">dart::optimizer::Problem</a>
+</li>
+<li>getOrCreateDestructor()
+: <a class="el" href="db/dc8/classdart_1_1dynamics_1_1Node.html#ab1f0bd39805f5a240d18781feb7c0fa5">dart::dynamics::Node</a>
+</li>
+<li>getOrCreateIK()
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a8c4f6611187977b8ac6f77823b2fba1f">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a7798c99048951765a603e8c10aeea979">dart::dynamics::Skeleton</a>
+</li>
+<li>getOsSeparator()
+: <a class="el" href="d6/db8/classdart_1_1dynamics_1_1AssimpInputResourceRetrieverAdaptor.html#aca889c581c234ff4ef6fbc7c1b6b9ab9">dart::dynamics::AssimpInputResourceRetrieverAdaptor</a>
+</li>
+<li>getOutStream()
+: <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a26213fddc87b237d26d0d9c10f8c77be">dart::optimizer::Solver</a>
+</li>
+<li>getPackagePaths()
+: <a class="el" href="d8/d23/classdart_1_1utils_1_1PackageResourceRetriever.html#a8d6cc8993491f0c25a0a843f8de04754">dart::utils::PackageResourceRetriever</a>
 </li>
 <li>getPairCollidable()
 : <a class="el" href="d6/de8/classdart_1_1collision_1_1CollisionDetector.html#a65520f68e5758501691b2e2d3a02b7d9">dart::collision::CollisionDetector</a>
@@ -1143,10 +1383,11 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getParentBodyNode()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a9f179a8c938173842d764995eebfffb0">dart::dynamics::BodyNode</a>
 , <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a916c16b49a1a13f360bc10d24f3f2b21">dart::dynamics::DegreeOfFreedom</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a80790996ecee593c58a930446da4acba">dart::dynamics::EndEffector</a>
 , <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a46ae90ae92ab034cd557c3e5b865a7fa">dart::dynamics::Joint</a>
 </li>
 <li>getParentFrame()
-: <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#a9fa665e65bc5d84c75ca058d1f3095ef">dart::dynamics::Entity</a>
+: <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#a10c4c8b43980159e9bb8570ba50f0da6">dart::dynamics::Entity</a>
 </li>
 <li>getParentJoint()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a1a834f7e603559f8dc279300ac9b7f02">dart::dynamics::BodyNode</a>
@@ -1156,15 +1397,22 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getPartialAcceleration()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a4dfb633efee7db996e5823f433b1d201">dart::dynamics::BodyNode</a>
+, <a class="el" href="d8/d17/classdart_1_1dynamics_1_1FixedFrame.html#adff2e94ec30251f5c8d8e59842a46e0f">dart::dynamics::FixedFrame</a>
 , <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a2f0f4068238a39f6aff37428d5e42378">dart::dynamics::Frame</a>
 , <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#ae65c22703cb05a0ea39812db652f7389">dart::dynamics::SimpleFrame</a>
-, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#afbd3c8fa47eca91f0d8608129738c40b">dart::dynamics::WorldFrame</a>
+, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a29c7aba6a1a8600602e1133adf55b1e2">dart::dynamics::WorldFrame</a>
 </li>
 <li>getPartialAccelerations()
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a62a3cd652213c650eef25b75b358ba1a">dart::dynamics::PointMass</a>
 </li>
+<li>getPath()
+: <a class="el" href="d8/d07/structdart_1_1common_1_1Uri.html#aacc11bb1e7ea76b9e74bfcaba114445b">dart::common::Uri</a>
+</li>
 <li>getPathSegment()
 : <a class="el" href="d6/de6/classdart_1_1planning_1_1Path.html#a389d2395cb68c7d4d193a978050180c8">dart::planning::Path</a>
+</li>
+<li>getPerturbationStep()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a03a00b52b9cc5a84ea722cd4ae679e03">dart::optimizer::GradientDescentSolver</a>
 </li>
 <li>getPi()
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a2e7639ce71527e73191db52617a8f6de">dart::dynamics::PointMass</a>
@@ -1225,7 +1473,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a9786da08864637ba50c105c3dd761180">dart::dynamics::ZeroDofJoint</a>
 </li>
 <li>getPositions()
-: <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#ac98858647eab043e2b7e95b4bbf61399">dart::dynamics::Joint</a>
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a771082d00aafa54708f520bcb7be6e5f">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a79f5495be3c229e347e94e5540e3f260">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#ac98858647eab043e2b7e95b4bbf61399">dart::dynamics::Joint</a>
 , <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a8689b2438d521350c2ce433b40f68ba0">dart::dynamics::MetaSkeleton</a>
 , <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#add02dcf2d93b654d041d0de03f9e6a58">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 , <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a2733238762bfc8e362cb46a228ffae27">dart::dynamics::PointMass</a>
@@ -1258,24 +1508,33 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getPrimaryRelativeAcceleration()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a9bc8cdb94436ea991bddce56a513cf41">dart::dynamics::BodyNode</a>
+, <a class="el" href="d8/d17/classdart_1_1dynamics_1_1FixedFrame.html#a63bfc40e3dba66cfa564d1d114843d63">dart::dynamics::FixedFrame</a>
 , <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a79abd92e6bef6efb58ffae4b2988a72f">dart::dynamics::Frame</a>
 , <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#ac0df86472020b3262d60a35d09f8be91">dart::dynamics::SimpleFrame</a>
-, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a363230f18e1313461e0a7e453de09975">dart::dynamics::WorldFrame</a>
+, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a5c76e5f379768a4c0e46af3f71b82bac">dart::dynamics::WorldFrame</a>
+</li>
+<li>getPrintFinalResult()
+: <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a2b8822485d72a57260bca897323812a6">dart::optimizer::Solver</a>
 </li>
 <li>getPrismaticJointProperties()
 : <a class="el" href="de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a065a96ed47488ff9c67bd607d197c72b">dart::dynamics::PrismaticJoint</a>
 </li>
 <li>getProblem()
-: <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a5db65d3e9fd39492897ccbc1d7b2e644">dart::optimizer::Solver</a>
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a8f286830406e442f0118d0924d1f7401">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#aba09513be2d20e621a399b05c95d2888">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a41ebe9ea5dd127a939a63f4473c25f5a">dart::optimizer::Solver</a>
 </li>
 <li>getProperties()
 : <a class="el" href="d7/dcd/classdart_1_1dynamics_1_1ArrowShape.html#afd080294af8741fd0ac6dde81b235acf">dart::dynamics::ArrowShape</a>
+</li>
+<li>getPseudoInverseDamping()
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#adb912349b78a9a9e87765a2d77f3c0ef">dart::constraint::BalanceConstraint</a>
 </li>
 <li>getPsi()
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#afe3769c261d6e92c3087d29095ee8bd1">dart::dynamics::PointMass</a>
 </li>
 <li>getPtr()
-: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aff3e17b2125e5d281a8e3e0353a33bae">dart::dynamics::Skeleton</a>
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a72819f9545a0ebb97b44176d31a8461a">dart::dynamics::Skeleton</a>
 </li>
 <li>getQ()
 : <a class="el" href="d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#a91ed82b4f0aad5ab84f076c26a35b60a">dart::dynamics::FreeJoint</a>
@@ -1296,25 +1555,35 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getRelativeSpatialAcceleration()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a9c528aea879554f31115a2c841cc3fa2">dart::dynamics::BodyNode</a>
+, <a class="el" href="d8/d17/classdart_1_1dynamics_1_1FixedFrame.html#a97c75d000b50df45ce15a48a808c9656">dart::dynamics::FixedFrame</a>
 , <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#ae6a85312c5dbfba5c78b18e89fa2519d">dart::dynamics::Frame</a>
 , <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#ac9530c61fb57d8f084bc34ddd790edaa">dart::dynamics::SimpleFrame</a>
-, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a6732a8304c30a7f39ba2897ac874fe67">dart::dynamics::WorldFrame</a>
+, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a416ac3582402af15cedffd7b117a5f4c">dart::dynamics::WorldFrame</a>
 </li>
 <li>getRelativeSpatialVelocity()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#afc66d8ea5bccfbb75e9fe633d434deb7">dart::dynamics::BodyNode</a>
+, <a class="el" href="d8/d17/classdart_1_1dynamics_1_1FixedFrame.html#af09781f381e76aec84b366962024b498">dart::dynamics::FixedFrame</a>
 , <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a56266fc322dc4915f762c1347aeee6a3">dart::dynamics::Frame</a>
 , <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#afcb4448dc3271c772b8570da6993a407">dart::dynamics::SimpleFrame</a>
-, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a1ab86a70fdeb14c5759ebc11731cd49d">dart::dynamics::WorldFrame</a>
+, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a1233f8ca9c21152611c812236ba228d9">dart::dynamics::WorldFrame</a>
 </li>
 <li>getRelativeTransform()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a5d08e4e279c585e070790f1f594bd2a5">dart::dynamics::BodyNode</a>
+, <a class="el" href="d8/d17/classdart_1_1dynamics_1_1FixedFrame.html#afa03e240c1736ab12e5f973fb0a8bf6b">dart::dynamics::FixedFrame</a>
 , <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#af3cdd8f9baaf0941f202fd38573cb1bc">dart::dynamics::Frame</a>
 , <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a69a8020fed6358e0c27d91b8a29ad3a8">dart::dynamics::SimpleFrame</a>
-, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a9e85398963976d9422870fb35509f97a">dart::dynamics::WorldFrame</a>
+, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a0db4293698b656813be113a5bf437fd3">dart::dynamics::WorldFrame</a>
+</li>
+<li>getRelativeUri()
+: <a class="el" href="d8/d07/structdart_1_1common_1_1Uri.html#ad2056cc69f6f4318994c78dd6c142cb5">dart::common::Uri</a>
 </li>
 <li>getRelVelocity()
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#aaec44384b85e77de9ad43db356c18b98">dart::constraint::ContactConstraint</a>
 , <a class="el" href="d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a6b39189e60d459724bbf4ae356696607">dart::constraint::SoftContactConstraint</a>
+</li>
+<li>getResourceRetriever()
+: <a class="el" href="d8/d29/classdart_1_1utils_1_1DartLoader.html#a7913d3f19e1d6bab426ec204cfe08c94">dart::utils::DartLoader</a>
+, <a class="el" href="d2/d42/classdart_1_1utils_1_1SdfParser.html#a669f8de51abef9bd92a6949fb69e1e54">dart::utils::SdfParser</a>
 </li>
 <li>getRestingPosition()
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#aff0e44b95c3c7af0c5ecce26fab82db3">dart::dynamics::PointMass</a>
@@ -1328,6 +1597,15 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a2b4555bdb9b5e46bcf9b766a292d6f94">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 , <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ab81b0ad4320bcc0a4875312b5fc44863">dart::dynamics::SingleDofJoint</a>
 , <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a5afdb3592fb7535c6198f215d7155df2">dart::dynamics::ZeroDofJoint</a>
+</li>
+<li>getResultFileName()
+: <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#ac4b4febb53a738891172acaa5e2530d3">dart::optimizer::Solver</a>
+</li>
+<li>getRetriever()
+: <a class="el" href="dd/d87/classdart_1_1utils_1_1SkelParser.html#a610a24f6e92951e448f614bc1244ad9b">dart::utils::SkelParser</a>
+</li>
+<li>getRetrievers()
+: <a class="el" href="da/da5/classdart_1_1utils_1_1CompositeResourceRetriever.html#a58f9f6c8751947cc1f7daa64be2a6adc">dart::utils::CompositeResourceRetriever</a>
 </li>
 <li>getRevoluteJointProperties()
 : <a class="el" href="d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#ada5931cf1f977f8cf287504839711c39">dart::dynamics::RevoluteJoint</a>
@@ -1343,7 +1621,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getRootSkeleton()
 : <a class="el" href="d9/d4e/classdart_1_1constraint_1_1BallJointConstraint.html#acac0f413f97a65434c38ef70ac49bacb">dart::constraint::BallJointConstraint</a>
-, <a class="el" href="df/d29/classdart_1_1constraint_1_1ConstraintBase.html#a7ba3e5179d876fc147f630ab1a524adb">dart::constraint::ConstraintBase</a>
+, <a class="el" href="df/d29/classdart_1_1constraint_1_1ConstraintBase.html#a5b19def48ad79687b8b414d09321219e">dart::constraint::ConstraintBase</a>
 , <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#af97071d84e9aa2bbbd44bdfface420ba">dart::constraint::ContactConstraint</a>
 , <a class="el" href="dd/d61/classdart_1_1constraint_1_1JointCoulombFrictionConstraint.html#aaa4378fc266c5131b46dc10052739a6b">dart::constraint::JointCoulombFrictionConstraint</a>
 , <a class="el" href="d4/dbf/classdart_1_1constraint_1_1JointLimitConstraint.html#a123de0f4470b0280bbc0a13bcd758be4">dart::constraint::JointLimitConstraint</a>
@@ -1362,6 +1640,12 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getScrewJointProperties()
 : <a class="el" href="db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a6fa6def8ced1f635f710f234b4b22fe6">dart::dynamics::ScrewJoint</a>
 </li>
+<li>getSeed()
+: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a9726914b3fa2db3075c20728e3add56e">dart::optimizer::Problem</a>
+</li>
+<li>getSeeds()
+: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#ad92708e5838235023877c4e668e956a8">dart::optimizer::Problem</a>
+</li>
 <li>getShapeType()
 : <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a008111ba607c45955131361d493e053d">dart::dynamics::Shape</a>
 </li>
@@ -1375,7 +1659,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a80f95101678da9d3255218389b193671">dart::dynamics::SingleDofJoint</a>
 </li>
 <li>getSize()
-: <a class="el" href="d4/d45/classdart_1_1dynamics_1_1BoxShape.html#a32499e9f5d57dece0e1a4d12577ba12e">dart::dynamics::BoxShape</a>
+: <a class="el" href="d5/db8/classdart_1_1common_1_1LocalResource.html#ae286ce7c28ef449610be5f91e73591f2">dart::common::LocalResource</a>
+, <a class="el" href="d6/d63/classdart_1_1common_1_1Resource.html#aed7d49f4e46c404132909fabe0b45dbb">dart::common::Resource</a>
+, <a class="el" href="d4/d45/classdart_1_1dynamics_1_1BoxShape.html#a32499e9f5d57dece0e1a4d12577ba12e">dart::dynamics::BoxShape</a>
 , <a class="el" href="db/da3/classdart_1_1dynamics_1_1EllipsoidShape.html#a159808e5461ff9c3f9dc990fbe56b65e">dart::dynamics::EllipsoidShape</a>
 , <a class="el" href="d7/dd6/classdart_1_1planning_1_1RRT.html#ade2f3f6d8db66d66f6ece344e0cc22ac">dart::planning::RRT</a>
 </li>
@@ -1383,10 +1669,14 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d9/dbf/classdart_1_1utils_1_1FileInfoDof.html#ac797aa9acc3112099d2fa103f213dd21">dart::utils::FileInfoDof</a>
 </li>
 <li>getSkeleton()
-: <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#acd918acb3a74c538b8db40eae20c605b">dart::dynamics::DegreeOfFreedom</a>
-, <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a9ba2298842daa800567e545ebf9cdb7b">dart::dynamics::Joint</a>
-, <a class="el" href="d1/d38/classdart_1_1dynamics_1_1SkeletonRefCountingBase.html#a5097fc0bfad73097ccdbdebf1ab650b9">dart::dynamics::SkeletonRefCountingBase</a>
-, <a class="el" href="d7/d41/classdart_1_1simulation_1_1World.html#af4fa7aaaf2c63d35f3e5f3b7047a1cd7">dart::simulation::World</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a95afec3d5d4d1332f88ddde4083a4dd6">dart::dynamics::BodyNode</a>
+, <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#acd918acb3a74c538b8db40eae20c605b">dart::dynamics::DegreeOfFreedom</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#ae4dbbb82702ca64abc9147a86cd6189c">dart::dynamics::EndEffector</a>
+, <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a4c57456b6f006442e730faceee9e13dc">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a3265f19b613673c1fe73e9aeeb543705">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#aa2eb3ca91def6c54cc7161e7a79a8f02">dart::dynamics::Joint</a>
+, <a class="el" href="d1/d38/classdart_1_1dynamics_1_1SkeletonRefCountingBase.html#a66b09f3013315ff3683add88b8b28322">dart::dynamics::SkeletonRefCountingBase</a>
+, <a class="el" href="d7/d41/classdart_1_1simulation_1_1World.html#aa37316c0d59fdeffd0f0e12877e18efe">dart::simulation::World</a>
 </li>
 <li>getSkeletonProperties()
 : <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ac9cbbbbae57130593c7a7059d4d83223">dart::dynamics::Skeleton</a>
@@ -1399,12 +1689,20 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 </li>
 <li>getSoftBodyNode()
 : <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a927bdd67bf6140db4ab281776e772431">dart::dynamics::Skeleton</a>
+, <a class="el" href="d6/dae/classdart_1_1dynamics_1_1SoftMeshShape.html#a8475e3323299e86d8f6e9eb5dce47bbf">dart::dynamics::SoftMeshShape</a>
 </li>
 <li>getSoftBodyNodeProperties()
 : <a class="el" href="dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#ad44c064914090604217e7b859d77832a">dart::dynamics::SoftBodyNode</a>
 </li>
+<li>getSolver()
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a55f42c0ea8af80753effea41153d7d31">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a9853414a8831dec6d940b797542e5580">dart::dynamics::InverseKinematics</a>
+</li>
+<li>getSolverProperties()
+: <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a16387723a2325619c709b8b92ce7030f">dart::optimizer::Solver</a>
+</li>
 <li>getSpatialAcceleration()
-: <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a43d136c2876bf85f3bfcaba14511a6a8">dart::dynamics::Frame</a>
+: <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#afa22c6acbec15979674a60405104f275">dart::dynamics::Frame</a>
 </li>
 <li>getSpatialInertia()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#abef5d034f65c1837a8584fc444e02d83">dart::dynamics::BodyNode</a>
@@ -1419,10 +1717,10 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a70e86fd73b97028578e2768598779ae3">dart::dynamics::ZeroDofJoint</a>
 </li>
 <li>getSpatialVelocity()
-: <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#aa9072a90944c917e03da4b435d5401ce">dart::dynamics::Frame</a>
+: <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a51776674c6eaa08d8014440513904958">dart::dynamics::Frame</a>
 </li>
 <li>GetSpecular()
-: <a class="el" href="d7/d86/classdart_1_1renderer_1_1Light.html#a2eba65dcc11b0b348be39fedd3fe03ba">dart::renderer::Light</a>
+: <a class="el" href="d7/d86/classdart_1_1renderer_1_1Light.html#adc247cc589fa8360688dd842dccf1e2c">dart::renderer::Light</a>
 </li>
 <li>getSpringStiffness()
 : <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a6803760ccde054b380c62f8e91f417cd">dart::dynamics::DegreeOfFreedom</a>
@@ -1446,6 +1744,27 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a9ff29d3abe8c6c3c50dcb5fffc53d7bf">dart::dynamics::UniversalJoint</a>
 , <a class="el" href="d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#aa77c549d17f007132828ebd1c935e16a">dart::dynamics::WeldJoint</a>
 </li>
+<li>getStepSize()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a9aa52337f59adeaf7de70368914019c1">dart::optimizer::GradientDescentSolver</a>
+</li>
+<li>getSupport()
+: <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a1d4457ab561358562cbbdc4c999805b0">dart::dynamics::EndEffector</a>
+</li>
+<li>getSupportAxes()
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aa9f4c8953fdd439ecdf8703d6f3a871c">dart::dynamics::Skeleton</a>
+</li>
+<li>getSupportCentroid()
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a9ba8b107c44125d0c9e527c7e4c06763">dart::dynamics::Skeleton</a>
+</li>
+<li>getSupportIndices()
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#adcd8296a00bd4a322e21a1afa72f8a3a">dart::dynamics::Skeleton</a>
+</li>
+<li>getSupportPolygon()
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a73cca6756da92eb582692b67b8122528">dart::dynamics::Skeleton</a>
+</li>
+<li>getSupportVersion()
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a56183834fbf636507c0f191cd5d02ec0">dart::dynamics::Skeleton</a>
+</li>
 <li>getSwitchingPoints()
 : <a class="el" href="df/df5/classdart_1_1planning_1_1CircularPathSegment.html#aba73c56944a28caeeb9846a39baf2d7b">dart::planning::CircularPathSegment</a>
 , <a class="el" href="d9/dda/classdart_1_1planning_1_1LinearPathSegment.html#ac2e8a480f96178c658234beaf8bb9f05">dart::planning::LinearPathSegment</a>
@@ -1465,6 +1784,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a352d4ddc9e78ae80379b2e81ea615972">dart::constraint::ContactConstraint</a>
 , <a class="el" href="d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a946f65bb672d46b6f0e62a4160cc0e4a">dart::constraint::SoftContactConstraint</a>
 </li>
+<li>getTarget()
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a092cdf9e7c5627c135bd0ba01babb1b0">dart::dynamics::InverseKinematics</a>
+</li>
 <li>getThickness()
 : <a class="el" href="d1/ddd/classdart_1_1dynamics_1_1LineSegmentShape.html#a5e8ea175abc7e5e89e837fde1ee9b50a">dart::dynamics::LineSegmentShape</a>
 </li>
@@ -1477,6 +1799,9 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a3f33156b4ac8a4030cd671f1bb4d1484">dart::dynamics::Skeleton</a>
 , <a class="el" href="d7/d41/classdart_1_1simulation_1_1World.html#a8ab96c5aaa4676ddea35d9a309c9680d">dart::simulation::World</a>
 </li>
+<li>getTolerance()
+: <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a910fab01853329b0fb05384a98e889d2">dart::optimizer::Solver</a>
+</li>
 <li>getTotalDimension()
 : <a class="el" href="d6/db4/classdart_1_1constraint_1_1ConstrainedGroup.html#acf8c9b98cfc379a46e0c590b70035300">dart::constraint::ConstrainedGroup</a>
 </li>
@@ -1487,7 +1812,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d8/ddd/classdart_1_1planning_1_1PathFollowingTrajectory.html#a5aac6519f0e3c00755fb331a025b5a87">dart::planning::PathFollowingTrajectory</a>
 </li>
 <li>getTransform()
-: <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#aa78f1921a5743eaa9af041b1c71a60b8">dart::dynamics::Frame</a>
+: <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a9befce37ccf4c831ad569538fae2b057">dart::dynamics::Frame</a>
 </li>
 <li>getTransformFromChildBodyNode()
 : <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a0cf31e9e9ae066be9835932781dd1888">dart::dynamics::Joint</a>
@@ -1513,6 +1838,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getTreeIndex()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a4680f0139dd786ddbe35a75a55556004">dart::dynamics::BodyNode</a>
 , <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a48baa4fbbc970d1c2bfa04b7a491161b">dart::dynamics::DegreeOfFreedom</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a7dbd19e297d4f62db0d56263f1187610">dart::dynamics::EndEffector</a>
 , <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#ac77c3419da7c5044ff02832e7f611df0">dart::dynamics::Joint</a>
 </li>
 <li>getType()
@@ -1527,6 +1853,10 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#af40657610916e18a8a2f621e0a0c6434">dart::dynamics::TranslationalJoint</a>
 , <a class="el" href="d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a3a67ed6e9ad933ffea31c25719cab61c">dart::dynamics::UniversalJoint</a>
 , <a class="el" href="d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#aa1f807727ceafd37f065750b605b3274">dart::dynamics::WeldJoint</a>
+, <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#af33b5d6bcf408eff837cc0968f1f4214">dart::optimizer::GradientDescentSolver</a>
+, <a class="el" href="dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html#ab80e0a71160db928c7c11d13b8beafcb">dart::optimizer::IpoptSolver</a>
+, <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#a10cf16baaf5c301ea72ffa8eb8b97d48">dart::optimizer::NloptSolver</a>
+, <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#af5bce8c03145ba5fca2a9756960f4c5e">dart::optimizer::Solver</a>
 </li>
 <li>GetType()
 : <a class="el" href="d7/d86/classdart_1_1renderer_1_1Light.html#aea984e127ca59e781a73ac747777c396">dart::renderer::Light</a>
@@ -1540,9 +1870,12 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>getUpperBounds()
 : <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#ab93784216b85c044d6d2a6a38d36aaca">dart::optimizer::Problem</a>
 </li>
+<li>getUri()
+: <a class="el" href="d8/d07/structdart_1_1common_1_1Uri.html#a71b4ccb3d8cf74c08002c284f567855e">dart::common::Uri</a>
+</li>
 <li>getVelocities()
 : <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#af15a842080b0a58c4c52818c74a85ef0">dart::dynamics::Joint</a>
-, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ab7d4d84098a2c146023739b7b11af064">dart::dynamics::MetaSkeleton</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a81f006d558281a5393893cd9f7fbc316">dart::dynamics::MetaSkeleton</a>
 , <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ab81c6cedf1f85bc30bed3cf505748823">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 , <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#aa607490682c224ed445fcb8d3dc279fd">dart::dynamics::PointMass</a>
 , <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a0de03919f5b740b608335d7eaf6a24b1">dart::dynamics::SingleDofJoint</a>
@@ -1628,7 +1961,10 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 , <a class="el" href="da/ddb/classdart_1_1renderer_1_1RenderInterface.html#afa802820cb314d45d801289352e73e95">dart::renderer::RenderInterface</a>
 </li>
 <li>getVisualizationShape()
-: <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#a8bb0c3cd898e0fb27b195c2792c0fa0d">dart::dynamics::Entity</a>
+: <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#afdaf722ad3b2a7bdd0c2fceef29452c9">dart::dynamics::Entity</a>
+</li>
+<li>getVisualizationShapes()
+: <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#a974812b276480910ccde5384b6560aef">dart::dynamics::Entity</a>
 </li>
 <li>getVolume()
 : <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a0a8824b5ebb8b738ce0431d58e162877">dart::dynamics::Shape</a>
@@ -1646,11 +1982,14 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#ad16ad4e4871dfb90f70e2de6e442077b">dart::dynamics::PointMass</a>
 </li>
 <li>getWorldJacobian()
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a66b333b0859f55b00818ed095d9b19a2">dart::dynamics::BodyNode</a>
-, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a7b8469b7e65fa3318f2f179480005a8c">dart::dynamics::MetaSkeleton</a>
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a5c200c373121f6781c8b3087308ed8e9">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#afeb9dc1ebdcc825feef6b1d0bc43cb8d">dart::dynamics::EndEffector</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#ad4de7f1c725b675d49cd2c23eb5b65af">dart::dynamics::JacobianNode</a>
+, <a class="el" href="d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ab12b66d6b114cff5fd41eab5682efb86">dart::dynamics::MetaSkeleton</a>
 , <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a28b8d68828ac56bca83851cbc83d8b47">dart::dynamics::PointMass</a>
-, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a468c707da26e4243ffa5848b24523c14">dart::dynamics::ReferentialSkeleton</a>
-, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a23732e8aea7880472b7b1ccafa607627">dart::dynamics::Skeleton</a>
+, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a2dd2740ed742fdc4883db8842f9c40e0">dart::dynamics::ReferentialSkeleton</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a4ecea23890f3cb344510cb4728a02d49">dart::dynamics::Skeleton</a>
+, <a class="el" href="d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode.html#af3652e978abed8aa00a5b8e614757ac0">dart::dynamics::TemplatedJacobianNode&lt; EntityType &gt;</a>
 </li>
 <li>getWorldPosition()
 : <a class="el" href="db/d20/classdart_1_1dynamics_1_1Marker.html#ab9540c2d2342fef3eaae7b447c70e45c">dart::dynamics::Marker</a>
@@ -1678,6 +2017,12 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <li>goalBias
 : <a class="el" href="d5/d78/classdart_1_1planning_1_1PathPlanner.html#ab8ce7158030f93c75c5fafc552d5e987">dart::planning::PathPlanner&lt; R &gt;</a>
 </li>
+<li>GradientDescentSolver()
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#acd81a622ba20191af3735e15a1f85062">dart::optimizer::GradientDescentSolver</a>
+</li>
+<li>GradientMethod()
+: <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#ad923cf26d2e3ff4ac39388b712fe12f4">dart::dynamics::InverseKinematics::GradientMethod</a>
+</li>
 <li>GraphWindow()
 : <a class="el" href="d4/d40/classdart_1_1gui_1_1GraphWindow.html#ab6de6a3cc80d7eaf4f008abe90773a1a">dart::gui::GraphWindow</a>
 </li>
@@ -1696,7 +2041,7 @@ $(document).ready(function(){initNavTree('functions_g.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:57 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:35 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

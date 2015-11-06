@@ -13,5 +13,10 @@ var structdart_1_1dynamics_1_1Skeleton_1_1DataCache =
     [ "mG", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#a7daeec82ad46168818ba657afe575bc9", null ],
     [ "mInvAugM", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#a760dd5d30c74c3c82620027d54550e39", null ],
     [ "mInvM", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#a5a97cb546ec5ec3559b5f8dabf13abd7", null ],
-    [ "mM", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#ae868f810fcf39387277b63ebc0fd287c", null ]
+    [ "mM", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#ae868f810fcf39387277b63ebc0fd287c", null ],
+    [ "mSupportAxes", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#adde896c406784bbbaf1a30f41356849c", null ],
+    [ "mSupportCentroid", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#aca236a6ea9df48b799a8be7d41103b33", null ],
+    [ "mSupportGeometry", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#aac6b471b818df8b6da496ed0c6b8c9a9", null ],
+    [ "mSupportIndices", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#a5b98a87792a3411f4219a9cb9b36a48d", null ],
+    [ "mSupportPolygon", "dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#a8f8b3d07667edf48cc510ec3bfd3fc52", null ]
 ];

@@ -38,7 +38,7 @@ var NAVTREE =
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
   ] ]
@@ -47,30 +47,34 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d1/d02/structLodePNGState.html#a597bc08de787147474d43adf8b6ceacf",
-"d2/d3d/SdfParser_8h.html",
-"d2/db2/DARTCollide_8cpp.html#a4146747250f23fa87196b56d54138c19",
-"d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a6cafc97259214db14966a4a4807d24dd",
-"d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#a6a11291b70c2cbded85d321ce539c62f",
-"d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a81f006d558281a5393893cd9f7fbc316",
-"d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a1ec55b0a0bf4a06a85c521f7705a50a3",
-"d5/d55/MathTypes_8h.html#acaf385e0537db2db2df04bf8baf7543b",
-"d6/d0c/Parser_8h.html#a026d75f4787ac5d023b0bcca062005c2",
-"d6/d6b/C3D_8h.html",
-"d6/de7/IpoptSolver_8h.html#af858cc42aa54f0d70f119d478538357a",
-"d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#aead7cdba6e921cd26ac627484721d4dc",
-"d7/dd6/classdart_1_1planning_1_1RRT.html#a6b6b1ad947c12d607d7b5c057199bf6b",
-"d8/ddd/classdart_1_1planning_1_1PathFollowingTrajectory.html#a0633b6c439b7ba63f6a9cb8a8fbdfb81",
-"d9/dc9/classdart_1_1common_1_1NameManager.html#ae49b3c6102a3f27304dac5184508c207",
-"da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ab04f3cfd4ed528821b3c824f0e8f2246",
-"db/d2f/ReferentialSkeleton_8cpp.html#a9a3901ea8fcb7bdf9aca97d75b023385",
-"db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#abf166c1bdd50557b46652cd8afaa7280",
-"dc/d54/common_8h.html#a78de938d4dacf2e47496fc9ef91bd7b6",
-"dd/d87/classdart_1_1utils_1_1SkelParser.html#a00b7042268b8de74d61ffd8f19878f4a",
-"dd/dc0/lodepng_8cpp.html#ac95f3a26d39c863efabb2a9cc41923c3",
-"de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a9172d2d26612a0d136e177ad9576ae18",
-"df/d64/classdart_1_1optimizer_1_1DartTNLP.html#aa7d9c1124464b1abaf1c0ffee84358a4",
-"globals_f.html"
+"d0/de1/classdart_1_1constraint_1_1WeldJointConstraint.html#a686d00d9994dfcd8686a198fe94fe19a",
+"d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a2cb6d1d5b8ad284dfff3cad58e78b158",
+"d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a3c88256f004b0adc4f3a11c5a248f0c1",
+"d2/ddf/lodepng_8h.html#abca559f31bf69eabc23c09a8a4c80b93",
+"d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ac806839abed5ef412cd2bc73e87328bd",
+"d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#ab8d563588f1324da299e17830bcaa6eb",
+"d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a7e997ada1707acdfe238f83b453a0ccb",
+"d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a01c1e2600bbc236afbf89f73766ea92a",
+"d5/d40/classdart_1_1common_1_1Signal_3_01__Res_07__ArgTypes_8_8_8_08_00_01Combiner_01_4.html#abcaa1d1649aad286a2c5a9ee881359f4",
+"d5/db5/classdart_1_1dynamics_1_1TemplateWeakNodePtr.html#a06e953bef7a344c1ee57642a86045a22",
+"d6/d5b/classdart_1_1dynamics_1_1Joint.html#a4627c9e30893a61719056bc0dd505b9c",
+"d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a399a92f1621b614a3c10ed04f2c5e1a9",
+"d6/df6/structdLCP.html#acebd8c7229b126c84d9ab4485adfb5e8",
+"d7/d41/classdart_1_1simulation_1_1World.html#aca6b178778492c5881182047d8a0b24b",
+"d7/dd6/classdart_1_1planning_1_1RRT.html#a38adc04d2f3c41b2fcd838b15961c357ab6063599a97693cf474a827c0928c12a",
+"d8/d3c/classdart_1_1integration_1_1RK4Integrator.html#a22f0812e3224a3900c1d3db926e22c86",
+"d9/d4f/classdart_1_1dynamics_1_1PlaneShape.html#a61156178c8f59fdee9dbc0a80ba6f4d1",
+"da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a6d8c4310c2722f1810386981bcea22c9",
+"da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#afd4b8551b8a6ef9e05e1914824530340",
+"db/d20/classdart_1_1dynamics_1_1Marker.html#abf12fda6c4c28ac7c13a174e48ced31cadd5bc06d7e67103cd748f8a7ab315d74",
+"db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a3c6ad052126ed830ce0e3b8b6352ab6d",
+"db/dc8/classdart_1_1dynamics_1_1Node.html#aabce31d5c1b43e2e5a686db2aa95b50e",
+"dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#aed5a94c8d2ec3ffefbddd5e44946b4a2",
+"dd/d4c/UniversalJoint_8h_source.html",
+"dd/dc0/lodepng_8cpp.html#a72d4240c44c9ba1814dae814c7d80eb1",
+"de/d13/NloptSolver_8cpp.html#a36ec915bdf1142fda333b8f9097897fb",
+"de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#ae095187fb4122e5e1b0317c342f5ba4c",
+"df/df5/classdart_1_1planning_1_1CircularPathSegment.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

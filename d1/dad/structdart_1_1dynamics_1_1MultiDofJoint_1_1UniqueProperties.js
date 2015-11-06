@@ -10,6 +10,8 @@ var structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties =
     [ "mForceLowerLimits", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#ae53c6d6f1efd61c8f7d278ecd15c036d", null ],
     [ "mForceUpperLimits", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a2f7e547f5d81191c37852f619d376f59", null ],
     [ "mFrictions", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a8e3bafd97609b09dd418e7791080d814", null ],
+    [ "mInitialPositions", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a2cb6d1d5b8ad284dfff3cad58e78b158", null ],
+    [ "mInitialVelocities", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a4ae65addd9e5a831964a7ac8d8bf930a", null ],
     [ "mPositionLowerLimits", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#af486214c03fe7a3d71312eea8f6651e1", null ],
     [ "mPositionUpperLimits", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#afe25e27237e2e72c115c25a27a8f4e1c", null ],
     [ "mPreserveDofNames", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a5e69dbc3dbdd8a86957946580d9241d0", null ],

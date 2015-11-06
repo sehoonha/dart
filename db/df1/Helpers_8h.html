@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>DART: /home/js/DRC/dart_5.0_gazebo/dart/math/Helpers.h File Reference</title>
+<title>DART: /home/js/dev/dart/5.1.1/dart/math/Helpers.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -112,17 +112,15 @@ $(document).ready(function(){initNavTree('db/df1/Helpers_8h.html','../../');});
 <div class="title">Helpers.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cassert&gt;</code><br />
-<code>#include &lt;cfloat&gt;</code><br />
+<div class="textblock"><code>#include &lt;cfloat&gt;</code><br />
 <code>#include &lt;climits&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;ctime&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;Eigen/Dense&gt;</code><br />
-<code>#include &quot;<a class="el" href="../../d2/d3f/Console_8h_source.html">dart/common/Console.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d9/db7/Deprecated_8h_source.html">dart/common/Deprecated.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d55/MathTypes_8h_source.html">dart/math/MathTypes.h</a>&quot;</code><br />
 </div>
 <p><a href="../../db/df1/Helpers_8h_source.html">Go to the source code of this file.</a></p>
@@ -143,6 +141,15 @@ Functions</h2></td></tr>
 <tr class="separator:a016887264359b2adec638f50b2f521d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6aede87f5eb5a1e43f0c8421dc237fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#ae6aede87f5eb5a1e43f0c8421dc237fa">dart::math::delta</a> (int _i, int _j)</td></tr>
 <tr class="separator:ae6aede87f5eb5a1e43f0c8421dc237fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eef8bbcf51caedb89883c2379e3f1bd"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a9eef8bbcf51caedb89883c2379e3f1bd"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a9eef8bbcf51caedb89883c2379e3f1bd">dart::math::sign</a> (T x, std::false_type)</td></tr>
+<tr class="separator:a9eef8bbcf51caedb89883c2379e3f1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8163ea1c30b0bea0518b73f3a64bad1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac8163ea1c30b0bea0518b73f3a64bad1"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#ac8163ea1c30b0bea0518b73f3a64bad1">dart::math::sign</a> (T x, std::true_type)</td></tr>
+<tr class="separator:ac8163ea1c30b0bea0518b73f3a64bad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc6974b0afdc5c38c0d708ac527a9e94"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:abc6974b0afdc5c38c0d708ac527a9e94"><td class="memTemplItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#abc6974b0afdc5c38c0d708ac527a9e94">dart::math::sign</a> (T x)</td></tr>
+<tr class="separator:abc6974b0afdc5c38c0d708ac527a9e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3299a641f96393c7bc2dddf6a442452"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#af3299a641f96393c7bc2dddf6a442452">dart::math::sgn</a> (double _a)</td></tr>
 <tr class="separator:af3299a641f96393c7bc2dddf6a442452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf35aa090d0b6f33e81c40697334df61"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#aaf35aa090d0b6f33e81c40697334df61">dart::math::sqr</a> (double _x)</td></tr>
@@ -202,10 +209,22 @@ Functions</h2></td></tr>
 <tr class="memitem:adfee9c8e11ec79925fefa99e527dd781"><td class="memTemplParams" colspan="2">template&lt;int N&gt; </td></tr>
 <tr class="memitem:adfee9c8e11ec79925fefa99e527dd781"><td class="memTemplItemLeft" align="right" valign="top">Eigen::Matrix&lt; double, N, 1 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#adfee9c8e11ec79925fefa99e527dd781">dart::math::randomVector</a> (double _limit)</td></tr>
 <tr class="separator:adfee9c8e11ec79925fefa99e527dd781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb42517351767562eb4243b51ca017b7"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#afb42517351767562eb4243b51ca017b7">dart::math::randomVectorXd</a> (size_t size, double min, double max)</td></tr>
+<tr class="separator:afb42517351767562eb4243b51ca017b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80a0dbf8770bf38fe58b8fb76029c632"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a80a0dbf8770bf38fe58b8fb76029c632">dart::math::randomVectorXd</a> (size_t size, double limit)</td></tr>
+<tr class="separator:a80a0dbf8770bf38fe58b8fb76029c632"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d3ab5b883e6b4acf99db77b646d5da0"><td class="memItemLeft" align="right" valign="top">Eigen::Vector4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespacedart_1_1Color.html#a4d3ab5b883e6b4acf99db77b646d5da0">dart::Color::Red</a> (double alpha)</td></tr>
 <tr class="separator:a4d3ab5b883e6b4acf99db77b646d5da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c325dd75125cb0ba7277a867483803"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespacedart_1_1Color.html#a40c325dd75125cb0ba7277a867483803">dart::Color::Red</a> ()</td></tr>
 <tr class="separator:a40c325dd75125cb0ba7277a867483803"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83fcb93f2c424e8730a11b466d3dfa76"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespacedart_1_1Color.html#a83fcb93f2c424e8730a11b466d3dfa76">dart::Color::Fuschia</a> ()</td></tr>
+<tr class="separator:a83fcb93f2c424e8730a11b466d3dfa76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5320f9fccb6f5761d28d46223a01a58c"><td class="memItemLeft" align="right" valign="top">Eigen::Vector4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespacedart_1_1Color.html#a5320f9fccb6f5761d28d46223a01a58c">dart::Color::Fuschia</a> (double alpha)</td></tr>
+<tr class="separator:a5320f9fccb6f5761d28d46223a01a58c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1817741b56722a3f2a8eb77280bd01f"><td class="memItemLeft" align="right" valign="top">Eigen::Vector4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespacedart_1_1Color.html#aa1817741b56722a3f2a8eb77280bd01f">dart::Color::Orange</a> (double alpha)</td></tr>
+<tr class="separator:aa1817741b56722a3f2a8eb77280bd01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7590f97cfe8ec52c79464f8ee6dea90"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespacedart_1_1Color.html#ac7590f97cfe8ec52c79464f8ee6dea90">dart::Color::Orange</a> ()</td></tr>
+<tr class="separator:ac7590f97cfe8ec52c79464f8ee6dea90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1902c703d717eebe4d4f6a16d01cdeee"><td class="memItemLeft" align="right" valign="top">Eigen::Vector4d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespacedart_1_1Color.html#a1902c703d717eebe4d4f6a16d01cdeee">dart::Color::Green</a> (double alpha)</td></tr>
 <tr class="separator:a1902c703d717eebe4d4f6a16d01cdeee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad96afa4f4d8ec8978b290fd523808370"><td class="memItemLeft" align="right" valign="top">Eigen::Vector3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbc/namespacedart_1_1Color.html#ad96afa4f4d8ec8978b290fd523808370">dart::Color::Green</a> ()</td></tr>
@@ -237,7 +256,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_bdca9e024c7189a7f761273aaa65cff0.html">dart</a></li><li class="navelem"><a class="el" href="../../dir_89aa97c1afb8f2f06c6371ad36082490.html">math</a></li><li class="navelem"><a class="el" href="../../db/df1/Helpers_8h.html">Helpers.h</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:53 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:32 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

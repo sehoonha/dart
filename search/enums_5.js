@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nextresult',['NextResult',['../d2/d42/classdart_1_1utils_1_1SdfParser.html#a87dc15818fc719447fd863ea8cff14a8',1,'dart::utils::SdfParser::NextResult()'],['../d8/d28/namespacedart_1_1utils.html#a4615d94670cb9a8340ba253911c9584a',1,'dart::utils::NextResult()']]]
+  ['includeboth_5ft',['IncludeBoth_t',['../d3/d43/classdart_1_1dynamics_1_1Chain.html#a6e2abfccee2e23817102eb7dcb0c9cf6',1,'dart::dynamics::Chain']]],
+  ['intersection_5ft',['Intersection_t',['../d8/d96/namespacedart_1_1math.html#a6738b54f0224620743ddb50c386dfaf9',1,'dart::math']]]
 ];

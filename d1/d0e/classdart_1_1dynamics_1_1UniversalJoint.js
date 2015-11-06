@@ -2,6 +2,7 @@ var classdart_1_1dynamics_1_1UniversalJoint =
 [
     [ "Properties", "df/df6/structdart_1_1dynamics_1_1UniversalJoint_1_1Properties.html", "df/df6/structdart_1_1dynamics_1_1UniversalJoint_1_1Properties" ],
     [ "UniqueProperties", "d9/dd5/structdart_1_1dynamics_1_1UniversalJoint_1_1UniqueProperties.html", "d9/dd5/structdart_1_1dynamics_1_1UniversalJoint_1_1UniqueProperties" ],
+    [ "UniversalJoint", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a7f7bbee55ce998d2e9ba1d672341d400", null ],
     [ "~UniversalJoint", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#aab541e098b35a5d0051ff803e89cab96", null ],
     [ "UniversalJoint", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a83993bef3cc9008c7acbe726ac0ac8f4", null ],
     [ "clone", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a8259d065fee5ebc71c93c127b91b1d21", null ],
@@ -13,6 +14,7 @@ var classdart_1_1dynamics_1_1UniversalJoint =
     [ "getStaticType", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a9ff29d3abe8c6c3c50dcb5fffc53d7bf", null ],
     [ "getType", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a3a67ed6e9ad933ffea31c25719cab61c", null ],
     [ "getUniversalJointProperties", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a9b878e08c5f53575a0d474604e1cee3e", null ],
+    [ "isCyclic", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a7bed71e091dee6d4f3f43c87a776ca55", null ],
     [ "operator=", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a77fdff992ff87aab5d542303748e0e06", null ],
     [ "setAxis1", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#adda6d32cb67d0d0fd944f7bd2035d5e5", null ],
     [ "setAxis2", "d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#af727af82848346e26eb1bf0b6fb687b0", null ],

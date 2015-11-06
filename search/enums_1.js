@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['constrainttype',['ConstraintType',['../db/d20/classdart_1_1dynamics_1_1Marker.html#abf12fda6c4c28ac7c13a174e48ced31c',1,'dart::dynamics::Marker']]]
+  ['balancemethod_5ft',['BalanceMethod_t',['../da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a57ee8de172dfbdca4d50518afe9eabfc',1,'dart::constraint::BalanceConstraint']]]
 ];

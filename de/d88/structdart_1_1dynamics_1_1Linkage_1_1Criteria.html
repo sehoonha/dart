@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -135,7 +135,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a7be901a9cffcbcf39946b5c3a91e46bc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a7be901a9cffcbcf39946b5c3a91e46bc">ExpansionPolicy</a> { <a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a7be901a9cffcbcf39946b5c3a91e46bcab0a7ed22d51dc23f39f25db13721e69d">NEUTRAL</a> = 0, 
+<tr class="memitem:a7be901a9cffcbcf39946b5c3a91e46bc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a7be901a9cffcbcf39946b5c3a91e46bc">ExpansionPolicy</a> { <a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a7be901a9cffcbcf39946b5c3a91e46bca6ebcc4392553d81cf86437a479e07264">INCLUDE</a> = 0, 
+<a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a7be901a9cffcbcf39946b5c3a91e46bca6a4d4c5d8faab1a36cfbf96b48abc571">EXCLUDE</a>, 
 <a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a7be901a9cffcbcf39946b5c3a91e46bca7c091fdce5ae9bbe012f8a099db17ed3">DOWNSTREAM</a>, 
 <a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a7be901a9cffcbcf39946b5c3a91e46bca37126a60abacad226db7d89f4ad476f3">UPSTREAM</a>
  }</td></tr>
@@ -168,24 +169,24 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a19f2b53c61519720955984b79b7b701b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a19f2b53c61519720955984b79b7b701b">expansionPolicy</a> (<a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_start, <a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a7be901a9cffcbcf39946b5c3a91e46bc">ExpansionPolicy</a> _policy, std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_bns) const </td></tr>
 <tr class="memdesc:a19f2b53c61519720955984b79b7b701b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Satisfy the expansion policy of a target.  <a href="#a19f2b53c61519720955984b79b7b701b">More...</a><br /></td></tr>
 <tr class="separator:a19f2b53c61519720955984b79b7b701b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fb823ed9217deae4c605f067e5a1cf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a5fb823ed9217deae4c605f067e5a1cf9">expandDownstream</a> (<a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_start, std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_bns) const </td></tr>
-<tr class="memdesc:a5fb823ed9217deae4c605f067e5a1cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand downstream.  <a href="#a5fb823ed9217deae4c605f067e5a1cf9">More...</a><br /></td></tr>
-<tr class="separator:a5fb823ed9217deae4c605f067e5a1cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9172d2d26612a0d136e177ad9576ae18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a9172d2d26612a0d136e177ad9576ae18">expandUpstream</a> (<a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_start, std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_bns) const </td></tr>
-<tr class="memdesc:a9172d2d26612a0d136e177ad9576ae18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand upstream.  <a href="#a9172d2d26612a0d136e177ad9576ae18">More...</a><br /></td></tr>
-<tr class="separator:a9172d2d26612a0d136e177ad9576ae18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71f48ee2d0bec6f9a5e238efad6e130a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a71f48ee2d0bec6f9a5e238efad6e130a">expandToTarget</a> (<a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_start, const <a class="el" href="../../d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html">Target</a> &amp;_target, std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_bns) const </td></tr>
-<tr class="memdesc:a71f48ee2d0bec6f9a5e238efad6e130a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a path from start to target.  <a href="#a71f48ee2d0bec6f9a5e238efad6e130a">More...</a><br /></td></tr>
-<tr class="separator:a71f48ee2d0bec6f9a5e238efad6e130a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7218cdd079f67f9c042ad613063033"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a7f7218cdd079f67f9c042ad613063033">expandDownstream</a> (<a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_start, std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_bns, bool _includeStart) const </td></tr>
+<tr class="memdesc:a7f7218cdd079f67f9c042ad613063033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand downstream.  <a href="#a7f7218cdd079f67f9c042ad613063033">More...</a><br /></td></tr>
+<tr class="separator:a7f7218cdd079f67f9c042ad613063033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c27425b30c4c3eb92ee509f796f6b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a97c27425b30c4c3eb92ee509f796f6b1">expandUpstream</a> (<a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_start, std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_bns, bool _includeStart) const </td></tr>
+<tr class="memdesc:a97c27425b30c4c3eb92ee509f796f6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand upstream.  <a href="#a97c27425b30c4c3eb92ee509f796f6b1">More...</a><br /></td></tr>
+<tr class="separator:a97c27425b30c4c3eb92ee509f796f6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7280a662e494b5433352dd8521a344a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#ae7280a662e494b5433352dd8521a344a">expandToTarget</a> (const <a class="el" href="../../d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html">Target</a> &amp;_start, const <a class="el" href="../../d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html">Target</a> &amp;_target, std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_bns) const </td></tr>
+<tr class="memdesc:ae7280a662e494b5433352dd8521a344a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a path from start to target.  <a href="#ae7280a662e494b5433352dd8521a344a">More...</a><br /></td></tr>
+<tr class="separator:ae7280a662e494b5433352dd8521a344a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0c4e918d6ac89a58005db89741661a5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#ad0c4e918d6ac89a58005db89741661a5">climbToTarget</a> (<a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_start, <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_target) const </td></tr>
 <tr class="memdesc:ad0c4e918d6ac89a58005db89741661a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand upwards from the _start <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> to the _target <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#ad0c4e918d6ac89a58005db89741661a5">More...</a><br /></td></tr>
 <tr class="separator:ad0c4e918d6ac89a58005db89741661a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd39f6d89ef3699fd4c969a735e328fa"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#abd39f6d89ef3699fd4c969a735e328fa">climbToCommonRoot</a> (<a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_start, <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_target, bool _chain) const </td></tr>
-<tr class="memdesc:abd39f6d89ef3699fd4c969a735e328fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand upwards from both BodyNodes to a common root.  <a href="#abd39f6d89ef3699fd4c969a735e328fa">More...</a><br /></td></tr>
-<tr class="separator:abd39f6d89ef3699fd4c969a735e328fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5e3e21412b7834d368ee4539c2bbde2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#aa5e3e21412b7834d368ee4539c2bbde2">trimBodyNodes</a> (std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_bns, bool _chain, bool _upstream) const </td></tr>
-<tr class="memdesc:aa5e3e21412b7834d368ee4539c2bbde2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crawl through the list and cut it off anywhere that the criteria is violated.  <a href="#aa5e3e21412b7834d368ee4539c2bbde2">More...</a><br /></td></tr>
-<tr class="separator:aa5e3e21412b7834d368ee4539c2bbde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdde502ec7e666514f5af0767bc4e3f1"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#afdde502ec7e666514f5af0767bc4e3f1">climbToCommonRoot</a> (const <a class="el" href="../../d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html">Target</a> &amp;_start, const <a class="el" href="../../d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html">Target</a> &amp;_target, bool _chain) const </td></tr>
+<tr class="memdesc:afdde502ec7e666514f5af0767bc4e3f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand upwards from both BodyNodes to a common root.  <a href="#afdde502ec7e666514f5af0767bc4e3f1">More...</a><br /></td></tr>
+<tr class="separator:afdde502ec7e666514f5af0767bc4e3f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ccae89c381dabd9a580337773b0027a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a9ccae89c381dabd9a580337773b0027a">trimBodyNodes</a> (std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_bns, bool _chain, bool _movingUpstream) const </td></tr>
+<tr class="memdesc:a9ccae89c381dabd9a580337773b0027a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crawl through the list and cut it off anywhere that the criteria is violated.  <a href="#a9ccae89c381dabd9a580337773b0027a">More...</a><br /></td></tr>
+<tr class="separator:a9ccae89c381dabd9a580337773b0027a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -208,21 +209,24 @@ Protected Attributes</h2></td></tr>
 
 <p>The ExpansionPolicy indicates how the collection of BodyNodes should expand from the starting <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> (mStart) </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a7be901a9cffcbcf39946b5c3a91e46bcab0a7ed22d51dc23f39f25db13721e69d"></a>NEUTRAL&#160;</td><td class="fielddoc">
-<p>Do not expand. Only include the BodyNodes needed to reach the target. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a7be901a9cffcbcf39946b5c3a91e46bca6ebcc4392553d81cf86437a479e07264"></a>INCLUDE&#160;</td><td class="fielddoc">
+<p>Do not expand from the target. Include everything up to the target and then stop. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7be901a9cffcbcf39946b5c3a91e46bca6a4d4c5d8faab1a36cfbf96b48abc571"></a>EXCLUDE&#160;</td><td class="fielddoc">
+<p>Do not expand from the target. Include everything up to the target, but NOT the target, and then stop. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a7be901a9cffcbcf39946b5c3a91e46bca7c091fdce5ae9bbe012f8a099db17ed3"></a>DOWNSTREAM&#160;</td><td class="fielddoc">
-<p>Expand downstream, toward the leaves of the tree. </p>
+<p>Include the target, and then expand downstream, toward the leaves of the tree. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a7be901a9cffcbcf39946b5c3a91e46bca37126a60abacad226db7d89f4ad476f3"></a>UPSTREAM&#160;</td><td class="fielddoc">
-<p>Expand upstream, toward the root of the tree. </p>
+<p>Include the target, and then expand upstream, toward the root of the tree. </p>
 </td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="abd39f6d89ef3699fd4c969a735e328fa"></a>
+<a class="anchor" id="afdde502ec7e666514f5af0767bc4e3f1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -232,13 +236,13 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; dart::dynamics::Linkage::Criteria::climbToCommonRoot </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html">Target</a> &amp;&#160;</td>
           <td class="paramname"><em>_start</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html">Target</a> &amp;&#160;</td>
           <td class="paramname"><em>_target</em>, </td>
         </tr>
         <tr>
@@ -300,7 +304,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5fb823ed9217deae4c605f067e5a1cf9"></a>
+<a class="anchor" id="a7f7218cdd079f67f9c042ad613063033"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -317,7 +321,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>_bns</em>&#160;</td>
+          <td class="paramname"><em>_bns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_includeStart</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -336,7 +346,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a71f48ee2d0bec6f9a5e238efad6e130a"></a>
+<a class="anchor" id="ae7280a662e494b5433352dd8521a344a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -346,7 +356,7 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="memname">void dart::dynamics::Linkage::Criteria::expandToTarget </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html">Target</a> &amp;&#160;</td>
           <td class="paramname"><em>_start</em>, </td>
         </tr>
         <tr>
@@ -378,7 +388,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9172d2d26612a0d136e177ad9576ae18"></a>
+<a class="anchor" id="a97c27425b30c4c3eb92ee509f796f6b1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -395,7 +405,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>_bns</em>&#160;</td>
+          <td class="paramname"><em>_bns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_includeStart</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -498,7 +514,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa5e3e21412b7834d368ee4539c2bbde2"></a>
+<a class="anchor" id="a9ccae89c381dabd9a580337773b0027a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -521,7 +537,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_upstream</em>&#160;</td>
+          <td class="paramname"><em>_movingUpstream</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -606,17 +622,13 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/dynamics/<a class="el" href="../../d5/dc6/Linkage_8h_source.html">Linkage.h</a></li>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/dynamics/<a class="el" href="../../d3/d21/Linkage_8cpp.html">Linkage.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../d7/d5a/namespacedart_1_1dynamics.html">dynamics</a></li><li class="navelem"><a class="el" href="../../d8/d57/classdart_1_1dynamics_1_1Linkage.html">Linkage</a></li><li class="navelem"><a class="el" href="../../de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html">Criteria</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:53 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:33 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

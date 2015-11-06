@@ -6,6 +6,7 @@ var classdart_1_1dynamics_1_1EulerJoint =
       [ "AO_ZYX", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a3c88256f004b0adc4f3a11c5a248f0c1ae7b17b4af226cea4128e4e18785cc8e5", null ],
       [ "AO_XYZ", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a3c88256f004b0adc4f3a11c5a248f0c1af86e7f51eaa50f51d6762670b42e5dce", null ]
     ] ],
+    [ "EulerJoint", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a94113290cb25aedaf61fcc46fa7ad696", null ],
     [ "~EulerJoint", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a456f60d529d88aac13968f8dc95b2357", null ],
     [ "EulerJoint", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#aa531657830ead22ce03c6b453d7be992", null ],
     [ "clone", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#ad0f4af3e0ccb333ab0eab97c9f3e4884", null ],
@@ -22,6 +23,7 @@ var classdart_1_1dynamics_1_1EulerJoint =
     [ "getLocalJacobianStatic", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a223297fc4c7eb4111609ebc45a8c353b", null ],
     [ "getStaticType", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#ae423cfb40e991d4be0baf0a69ddde9d6", null ],
     [ "getType", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#ad698007390db695fc26d903c77a2a902", null ],
+    [ "isCyclic", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a99d63c0cc5f9802531c4b9903edd61f1", null ],
     [ "operator=", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a945d7140cf6d288020afc5452c646acb", null ],
     [ "setAxisOrder", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a2947580ce65af2df1f25e19f99a85b14", null ],
     [ "setProperties", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a6f03535f34741a25aa5327be6dcf6944", null ],

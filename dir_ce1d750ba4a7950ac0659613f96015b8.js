@@ -6,6 +6,8 @@ var dir_ce1d750ba4a7950ac0659613f96015b8 =
       [ "ArrowShape", "d7/dcd/classdart_1_1dynamics_1_1ArrowShape.html", "d7/dcd/classdart_1_1dynamics_1_1ArrowShape" ],
       [ "Properties", "dc/dc5/structdart_1_1dynamics_1_1ArrowShape_1_1Properties.html", "dc/dc5/structdart_1_1dynamics_1_1ArrowShape_1_1Properties" ]
     ] ],
+    [ "AssimpInputResourceAdaptor.cpp", "d3/d4c/AssimpInputResourceAdaptor_8cpp.html", "d3/d4c/AssimpInputResourceAdaptor_8cpp" ],
+    [ "AssimpInputResourceAdaptor.h", "de/dbe/AssimpInputResourceAdaptor_8h.html", "de/dbe/AssimpInputResourceAdaptor_8h" ],
     [ "BallJoint.cpp", "dc/dfc/BallJoint_8cpp.html", null ],
     [ "BallJoint.h", "d3/ddc/BallJoint_8h.html", [
       [ "BallJoint", "d7/de3/classdart_1_1dynamics_1_1BallJoint.html", "d7/de3/classdart_1_1dynamics_1_1BallJoint" ],
@@ -40,6 +42,13 @@ var dir_ce1d750ba4a7950ac0659613f96015b8 =
     [ "EllipsoidShape.h", "de/d25/EllipsoidShape_8h.html", [
       [ "EllipsoidShape", "db/da3/classdart_1_1dynamics_1_1EllipsoidShape.html", "db/da3/classdart_1_1dynamics_1_1EllipsoidShape" ]
     ] ],
+    [ "EndEffector.cpp", "d1/d4b/EndEffector_8cpp.html", null ],
+    [ "EndEffector.h", "d9/da1/EndEffector_8h.html", [
+      [ "Support", "d9/d4f/classdart_1_1dynamics_1_1Support.html", "d9/d4f/classdart_1_1dynamics_1_1Support" ],
+      [ "EndEffector", "db/d3c/classdart_1_1dynamics_1_1EndEffector.html", "db/d3c/classdart_1_1dynamics_1_1EndEffector" ],
+      [ "UniqueProperties", "d8/de9/structdart_1_1dynamics_1_1EndEffector_1_1UniqueProperties.html", "d8/de9/structdart_1_1dynamics_1_1EndEffector_1_1UniqueProperties" ],
+      [ "Properties", "d2/d60/structdart_1_1dynamics_1_1EndEffector_1_1Properties.html", "d2/d60/structdart_1_1dynamics_1_1EndEffector_1_1Properties" ]
+    ] ],
     [ "Entity.cpp", "df/de9/Entity_8cpp.html", "df/de9/Entity_8cpp" ],
     [ "Entity.h", "d4/da0/Entity_8h.html", [
       [ "Entity", "d7/d42/classdart_1_1dynamics_1_1Entity.html", "d7/d42/classdart_1_1dynamics_1_1Entity" ],
@@ -51,6 +60,10 @@ var dir_ce1d750ba4a7950ac0659613f96015b8 =
       [ "EulerJoint", "d2/d87/classdart_1_1dynamics_1_1EulerJoint.html", "d2/d87/classdart_1_1dynamics_1_1EulerJoint" ],
       [ "UniqueProperties", "d0/dcc/structdart_1_1dynamics_1_1EulerJoint_1_1UniqueProperties.html", "d0/dcc/structdart_1_1dynamics_1_1EulerJoint_1_1UniqueProperties" ],
       [ "Properties", "df/de0/structdart_1_1dynamics_1_1EulerJoint_1_1Properties.html", "df/de0/structdart_1_1dynamics_1_1EulerJoint_1_1Properties" ]
+    ] ],
+    [ "FixedFrame.cpp", "df/dec/FixedFrame_8cpp.html", null ],
+    [ "FixedFrame.h", "d1/d67/FixedFrame_8h.html", [
+      [ "FixedFrame", "d8/d17/classdart_1_1dynamics_1_1FixedFrame.html", "d8/d17/classdart_1_1dynamics_1_1FixedFrame" ]
     ] ],
     [ "Frame.cpp", "d5/de0/Frame_8cpp.html", "d5/de0/Frame_8cpp" ],
     [ "Frame.h", "d7/db3/Frame_8h.html", [
@@ -66,11 +79,19 @@ var dir_ce1d750ba4a7950ac0659613f96015b8 =
     [ "Group.h", "de/d3d/Group_8h.html", [
       [ "Group", "db/db4/classdart_1_1dynamics_1_1Group.html", "db/db4/classdart_1_1dynamics_1_1Group" ]
     ] ],
+    [ "HierarchicalIK.cpp", "d4/dfa/HierarchicalIK_8cpp.html", "d4/dfa/HierarchicalIK_8cpp" ],
+    [ "HierarchicalIK.h", "d2/dc9/HierarchicalIK_8h.html", "d2/dc9/HierarchicalIK_8h" ],
     [ "Inertia.cpp", "da/dbf/Inertia_8cpp.html", null ],
     [ "Inertia.h", "db/d17/Inertia_8h.html", [
       [ "Inertia", "d6/d91/classdart_1_1dynamics_1_1Inertia.html", "d6/d91/classdart_1_1dynamics_1_1Inertia" ]
     ] ],
     [ "InvalidIndex.h", "d3/da4/InvalidIndex_8h.html", "d3/da4/InvalidIndex_8h" ],
+    [ "InverseKinematics.cpp", "d7/d44/InverseKinematics_8cpp.html", "d7/d44/InverseKinematics_8cpp" ],
+    [ "InverseKinematics.h", "d3/ded/InverseKinematics_8h.html", "d3/ded/InverseKinematics_8h" ],
+    [ "JacobianNode.cpp", "d8/dbf/JacobianNode_8cpp.html", null ],
+    [ "JacobianNode.h", "d6/dfd/JacobianNode_8h.html", [
+      [ "JacobianNode", "d1/d50/classdart_1_1dynamics_1_1JacobianNode.html", "d1/d50/classdart_1_1dynamics_1_1JacobianNode" ]
+    ] ],
     [ "Joint.cpp", "d6/de6/Joint_8cpp.html", null ],
     [ "Joint.h", "de/d50/Joint_8h.html", [
       [ "Joint", "d6/d5b/classdart_1_1dynamics_1_1Joint.html", "d6/d5b/classdart_1_1dynamics_1_1Joint" ],
@@ -104,6 +125,12 @@ var dir_ce1d750ba4a7950ac0659613f96015b8 =
       [ "MultiDofJoint", "da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html", "da/d30/classdart_1_1dynamics_1_1MultiDofJoint" ],
       [ "UniqueProperties", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html", "d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties" ],
       [ "Properties", "d5/dbc/structdart_1_1dynamics_1_1MultiDofJoint_1_1Properties.html", "d5/dbc/structdart_1_1dynamics_1_1MultiDofJoint_1_1Properties" ]
+    ] ],
+    [ "Node.cpp", "dc/d73/Node_8cpp.html", "dc/d73/Node_8cpp" ],
+    [ "Node.h", "db/d92/Node_8h.html", [
+      [ "NodeDestructor", "de/ddb/classdart_1_1dynamics_1_1NodeDestructor.html", "de/ddb/classdart_1_1dynamics_1_1NodeDestructor" ],
+      [ "Node", "db/dc8/classdart_1_1dynamics_1_1Node.html", "db/dc8/classdart_1_1dynamics_1_1Node" ],
+      [ "AccessoryNode", "df/d31/classdart_1_1dynamics_1_1AccessoryNode.html", "df/d31/classdart_1_1dynamics_1_1AccessoryNode" ]
     ] ],
     [ "PlanarJoint.cpp", "d5/d9e/PlanarJoint_8cpp.html", null ],
     [ "PlanarJoint.h", "de/d0a/PlanarJoint_8h.html", [
@@ -145,9 +172,13 @@ var dir_ce1d750ba4a7950ac0659613f96015b8 =
       [ "Properties", "de/df9/structdart_1_1dynamics_1_1ScrewJoint_1_1Properties.html", "de/df9/structdart_1_1dynamics_1_1ScrewJoint_1_1Properties" ]
     ] ],
     [ "Shape.cpp", "d6/dbd/Shape_8cpp.html", "d6/dbd/Shape_8cpp" ],
-    [ "Shape.h", "de/d8f/Shape_8h.html", "de/d8f/Shape_8h" ],
+    [ "Shape.h", "de/d8f/Shape_8h.html", [
+      [ "Shape", "db/d1c/classdart_1_1dynamics_1_1Shape.html", "db/d1c/classdart_1_1dynamics_1_1Shape" ]
+    ] ],
     [ "SimpleFrame.cpp", "d4/d78/SimpleFrame_8cpp.html", null ],
-    [ "SimpleFrame.h", "d4/d97/SimpleFrame_8h.html", "d4/d97/SimpleFrame_8h" ],
+    [ "SimpleFrame.h", "d4/d97/SimpleFrame_8h.html", [
+      [ "SimpleFrame", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html", "da/d1c/classdart_1_1dynamics_1_1SimpleFrame" ]
+    ] ],
     [ "SingleDofJoint.cpp", "db/d32/SingleDofJoint_8cpp.html", "db/d32/SingleDofJoint_8cpp" ],
     [ "SingleDofJoint.h", "db/df8/SingleDofJoint_8h.html", [
       [ "SingleDofJoint", "d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html", "d7/d33/classdart_1_1dynamics_1_1SingleDofJoint" ],
@@ -167,6 +198,9 @@ var dir_ce1d750ba4a7950ac0659613f96015b8 =
     [ "SoftMeshShape.cpp", "d9/de2/SoftMeshShape_8cpp.html", null ],
     [ "SoftMeshShape.h", "d6/db8/SoftMeshShape_8h.html", [
       [ "SoftMeshShape", "d6/dae/classdart_1_1dynamics_1_1SoftMeshShape.html", "d6/dae/classdart_1_1dynamics_1_1SoftMeshShape" ]
+    ] ],
+    [ "TemplatedJacobianNode.h", "d3/dc0/TemplatedJacobianNode_8h.html", [
+      [ "TemplatedJacobianNode", "d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode.html", "d3/d10/classdart_1_1dynamics_1_1TemplatedJacobianNode" ]
     ] ],
     [ "TranslationalJoint.cpp", "df/d58/TranslationalJoint_8cpp.html", null ],
     [ "TranslationalJoint.h", "db/dec/TranslationalJoint_8h.html", [

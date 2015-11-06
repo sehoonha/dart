@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -262,6 +262,8 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 , <a class="el" href="dd/d61/classdart_1_1constraint_1_1JointCoulombFrictionConstraint.html#abd02a9b5b8df4398ce934b2f44584564">dart::constraint::JointCoulombFrictionConstraint</a>
 , <a class="el" href="d4/dbf/classdart_1_1constraint_1_1JointLimitConstraint.html#af51d625e91035ac7a942a71dc05d844a">dart::constraint::JointLimitConstraint</a>
 , <a class="el" href="d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a9f4ad15c187592840c3b2bc4763ed07a">dart::constraint::SoftContactConstraint</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a73c517fc9e01937d6662d1ca9dce2c8c">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="d9/d4f/classdart_1_1dynamics_1_1Support.html#a30db5198ef97709bcc4507bc202eaa82">dart::dynamics::Support</a>
 </li>
 <li>mActiveConstraints
 : <a class="el" href="d6/dc9/classdart_1_1constraint_1_1ConstraintSolver.html#a8e8eee06a12b720472f99b4554284e69">dart::constraint::ConstraintSolver</a>
@@ -272,14 +274,23 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mAffix
 : <a class="el" href="d9/dc9/classdart_1_1common_1_1NameManager.html#a8ed2f3966d9d48ba1f37ba251da99e6b">dart::common::NameManager&lt; T &gt;</a>
 </li>
+<li>mAlg
+: <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#aca3d06519bb33d974e53d8a73816dd12">dart::optimizer::NloptSolver</a>
+</li>
 <li>mAlpha
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#aed5a12dd970c37f2181393c355b44b3e">dart::dynamics::PointMass</a>
+</li>
+<li>mAmFrame
+: <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#a1b1ed11d66b4113ebd8577927c3766f1">dart::dynamics::Entity</a>
 </li>
 <li>mAmQuiet
 : <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#a4169c654d2a5e50d95b22922379f88dc">dart::dynamics::Entity</a>
 </li>
 <li>mAmWorld
 : <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a3bd1e48a1fcdd3ad084f89a3e33fdd1e">dart::dynamics::Frame</a>
+</li>
+<li>mAngle
+: <a class="el" href="d7/dc6/structdart_1_1math_1_1HullAngle.html#aceb5d36428ee02e0e0ca14cdfa5495ac">dart::math::HullAngle</a>
 </li>
 <li>mAppliedImpulseIndex
 : <a class="el" href="d9/d4e/classdart_1_1constraint_1_1BallJointConstraint.html#a1ed9c481104d91b565e767b85f8a9eb7">dart::constraint::BallJointConstraint</a>
@@ -320,6 +331,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mAugMassMatrix
 : <a class="el" href="d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a32f02b0bfd15d7d00be7ab4b8f803c8b">dart::dynamics::Skeleton::DirtyFlags</a>
 </li>
+<li>mAuthority
+: <a class="el" href="d8/d07/structdart_1_1common_1_1Uri.html#a5d2bd0df93b44c4f7c96c10a83099d39">dart::common::Uri</a>
+</li>
 <li>maxAcceleration
 : <a class="el" href="d8/ddd/classdart_1_1planning_1_1PathFollowingTrajectory.html#aa35a31469d452c2be5a16d6d79585bc1">dart::planning::PathFollowingTrajectory</a>
 </li>
@@ -353,6 +367,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mBakedStates
 : <a class="el" href="dd/d87/classdart_1_1simulation_1_1Recording.html#ad0a3a2724fc4cd9a9abfbeb668872262">dart::simulation::Recording</a>
 </li>
+<li>mBalanceMethod
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a070e458660db1452d8e6d7e85cfbf288">dart::constraint::BalanceConstraint</a>
+</li>
 <li>mBeta
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a338fab029248f204e05b245417a17fd6">dart::dynamics::PointMass</a>
 </li>
@@ -385,6 +402,7 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 , <a class="el" href="dd/d61/classdart_1_1constraint_1_1JointCoulombFrictionConstraint.html#aff4add6238a456fb3cf709b70104d650">dart::constraint::JointCoulombFrictionConstraint</a>
 , <a class="el" href="d4/dbf/classdart_1_1constraint_1_1JointLimitConstraint.html#aba1da9311ffb50ca7d1d9c3270cbdc80">dart::constraint::JointLimitConstraint</a>
 , <a class="el" href="db/d20/classdart_1_1dynamics_1_1Marker.html#a5efa4f8ce6b0ce0acd2bbbf3804c2757">dart::dynamics::Marker</a>
+, <a class="el" href="db/dc8/classdart_1_1dynamics_1_1Node.html#a9a2ecc7d4a7224b2e2c4d0fa4a062282">dart::dynamics::Node</a>
 </li>
 <li>mBodyNode1
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a23d291dc762739f4fe40b40893fd79d3">dart::constraint::ContactConstraint</a>
@@ -402,6 +420,7 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mBodyNodePtr
 : <a class="el" href="d2/d70/classdart_1_1dynamics_1_1TemplateDegreeOfFreedomPtr.html#a0fc0549bda77bcb859a725799b98aef0">dart::dynamics::TemplateDegreeOfFreedomPtr&lt; DegreeOfFreedomT, BodyNodeT &gt;</a>
 , <a class="el" href="d0/d2f/classdart_1_1dynamics_1_1TemplateJointPtr.html#ae1a667fcbd7df3cb279e0eb754c62086">dart::dynamics::TemplateJointPtr&lt; JointT, BodyNodeT &gt;</a>
+, <a class="el" href="d9/dff/classdart_1_1dynamics_1_1TemplateNodePtr.html#a37b3ba8963d32e74214eebade636ed0d">dart::dynamics::TemplateNodePtr&lt; NodeT, BodyNodeT &gt;</a>
 </li>
 <li>mBodyNodes
 : <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a3b1b1faab634e61655fce162d16cc6f7">dart::dynamics::ReferentialSkeleton</a>
@@ -412,6 +431,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mBoundingBoxDim
 : <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a806daf43c119d2f4563ca4d5863855d0">dart::dynamics::Shape</a>
+</li>
+<li>mBounds
+: <a class="el" href="db/d2b/structdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod_1_1Properties.html#a851d29fe57fab0df7e87edb260b102b0">dart::dynamics::InverseKinematics::ErrorMethod::Properties</a>
 </li>
 <li>mBoundsHi
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#aa8afc1d912e090ab54fe65167cc9791c">dart::optimizer::snopt::SnoptInterface</a>
@@ -473,6 +495,12 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mChildFrames
 : <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a5c6fb9d277328a7f383124d903f252bf">dart::dynamics::Frame</a>
 </li>
+<li>mChildJacobianNodes
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a1e967204251a4b590b46f7d7560cc5f2">dart::dynamics::JacobianNode</a>
+</li>
+<li>mClosestEndEffector
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a25d2655bb329fee79cf0bff954635bee">dart::constraint::BalanceConstraint</a>
+</li>
 <li>mCoefMap
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#a46f6c5388cac040149feb43e0664ec95">dart::optimizer::snopt::SnoptInterface</a>
 </li>
@@ -494,6 +522,12 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mColor
 : <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a5592a8e31030dd80c7ad3118c18e3430">dart::dynamics::Shape</a>
 </li>
+<li>mColorIndex
+: <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a13ea6e9380c956f1a596f15cf771768a">dart::dynamics::MeshShape</a>
+</li>
+<li>mColorMode
+: <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a78f1c6fa9b19e9d3f202a9a8088e0d95">dart::dynamics::MeshShape</a>
+</li>
 <li>mColShapeAddedSignal
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ac19bf3481c2ad7ad22201dfc5901d779">dart::dynamics::BodyNode</a>
 </li>
@@ -503,11 +537,23 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mColShapes
 : <a class="el" href="d0/d20/structdart_1_1dynamics_1_1BodyNode_1_1UniqueProperties.html#a70b3bcab1502320970a9d6a24daaa892">dart::dynamics::BodyNode::UniqueProperties</a>
 </li>
+<li>mComJacCache
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#ab0654f037ccda540bd27c75e71b3cdbe">dart::constraint::BalanceConstraint</a>
+</li>
 <li>mCommand
 : <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ad4538e98e930c2cd67b240838221b3e2">dart::dynamics::SingleDofJoint</a>
 </li>
 <li>mCommands
 : <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a7ddb18afe4ef26695eb0c8102ee41da4">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
+</li>
+<li>mComponentWeights
+: <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#aab3b3112e10656ab1912020d6bcb699a">dart::dynamics::InverseKinematics::GradientMethod</a>
+</li>
+<li>mComponentWiseClamp
+: <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#aab35c4e515779af0c1dbd86eff0d3e13">dart::dynamics::InverseKinematics::GradientMethod</a>
+</li>
+<li>mComputeErrorFromCenter
+: <a class="el" href="d9/d4d/classdart_1_1dynamics_1_1InverseKinematics_1_1TaskSpaceRegion.html#ab8d6e2fa79fd69cd276c0a345a9a4967">dart::dynamics::InverseKinematics::TaskSpaceRegion</a>
 </li>
 <li>mConnectedPointMassIndices
 : <a class="el" href="d9/db4/structdart_1_1dynamics_1_1PointMass_1_1Properties.html#abee36c50744111ab34b98c17352c3520">dart::dynamics::PointMass::Properties</a>
@@ -575,6 +621,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mCoriolisForces
 : <a class="el" href="d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a117e575d37dc0e23386e0626d9c2273f">dart::dynamics::Skeleton::DirtyFlags</a>
 </li>
+<li>mCostFunction
+: <a class="el" href="d9/d98/classdart_1_1optimizer_1_1ModularFunction.html#a386fde0fc7b3e00cb550501ad669a64e">dart::optimizer::ModularFunction</a>
+</li>
 <li>mCount
 : <a class="el" href="d9/d32/classdart_1_1common_1_1Timer.html#a129fac4d5b2e4cc2a027103c2a1965d9">dart::common::Timer</a>
 , <a class="el" href="df/d79/structdart_1_1dynamics_1_1Recording.html#aa01a485f3492cbc94c52634f1b6ee326">dart::dynamics::Recording</a>
@@ -595,6 +644,10 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mDampCoeff
 : <a class="el" href="d4/d2b/structdart_1_1dynamics_1_1SoftBodyNode_1_1UniqueProperties.html#af9ec07c349befee7e2e735ddf4f6742e">dart::dynamics::SoftBodyNode::UniqueProperties</a>
 </li>
+<li>mDamping
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a74491853d9d2296002c3d1101d8f993b">dart::constraint::BalanceConstraint</a>
+, <a class="el" href="d6/dd1/classdart_1_1dynamics_1_1InverseKinematics_1_1JacobianDLS.html#ae8e70f90fae2ca90d5364229d43c1984">dart::dynamics::InverseKinematics::JacobianDLS</a>
+</li>
 <li>mDampingCoefficient
 : <a class="el" href="d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#a1d69a1e018f9a65eb5cc2e8f0fe1764d">dart::dynamics::SingleDofJoint::UniqueProperties</a>
 </li>
@@ -611,8 +664,17 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mdConstrdCoef
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#a76debbc74c13e1308e769299228e203c">dart::optimizer::snopt::SnoptInterface</a>
 </li>
+<li>mDefaultConstraintWeight
+: <a class="el" href="d8/db5/structdart_1_1optimizer_1_1GradientDescentSolver_1_1UniqueProperties.html#a689ff1bc4202bf543a2a3bbb5110c21e">dart::optimizer::GradientDescentSolver::UniqueProperties</a>
+</li>
 <li>mDefaultName
 : <a class="el" href="d9/dc9/classdart_1_1common_1_1NameManager.html#a8c87a6a21414cd184b3aa96b3edf28fb">dart::common::NameManager&lt; T &gt;</a>
+</li>
+<li>mDefaultResourceRetrievers
+: <a class="el" href="da/da5/classdart_1_1utils_1_1CompositeResourceRetriever.html#a934eebde3862477791421c629642609e">dart::utils::CompositeResourceRetriever</a>
+</li>
+<li>mDefaultTransform
+: <a class="el" href="d8/de9/structdart_1_1dynamics_1_1EndEffector_1_1UniqueProperties.html#a60ebc6632f3a388d6a2a78331cc3db11">dart::dynamics::EndEffector::UniqueProperties</a>
 </li>
 <li>mDelV
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ab417ce330020874e8df8ca8b95416115">dart::dynamics::BodyNode</a>
@@ -624,6 +686,10 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mDependentGenCoordIndices
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a01c1e2600bbc236afbf89f73766ea92a">dart::dynamics::BodyNode</a>
 , <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#ac26a52357d0a9b363a73f0774688b089">dart::dynamics::PointMass</a>
+</li>
+<li>mDestructor
+: <a class="el" href="db/dc8/classdart_1_1dynamics_1_1Node.html#a6729f60f63bb95d26f4a1de37995fd94">dart::dynamics::Node</a>
+, <a class="el" href="d9/dff/classdart_1_1dynamics_1_1TemplateNodePtr.html#a78f3b547ac79f4369c2edb8fe61e6bf9">dart::dynamics::TemplateNodePtr&lt; NodeT, BodyNodeT &gt;</a>
 </li>
 <li>mDiffuse
 : <a class="el" href="d7/d86/classdart_1_1renderer_1_1Light.html#a4274cad71d3c83f1a8d3c1c35fec358d">dart::renderer::Light</a>
@@ -643,6 +709,12 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mDisplayTimeout
 : <a class="el" href="d1/d33/classdart_1_1gui_1_1GlutWindow.html#a0cbc77f9ad81caedd41214067a90481b">dart::gui::GlutWindow</a>
 </li>
+<li>mDistance
+: <a class="el" href="d7/dc6/structdart_1_1math_1_1HullAngle.html#af0e82d62420aaf09166307e56c430124">dart::math::HullAngle</a>
+</li>
+<li>mDistribution
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a7c9a5c23d2b606c18a7baa7c0d16c070">dart::optimizer::GradientDescentSolver</a>
+</li>
 <li>mdObjdCoef
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#a78c03bac36a03e6452604856a9e193fe">dart::optimizer::snopt::SnoptInterface</a>
 </li>
@@ -652,6 +724,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mDofIndices
 : <a class="el" href="d8/dd7/structdart_1_1dynamics_1_1ReferentialSkeleton_1_1IndexMap.html#af84c0b7f50c01f7bf0b649f74ec535ed">dart::dynamics::ReferentialSkeleton::IndexMap</a>
 </li>
+<li>mDofMap
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a7791d2b820e2f5623fd9c4999587bbcc">dart::dynamics::InverseKinematics</a>
+</li>
 <li>mDofName
 : <a class="el" href="d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#af09bfbaf5cdfb62cb63de4684e719490">dart::dynamics::SingleDofJoint::UniqueProperties</a>
 </li>
@@ -659,7 +734,8 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a0fe674aab7548534948e482d665be754">dart::dynamics::MultiDofJoint&lt; DOF &gt;::UniqueProperties</a>
 </li>
 <li>mDofs
-: <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a274d3ece69dedeb1829950f5352514b3">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a18040f5f2054bedb4920db8add105185">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a274d3ece69dedeb1829950f5352514b3">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 , <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a399a92f1621b614a3c10ed04f2c5e1a9">dart::dynamics::ReferentialSkeleton</a>
 , <a class="el" href="dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#a96b8924854e22fdb3f89d092e777bbdd">dart::dynamics::Skeleton::DataCache</a>
 , <a class="el" href="d9/dbf/classdart_1_1utils_1_1FileInfoDof.html#a501aad9f9adf5a8bb8b562af6c2f29d3">dart::utils::FileInfoDof</a>
@@ -670,17 +746,42 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mDummyVertex
 : <a class="el" href="d1/ddd/classdart_1_1dynamics_1_1LineSegmentShape.html#a025cc816ddee9ca11e78ce9f73fad261">dart::dynamics::LineSegmentShape</a>
 </li>
+<li>mEEJacCache
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#ae7a2bd820bf1ff830e2b1f70f23a37d5">dart::constraint::BalanceConstraint</a>
+</li>
+<li>mEffectorJacobian
+: <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#aa8333d31ad8cbb25a4346a80bb34fcd2">dart::dynamics::EndEffector</a>
+</li>
+<li>mEffectorJacobianSpatialDeriv
+: <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a5c28340d432fab0ff7a57f87fed94c84">dart::dynamics::EndEffector</a>
+</li>
 <li>mEnabledAdjacentBodyCheck
 : <a class="el" href="dd/dec/structdart_1_1dynamics_1_1Skeleton_1_1Properties.html#abfa0bdd4fc19b1ee4da16a0a27c1e7b8">dart::dynamics::Skeleton::Properties</a>
 </li>
 <li>mEnabledSelfCollisionCheck
 : <a class="el" href="dd/dec/structdart_1_1dynamics_1_1Skeleton_1_1Properties.html#a3f8290ecd65a5487101a0c8a6d458321">dart::dynamics::Skeleton::Properties</a>
 </li>
+<li>mEndEffector
+: <a class="el" href="d9/d4f/classdart_1_1dynamics_1_1Support.html#a3c3160d412d8216f3952bffafb847017">dart::dynamics::Support</a>
+</li>
+<li>mEndEffectorP
+: <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#aaf907784a12ee75282228b9358da8e6d">dart::dynamics::EndEffector</a>
+</li>
+<li>mEndEffectors
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a83f8f7f6c29af0a0c24fa0f3bc1d1b6b">dart::dynamics::BodyNode</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ad49c0564cee4f062b3e480286a2640ed">dart::dynamics::Skeleton</a>
+</li>
 <li>mEntityP
 : <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#aae19930f19f26e8b45d9d09021733e25">dart::dynamics::Entity</a>
 </li>
+<li>mEqConstraintCostCache
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a55aa0cbe1c550d420f3d5840dc4b8aac">dart::optimizer::GradientDescentSolver</a>
+</li>
 <li>mEqConstraints
-: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#aeb91e31f72a7ed8a769ab3efd37fdc60">dart::optimizer::Problem</a>
+: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a713a7ef206a722ae68fe8e9de9dce83e">dart::optimizer::Problem</a>
+</li>
+<li>mEqConstraintWeights
+: <a class="el" href="d8/db5/structdart_1_1optimizer_1_1GradientDescentSolver_1_1UniqueProperties.html#a6298e647fedb8bf31b2783e742e07176">dart::optimizer::GradientDescentSolver::UniqueProperties</a>
 </li>
 <li>mErrorAllowance
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#ac7e4956ad4f6c2ed7a59beff1fccd344">dart::constraint::ContactConstraint</a>
@@ -688,17 +789,30 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 , <a class="el" href="d4/dbf/classdart_1_1constraint_1_1JointLimitConstraint.html#a26c45dfe89fd252bd16b7dbd2a23109f">dart::constraint::JointLimitConstraint</a>
 , <a class="el" href="d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#ada8a83fc79c734939eb1cad87836b551">dart::constraint::SoftContactConstraint</a>
 </li>
+<li>mErrorLengthClamp
+: <a class="el" href="db/d2b/structdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod_1_1Properties.html#ab6bf47bae4bc5689eef19279b4bed845">dart::dynamics::InverseKinematics::ErrorMethod::Properties</a>
+</li>
+<li>mErrorMethod
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#ac2154d8c8f0893f298867bab42a7972a">dart::constraint::BalanceConstraint</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#ae555b821480b29302109aa6d74c4428d">dart::dynamics::InverseKinematics</a>
+</li>
 <li>mErrorReductionParameter
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a8029beb76abbd99884fa2c2e084c6d0f">dart::constraint::ContactConstraint</a>
 , <a class="el" href="dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#a234f51bdf0ff81f60e2dfbe6186ff473">dart::constraint::JointConstraint</a>
 , <a class="el" href="d4/dbf/classdart_1_1constraint_1_1JointLimitConstraint.html#ae4177622e17d9f24a776258d7c689f04">dart::constraint::JointLimitConstraint</a>
 , <a class="el" href="d4/d23/classdart_1_1constraint_1_1SoftContactConstraint.html#a55fe39a46ffdd68d7309d5b7c6019308">dart::constraint::SoftContactConstraint</a>
 </li>
+<li>mErrorWeights
+: <a class="el" href="db/d2b/structdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod_1_1Properties.html#a63405484fc8173dc5833d31595a189ca">dart::dynamics::InverseKinematics::ErrorMethod::Properties</a>
+</li>
 <li>mEta
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a4c8230a0e998ec92cd986e924cce7df9">dart::dynamics::PointMass</a>
 </li>
 <li>mEulerP
 : <a class="el" href="d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a6ac9e2e180eafb3e169eaac3cde3af80">dart::dynamics::EulerJoint</a>
+</li>
+<li>mExists
+: <a class="el" href="d6/d65/classdart_1_1common_1_1UriComponent.html#a89e11b1fe335d37237ed814cb189499a">dart::common::UriComponent</a>
 </li>
 <li>mExternalForces
 : <a class="el" href="d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a14667651a7e51ba005158cdb3a6c13b4">dart::dynamics::Skeleton::DirtyFlags</a>
@@ -734,6 +848,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mFgravity
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aecfaff76502e28eeb3b4db7a8bdac62a">dart::dynamics::BodyNode</a>
+</li>
+<li>mFile
+: <a class="el" href="d5/db8/classdart_1_1common_1_1LocalResource.html#a0a89d11eed924d930fe0d5fd53dc5e28">dart::common::LocalResource</a>
 </li>
 <li>mFileName
 : <a class="el" href="de/db6/classdart_1_1utils_1_1FileInfoC3D.html#ab0f94892d2f92893667aa0e2bda1490a">dart::utils::FileInfoC3D</a>
@@ -776,6 +893,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="de/db6/classdart_1_1utils_1_1FileInfoC3D.html#ad1f1a05f7b2fb25b77f61cdd9743bd14">dart::utils::FileInfoC3D</a>
 , <a class="el" href="d9/dbf/classdart_1_1utils_1_1FileInfoDof.html#a5f8d54438cdb4e8dd34f2c16291d5f9d">dart::utils::FileInfoDof</a>
 </li>
+<li>mFragment
+: <a class="el" href="d8/d07/structdart_1_1common_1_1Uri.html#a06c7b7cd31576e897e978ff14efb2fc0">dart::common::Uri</a>
+</li>
 <li>mFrame
 : <a class="el" href="d7/d41/classdart_1_1simulation_1_1World.html#abff4aab9c284d535ae96aa0635515071">dart::simulation::World</a>
 </li>
@@ -801,6 +921,22 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a6abc016b0b83d6931e0602b503c477a7">dart::dynamics::BodyNode</a>
 , <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#ad78b2502ddc77742fc5b25e241daa6b8">dart::dynamics::PointMass</a>
 </li>
+<li>mGeometry
+: <a class="el" href="d9/d4f/classdart_1_1dynamics_1_1Support.html#a6f6a9462eefcd2f1fcb15c26483897f9">dart::dynamics::Support</a>
+</li>
+<li>mGradCache
+: <a class="el" href="d3/d24/classdart_1_1dynamics_1_1HierarchicalIK_1_1Objective.html#ac197d1c8e2d500de782c1e76daa82006">dart::dynamics::HierarchicalIK::Objective</a>
+, <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1InverseKinematics_1_1Objective.html#a83365c3ce7d1b049b549d978ee5960e1">dart::dynamics::InverseKinematics::Objective</a>
+</li>
+<li>mGradientFunction
+: <a class="el" href="d9/d98/classdart_1_1optimizer_1_1ModularFunction.html#aa9e1099f5a2408c705f46387b74f6fbe">dart::optimizer::ModularFunction</a>
+</li>
+<li>mGradientMethod
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#af5d9ac877c4ebac5da142eb6633347d6">dart::dynamics::InverseKinematics</a>
+</li>
+<li>mGradientP
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a41e0a42caab656366e6af4996e0d7545">dart::optimizer::GradientDescentSolver</a>
+</li>
 <li>mGraphWindows
 : <a class="el" href="d9/d05/classdart_1_1gui_1_1SimWindow.html#ae45ba970bebf1c6b5a8bd33becd83666">dart::gui::SimWindow</a>
 </li>
@@ -817,6 +953,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mHasObjective
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#ab681a481d910e4b649f79009d358b5f3">dart::optimizer::snopt::SnoptInterface</a>
 </li>
+<li>mHasOffset
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a3cbdfd4ca1f4ccf3ff1cc9c200979ac4">dart::dynamics::InverseKinematics</a>
+</li>
 <li>mHead
 : <a class="el" href="d7/dcd/classdart_1_1dynamics_1_1ArrowShape.html#a6259de438733d4a5117960da13bb6023">dart::dynamics::ArrowShape</a>
 </li>
@@ -830,6 +969,18 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d3/d73/classdart_1_1dynamics_1_1CylinderShape.html#aa759ba117b9136bd01a9b314e63af8c8">dart::dynamics::CylinderShape</a>
 , <a class="el" href="db/d67/classdart_1_1renderer_1_1Camera.html#aa8d88215cef8b32f0f342eef2cd63f61">dart::renderer::Camera</a>
 </li>
+<li>mHessianFunction
+: <a class="el" href="d9/d98/classdart_1_1optimizer_1_1ModularFunction.html#a0a7cf770906c224cf88400ab1af88664">dart::optimizer::ModularFunction</a>
+</li>
+<li>mHidden
+: <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#a27090a2654107ad0b3565e48657d2f0b">dart::dynamics::Shape</a>
+</li>
+<li>mHierarchy
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a0e547814f5fc0a8c39894bbf4001758c">dart::dynamics::HierarchicalIK</a>
+</li>
+<li>mHierarchyLevel
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a3cd93923e5869afbb52c7e34e561bd52">dart::dynamics::InverseKinematics</a>
+</li>
 <li>mI2
 : <a class="el" href="dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#a8b989c0ae3fb056e0f9ffe3474b44496">dart::dynamics::SoftBodyNode</a>
 </li>
@@ -837,6 +988,17 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ad237b37d53baa7256bf9f158a515c41c">dart::dynamics::BodyNode</a>
 , <a class="el" href="db/d20/classdart_1_1dynamics_1_1Marker.html#a4f706ac3268e88f6e6a9499cff052802">dart::dynamics::Marker</a>
 , <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#adefad047400d9d53ed10a07816c3636e">dart::dynamics::Shape</a>
+</li>
+<li>mIK
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a56b775aa4c01480f566b07b7c0e29d65">dart::constraint::BalanceConstraint</a>
+, <a class="el" href="d0/dd2/classdart_1_1dynamics_1_1HierarchicalIK_1_1Constraint.html#a2372f4ba752d0edf7afdf7733f85e2db">dart::dynamics::HierarchicalIK::Constraint</a>
+, <a class="el" href="d3/d24/classdart_1_1dynamics_1_1HierarchicalIK_1_1Objective.html#a8780206879ed5ae6cf7f38d1d125ac60">dart::dynamics::HierarchicalIK::Objective</a>
+, <a class="el" href="d8/d14/classdart_1_1dynamics_1_1InverseKinematics_1_1Constraint.html#ae43e1069e2c669ef1108b2eb05a8a106">dart::dynamics::InverseKinematics::Constraint</a>
+, <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#a117089e9064a708c397de39182efcd75">dart::dynamics::InverseKinematics::ErrorMethod</a>
+, <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#aa0d3b3fca2c935154f44494f2a0898e4">dart::dynamics::InverseKinematics::GradientMethod</a>
+, <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1InverseKinematics_1_1Objective.html#a895b7f0e263259fcf057d3b07117e70a">dart::dynamics::InverseKinematics::Objective</a>
+, <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a4ae0339caf1adf4e83ef565e8164c736">dart::dynamics::JacobianNode</a>
+, <a class="el" href="dd/dbc/classdart_1_1dynamics_1_1TemplateInverseKinematicsPtr.html#a8b60fa044976a16ff054c668719001af">dart::dynamics::TemplateInverseKinematicsPtr&lt; IkType, JacobianNodePtrT &gt;</a>
 </li>
 <li>mImpAlpha
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a21c50dac78bfd86082d589c6d78124cd">dart::dynamics::PointMass</a>
@@ -863,6 +1025,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mImpulses
 : <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ad0852ae73ce265f76343dc882a0c3f46">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 </li>
+<li>mIncludeBoth
+: <a class="el" href="d3/d0c/structdart_1_1dynamics_1_1Chain_1_1Criteria.html#a82efee81e7d844e615530c3df4a0763f">dart::dynamics::Chain::Criteria</a>
+</li>
 <li>mInclusive
 : <a class="el" href="d4/d49/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Terminal.html#a55254dba11e32b98ea74cabd88080fb4">dart::dynamics::Linkage::Criteria::Terminal</a>
 </li>
@@ -871,6 +1036,10 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 , <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a84f16d821c871b117d2577dabdc34a5f">dart::dynamics::PointMass</a>
 , <a class="el" href="d2/d70/classdart_1_1dynamics_1_1TemplateDegreeOfFreedomPtr.html#a5720bc8491bf3ed36c27c48508f516ca">dart::dynamics::TemplateDegreeOfFreedomPtr&lt; DegreeOfFreedomT, BodyNodeT &gt;</a>
 , <a class="el" href="d7/d70/classdart_1_1dynamics_1_1TemplateWeakDegreeOfFreedomPtr.html#aa82f2be4779465b3998e7ac3b8f37d3b">dart::dynamics::TemplateWeakDegreeOfFreedomPtr&lt; DegreeOfFreedomT, BodyNodeT &gt;</a>
+, <a class="el" href="d7/dc6/structdart_1_1math_1_1HullAngle.html#ae7a233bb97333c52b7fc940b917b8f70">dart::math::HullAngle</a>
+</li>
+<li>mIndexInBodyNode
+: <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a8383a987036d345d80b17f449e0b02bd">dart::dynamics::EndEffector</a>
 </li>
 <li>mIndexInJoint
 : <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a6dff598d8b9d8b6bbc16e7beb5a1e710">dart::dynamics::DegreeOfFreedom</a>
@@ -878,6 +1047,7 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mIndexInSkeleton
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a93ff1f0ab70fc03e75ae1872b6eb6983">dart::dynamics::BodyNode</a>
 , <a class="el" href="de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html#a24f25f495c49ccec85a21a44e095fab5">dart::dynamics::DegreeOfFreedom</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a18675dd9d0e25e4a6b49e6669d4067ac">dart::dynamics::EndEffector</a>
 </li>
 <li>mIndexInTree
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a71f603bfe71703f92aef8db95ad8439e">dart::dynamics::BodyNode</a>
@@ -889,8 +1059,14 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mIndices
 : <a class="el" href="d7/d41/classdart_1_1simulation_1_1World.html#a950a0b55028b7b6c13734782a475317b">dart::simulation::World</a>
 </li>
+<li>mIneqConstraintCostCache
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a70cb526de1022b8d9bbf76d618d385b1">dart::optimizer::GradientDescentSolver</a>
+</li>
 <li>mIneqConstraints
-: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#ad47a2b60dfe653d8c3b66fcb4f8643c8">dart::optimizer::Problem</a>
+: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#ae61a1858242e0c925f27e9482bb62373">dart::optimizer::Problem</a>
+</li>
+<li>mIneqConstraintWeights
+: <a class="el" href="d8/db5/structdart_1_1optimizer_1_1GradientDescentSolver_1_1UniqueProperties.html#afd812ecc7889b8fdb4b9dde4ae751c7a">dart::optimizer::GradientDescentSolver::UniqueProperties</a>
 </li>
 <li>mInertia
 : <a class="el" href="d0/d20/structdart_1_1dynamics_1_1BodyNode_1_1UniqueProperties.html#aaf588afe2d3f0dfadb406e82c0c70923">dart::dynamics::BodyNode::UniqueProperties</a>
@@ -900,6 +1076,18 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mInitialGuess
 : <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a058f35c9e6ca6be6aba8c09526f247e4">dart::optimizer::Problem</a>
+</li>
+<li>mInitialPosition
+: <a class="el" href="d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#a0d94d2bade14496d3b94bbd22f406a98">dart::dynamics::SingleDofJoint::UniqueProperties</a>
+</li>
+<li>mInitialPositions
+: <a class="el" href="d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a2cb6d1d5b8ad284dfff3cad58e78b158">dart::dynamics::MultiDofJoint&lt; DOF &gt;::UniqueProperties</a>
+</li>
+<li>mInitialVelocities
+: <a class="el" href="d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a4ae65addd9e5a831964a7ac8d8bf930a">dart::dynamics::MultiDofJoint&lt; DOF &gt;::UniqueProperties</a>
+</li>
+<li>mInitialVelocity
+: <a class="el" href="d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#a2eef0a606e8d17decd688b4858df42f0">dart::dynamics::SingleDofJoint::UniqueProperties</a>
 </li>
 <li>minute
 : <a class="el" href="d9/da9/structLodePNGTime.html#ac3045de79728f29fc61f534b062e0f13">LodePNGTime</a>
@@ -944,10 +1132,10 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html#a2be0de7e94cb9ace34072ea0f5a3d748">dart::optimizer::IpoptSolver</a>
 </li>
 <li>mIsBodyJacobianDirty
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a6b51f09f9b37f95ad55f4c3f859f93af">dart::dynamics::BodyNode</a>
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#abbe4f56462d8fad3c441263156308ff3">dart::dynamics::JacobianNode</a>
 </li>
 <li>mIsBodyJacobianSpatialDerivDirty
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a7394a2034dfa1f0786d119aba7a11e54">dart::dynamics::BodyNode</a>
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#a564f48e08d56186e811c627e64991df7">dart::dynamics::JacobianNode</a>
 </li>
 <li>mIsBounceOn
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#acc66b2e883e3594cb881f55aec5a47f5">dart::constraint::ContactConstraint</a>
@@ -992,13 +1180,23 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d9/d32/classdart_1_1common_1_1Timer.html#aaffedcc5566ec26694b6d3f210f0abf8">dart::common::Timer</a>
 </li>
 <li>mIsWorldJacobianClassicDerivDirty
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a6b0fd08027254402cb0c2973b575877c">dart::dynamics::BodyNode</a>
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#ae896131903056a28ad39280bb4de5242">dart::dynamics::JacobianNode</a>
 </li>
 <li>mIsWorldJacobianDirty
-: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a591f3b5fe516c79a57f11e8c0c59e027">dart::dynamics::BodyNode</a>
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#ad6a6d69a44f423d63b839ae0c116ea7f">dart::dynamics::JacobianNode</a>
+</li>
+<li>mIterationsPerPrint
+: <a class="el" href="db/d48/structdart_1_1optimizer_1_1Solver_1_1Properties.html#ad6e32f0ecca844d2599326674f58e6ee">dart::optimizer::Solver::Properties</a>
+</li>
+<li>mJacCache
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#af2aa2f6da386d41948f896c58c825b62">dart::dynamics::HierarchicalIK</a>
+</li>
+<li>mJacNodePtr
+: <a class="el" href="dd/dbc/classdart_1_1dynamics_1_1TemplateInverseKinematicsPtr.html#a6b3b09324f68e733b8a0eb98a65aaf04">dart::dynamics::TemplateInverseKinematicsPtr&lt; IkType, JacobianNodePtrT &gt;</a>
 </li>
 <li>mJacobian
-: <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a8eed9f3d1ebde1a9aa48b2d480a4861f">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a1a26feddbfefcefd3f9f3af6050d7840">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a8eed9f3d1ebde1a9aa48b2d480a4861f">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 , <a class="el" href="d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#aa200d5db8cf93c7a235609b27544c80c">dart::dynamics::SingleDofJoint</a>
 </li>
 <li>mJacobian1
@@ -1041,11 +1239,38 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mKv
 : <a class="el" href="d4/d2b/structdart_1_1dynamics_1_1SoftBodyNode_1_1UniqueProperties.html#a680befe7585f6aa5f30cb19a59af7ad9">dart::dynamics::SoftBodyNode::UniqueProperties</a>
 </li>
+<li>mLastCOM
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a9e6f219b81e9931a47f2764c52c56231">dart::constraint::BalanceConstraint</a>
+</li>
+<li>mLastConfig
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#aa96842fec8a2a2b160c26099cf7016bc">dart::optimizer::GradientDescentSolver</a>
+</li>
 <li>mLastElapsedTime
 : <a class="el" href="d9/d32/classdart_1_1common_1_1Timer.html#afdb607fa4a490f951258a4a7d13a3cf5">dart::common::Timer</a>
 </li>
+<li>mLastError
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a1c324ada106b22dd184b683b99525f7b">dart::constraint::BalanceConstraint</a>
+, <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#a4c7e7ed5418232c00d32094a3157f26b">dart::dynamics::InverseKinematics::ErrorMethod</a>
+</li>
+<li>mLastGradient
+: <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#ad07e1a8119541fb898652b466b4e55e1">dart::dynamics::InverseKinematics::GradientMethod</a>
+</li>
+<li>mLastNumIterations
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#aa10006b1f772b0301f4fbcfda0451667">dart::optimizer::GradientDescentSolver</a>
+</li>
+<li>mLastPositions
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#aa94741a795804e6f5c32936b25027ed7">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#aad1566f7023e43d6f0ea65b54c215270">dart::dynamics::InverseKinematics::ErrorMethod</a>
+, <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#a9be4823acc2404ef51541f5197522ca0">dart::dynamics::InverseKinematics::GradientMethod</a>
+</li>
+<li>mLastSupportVersion
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a3a112f3102bc4062c099087c11f0e2ec">dart::constraint::BalanceConstraint</a>
+</li>
 <li>mLCPSolver
 : <a class="el" href="d6/dc9/classdart_1_1constraint_1_1ConstraintSolver.html#ac5196bb47be9ae93e035e7c2bb75db22">dart::constraint::ConstraintSolver</a>
+</li>
+<li>mLevelGradCache
+: <a class="el" href="d0/dd2/classdart_1_1dynamics_1_1HierarchicalIK_1_1Constraint.html#af72da1086aae91bf5f514fc2009bfc7e">dart::dynamics::HierarchicalIK::Constraint</a>
 </li>
 <li>mLifeTime
 : <a class="el" href="dd/d61/classdart_1_1constraint_1_1JointCoulombFrictionConstraint.html#a683397f04cae0941d775fa77f5878855">dart::constraint::JointCoulombFrictionConstraint</a>
@@ -1053,6 +1278,10 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mLightList
 : <a class="el" href="da/ddb/classdart_1_1renderer_1_1RenderInterface.html#a62cad476515f7650f302048d60102d40">dart::renderer::RenderInterface</a>
+</li>
+<li>mLocalRetriever
+: <a class="el" href="d8/d29/classdart_1_1utils_1_1DartLoader.html#a9f0d4e5fb7d17460f0ecf2d70db7b037">dart::utils::DartLoader</a>
+, <a class="el" href="d8/d23/classdart_1_1utils_1_1PackageResourceRetriever.html#ad56d953a1c1e345b7c052addf9b2261e">dart::utils::PackageResourceRetriever</a>
 </li>
 <li>mLockedSkeleton
 : <a class="el" href="d1/d38/classdart_1_1dynamics_1_1SkeletonRefCountingBase.html#a400422e72f10c1d80a54dff183d68ab3">dart::dynamics::SkeletonRefCountingBase</a>
@@ -1107,6 +1336,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mMassMatrix
 : <a class="el" href="d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a2de816fbf3da16f642e26b79360d61d2">dart::dynamics::Skeleton::DirtyFlags</a>
 </li>
+<li>mMaxAttempts
+: <a class="el" href="d8/db5/structdart_1_1optimizer_1_1GradientDescentSolver_1_1UniqueProperties.html#ac52452889f690b23d213bc3daa6b46f6">dart::optimizer::GradientDescentSolver::UniqueProperties</a>
+</li>
 <li>mMaxErrorReductionVelocity
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#a338edeef87a4de654fba0253021d4a39">dart::constraint::ContactConstraint</a>
 , <a class="el" href="dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#a52a896483c222582ae456e83dfbc52f6">dart::constraint::JointConstraint</a>
@@ -1115,6 +1347,12 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mMaxHeadLength
 : <a class="el" href="dc/dc5/structdart_1_1dynamics_1_1ArrowShape_1_1Properties.html#a40d938ef3b752cd313b24a0a6e120d1b">dart::dynamics::ArrowShape::Properties</a>
+</li>
+<li>mMaxPerturbationFactor
+: <a class="el" href="d8/db5/structdart_1_1optimizer_1_1GradientDescentSolver_1_1UniqueProperties.html#ac8ff3573c74cd0053bbb82712bf0ce14">dart::optimizer::GradientDescentSolver::UniqueProperties</a>
+</li>
+<li>mMaxRandomizationStep
+: <a class="el" href="d8/db5/structdart_1_1optimizer_1_1GradientDescentSolver_1_1UniqueProperties.html#ac35a58bf6521cd532ffd69950f37d832">dart::optimizer::GradientDescentSolver::UniqueProperties</a>
 </li>
 <li>mMesh
 : <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a0ca12db4d0674aa1e5e091b567690ba2">dart::dynamics::MeshShape</a>
@@ -1125,11 +1363,21 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mMeshPath
 : <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a9906bf3cd5c0cdf207be46786bef147b">dart::dynamics::MeshShape</a>
 </li>
+<li>mMeshUri
+: <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a2b8031ff435d2fbe0d23588eef42a66f">dart::dynamics::MeshShape</a>
+</li>
+<li>mMethodName
+: <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#ac3f793a1ec5bcc10419f79ac4d7b2840">dart::dynamics::InverseKinematics::ErrorMethod</a>
+, <a class="el" href="dc/d01/classdart_1_1dynamics_1_1InverseKinematics_1_1GradientMethod.html#a1747a0e1688b185f1b26c58633afa483">dart::dynamics::InverseKinematics::GradientMethod</a>
+</li>
 <li>mMinF
 : <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#ac169a3887d43f20b8e4d9d2a253b3244">dart::optimizer::NloptSolver</a>
 </li>
 <li>mMinHeadLength
 : <a class="el" href="dc/dc5/structdart_1_1dynamics_1_1ArrowShape_1_1Properties.html#ad12cc4f771ab3538625a736578dafcca">dart::dynamics::ArrowShape::Properties</a>
+</li>
+<li>mModuleSet
+: <a class="el" href="d4/de6/classdart_1_1dynamics_1_1CompositeIK.html#a663bb8ff8b7d8d8ecc76a27941c8ade8">dart::dynamics::CompositeIK</a>
 </li>
 <li>mMoment
 : <a class="el" href="d6/d91/classdart_1_1dynamics_1_1Inertia.html#a5ed236ebf88f9c50b88be7a769c33ca8">dart::dynamics::Inertia</a>
@@ -1146,11 +1394,15 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mMouseY
 : <a class="el" href="d1/d33/classdart_1_1gui_1_1GlutWindow.html#a6044c4060180b3b1aed11a642d3ebaa9">dart::gui::GlutWindow</a>
 </li>
+<li>mMT
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#ad1ec0e6a39ab8a5253cc732ef9f3736a">dart::optimizer::GradientDescentSolver</a>
+</li>
 <li>mMultiDofP
 : <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ac8aa293cd3f3806d60de90bffc2468d8">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
 </li>
 <li>mMutex
 : <a class="el" href="de/d69/structdart_1_1dynamics_1_1MutexedWeakSkeletonPtr.html#ae99b07a21b689fc4a701632d2dae61ac">dart::dynamics::MutexedWeakSkeletonPtr</a>
+, <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a646b88e1f50e5c7b078f350ffc08d6bf">dart::dynamics::Skeleton</a>
 </li>
 <li>mName
 : <a class="el" href="d9/d32/classdart_1_1common_1_1Timer.html#aca1f40962a3653aaf13b01fd36f793ac">dart::common::Timer</a>
@@ -1159,6 +1411,7 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 , <a class="el" href="d8/d3f/structdart_1_1dynamics_1_1Marker_1_1Properties.html#ae89e8edd8ceb6d6275f7154a706fb6e9">dart::dynamics::Marker::Properties</a>
 , <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a2143d22159c61d191468bd87cd1b9f43">dart::dynamics::ReferentialSkeleton</a>
 , <a class="el" href="dd/dec/structdart_1_1dynamics_1_1Skeleton_1_1Properties.html#a5c703891bf3ccc1e687e99635fc49041">dart::dynamics::Skeleton::Properties</a>
+, <a class="el" href="d9/dae/classdart_1_1optimizer_1_1Function.html#a201fd012640c54e6c513af5a1a16db20">dart::optimizer::Function</a>
 , <a class="el" href="d7/d41/classdart_1_1simulation_1_1World.html#a32175b63fe2cf7e430594c273cb9febb">dart::simulation::World</a>
 </li>
 <li>mNameBeforeNumber
@@ -1180,6 +1433,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mNameMgrForDofs
 : <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ad243ba51aa2d58a33945f3b95041ee27">dart::dynamics::Skeleton</a>
+</li>
+<li>mNameMgrForEndEffectors
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#addb71646e3798090a43910ad5a125334">dart::dynamics::Skeleton</a>
 </li>
 <li>mNameMgrForJoints
 : <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af00831cd164cc383e084d11c3a91eb61">dart::dynamics::Skeleton</a>
@@ -1229,8 +1485,18 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html#afb4059d40814c14cbbf8f243eced2991">dart::optimizer::IpoptSolver</a>
 </li>
 <li>mNode
-: <a class="el" href="d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html#a752206a856fa396d0a58f00e9766123a">dart::dynamics::Linkage::Criteria::Target</a>
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a476bdbdf0a4e37c80746ddca365d21bf">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="d0/de1/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Target.html#a752206a856fa396d0a58f00e9766123a">dart::dynamics::Linkage::Criteria::Target</a>
+, <a class="el" href="de/ddb/classdart_1_1dynamics_1_1NodeDestructor.html#af23a7368f5681345fd9b603cda9dee8a">dart::dynamics::NodeDestructor</a>
 , <a class="el" href="df/d79/structdart_1_1dynamics_1_1Recording.html#af297e36a5b11db82b5e40477eb807375">dart::dynamics::Recording</a>
+, <a class="el" href="d9/dff/classdart_1_1dynamics_1_1TemplateNodePtr.html#ae8769d6ce0464921d1dd6b2c7f324435">dart::dynamics::TemplateNodePtr&lt; NodeT, BodyNodeT &gt;</a>
+, <a class="el" href="d5/db5/classdart_1_1dynamics_1_1TemplateWeakNodePtr.html#a06e953bef7a344c1ee57642a86045a22">dart::dynamics::TemplateWeakNodePtr&lt; NodeT, BodyNodeT &gt;</a>
+</li>
+<li>mNodeConnection
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a9f0ae10b40ba613019e47ab2c63470a5">dart::dynamics::InverseKinematics</a>
+</li>
+<li>mNodeMap
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ae6d34fc5fbfd9235c52b3938b98eac2b">dart::dynamics::BodyNode</a>
 </li>
 <li>mNoDisplay
 : <a class="el" href="d4/da4/classdart_1_1optimizer_1_1snopt_1_1SnoptSolver.html#a8b9f157e716f0e1a5d334afd46cc4a0b">dart::optimizer::snopt::SnoptSolver</a>
@@ -1244,6 +1510,15 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mNotifier
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a7797430bc9a7499d1a559c0e1adf1a9b">dart::dynamics::PointMass</a>
 , <a class="el" href="dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#a0b5d44051742fdccc8b3f39cffbb4c90">dart::dynamics::SoftBodyNode</a>
+</li>
+<li>mNullSpaceCache
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#ab39d5dfde6822c319e7fba89e212fb56">dart::constraint::BalanceConstraint</a>
+, <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#aac6e5ed67120a122e5780210eddea8f6">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1InverseKinematics_1_1Objective.html#a586ef1513a053c1d8ebfd0d27967e024">dart::dynamics::InverseKinematics::Objective</a>
+</li>
+<li>mNullSpaceObjective
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a17e517735e74c512c31e2d9d079ecb6d">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a81b69f9aec6952d4cb9292ae8985bf24">dart::dynamics::InverseKinematics</a>
 </li>
 <li>mNumChildNodes
 : <a class="el" href="dd/d80/classdart_1_1dynamics_1_1Branch.html#a641ca02704c26d5e0af28ca610617b8f">dart::dynamics::Branch</a>
@@ -1267,6 +1542,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mNumMaxContacts
 : <a class="el" href="d6/de8/classdart_1_1collision_1_1CollisionDetector.html#a7d452d1d39de4829cfe3741120228960">dart::collision::CollisionDetector</a>
 </li>
+<li>mNumMaxIterations
+: <a class="el" href="db/d48/structdart_1_1optimizer_1_1Solver_1_1Properties.html#ae5ea7e196db6f2cd97ebb7d4ee9925d1">dart::optimizer::Solver::Properties</a>
+</li>
 <li>mNumNonlinConstr
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#ad05d6abb7a53c1ee88d0f17ec6cf3ade">dart::optimizer::snopt::SnoptInterface</a>
 </li>
@@ -1280,7 +1558,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#ac8529e70d31afd8da2c84b4e7867c18b">dart::optimizer::snopt::SnoptInterface</a>
 </li>
 <li>mObjective
-: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a6b63c2b44de31387afdb4b8767962236">dart::optimizer::Problem</a>
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a2cc0ca997c817a95e78ce16223c8ffd8">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a897ef2919adb9a949063c4823201ab1a">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#afba35354993dbf68a061bd2ca593551a">dart::optimizer::Problem</a>
 </li>
 <li>mObjGradient
 : <a class="el" href="df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a5f3e4f4e53cc294ed1555b03b5f6bb4e">dart::optimizer::DartTNLP</a>
@@ -1294,8 +1574,15 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mObservers
 : <a class="el" href="d3/d73/classdart_1_1common_1_1Subject.html#acb21558de80efdc434cd64c90a205ba8">dart::common::Subject</a>
 </li>
+<li>model
+: <a class="el" href="d7/ddf/classdart_1_1utils_1_1urdf__parsing_1_1Entity.html#a5e8a88a6feaef77799a1a1f194e029d9">dart::utils::urdf_parsing::Entity</a>
+</li>
+<li>models
+: <a class="el" href="d5/d46/classdart_1_1utils_1_1urdf__parsing_1_1World.html#abb21099dce92b15982dd29f0c258b76b">dart::utils::urdf_parsing::World</a>
+</li>
 <li>mOffset
-: <a class="el" href="d8/d3f/structdart_1_1dynamics_1_1Marker_1_1Properties.html#a47f2a2fa9ce3db0aa006ff1e32cd0e69">dart::dynamics::Marker::Properties</a>
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#ab4e750a744f0074d0e300e1582defdfe">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="d8/d3f/structdart_1_1dynamics_1_1Marker_1_1Properties.html#a47f2a2fa9ce3db0aa006ff1e32cd0e69">dart::dynamics::Marker::Properties</a>
 , <a class="el" href="d9/d4f/classdart_1_1dynamics_1_1PlaneShape.html#a5f9837381bc76d79925feabbdc093ea1">dart::dynamics::PlaneShape</a>
 </li>
 <li>mOffset1
@@ -1314,7 +1601,7 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d9/da9/structLodePNGTime.html#a295d890e862d5cd0c444e9d3a96fa9d5">LodePNGTime</a>
 </li>
 <li>mOpt
-: <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#a34f889107113d6dd0700634e2c3a8d2a">dart::optimizer::NloptSolver</a>
+: <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#a6f026724e6cc699d24929878bc206896">dart::optimizer::NloptSolver</a>
 </li>
 <li>mOptCount
 : <a class="el" href="d4/da4/classdart_1_1optimizer_1_1snopt_1_1SnoptSolver.html#a31cc0e7e1e1d32d623a754af7804247f">dart::optimizer::snopt::SnoptSolver</a>
@@ -1322,14 +1609,23 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mOptimalSolution
 : <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a5986732b804682ee3dfb2ec0b7003e37">dart::optimizer::Problem</a>
 </li>
+<li>mOptimizationTolerance
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a55dff5f4d052d9ddf6d2377d05892dfc">dart::constraint::BalanceConstraint</a>
+</li>
 <li>mOptimumValue
 : <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a375ff405f430cb2618fa21bc74bc2589">dart::optimizer::Problem</a>
 </li>
 <li>mOutput
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#a7271b8433af334912f62206fc785437e">dart::optimizer::snopt::SnoptInterface</a>
 </li>
-<li>mPackageDirectories
-: <a class="el" href="d8/d29/classdart_1_1utils_1_1DartLoader.html#aebfc8b4a4bcbe6de50d72f5907b29058">dart::utils::DartLoader</a>
+<li>mOutStream
+: <a class="el" href="db/d48/structdart_1_1optimizer_1_1Solver_1_1Properties.html#a1257be23c85527e679cfac6ef666bcb7">dart::optimizer::Solver::Properties</a>
+</li>
+<li>mPackageMap
+: <a class="el" href="d8/d23/classdart_1_1utils_1_1PackageResourceRetriever.html#a1400f414fb9544de0c88795739a76ea2">dart::utils::PackageResourceRetriever</a>
+</li>
+<li>mPackageRetriever
+: <a class="el" href="d8/d29/classdart_1_1utils_1_1DartLoader.html#af01e3aeb3a05ac8fb71615cbc4a67bf7">dart::utils::DartLoader</a>
 </li>
 <li>mParentBodyNode
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a280ec016e7a9136b0f161098c3a552d0">dart::dynamics::BodyNode</a>
@@ -1351,8 +1647,20 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a191c815a9d72c3fdf1e1c99e959e735c">dart::dynamics::BodyNode</a>
 , <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a53692ad9c9028f3b974f1cde6fc523ca">dart::dynamics::SimpleFrame</a>
 </li>
+<li>mPartialNullSpaceCache
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a4d5e68f31d032f3b1e11d52eb30e6d15">dart::constraint::BalanceConstraint</a>
+</li>
+<li>mPartialNullspaceCache
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#ad2182863a87f98fd9cc99691e6f14e4c">dart::dynamics::HierarchicalIK</a>
+</li>
+<li>mPath
+: <a class="el" href="d8/d07/structdart_1_1common_1_1Uri.html#acb82f913192ac07f68b890c8e48056d2">dart::common::Uri</a>
+</li>
 <li>mPersp
 : <a class="el" href="d9/df5/classdart_1_1gui_1_1Win3D.html#ae192f4f9d8f008eba6a1795689367d48">dart::gui::Win3D</a>
+</li>
+<li>mPerturbationStep
+: <a class="el" href="d8/db5/structdart_1_1optimizer_1_1GradientDescentSolver_1_1UniqueProperties.html#a21e2af665b26892ac6aa5477ac05e70b">dart::optimizer::GradientDescentSolver::UniqueProperties</a>
 </li>
 <li>mPi
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#acc85afcbd17949e2846415f061911460">dart::dynamics::PointMass</a>
@@ -1429,31 +1737,41 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mPrint
 : <a class="el" href="d4/da4/classdart_1_1optimizer_1_1snopt_1_1SnoptSolver.html#a232888f487ab481ea6a72388e0dde50b">dart::optimizer::snopt::SnoptSolver</a>
 </li>
+<li>mPrintFinalResult
+: <a class="el" href="db/d48/structdart_1_1optimizer_1_1Solver_1_1Properties.html#a75388b53777f1ee5625b11458ef69643">dart::optimizer::Solver::Properties</a>
+</li>
 <li>mPrismaticP
 : <a class="el" href="de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#ac041b4c9f7589c56901da1f70a56f859">dart::dynamics::PrismaticJoint</a>
 </li>
 <li>mProblem
-: <a class="el" href="df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a0d0bc810a754fe69b6b0d482be7b6210">dart::optimizer::DartTNLP</a>
-, <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a2f871e1ea43104debb0cd26e214e0133">dart::optimizer::Solver</a>
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#ad44a2739e55ab7e53d9a137426dfd905">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#ad924f542ab476c4ab59fd1073b4c4669">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="db/d48/structdart_1_1optimizer_1_1Solver_1_1Properties.html#afa79c2c6b67637bb2528d7f6b120a0ed">dart::optimizer::Solver::Properties</a>
 </li>
 <li>mProblemX
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#a4a682f4da379dc6231327aa4013f7123">dart::optimizer::snopt::SnoptInterface</a>
 </li>
 <li>mProperties
 : <a class="el" href="d7/dcd/classdart_1_1dynamics_1_1ArrowShape.html#a25214998085e8d91234c2ac25286ed88">dart::dynamics::ArrowShape</a>
+, <a class="el" href="dc/d4e/classdart_1_1dynamics_1_1InverseKinematics_1_1ErrorMethod.html#ad4aaf57b3e4c77329e81d80b18f74d3f">dart::dynamics::InverseKinematics::ErrorMethod</a>
 , <a class="el" href="db/d20/classdart_1_1dynamics_1_1Marker.html#abb5dea5dd11d660abb83968ff165ecd5">dart::dynamics::Marker</a>
+, <a class="el" href="d0/d68/classdart_1_1optimizer_1_1Solver.html#a4eba45b7e2fe9a3585c918a0483f1753">dart::optimizer::Solver</a>
 </li>
 <li>mPsi
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a4b5c0858c9ed94e4a084cbed544cbba0">dart::dynamics::PointMass</a>
 </li>
 <li>mPtr
-: <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#aa229e19e3f85ae9c4cb36deb9cfae6a1">dart::dynamics::ReferentialSkeleton</a>
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a9a6cf7de383c3c47ede262f079a0e447">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#aa229e19e3f85ae9c4cb36deb9cfae6a1">dart::dynamics::ReferentialSkeleton</a>
 , <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a2afa29e12041fec99e998783749a2173">dart::dynamics::Skeleton</a>
 , <a class="el" href="d1/d01/classdart_1_1dynamics_1_1TemplateBodyNodePtr.html#a2491098b31a85f7a0ea5bf264dc93762">dart::dynamics::TemplateBodyNodePtr&lt; BodyNodeT &gt;</a>
 , <a class="el" href="d2/d0d/classdart_1_1dynamics_1_1TemplateWeakBodyNodePtr.html#a0bc0fc9039197c397be1a9af0be2a755">dart::dynamics::TemplateWeakBodyNodePtr&lt; BodyNodeT &gt;</a>
 </li>
 <li>mQ
 : <a class="el" href="d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#ad78aafd9c3250d3df8e9342198fbbf7f">dart::dynamics::FreeJoint</a>
+</li>
+<li>mQuery
+: <a class="el" href="d8/d07/structdart_1_1common_1_1Uri.html#ae14c79b2263d01a26de4fbd9c4f1c7ab">dart::common::Uri</a>
 </li>
 <li>mR
 : <a class="el" href="d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a9456934b38ce8d6a3f59704a909ec18b">dart::dynamics::BallJoint</a>
@@ -1475,6 +1793,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mRawDofs
 : <a class="el" href="d6/d9a/classdart_1_1dynamics_1_1ReferentialSkeleton.html#a87656443923b6295e3ab124b54c37d24">dart::dynamics::ReferentialSkeleton</a>
 </li>
+<li>mRD
+: <a class="el" href="d7/dbc/classdart_1_1optimizer_1_1GradientDescentSolver.html#a427e408ac8a00741ade70f8cbbf382ad">dart::optimizer::GradientDescentSolver</a>
+</li>
 <li>mRecord
 : <a class="el" href="d8/db2/classdart_1_1utils_1_1FileInfoWorld.html#a2b5306d96023cad9800f9ef988869555">dart::utils::FileInfoWorld</a>
 </li>
@@ -1494,7 +1815,8 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a3a93a3d3bba79ca298d86c85d583f832">dart::dynamics::SimpleFrame</a>
 </li>
 <li>mRelativeTf
-: <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a34ebb6e624c61af6356ce5587fbfe48b">dart::dynamics::SimpleFrame</a>
+: <a class="el" href="d8/d17/classdart_1_1dynamics_1_1FixedFrame.html#aba8bb423a886f58b11db059af25aabfc">dart::dynamics::FixedFrame</a>
+, <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#a34ebb6e624c61af6356ce5587fbfe48b">dart::dynamics::SimpleFrame</a>
 , <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a0d59244f1dea78fc0aa99e718657fcd8">dart::dynamics::WorldFrame</a>
 </li>
 <li>mRelativeTransform
@@ -1502,6 +1824,16 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mRelativeVelocity
 : <a class="el" href="da/d1c/classdart_1_1dynamics_1_1SimpleFrame.html#af1357a9d9de0a5811ccbd8a5d4d06300">dart::dynamics::SimpleFrame</a>
+</li>
+<li>mResource
+: <a class="el" href="dc/dc1/classdart_1_1dynamics_1_1AssimpInputResourceAdaptor.html#a3c0ac51d4aca155711e9fe5a4de6ed64">dart::dynamics::AssimpInputResourceAdaptor</a>
+</li>
+<li>mResourceRetriever
+: <a class="el" href="d6/db8/classdart_1_1dynamics_1_1AssimpInputResourceRetrieverAdaptor.html#a2a8e06a1c476ff7f05c8e7fe31208941">dart::dynamics::AssimpInputResourceRetrieverAdaptor</a>
+, <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a0a0664ae7f5007260b50c60e554c14fb">dart::dynamics::MeshShape</a>
+</li>
+<li>mResourceRetrievers
+: <a class="el" href="da/da5/classdart_1_1utils_1_1CompositeResourceRetriever.html#a516393a97215a713d76bd91a98977411">dart::utils::CompositeResourceRetriever</a>
 </li>
 <li>mRestitutionCoeff
 : <a class="el" href="d4/d18/classdart_1_1constraint_1_1ContactConstraint.html#acf84778e25fc924fb6bfb89f206abe7b">dart::constraint::ContactConstraint</a>
@@ -1513,6 +1845,12 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mRestPositions
 : <a class="el" href="d1/dad/structdart_1_1dynamics_1_1MultiDofJoint_1_1UniqueProperties.html#a5ca1c8de85dbd0ed17a9fafffac578b1">dart::dynamics::MultiDofJoint&lt; DOF &gt;::UniqueProperties</a>
+</li>
+<li>mResultFile
+: <a class="el" href="db/d48/structdart_1_1optimizer_1_1Solver_1_1Properties.html#a41df1a1c0cfaf6b8548563c4f86ebe54">dart::optimizer::Solver::Properties</a>
+</li>
+<li>mRetriever
+: <a class="el" href="d8/d29/classdart_1_1utils_1_1DartLoader.html#a0a203558ed53f49daf0b65ed09fa211b">dart::utils::DartLoader</a>
 </li>
 <li>mReturnedObj
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#adc3c3a25991bd1560c063c5c2188d416">dart::optimizer::snopt::SnoptInterface</a>
@@ -1529,12 +1867,6 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mRootSkeleton
 : <a class="el" href="d6/db4/classdart_1_1constraint_1_1ConstrainedGroup.html#ab6403be8c801059969d6b615ac2fadd6">dart::constraint::ConstrainedGroup</a>
 </li>
-<li>mRootToSkelPath
-: <a class="el" href="d8/d29/classdart_1_1utils_1_1DartLoader.html#a1600fac02fd823ec34dce00f7dc18eb5">dart::utils::DartLoader</a>
-</li>
-<li>mRootToWorldPath
-: <a class="el" href="d8/d29/classdart_1_1utils_1_1DartLoader.html#a432201c2240420f35b0db3c1766cbc9e">dart::utils::DartLoader</a>
-</li>
 <li>mRotate
 : <a class="el" href="d9/df5/classdart_1_1gui_1_1Win3D.html#a475bc57ebeffa84949439602e73965e4">dart::gui::Win3D</a>
 </li>
@@ -1547,6 +1879,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mScale
 : <a class="el" href="d0/d2d/classdart_1_1dynamics_1_1MeshShape.html#a354fcd58f9b788ed013b75714b1cb5b7">dart::dynamics::MeshShape</a>
 </li>
+<li>mScheme
+: <a class="el" href="d8/d07/structdart_1_1common_1_1Uri.html#af510dfe18f40d1608edca9fd85ad1c87">dart::common::Uri</a>
+</li>
 <li>mScreenshotTemp
 : <a class="el" href="d1/d33/classdart_1_1gui_1_1GlutWindow.html#a909e0f34027645d02193a4ad6d94e9ff">dart::gui::GlutWindow</a>
 </li>
@@ -1555,6 +1890,12 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mScrewP
 : <a class="el" href="db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a4b13a55c1999e2f640c9e1403ed1c0d0">dart::dynamics::ScrewJoint</a>
+</li>
+<li>mSeeds
+: <a class="el" href="df/dbc/classdart_1_1optimizer_1_1Problem.html#a9620456cef740b0af8b8bd348ecbccb6">dart::optimizer::Problem</a>
+</li>
+<li>mSelfDestructor
+: <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ab3f81018e4ed78b0481553635ba89e21">dart::dynamics::BodyNode</a>
 </li>
 <li>mShape
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#a794d6975aa687a6d6e2dc0cbbb23adc7">dart::dynamics::PointMass</a>
@@ -1594,7 +1935,8 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#affbd5a9e992e63ae466ec220f415e5cf">dart::dynamics::Skeleton</a>
 </li>
 <li>mSkeleton
-: <a class="el" href="de/d69/structdart_1_1dynamics_1_1MutexedWeakSkeletonPtr.html#a064f9c58e46829ad633b31b030634dda">dart::dynamics::MutexedWeakSkeletonPtr</a>
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a18916124af441aebbe8bc48dc02e6093">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="de/d69/structdart_1_1dynamics_1_1MutexedWeakSkeletonPtr.html#a064f9c58e46829ad633b31b030634dda">dart::dynamics::MutexedWeakSkeletonPtr</a>
 , <a class="el" href="d1/d38/classdart_1_1dynamics_1_1SkeletonRefCountingBase.html#ac3414be18a9812f62d7b5f845e504150">dart::dynamics::SkeletonRefCountingBase</a>
 </li>
 <li>mSkeletonP
@@ -1641,6 +1983,11 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mSoftShape
 : <a class="el" href="dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html#a73a7f2daa3d6a820a1a4d7d354124c42">dart::dynamics::SoftBodyNode</a>
 </li>
+<li>mSolver
+: <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#a16df8ff934c1134325ebfc21d064728a">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#ad171a081c171c77e947f28bbc9b0855d">dart::dynamics::InverseKinematics</a>
+, <a class="el" href="df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a5e9e560babbc67d3fb15a6dbbf9cca5a">dart::optimizer::DartTNLP</a>
+</li>
 <li>mSolverIter
 : <a class="el" href="d4/da4/classdart_1_1optimizer_1_1snopt_1_1SnoptSolver.html#a906059fa53b006a8623d227d2b1243bf">dart::optimizer::snopt::SnoptSolver</a>
 </li>
@@ -1676,6 +2023,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mStartPos
 : <a class="el" href="de/d9b/classdart_1_1gui_1_1Trackball.html#a002ec153aea7cceec825aaea5648bcbf">dart::gui::Trackball</a>
 </li>
+<li>mStepSize
+: <a class="el" href="d8/db5/structdart_1_1optimizer_1_1GradientDescentSolver_1_1UniqueProperties.html#a2649167e2f901db9c671162f75642c9b">dart::optimizer::GradientDescentSolver::UniqueProperties</a>
+</li>
 <li>mStoppedTime
 : <a class="el" href="d9/d32/classdart_1_1common_1_1Timer.html#ad3a54ac30208094ee5088235701f2f69">dart::common::Timer</a>
 </li>
@@ -1691,6 +2041,33 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mSum
 : <a class="el" href="d2/d9b/classdart_1_1optimizer_1_1snopt_1_1SnoptInterface.html#ae4cd77d79219cefb47bf5c6a13fba9e8">dart::optimizer::snopt::SnoptInterface</a>
 </li>
+<li>mSupport
+: <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#abdfa1edc058c22fc785f4003974188ee">dart::dynamics::EndEffector</a>
+, <a class="el" href="d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a7547258b9ce46afe8674c53b1e7793e3">dart::dynamics::Skeleton::DirtyFlags</a>
+</li>
+<li>mSupportAxes
+: <a class="el" href="dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#adde896c406784bbbaf1a30f41356849c">dart::dynamics::Skeleton::DataCache</a>
+</li>
+<li>mSupportCentroid
+: <a class="el" href="dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#aca236a6ea9df48b799a8be7d41103b33">dart::dynamics::Skeleton::DataCache</a>
+</li>
+<li>mSupportGeometry
+: <a class="el" href="dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#aac6b471b818df8b6da496ed0c6b8c9a9">dart::dynamics::Skeleton::DataCache</a>
+</li>
+<li>mSupportIndices
+: <a class="el" href="dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#a5b98a87792a3411f4219a9cb9b36a48d">dart::dynamics::Skeleton::DataCache</a>
+</li>
+<li>mSupportPolygon
+: <a class="el" href="dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html#a8f8b3d07667edf48cc510ec3bfd3fc52">dart::dynamics::Skeleton::DataCache</a>
+</li>
+<li>mSupportVersion
+: <a class="el" href="d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a071c6726ed1f0ffbd4f46d4c8a260866">dart::dynamics::Skeleton::DirtyFlags</a>
+</li>
+<li>mSVDCache
+: <a class="el" href="da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html#a6a5768ea2c8e66279d040805f5426ef4">dart::constraint::BalanceConstraint</a>
+, <a class="el" href="d5/de6/classdart_1_1dynamics_1_1HierarchicalIK.html#ad80b43ce92fdc7453aeacf5e76607818">dart::dynamics::HierarchicalIK</a>
+, <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1InverseKinematics_1_1Objective.html#ac2bbebf8ccb0e16873d5edcd868b1d61">dart::dynamics::InverseKinematics::Objective</a>
+</li>
 <li>mT
 : <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#ad65b631e90dae3b36cc3df3b3492d4f4">dart::dynamics::Joint</a>
 </li>
@@ -1705,9 +2082,16 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mTarget
 : <a class="el" href="d3/d0c/structdart_1_1dynamics_1_1Chain_1_1Criteria.html#a38745c91ea79e82843618fa201ae12a5">dart::dynamics::Chain::Criteria</a>
+, <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#af7cf2605a4b82a22a9caf990dbf0a76d">dart::dynamics::InverseKinematics</a>
+</li>
+<li>mTargetConnection
+: <a class="el" href="db/d91/classdart_1_1dynamics_1_1InverseKinematics.html#a7ac659a036f4747ce5553c48373a1d29">dart::dynamics::InverseKinematics</a>
 </li>
 <li>mTargets
 : <a class="el" href="de/d88/structdart_1_1dynamics_1_1Linkage_1_1Criteria.html#a32aff57b36e113c5de2aedd181bd21b6">dart::dynamics::Linkage::Criteria</a>
+</li>
+<li>mTempGradCache
+: <a class="el" href="d0/dd2/classdart_1_1dynamics_1_1HierarchicalIK_1_1Constraint.html#a0c5861f24e06ac935cc3e314435cb632">dart::dynamics::HierarchicalIK::Constraint</a>
 </li>
 <li>mTerminal
 : <a class="el" href="d4/d49/structdart_1_1dynamics_1_1Linkage_1_1Criteria_1_1Terminal.html#a84cca8df926924a86d171169cf35d013">dart::dynamics::Linkage::Criteria::Terminal</a>
@@ -1734,6 +2118,9 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mTimeVal
 : <a class="el" href="d9/d32/classdart_1_1common_1_1Timer.html#a0ae3bedc2fa78e38501c8894760ccf4b">dart::common::Timer</a>
+</li>
+<li>mTolerance
+: <a class="el" href="db/d48/structdart_1_1optimizer_1_1Solver_1_1Properties.html#ae5b85eee23e8e90f78aacc16ad3abc7a">dart::optimizer::Solver::Properties</a>
 </li>
 <li>mTotalDofs
 : <a class="el" href="d4/da4/classdart_1_1optimizer_1_1snopt_1_1SnoptSolver.html#a217ec889ad7170055946e19ca60a41e7">dart::optimizer::snopt::SnoptSolver</a>
@@ -1781,7 +2168,7 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d2/ded/classdart_1_1gui_1_1Win2D.html#a0ab6436a8d8b1606f407529705595b92">dart::gui::Win2D</a>
 </li>
 <li>mTreeCache
-: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#adb24631439fc22244ec175c971e64732">dart::dynamics::Skeleton</a>
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a964a057e1b39784bbf4a5e8afe427469">dart::dynamics::Skeleton</a>
 </li>
 <li>mTreeIndex
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a69f4dcaf764651491f4bb22079c7c129">dart::dynamics::BodyNode</a>
@@ -1824,6 +2211,12 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mV
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#ac49dc6aee24791672573ab1bfba2eba8">dart::dynamics::PointMass</a>
+</li>
+<li>mValue
+: <a class="el" href="d6/d65/classdart_1_1common_1_1UriComponent.html#a44c0edfc29d704fa7bb5e4a6a2e25c7a">dart::common::UriComponent</a>
+</li>
+<li>mVariance
+: <a class="el" href="db/d1c/classdart_1_1dynamics_1_1Shape.html#aa4ec0172edc2d98894b5a41228b598a8">dart::dynamics::Shape</a>
 </li>
 <li>mVelocities
 : <a class="el" href="da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a955b15e1441e06a02fb2de6590171e63">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>
@@ -1906,8 +2299,23 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 : <a class="el" href="d7/d70/classdart_1_1dynamics_1_1TemplateWeakDegreeOfFreedomPtr.html#a49fa95097614a916a6973e7cdd7dae23">dart::dynamics::TemplateWeakDegreeOfFreedomPtr&lt; DegreeOfFreedomT, BodyNodeT &gt;</a>
 , <a class="el" href="d8/d37/classdart_1_1dynamics_1_1TemplateWeakJointPtr.html#af9a63d1021fdf0a1e7c306b11c661a4a">dart::dynamics::TemplateWeakJointPtr&lt; JointT, BodyNodeT &gt;</a>
 </li>
+<li>mWeakBodyNodePtr
+: <a class="el" href="d5/db5/classdart_1_1dynamics_1_1TemplateWeakNodePtr.html#ade4bbe43c0ff8609d4fa91fcc081ba23">dart::dynamics::TemplateWeakNodePtr&lt; NodeT, BodyNodeT &gt;</a>
+</li>
 <li>mWeakConnectionBody
 : <a class="el" href="d1/d23/classdart_1_1common_1_1Connection.html#acf32fe88c8710a2950b0370f9fb53544">dart::common::Connection</a>
+</li>
+<li>mWeakDestructor
+: <a class="el" href="d5/db5/classdart_1_1dynamics_1_1TemplateWeakNodePtr.html#a31593cb79170fb34c3c0f5305814b354">dart::dynamics::TemplateWeakNodePtr&lt; NodeT, BodyNodeT &gt;</a>
+</li>
+<li>mWeakIK
+: <a class="el" href="d9/d6b/classdart_1_1dynamics_1_1TemplateWeakInverseKinematicsPtr.html#a8dbbcbbf44a970c1e2952e690c9deb18">dart::dynamics::TemplateWeakInverseKinematicsPtr&lt; InverseKinematicsT, JacobianNodePtrT &gt;</a>
+</li>
+<li>mWeakJacNode
+: <a class="el" href="d9/d6b/classdart_1_1dynamics_1_1TemplateWeakInverseKinematicsPtr.html#a84e6590e5c9a8e76f58eb5d14c6f0252">dart::dynamics::TemplateWeakInverseKinematicsPtr&lt; InverseKinematicsT, JacobianNodePtrT &gt;</a>
+</li>
+<li>mWholeBodyIK
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a8652b82c58ad014d057329ccedb91aa0">dart::dynamics::Skeleton</a>
 </li>
 <li>mWidth
 : <a class="el" href="db/d67/classdart_1_1renderer_1_1Camera.html#a2dc0b7102bfdf2277142b340bf424172">dart::renderer::Camera</a>
@@ -1927,14 +2335,13 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <li>mWorld
 : <a class="el" href="d9/d05/classdart_1_1gui_1_1SimWindow.html#a17abeb350b301503571d125ba1d2f832">dart::gui::SimWindow</a>
 </li>
-<li>mWorld_To_Entity_Paths
-: <a class="el" href="d8/d29/classdart_1_1utils_1_1DartLoader.html#a0cd712e2a2822d39ddd831fa1134de0a">dart::utils::DartLoader</a>
-</li>
 <li>mWorldJacobian
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aa43ae0299745d46a3a2443608240ab9a">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a13175151c07bf501ef337ae2d661718e">dart::dynamics::EndEffector</a>
 </li>
 <li>mWorldJacobianClassicDeriv
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#af10276f3dc848c7ee218565696ca60bd">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#af242f6be925e42f4dae573857be1e478">dart::dynamics::EndEffector</a>
 </li>
 <li>mWorldTrans
 : <a class="el" href="d9/d3b/classdart_1_1collision_1_1FCLMeshCollisionNode.html#a2aa4963a4480ed515680160b8c0fdac5">dart::collision::FCLMeshCollisionNode</a>
@@ -1944,13 +2351,14 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 </li>
 <li>mX
 : <a class="el" href="d5/d55/classdart_1_1dynamics_1_1PointMass.html#aa2d8f358236d3812d7db7dff1b10a97f">dart::dynamics::PointMass</a>
-, <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#a593ca8c21b56d9a27eff9fcbd51693f0">dart::optimizer::NloptSolver</a>
+, <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#a994a719ce5eba02b770a57d72f65128c">dart::optimizer::NloptSolver</a>
 </li>
 <li>mX0
 : <a class="el" href="d9/db4/structdart_1_1dynamics_1_1PointMass_1_1Properties.html#a620828d1d90d43e794012750a4616abf">dart::dynamics::PointMass::Properties</a>
 </li>
 <li>mZero
-: <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a944be965ab58d08a5394fdf99299ce1a">dart::dynamics::WorldFrame</a>
+: <a class="el" href="d8/d17/classdart_1_1dynamics_1_1FixedFrame.html#a8a04b423055016a8b4e89a5f31b07d07">dart::dynamics::FixedFrame</a>
+, <a class="el" href="d0/df8/classdart_1_1dynamics_1_1WorldFrame.html#a944be965ab58d08a5394fdf99299ce1a">dart::dynamics::WorldFrame</a>
 </li>
 <li>mZoom
 : <a class="el" href="d9/df5/classdart_1_1gui_1_1Win3D.html#a69e0d1a5893daead1ac89aa9c6b02589">dart::gui::Win3D</a>
@@ -1964,7 +2372,7 @@ $(document).ready(function(){initNavTree('functions_vars_m.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:57 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:35 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

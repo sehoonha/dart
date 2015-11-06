@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>DART: /home/js/DRC/dart_5.0_gazebo/dart/utils/Parser.h File Reference</title>
+<title>DART: /home/js/dev/dart/5.1.1/dart/utils/Parser.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -116,6 +116,7 @@ $(document).ready(function(){initNavTree('d6/d0c/Parser_8h.html','../../');});
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;Eigen/Dense&gt;</code><br />
 <code>#include &lt;tinyxml2.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d14/ResourceRetriever_8h_source.html">dart/common/ResourceRetriever.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d5/d55/MathTypes_8h_source.html">dart/math/MathTypes.h</a>&quot;</code><br />
 </div>
 <p><a href="../../d6/d0c/Parser_8h_source.html">Go to the source code of this file.</a></p>
@@ -212,8 +213,8 @@ Functions</h2></td></tr>
 <tr class="separator:abf9d85028e23e7509fe4cf943f4a76bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7d9f73f3951f82f5c7f4b112829d4cf"><td class="memItemLeft" align="right" valign="top">Eigen::Isometry3d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html#aa7d9f73f3951f82f5c7f4b112829d4cf">dart::utils::getValueIsometry3dWithExtrinsicRotation</a> (tinyxml2::XMLElement *_parentElement, const std::string &amp;_name)</td></tr>
 <tr class="separator:aa7d9f73f3951f82f5c7f4b112829d4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58b9989f820bb5e26397ca32db1d77c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html#a58b9989f820bb5e26397ca32db1d77c0">dart::utils::openXMLFile</a> (tinyxml2::XMLDocument &amp;doc, const char *const filename)</td></tr>
-<tr class="separator:a58b9989f820bb5e26397ca32db1d77c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe1120e09bf0b63fc36534111a78aef7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html#afe1120e09bf0b63fc36534111a78aef7">dart::utils::openXMLFile</a> (tinyxml2::XMLDocument &amp;doc, const common::Uri &amp;uri, const common::ResourceRetrieverPtr &amp;_retriever)</td></tr>
+<tr class="separator:afe1120e09bf0b63fc36534111a78aef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ae82898f2f145b583baf7ed0685fd08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html#a0ae82898f2f145b583baf7ed0685fd08">dart::utils::hasElement</a> (tinyxml2::XMLElement *_parentElement, const std::string &amp;_name)</td></tr>
 <tr class="separator:a0ae82898f2f145b583baf7ed0685fd08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22b3f522f35d1ab54d19d1c83a35874d"><td class="memItemLeft" align="right" valign="top">tinyxml2::XMLElement *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html#a22b3f522f35d1ab54d19d1c83a35874d">dart::utils::getElement</a> (tinyxml2::XMLElement *_parentElement, const std::string &amp;_name)</td></tr>
@@ -231,7 +232,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_bdca9e024c7189a7f761273aaa65cff0.html">dart</a></li><li class="navelem"><a class="el" href="../../dir_558fb1470c9a14158ce5db1674bc31a0.html">utils</a></li><li class="navelem"><a class="el" href="../../d6/d0c/Parser_8h.html">Parser.h</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:53 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:32 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

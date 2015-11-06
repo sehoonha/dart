@@ -2,6 +2,7 @@ var classdart_1_1dynamics_1_1ScrewJoint =
 [
     [ "Properties", "de/df9/structdart_1_1dynamics_1_1ScrewJoint_1_1Properties.html", "de/df9/structdart_1_1dynamics_1_1ScrewJoint_1_1Properties" ],
     [ "UniqueProperties", "dd/da2/structdart_1_1dynamics_1_1ScrewJoint_1_1UniqueProperties.html", "dd/da2/structdart_1_1dynamics_1_1ScrewJoint_1_1UniqueProperties" ],
+    [ "ScrewJoint", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#aa8107690a937bd0316e91fe4a04337cb", null ],
     [ "~ScrewJoint", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a349cb15096925f3c8627e45f113b8827", null ],
     [ "ScrewJoint", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a92f5810d7d1d11be4da62c0889c76bbc", null ],
     [ "clone", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#aab1b2fffd11caf29b249f2bed40b3ed2", null ],
@@ -12,6 +13,7 @@ var classdart_1_1dynamics_1_1ScrewJoint =
     [ "getScrewJointProperties", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a6fa6def8ced1f635f710f234b4b22fe6", null ],
     [ "getStaticType", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#ad53783c3186a494144865904b4bb8219", null ],
     [ "getType", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a940752d8fa24286f3ca6f71e1cd4f014", null ],
+    [ "isCyclic", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a9eee95b28f4b592391cc342da9d86922", null ],
     [ "operator=", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a204cbf4bf4e16fcbf11fb1f68667cf6a", null ],
     [ "setAxis", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#afe56727d45b40d589641249207be0c68", null ],
     [ "setPitch", "db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#af8dcfdeac0e9b863e2280e6c7dc2ae84", null ],

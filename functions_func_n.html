@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -176,7 +176,13 @@ $(document).ready(function(){initNavTree('functions_func_n.html','');});
 : <a class="el" href="dd/dc3/classdart_1_1utils_1_1ElementEnumerator.html#a00f73b9ca7f10c1071c35a9038155ba2">dart::utils::ElementEnumerator</a>
 </li>
 <li>NloptSolver()
-: <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#af34771327481ce6fe9e52d0616200e0e">dart::optimizer::NloptSolver</a>
+: <a class="el" href="d0/d1c/classdart_1_1optimizer_1_1NloptSolver.html#abe1b82421da21c9738c491749f0e8fb9">dart::optimizer::NloptSolver</a>
+</li>
+<li>Node()
+: <a class="el" href="db/dc8/classdart_1_1dynamics_1_1Node.html#a53866d89ce173deb175751fbd89ffea1">dart::dynamics::Node</a>
+</li>
+<li>NodeDestructor()
+: <a class="el" href="de/ddb/classdart_1_1dynamics_1_1NodeDestructor.html#a29de015cf0c4b1eb8710e1f3f306a0e7">dart::dynamics::NodeDestructor</a>
 </li>
 <li>notifyAccelerationUpdate()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ad2809512086966a0db5e21d3397a9508">dart::dynamics::BodyNode</a>
@@ -195,21 +201,35 @@ $(document).ready(function(){initNavTree('functions_func_n.html','');});
 <li>notifyExternalForcesUpdate()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#ab58b32aabbbdf50b2563a74bf56923af">dart::dynamics::BodyNode</a>
 </li>
+<li>notifyJacobianDerivUpdate()
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#ad2b87d518644f9804335384c2008c8bc">dart::dynamics::JacobianNode</a>
+</li>
+<li>notifyJacobianUpdate()
+: <a class="el" href="d1/d50/classdart_1_1dynamics_1_1JacobianNode.html#aafa0012f8fea007dbfb708a756c51b3c">dart::dynamics::JacobianNode</a>
+</li>
 <li>notifyPositionUpdate()
 : <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a57977210b66f005c446a3c33b0bb578e">dart::dynamics::Joint</a>
 </li>
+<li>notifySupportUpdate()
+: <a class="el" href="d3/d19/classdart_1_1dynamics_1_1Skeleton.html#adfec7729ce5d098ad9b96b7c8626bf12">dart::dynamics::Skeleton</a>
+</li>
 <li>notifyTransformUpdate()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#a783cd66b7959865ed4f726ba094fa0bd">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a47ec0e1eb69ceb89fd2042902061bc2b">dart::dynamics::EndEffector</a>
 , <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#ab67377987c332b0e8158b16ed204ea1b">dart::dynamics::Entity</a>
 , <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#ae18d442162b1e7dd1cd55c2502e40c5c">dart::dynamics::Frame</a>
 , <a class="el" href="d5/d02/classdart_1_1dynamics_1_1PointMassNotifier.html#ae2e7e619ace6b2944ad57ba8cdada576">dart::dynamics::PointMassNotifier</a>
 </li>
 <li>notifyVelocityUpdate()
 : <a class="el" href="d5/d2e/classdart_1_1dynamics_1_1BodyNode.html#aa42ceefa2dbf4a6927b3106e89b2e13a">dart::dynamics::BodyNode</a>
+, <a class="el" href="db/d3c/classdart_1_1dynamics_1_1EndEffector.html#a2ba271e99517658404d40522a62099bf">dart::dynamics::EndEffector</a>
 , <a class="el" href="d7/d42/classdart_1_1dynamics_1_1Entity.html#ab116df52d83cb7b6edc3b3f9b1bc96ae">dart::dynamics::Entity</a>
 , <a class="el" href="db/d38/classdart_1_1dynamics_1_1Frame.html#a85f57d1939e626446070be1d1ce09221">dart::dynamics::Frame</a>
 , <a class="el" href="d6/d5b/classdart_1_1dynamics_1_1Joint.html#a8fe413bf4e47765f2cdff2f5db4a14eb">dart::dynamics::Joint</a>
 , <a class="el" href="d5/d02/classdart_1_1dynamics_1_1PointMassNotifier.html#ab791947d7e627628eab75106d6ce8b4f">dart::dynamics::PointMassNotifier</a>
+</li>
+<li>NullFunction()
+: <a class="el" href="dd/dfa/classdart_1_1optimizer_1_1NullFunction.html#a6e75d90f421c0dc3f133f27ea153ce3b">dart::optimizer::NullFunction</a>
 </li>
 <li>numC()
 : <a class="el" href="d6/df6/structdLCP.html#a703f840d7b5bb8a1d45ecaaa9b1a5f08">dLCP</a>
@@ -223,7 +243,7 @@ $(document).ready(function(){initNavTree('functions_func_n.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:57 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:35 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

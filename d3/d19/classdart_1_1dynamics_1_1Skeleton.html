@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -227,9 +227,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a583867ed1a17d3f2397562d68b860a7b"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a583867ed1a17d3f2397562d68b860a7b">getName</a> () const override</td></tr>
 <tr class="memdesc:a583867ed1a17d3f2397562d68b860a7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get name.  <a href="#a583867ed1a17d3f2397562d68b860a7b">More...</a><br /></td></tr>
 <tr class="separator:a583867ed1a17d3f2397562d68b860a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71ff8919b063e744dce30d2b0764c4a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a71ff8919b063e744dce30d2b0764c4a8">enableSelfCollision</a> (bool _enableAdjecentBodies=false)</td></tr>
-<tr class="memdesc:a71ff8919b063e744dce30d2b0764c4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable self collision check.  <a href="#a71ff8919b063e744dce30d2b0764c4a8">More...</a><br /></td></tr>
-<tr class="separator:a71ff8919b063e744dce30d2b0764c4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7385c8472b01d120134a2af40c188a78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a7385c8472b01d120134a2af40c188a78">enableSelfCollision</a> (bool _enableAdjacentBodyCheck=false)</td></tr>
+<tr class="memdesc:a7385c8472b01d120134a2af40c188a78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable self collision check.  <a href="#a7385c8472b01d120134a2af40c188a78">More...</a><br /></td></tr>
+<tr class="separator:a7385c8472b01d120134a2af40c188a78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ac410509ce3e9d78bae4a8233de96f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a7ac410509ce3e9d78bae4a8233de96f9">disableSelfCollision</a> ()</td></tr>
 <tr class="memdesc:a7ac410509ce3e9d78bae4a8233de96f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable self collision check.  <a href="#a7ac410509ce3e9d78bae4a8233de96f9">More...</a><br /></td></tr>
 <tr class="separator:a7ac410509ce3e9d78bae4a8233de96f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,70 +367,131 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad694fd871f4df58260ab61165723d4c3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; const <a class="el" href="../../de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html">DegreeOfFreedom</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ad694fd871f4df58260ab61165723d4c3">getTreeDofs</a> (size_t _treeIdx) const </td></tr>
 <tr class="memdesc:ad694fd871f4df58260ab61165723d4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the DegreesOfFreedom belonging to a tree in this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#ad694fd871f4df58260ab61165723d4c3">More...</a><br /></td></tr>
 <tr class="separator:ad694fd871f4df58260ab61165723d4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712df892e919d807eefa78545205992d"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a712df892e919d807eefa78545205992d">getNumEndEffectors</a> () const </td></tr>
+<tr class="memdesc:a712df892e919d807eefa78545205992d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of EndEffectors on this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a712df892e919d807eefa78545205992d">More...</a><br /></td></tr>
+<tr class="separator:a712df892e919d807eefa78545205992d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5656fc64e533dfdf818846e2c868465"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ac5656fc64e533dfdf818846e2c868465">getEndEffector</a> (size_t _idx)</td></tr>
+<tr class="memdesc:ac5656fc64e533dfdf818846e2c868465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> whose index is _idx.  <a href="#ac5656fc64e533dfdf818846e2c868465">More...</a><br /></td></tr>
+<tr class="separator:ac5656fc64e533dfdf818846e2c868465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3105ba0b5fc7a3670d30423651af70e6"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a3105ba0b5fc7a3670d30423651af70e6">getEndEffector</a> (size_t _idx) const </td></tr>
+<tr class="memdesc:a3105ba0b5fc7a3670d30423651af70e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> whose index is _idx.  <a href="#a3105ba0b5fc7a3670d30423651af70e6">More...</a><br /></td></tr>
+<tr class="separator:a3105ba0b5fc7a3670d30423651af70e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dfb55a28638d77b8ffd322aad446d44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a0dfb55a28638d77b8ffd322aad446d44">getEndEffector</a> (const std::string &amp;_name)</td></tr>
+<tr class="memdesc:a0dfb55a28638d77b8ffd322aad446d44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> whose name is _name.  <a href="#a0dfb55a28638d77b8ffd322aad446d44">More...</a><br /></td></tr>
+<tr class="separator:a0dfb55a28638d77b8ffd322aad446d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6293832bc689d54975f7dc98c70108e4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a6293832bc689d54975f7dc98c70108e4">getEndEffector</a> (const std::string &amp;_name) const </td></tr>
+<tr class="memdesc:a6293832bc689d54975f7dc98c70108e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> whose name is _name.  <a href="#a6293832bc689d54975f7dc98c70108e4">More...</a><br /></td></tr>
+<tr class="separator:a6293832bc689d54975f7dc98c70108e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9e9308fb0e458bd96c899955dfc345a"><td class="memItemLeft" align="right" valign="top">const std::shared_ptr&lt; <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af9e9308fb0e458bd96c899955dfc345a">getIK</a> (bool _createIfNull=false)</td></tr>
+<tr class="memdesc:af9e9308fb0e458bd96c899955dfc345a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to a <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#af9e9308fb0e458bd96c899955dfc345a">More...</a><br /></td></tr>
+<tr class="separator:af9e9308fb0e458bd96c899955dfc345a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7798c99048951765a603e8c10aeea979"><td class="memItemLeft" align="right" valign="top">const std::shared_ptr&lt; <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a7798c99048951765a603e8c10aeea979">getOrCreateIK</a> ()</td></tr>
+<tr class="memdesc:a7798c99048951765a603e8c10aeea979"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to a <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a7798c99048951765a603e8c10aeea979">More...</a><br /></td></tr>
+<tr class="separator:a7798c99048951765a603e8c10aeea979"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff1c6109376f72f8b0defec51f6bd0c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; const <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a9ff1c6109376f72f8b0defec51f6bd0c">getIK</a> () const </td></tr>
+<tr class="memdesc:a9ff1c6109376f72f8b0defec51f6bd0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a pointer to a <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a9ff1c6109376f72f8b0defec51f6bd0c">More...</a><br /></td></tr>
+<tr class="separator:a9ff1c6109376f72f8b0defec51f6bd0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca9ce72460cb0a86c1ec9fe2c6a0b5fb"><td class="memItemLeft" align="right" valign="top">const std::shared_ptr&lt; <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aca9ce72460cb0a86c1ec9fe2c6a0b5fb">createIK</a> ()</td></tr>
+<tr class="memdesc:aca9ce72460cb0a86c1ec9fe2c6a0b5fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#aca9ce72460cb0a86c1ec9fe2c6a0b5fb">More...</a><br /></td></tr>
+<tr class="separator:aca9ce72460cb0a86c1ec9fe2c6a0b5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4de0a407cdc0bedfe0e8c463218ad9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aee4de0a407cdc0bedfe0e8c463218ad9">clearIK</a> ()</td></tr>
+<tr class="memdesc:aee4de0a407cdc0bedfe0e8c463218ad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wipe away the <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>, leaving it as a nullptr.  <a href="#aee4de0a407cdc0bedfe0e8c463218ad9">More...</a><br /></td></tr>
+<tr class="separator:aee4de0a407cdc0bedfe0e8c463218ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b798e061955fe39a57e7a1e8303d1ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d20/classdart_1_1dynamics_1_1Marker.html">Marker</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a8b798e061955fe39a57e7a1e8303d1ae">getMarker</a> (const std::string &amp;_name)</td></tr>
 <tr class="memdesc:a8b798e061955fe39a57e7a1e8303d1ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get marker whose name is _name.  <a href="#a8b798e061955fe39a57e7a1e8303d1ae">More...</a><br /></td></tr>
 <tr class="separator:a8b798e061955fe39a57e7a1e8303d1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c6abad4aab1f76d191c454c75829f34"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../db/d20/classdart_1_1dynamics_1_1Marker.html">Marker</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a3c6abad4aab1f76d191c454c75829f34">getMarker</a> (const std::string &amp;_name) const </td></tr>
 <tr class="memdesc:a3c6abad4aab1f76d191c454c75829f34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get const marker whose name is _name.  <a href="#a3c6abad4aab1f76d191c454c75829f34">More...</a><br /></td></tr>
 <tr class="separator:a3c6abad4aab1f76d191c454c75829f34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Support Polygon</div></td></tr>
+<tr class="memitem:aedadd167494fc4d21c9b889408631ecc"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d8/d96/namespacedart_1_1math.html#a179187b12bcf5f46512c64ee1b0585a4">math::SupportPolygon</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aedadd167494fc4d21c9b889408631ecc">getSupportPolygon</a> () const </td></tr>
+<tr class="memdesc:aedadd167494fc4d21c9b889408631ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the support polygon of this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>, which is computed based on the gravitational projection of the support geometries of all EndEffectors in this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a> that are currently in support mode.  <a href="#aedadd167494fc4d21c9b889408631ecc">More...</a><br /></td></tr>
+<tr class="separator:aedadd167494fc4d21c9b889408631ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73cca6756da92eb582692b67b8122528"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d8/d96/namespacedart_1_1math.html#a179187b12bcf5f46512c64ee1b0585a4">math::SupportPolygon</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a73cca6756da92eb582692b67b8122528">getSupportPolygon</a> (size_t _treeIdx) const </td></tr>
+<tr class="memdesc:a73cca6756da92eb582692b67b8122528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aedadd167494fc4d21c9b889408631ecc" title="Get the support polygon of this Skeleton, which is computed based on the gravitational projection of ...">getSupportPolygon()</a>, but it will only use EndEffectors within the specified tree within this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a73cca6756da92eb582692b67b8122528">More...</a><br /></td></tr>
+<tr class="separator:a73cca6756da92eb582692b67b8122528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcd8296a00bd4a322e21a1afa72f8a3a"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#adcd8296a00bd4a322e21a1afa72f8a3a">getSupportIndices</a> () const </td></tr>
+<tr class="memdesc:adcd8296a00bd4a322e21a1afa72f8a3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of the <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> indices that correspond to each of the points in the support polygon.  <a href="#adcd8296a00bd4a322e21a1afa72f8a3a">More...</a><br /></td></tr>
+<tr class="separator:adcd8296a00bd4a322e21a1afa72f8a3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28cc62cfb0f1633f6219e9bc2c92f773"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; size_t &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a28cc62cfb0f1633f6219e9bc2c92f773">getSupportIndices</a> (size_t _treeIdx) const </td></tr>
+<tr class="memdesc:a28cc62cfb0f1633f6219e9bc2c92f773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#adcd8296a00bd4a322e21a1afa72f8a3a" title="Get a list of the EndEffector indices that correspond to each of the points in the support polygon...">getSupportIndices()</a>, but it corresponds to the support polygon of the specified tree within this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a28cc62cfb0f1633f6219e9bc2c92f773">More...</a><br /></td></tr>
+<tr class="separator:a28cc62cfb0f1633f6219e9bc2c92f773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08e0e2cb25261d57dea950e82c30593"><td class="memItemLeft" align="right" valign="top">const std::pair&lt; Eigen::Vector3d, Eigen::Vector3d &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ae08e0e2cb25261d57dea950e82c30593">getSupportAxes</a> () const </td></tr>
+<tr class="memdesc:ae08e0e2cb25261d57dea950e82c30593"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the axes that correspond to each component in the support polygon.  <a href="#ae08e0e2cb25261d57dea950e82c30593">More...</a><br /></td></tr>
+<tr class="separator:ae08e0e2cb25261d57dea950e82c30593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f4c8953fdd439ecdf8703d6f3a871c"><td class="memItemLeft" align="right" valign="top">const std::pair&lt; Eigen::Vector3d, Eigen::Vector3d &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aa9f4c8953fdd439ecdf8703d6f3a871c">getSupportAxes</a> (size_t _treeIdx) const </td></tr>
+<tr class="memdesc:aa9f4c8953fdd439ecdf8703d6f3a871c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ae08e0e2cb25261d57dea950e82c30593" title="Get the axes that correspond to each component in the support polygon. ">getSupportAxes()</a>, but it corresponds to the support polygon of the specified tree within this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#aa9f4c8953fdd439ecdf8703d6f3a871c">More...</a><br /></td></tr>
+<tr class="separator:aa9f4c8953fdd439ecdf8703d6f3a871c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d65e4ee841d7b982b8089e4637292b"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector2d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a36d65e4ee841d7b982b8089e4637292b">getSupportCentroid</a> () const </td></tr>
+<tr class="memdesc:a36d65e4ee841d7b982b8089e4637292b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the centroid of the support polygon for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a36d65e4ee841d7b982b8089e4637292b">More...</a><br /></td></tr>
+<tr class="separator:a36d65e4ee841d7b982b8089e4637292b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba8b107c44125d0c9e527c7e4c06763"><td class="memItemLeft" align="right" valign="top">const Eigen::Vector2d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a9ba8b107c44125d0c9e527c7e4c06763">getSupportCentroid</a> (size_t _treeIdx) const </td></tr>
+<tr class="memdesc:a9ba8b107c44125d0c9e527c7e4c06763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the centroid of the support polygon for a tree in this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a9ba8b107c44125d0c9e527c7e4c06763">More...</a><br /></td></tr>
+<tr class="separator:a9ba8b107c44125d0c9e527c7e4c06763"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a3b63667b4b779655cb8945e1d5103"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a15a3b63667b4b779655cb8945e1d5103">getSupportVersion</a> () const </td></tr>
+<tr class="memdesc:a15a3b63667b4b779655cb8945e1d5103"><td class="mdescLeft">&#160;</td><td class="mdescRight">The version number of a support polygon will be incremented each time the support polygon needs to be recomputed.  <a href="#a15a3b63667b4b779655cb8945e1d5103">More...</a><br /></td></tr>
+<tr class="separator:a15a3b63667b4b779655cb8945e1d5103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56183834fbf636507c0f191cd5d02ec0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a56183834fbf636507c0f191cd5d02ec0">getSupportVersion</a> (size_t _treeIdx) const </td></tr>
+<tr class="memdesc:a56183834fbf636507c0f191cd5d02ec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a15a3b63667b4b779655cb8945e1d5103" title="The version number of a support polygon will be incremented each time the support polygon needs to be...">getSupportVersion()</a>, but it corresponds to the support polygon of the specified tree within this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a56183834fbf636507c0f191cd5d02ec0">More...</a><br /></td></tr>
+<tr class="separator:a56183834fbf636507c0f191cd5d02ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Jacobians</div></td></tr>
-<tr class="memitem:a847c6d9f9840822b77c81a0c1c7e24ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a847c6d9f9840822b77c81a0c1c7e24ac">getJacobian</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode) const override</td></tr>
-<tr class="memdesc:a847c6d9f9840822b77c81a0c1c7e24ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a847c6d9f9840822b77c81a0c1c7e24ac">More...</a><br /></td></tr>
-<tr class="separator:a847c6d9f9840822b77c81a0c1c7e24ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3545de762041ba51955e8c257b548e37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a3545de762041ba51955e8c257b548e37">getJacobian</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
-<tr class="memdesc:a3545de762041ba51955e8c257b548e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a3545de762041ba51955e8c257b548e37">More...</a><br /></td></tr>
-<tr class="separator:a3545de762041ba51955e8c257b548e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab63c48b619f66b0b2d20f774bc077cb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ab63c48b619f66b0b2d20f774bc077cb5">getJacobian</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const Eigen::Vector3d &amp;_localOffset) const override</td></tr>
-<tr class="memdesc:ab63c48b619f66b0b2d20f774bc077cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#ab63c48b619f66b0b2d20f774bc077cb5">More...</a><br /></td></tr>
-<tr class="separator:ab63c48b619f66b0b2d20f774bc077cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a594fdee6a4ad8358cf8cc06c95824bb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a594fdee6a4ad8358cf8cc06c95824bb4">getJacobian</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const Eigen::Vector3d &amp;_localOffset, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
-<tr class="memdesc:a594fdee6a4ad8358cf8cc06c95824bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a594fdee6a4ad8358cf8cc06c95824bb4">More...</a><br /></td></tr>
-<tr class="separator:a594fdee6a4ad8358cf8cc06c95824bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c8fe42d48240974a750820cfc42422e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a9c8fe42d48240974a750820cfc42422e">getWorldJacobian</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode) const override</td></tr>
-<tr class="memdesc:a9c8fe42d48240974a750820cfc42422e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a9c8fe42d48240974a750820cfc42422e">More...</a><br /></td></tr>
-<tr class="separator:a9c8fe42d48240974a750820cfc42422e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23732e8aea7880472b7b1ccafa607627"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a23732e8aea7880472b7b1ccafa607627">getWorldJacobian</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const Eigen::Vector3d &amp;_localOffset) const override</td></tr>
-<tr class="memdesc:a23732e8aea7880472b7b1ccafa607627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a23732e8aea7880472b7b1ccafa607627">More...</a><br /></td></tr>
-<tr class="separator:a23732e8aea7880472b7b1ccafa607627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1257690fa7a52b79c4805cf3232bae0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ac1257690fa7a52b79c4805cf3232bae0">getLinearJacobian</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
-<tr class="memdesc:ac1257690fa7a52b79c4805cf3232bae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#ac1257690fa7a52b79c4805cf3232bae0">More...</a><br /></td></tr>
-<tr class="separator:ac1257690fa7a52b79c4805cf3232bae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88dd8c3c340fc777f80016e396aad13b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a88dd8c3c340fc777f80016e396aad13b">getLinearJacobian</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const Eigen::Vector3d &amp;_localOffset, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
-<tr class="memdesc:a88dd8c3c340fc777f80016e396aad13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a88dd8c3c340fc777f80016e396aad13b">More...</a><br /></td></tr>
-<tr class="separator:a88dd8c3c340fc777f80016e396aad13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f44e115c36149a87c8f9e6995ffb73d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#abd5ac0d14d2fd0c60fa633b16723f71a">math::AngularJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a8f44e115c36149a87c8f9e6995ffb73d">getAngularJacobian</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
-<tr class="memdesc:a8f44e115c36149a87c8f9e6995ffb73d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular Jacobian of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a8f44e115c36149a87c8f9e6995ffb73d">More...</a><br /></td></tr>
-<tr class="separator:a8f44e115c36149a87c8f9e6995ffb73d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81945ae0ee38937de3da9171da4a2298"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a81945ae0ee38937de3da9171da4a2298">getJacobianSpatialDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode) const override</td></tr>
-<tr class="memdesc:a81945ae0ee38937de3da9171da4a2298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a81945ae0ee38937de3da9171da4a2298">More...</a><br /></td></tr>
-<tr class="separator:a81945ae0ee38937de3da9171da4a2298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdc68bb19b7c8d4f5f7fd83436dac707"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#afdc68bb19b7c8d4f5f7fd83436dac707">getJacobianSpatialDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
-<tr class="memdesc:afdc68bb19b7c8d4f5f7fd83436dac707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#afdc68bb19b7c8d4f5f7fd83436dac707">More...</a><br /></td></tr>
-<tr class="separator:afdc68bb19b7c8d4f5f7fd83436dac707"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b1afc923fb2a198730687b46ff89737"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a9b1afc923fb2a198730687b46ff89737">getJacobianSpatialDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const Eigen::Vector3d &amp;_localOffset) const override</td></tr>
-<tr class="memdesc:a9b1afc923fb2a198730687b46ff89737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a9b1afc923fb2a198730687b46ff89737">More...</a><br /></td></tr>
-<tr class="separator:a9b1afc923fb2a198730687b46ff89737"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab04bc588489c2bb47215ec6340ba3c04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ab04bc588489c2bb47215ec6340ba3c04">getJacobianSpatialDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const Eigen::Vector3d &amp;_localOffset, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
-<tr class="memdesc:ab04bc588489c2bb47215ec6340ba3c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#ab04bc588489c2bb47215ec6340ba3c04">More...</a><br /></td></tr>
-<tr class="separator:ab04bc588489c2bb47215ec6340ba3c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4156d8e3cac215793f5fb899fb21f00e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a4156d8e3cac215793f5fb899fb21f00e">getJacobianClassicDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode) const override</td></tr>
-<tr class="memdesc:a4156d8e3cac215793f5fb899fb21f00e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a4156d8e3cac215793f5fb899fb21f00e">More...</a><br /></td></tr>
-<tr class="separator:a4156d8e3cac215793f5fb899fb21f00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1c781694025df436bd0542f0e3177d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af1c781694025df436bd0542f0e3177d9">getJacobianClassicDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
-<tr class="memdesc:af1c781694025df436bd0542f0e3177d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting the origin a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#af1c781694025df436bd0542f0e3177d9">More...</a><br /></td></tr>
-<tr class="separator:af1c781694025df436bd0542f0e3177d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8524cbe14682e22227e14646020cd78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af8524cbe14682e22227e14646020cd78">getJacobianClassicDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const Eigen::Vector3d &amp;_localOffset, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
-<tr class="memdesc:af8524cbe14682e22227e14646020cd78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#af8524cbe14682e22227e14646020cd78">More...</a><br /></td></tr>
-<tr class="separator:af8524cbe14682e22227e14646020cd78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5945265f0763100b374e75d1e9ffac1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ae5945265f0763100b374e75d1e9ffac1">getLinearJacobianDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
-<tr class="memdesc:ae5945265f0763100b374e75d1e9ffac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear Jacobian (classical) time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#ae5945265f0763100b374e75d1e9ffac1">More...</a><br /></td></tr>
-<tr class="separator:ae5945265f0763100b374e75d1e9ffac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0365fa39664e937e51079e3f8df81256"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a0365fa39664e937e51079e3f8df81256">getLinearJacobianDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const Eigen::Vector3d &amp;_localOffset=Eigen::Vector3d::Zero(), const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
-<tr class="memdesc:a0365fa39664e937e51079e3f8df81256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear Jacobian (classical) time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a0365fa39664e937e51079e3f8df81256">More...</a><br /></td></tr>
-<tr class="separator:a0365fa39664e937e51079e3f8df81256"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0773a871d79761eb0881a79a72d60a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#abd5ac0d14d2fd0c60fa633b16723f71a">math::AngularJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a4a0773a871d79761eb0881a79a72d60a">getAngularJacobianDeriv</a> (const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
-<tr class="memdesc:a4a0773a871d79761eb0881a79a72d60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular Jacobian time derivative of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a4a0773a871d79761eb0881a79a72d60a">More...</a><br /></td></tr>
-<tr class="separator:a4a0773a871d79761eb0881a79a72d60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff119bb9d386b73d6c986a6107e18769"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aff119bb9d386b73d6c986a6107e18769">getJacobian</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node) const override</td></tr>
+<tr class="memdesc:aff119bb9d386b73d6c986a6107e18769"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#aff119bb9d386b73d6c986a6107e18769">More...</a><br /></td></tr>
+<tr class="separator:aff119bb9d386b73d6c986a6107e18769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb1dee8f9b21cfec7b46c6d7988f015"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a1cb1dee8f9b21cfec7b46c6d7988f015">getJacobian</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
+<tr class="memdesc:a1cb1dee8f9b21cfec7b46c6d7988f015"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a1cb1dee8f9b21cfec7b46c6d7988f015">More...</a><br /></td></tr>
+<tr class="separator:a1cb1dee8f9b21cfec7b46c6d7988f015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3f08f4e9e41ba624190e2fb000e2806"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af3f08f4e9e41ba624190e2fb000e2806">getJacobian</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const Eigen::Vector3d &amp;_localOffset) const override</td></tr>
+<tr class="memdesc:af3f08f4e9e41ba624190e2fb000e2806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#af3f08f4e9e41ba624190e2fb000e2806">More...</a><br /></td></tr>
+<tr class="separator:af3f08f4e9e41ba624190e2fb000e2806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20e01a54fd19d9efdf2ebd9768ee3c41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a20e01a54fd19d9efdf2ebd9768ee3c41">getJacobian</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const Eigen::Vector3d &amp;_localOffset, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
+<tr class="memdesc:a20e01a54fd19d9efdf2ebd9768ee3c41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a20e01a54fd19d9efdf2ebd9768ee3c41">More...</a><br /></td></tr>
+<tr class="separator:a20e01a54fd19d9efdf2ebd9768ee3c41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ecea23890f3cb344510cb4728a02d49"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a4ecea23890f3cb344510cb4728a02d49">getWorldJacobian</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node) const override</td></tr>
+<tr class="memdesc:a4ecea23890f3cb344510cb4728a02d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a4ecea23890f3cb344510cb4728a02d49">More...</a><br /></td></tr>
+<tr class="separator:a4ecea23890f3cb344510cb4728a02d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae49fd0d3ec2f22189d2b2c5e979180b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aae49fd0d3ec2f22189d2b2c5e979180b">getWorldJacobian</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const Eigen::Vector3d &amp;_localOffset) const override</td></tr>
+<tr class="memdesc:aae49fd0d3ec2f22189d2b2c5e979180b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#aae49fd0d3ec2f22189d2b2c5e979180b">More...</a><br /></td></tr>
+<tr class="separator:aae49fd0d3ec2f22189d2b2c5e979180b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667794e8f5180b52c8352433a5b6dd1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a667794e8f5180b52c8352433a5b6dd1f">getLinearJacobian</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
+<tr class="memdesc:a667794e8f5180b52c8352433a5b6dd1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a667794e8f5180b52c8352433a5b6dd1f">More...</a><br /></td></tr>
+<tr class="separator:a667794e8f5180b52c8352433a5b6dd1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eb798ec275b36fc094f1101673505a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a3eb798ec275b36fc094f1101673505a8">getLinearJacobian</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const Eigen::Vector3d &amp;_localOffset, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
+<tr class="memdesc:a3eb798ec275b36fc094f1101673505a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a3eb798ec275b36fc094f1101673505a8">More...</a><br /></td></tr>
+<tr class="separator:a3eb798ec275b36fc094f1101673505a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69bcf8e161095692f8e960baae037bb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#abd5ac0d14d2fd0c60fa633b16723f71a">math::AngularJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a69bcf8e161095692f8e960baae037bb8">getAngularJacobian</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
+<tr class="memdesc:a69bcf8e161095692f8e960baae037bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular Jacobian of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a69bcf8e161095692f8e960baae037bb8">More...</a><br /></td></tr>
+<tr class="separator:a69bcf8e161095692f8e960baae037bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c26bcc60a7ac9f4fb5844d28a1cecd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a6c26bcc60a7ac9f4fb5844d28a1cecd0">getJacobianSpatialDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node) const override</td></tr>
+<tr class="memdesc:a6c26bcc60a7ac9f4fb5844d28a1cecd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a6c26bcc60a7ac9f4fb5844d28a1cecd0">More...</a><br /></td></tr>
+<tr class="separator:a6c26bcc60a7ac9f4fb5844d28a1cecd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af027637f1b2e842a1e72bb608c418bf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af027637f1b2e842a1e72bb608c418bf9">getJacobianSpatialDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
+<tr class="memdesc:af027637f1b2e842a1e72bb608c418bf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#af027637f1b2e842a1e72bb608c418bf9">More...</a><br /></td></tr>
+<tr class="separator:af027637f1b2e842a1e72bb608c418bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa181e4ce162d3014b6e5a28b755ecdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aaa181e4ce162d3014b6e5a28b755ecdb">getJacobianSpatialDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const Eigen::Vector3d &amp;_localOffset) const override</td></tr>
+<tr class="memdesc:aaa181e4ce162d3014b6e5a28b755ecdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#aaa181e4ce162d3014b6e5a28b755ecdb">More...</a><br /></td></tr>
+<tr class="separator:aaa181e4ce162d3014b6e5a28b755ecdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a137579162dfa9135697e6db7772f31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a4a137579162dfa9135697e6db7772f31">getJacobianSpatialDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const Eigen::Vector3d &amp;_localOffset, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
+<tr class="memdesc:a4a137579162dfa9135697e6db7772f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a4a137579162dfa9135697e6db7772f31">More...</a><br /></td></tr>
+<tr class="separator:a4a137579162dfa9135697e6db7772f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7f3c1ff7cef2845fb16ec54bd3129ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#af7f3c1ff7cef2845fb16ec54bd3129ba">getJacobianClassicDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node) const override</td></tr>
+<tr class="memdesc:af7f3c1ff7cef2845fb16ec54bd3129ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#af7f3c1ff7cef2845fb16ec54bd3129ba">More...</a><br /></td></tr>
+<tr class="separator:af7f3c1ff7cef2845fb16ec54bd3129ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50aae1b7e4f56ec558f7ab62d976f526"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a50aae1b7e4f56ec558f7ab62d976f526">getJacobianClassicDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf) const override</td></tr>
+<tr class="memdesc:a50aae1b7e4f56ec558f7ab62d976f526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting the origin a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a50aae1b7e4f56ec558f7ab62d976f526">More...</a><br /></td></tr>
+<tr class="separator:a50aae1b7e4f56ec558f7ab62d976f526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b1bba7c94f4cf3cfd0cdb770b5af25c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a4b1bba7c94f4cf3cfd0cdb770b5af25c">getJacobianClassicDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const Eigen::Vector3d &amp;_localOffset, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
+<tr class="memdesc:a4b1bba7c94f4cf3cfd0cdb770b5af25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spatial Jacobian time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a4b1bba7c94f4cf3cfd0cdb770b5af25c">More...</a><br /></td></tr>
+<tr class="separator:a4b1bba7c94f4cf3cfd0cdb770b5af25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f1c29d0f2de46678d7998422ef10ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a63f1c29d0f2de46678d7998422ef10ea">getLinearJacobianDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
+<tr class="memdesc:a63f1c29d0f2de46678d7998422ef10ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear Jacobian (classical) time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a63f1c29d0f2de46678d7998422ef10ea">More...</a><br /></td></tr>
+<tr class="separator:a63f1c29d0f2de46678d7998422ef10ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad81f711a874962e9c7b182c3f84a88a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ad81f711a874962e9c7b182c3f84a88a9">getLinearJacobianDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const Eigen::Vector3d &amp;_localOffset=Eigen::Vector3d::Zero(), const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
+<tr class="memdesc:ad81f711a874962e9c7b182c3f84a88a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the linear Jacobian (classical) time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#ad81f711a874962e9c7b182c3f84a88a9">More...</a><br /></td></tr>
+<tr class="separator:ad81f711a874962e9c7b182c3f84a88a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a323fc3c63b9053f3a2bca654c3f328cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#abd5ac0d14d2fd0c60fa633b16723f71a">math::AngularJacobian</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a323fc3c63b9053f3a2bca654c3f328cf">getAngularJacobianDeriv</a> (const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *_node, const <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html">Frame</a> *_inCoordinatesOf=<a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html#a6531fc7ae10eb122b887cb10946bc9d8">Frame::World</a>()) const override</td></tr>
+<tr class="memdesc:a323fc3c63b9053f3a2bca654c3f328cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the angular Jacobian time derivative of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>.  <a href="#a323fc3c63b9053f3a2bca654c3f328cf">More...</a><br /></td></tr>
+<tr class="separator:a323fc3c63b9053f3a2bca654c3f328cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Equations of Motion</div></td></tr>
 <tr class="memitem:a0f294f105e9d1401af934972814fde51"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a0f294f105e9d1401af934972814fde51">getMass</a> () const override</td></tr>
 <tr class="memdesc:a0f294f105e9d1401af934972814fde51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get total mass of the skeleton.  <a href="#a0f294f105e9d1401af934972814fde51">More...</a><br /></td></tr>
@@ -495,6 +556,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae5ff38e15969a0406465bbdd17a2ecaa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ae5ff38e15969a0406465bbdd17a2ecaa">clearInternalForces</a> () override</td></tr>
 <tr class="memdesc:ae5ff38e15969a0406465bbdd17a2ecaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the internal forces of the BodyNodes in this <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html" title="MetaSkeleton is a pure abstract base class that provides a common interface for obtaining data (such ...">MetaSkeleton</a>.  <a href="#ae5ff38e15969a0406465bbdd17a2ecaa">More...</a><br /></td></tr>
 <tr class="separator:ae5ff38e15969a0406465bbdd17a2ecaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4085bdc50c5c7dc6cfcb34cf19d94d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a9d4085bdc50c5c7dc6cfcb34cf19d94d">notifyArticulatedInertiaUpdate</a> (size_t _treeIdx)</td></tr>
+<tr class="memdesc:a9d4085bdc50c5c7dc6cfcb34cf19d94d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that the articulated inertia and everything that depends on it needs to be updated.  <a href="#a9d4085bdc50c5c7dc6cfcb34cf19d94d">More...</a><br /></td></tr>
+<tr class="separator:a9d4085bdc50c5c7dc6cfcb34cf19d94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfec7729ce5d098ad9b96b7c8626bf12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#adfec7729ce5d098ad9b96b7c8626bf12">notifySupportUpdate</a> (size_t _treeIdx)</td></tr>
+<tr class="memdesc:adfec7729ce5d098ad9b96b7c8626bf12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that the support polygon of a tree needs to be updated.  <a href="#adfec7729ce5d098ad9b96b7c8626bf12">More...</a><br /></td></tr>
+<tr class="separator:adfec7729ce5d098ad9b96b7c8626bf12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b1aa386c6648866d21b4870624b7af7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a9b1aa386c6648866d21b4870624b7af7">getKineticEnergy</a> () const override</td></tr>
 <tr class="memdesc:a9b1aa386c6648866d21b4870624b7af7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the kinetic energy of this <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html" title="MetaSkeleton is a pure abstract base class that provides a common interface for obtaining data (such ...">MetaSkeleton</a>.  <a href="#a9b1aa386c6648866d21b4870624b7af7">More...</a><br /></td></tr>
 <tr class="separator:a9b1aa386c6648866d21b4870624b7af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -530,6 +597,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3e6a05fe87ab3c7ba644833e738e6cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>'s COM Linear Jacobian time derivative in terms of any <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> (default is World <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>).  <a href="#a3e6a05fe87ab3c7ba644833e738e6cb5">More...</a><br /></td></tr>
 <tr class="separator:a3e6a05fe87ab3c7ba644833e738e6cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdart_1_1dynamics_1_1MetaSkeleton"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdart_1_1dynamics_1_1MetaSkeleton')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html">dart::dynamics::MetaSkeleton</a></td></tr>
+<tr class="memitem:ab7569e723777b2834b4fd409e7b11703 inherit pub_methods_classdart_1_1dynamics_1_1MetaSkeleton"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ab7569e723777b2834b4fd409e7b11703">MetaSkeleton</a> (const <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html">MetaSkeleton</a> &amp;)=delete</td></tr>
+<tr class="separator:ab7569e723777b2834b4fd409e7b11703 inherit pub_methods_classdart_1_1dynamics_1_1MetaSkeleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14623e1df9e8f179facf21ebb66b238a inherit pub_methods_classdart_1_1dynamics_1_1MetaSkeleton"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a14623e1df9e8f179facf21ebb66b238a">~MetaSkeleton</a> ()=default</td></tr>
 <tr class="memdesc:a14623e1df9e8f179facf21ebb66b238a inherit pub_methods_classdart_1_1dynamics_1_1MetaSkeleton"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor.  <a href="#a14623e1df9e8f179facf21ebb66b238a">More...</a><br /></td></tr>
 <tr class="separator:a14623e1df9e8f179facf21ebb66b238a inherit pub_methods_classdart_1_1dynamics_1_1MetaSkeleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -726,12 +795,18 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a0bcec8b1354e2f10f76e0f23756161c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a0bcec8b1354e2f10f76e0f23756161c4">registerJoint</a> (<a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html">Joint</a> *_newJoint)</td></tr>
 <tr class="memdesc:a0bcec8b1354e2f10f76e0f23756161c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> with the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. Internal use only.  <a href="#a0bcec8b1354e2f10f76e0f23756161c4">More...</a><br /></td></tr>
 <tr class="separator:a0bcec8b1354e2f10f76e0f23756161c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7839bc805f1b46a04815be5be930c020"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a7839bc805f1b46a04815be5be930c020">registerEndEffector</a> (<a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *_newEndEffector)</td></tr>
+<tr class="memdesc:a7839bc805f1b46a04815be5be930c020"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register an <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> with the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. Internal use only.  <a href="#a7839bc805f1b46a04815be5be930c020">More...</a><br /></td></tr>
+<tr class="separator:a7839bc805f1b46a04815be5be930c020"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37b170608a4f06f13f8584cd3b090e93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a37b170608a4f06f13f8584cd3b090e93">unregisterBodyNode</a> (<a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_oldBodyNode)</td></tr>
 <tr class="memdesc:a37b170608a4f06f13f8584cd3b090e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> from the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. Internal use only.  <a href="#a37b170608a4f06f13f8584cd3b090e93">More...</a><br /></td></tr>
 <tr class="separator:a37b170608a4f06f13f8584cd3b090e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3752bad106dca4db6794edb7e7b8f12e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a3752bad106dca4db6794edb7e7b8f12e">unregisterJoint</a> (<a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html">Joint</a> *_oldJoint)</td></tr>
 <tr class="memdesc:a3752bad106dca4db6794edb7e7b8f12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> from the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. Internal use only.  <a href="#a3752bad106dca4db6794edb7e7b8f12e">More...</a><br /></td></tr>
 <tr class="separator:a3752bad106dca4db6794edb7e7b8f12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca4fff5d2cf94f2e511d6fb2b049455"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#acca4fff5d2cf94f2e511d6fb2b049455">unregisterEndEffector</a> (<a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *_oldEndEffector)</td></tr>
+<tr class="memdesc:acca4fff5d2cf94f2e511d6fb2b049455"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove an <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> from the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. Internal use only.  <a href="#acca4fff5d2cf94f2e511d6fb2b049455">More...</a><br /></td></tr>
+<tr class="separator:acca4fff5d2cf94f2e511d6fb2b049455"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf09eb1a8c26b208eb7faa7efa8a6f86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#abf09eb1a8c26b208eb7faa7efa8a6f86">moveBodyNodeTree</a> (<a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html">Joint</a> *_parentJoint, <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_bodyNode, SkeletonPtr _newSkeleton, <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *_parentNode)</td></tr>
 <tr class="memdesc:abf09eb1a8c26b208eb7faa7efa8a6f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move a subtree of BodyNodes from this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a> to another <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#abf09eb1a8c26b208eb7faa7efa8a6f86">More...</a><br /></td></tr>
 <tr class="separator:abf09eb1a8c26b208eb7faa7efa8a6f86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -757,9 +832,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aab5fb90e41650d9b663b6224f7b1033a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aab5fb90e41650d9b663b6224f7b1033a">receiveBodyNodeTree</a> (const std::vector&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt; &amp;_tree)</td></tr>
 <tr class="memdesc:aab5fb90e41650d9b663b6224f7b1033a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Take in and register a subtree of BodyNodes.  <a href="#aab5fb90e41650d9b663b6224f7b1033a">More...</a><br /></td></tr>
 <tr class="separator:aab5fb90e41650d9b663b6224f7b1033a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d4085bdc50c5c7dc6cfcb34cf19d94d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a9d4085bdc50c5c7dc6cfcb34cf19d94d">notifyArticulatedInertiaUpdate</a> (size_t _treeIdx)</td></tr>
-<tr class="memdesc:a9d4085bdc50c5c7dc6cfcb34cf19d94d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify that the articulated inertia and everything that depends on it needs to be updated.  <a href="#a9d4085bdc50c5c7dc6cfcb34cf19d94d">More...</a><br /></td></tr>
-<tr class="separator:a9d4085bdc50c5c7dc6cfcb34cf19d94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5b2115ab5787d485405def487749792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ad5b2115ab5787d485405def487749792">updateTotalMass</a> ()</td></tr>
 <tr class="memdesc:ad5b2115ab5787d485405def487749792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the computation for total mass.  <a href="#ad5b2115ab5787d485405def487749792">More...</a><br /></td></tr>
 <tr class="separator:ad5b2115ab5787d485405def487749792"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -831,6 +903,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:abd4cceb4e00f8bf7c490277fcfcf0e61"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#abd4cceb4e00f8bf7c490277fcfcf0e61">addEntryToJointNameMgr</a> (<a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html">Joint</a> *_newJoint, bool _updateDofNames=true)</td></tr>
 <tr class="memdesc:abd4cceb4e00f8bf7c490277fcfcf0e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to to the <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> NameManager.  <a href="#abd4cceb4e00f8bf7c490277fcfcf0e61">More...</a><br /></td></tr>
 <tr class="separator:abd4cceb4e00f8bf7c490277fcfcf0e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a406fad6574a0f03e988bf2a2c1b21498"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a406fad6574a0f03e988bf2a2c1b21498">addEntryToEndEffectorNameMgr</a> (<a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *_ee)</td></tr>
+<tr class="memdesc:a406fad6574a0f03e988bf2a2c1b21498"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> to the <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> NameManager.  <a href="#a406fad6574a0f03e988bf2a2c1b21498">More...</a><br /></td></tr>
+<tr class="separator:a406fad6574a0f03e988bf2a2c1b21498"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0acbcaf76501001fb580fc24dd33e63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ae0acbcaf76501001fb580fc24dd33e63">addEntryToSoftBodyNodeNameMgr</a> (<a class="el" href="../../dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html">SoftBodyNode</a> *_newNode)</td></tr>
 <tr class="memdesc:ae0acbcaf76501001fb580fc24dd33e63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a <a class="el" href="../../dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html" title="SoftBodyNode represent a soft body that has one deformable skin. ">SoftBodyNode</a> to the <a class="el" href="../../dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html" title="SoftBodyNode represent a soft body that has one deformable skin. ">SoftBodyNode</a> NameManager.  <a href="#ae0acbcaf76501001fb580fc24dd33e63">More...</a><br /></td></tr>
 <tr class="separator:ae0acbcaf76501001fb580fc24dd33e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -869,6 +944,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a66362ef1bc9907dea780d67125d21c33"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d54/classdart_1_1dynamics_1_1SoftBodyNode.html">SoftBodyNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a66362ef1bc9907dea780d67125d21c33">mSoftBodyNodes</a></td></tr>
 <tr class="memdesc:a66362ef1bc9907dea780d67125d21c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Soft body node list in the skeleton.  <a href="#a66362ef1bc9907dea780d67125d21c33">More...</a><br /></td></tr>
 <tr class="separator:a66362ef1bc9907dea780d67125d21c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad49c0564cee4f062b3e480286a2640ed"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ad49c0564cee4f062b3e480286a2640ed">mEndEffectors</a></td></tr>
+<tr class="memdesc:ad49c0564cee4f062b3e480286a2640ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of EndEffectors in the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#ad49c0564cee4f062b3e480286a2640ed">More...</a><br /></td></tr>
+<tr class="separator:ad49c0564cee4f062b3e480286a2640ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08fee58a53efcb81f1b862538a9a08ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dc9/classdart_1_1common_1_1NameManager.html">dart::common::NameManager</a>&lt; <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a08fee58a53efcb81f1b862538a9a08ec">mNameMgrForBodyNodes</a></td></tr>
 <tr class="memdesc:a08fee58a53efcb81f1b862538a9a08ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">NameManager for tracking BodyNodes.  <a href="#a08fee58a53efcb81f1b862538a9a08ec">More...</a><br /></td></tr>
 <tr class="separator:a08fee58a53efcb81f1b862538a9a08ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -884,8 +962,14 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a0684b5ef890118e2f7eec7446b76d72f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dc9/classdart_1_1common_1_1NameManager.html">dart::common::NameManager</a>&lt; <a class="el" href="../../db/d20/classdart_1_1dynamics_1_1Marker.html">Marker</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a0684b5ef890118e2f7eec7446b76d72f">mNameMgrForMarkers</a></td></tr>
 <tr class="memdesc:a0684b5ef890118e2f7eec7446b76d72f"><td class="mdescLeft">&#160;</td><td class="mdescRight">NameManager for tracking Markers.  <a href="#a0684b5ef890118e2f7eec7446b76d72f">More...</a><br /></td></tr>
 <tr class="separator:a0684b5ef890118e2f7eec7446b76d72f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb24631439fc22244ec175c971e64732"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html">DataCache</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#adb24631439fc22244ec175c971e64732">mTreeCache</a></td></tr>
-<tr class="separator:adb24631439fc22244ec175c971e64732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addb71646e3798090a43910ad5a125334"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dc9/classdart_1_1common_1_1NameManager.html">dart::common::NameManager</a>&lt; <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#addb71646e3798090a43910ad5a125334">mNameMgrForEndEffectors</a></td></tr>
+<tr class="memdesc:addb71646e3798090a43910ad5a125334"><td class="mdescLeft">&#160;</td><td class="mdescRight">NameManager for tracking EndEffectors.  <a href="#addb71646e3798090a43910ad5a125334">More...</a><br /></td></tr>
+<tr class="separator:addb71646e3798090a43910ad5a125334"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8652b82c58ad014d057329ccedb91aa0"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a8652b82c58ad014d057329ccedb91aa0">mWholeBodyIK</a></td></tr>
+<tr class="memdesc:a8652b82c58ad014d057329ccedb91aa0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a8652b82c58ad014d057329ccedb91aa0">More...</a><br /></td></tr>
+<tr class="separator:a8652b82c58ad014d057329ccedb91aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a964a057e1b39784bbf4a5e8afe427469"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d62/namespaceEigen.html#a8dfe4f733de0543cf4067932f2ce7efa">Eigen::aligned_vector</a>&lt; <a class="el" href="../../dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html">DataCache</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a964a057e1b39784bbf4a5e8afe427469">mTreeCache</a></td></tr>
+<tr class="separator:a964a057e1b39784bbf4a5e8afe427469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affbd5a9e992e63ae466ec220f415e5cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html">DataCache</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#affbd5a9e992e63ae466ec220f415e5cf">mSkelCache</a></td></tr>
 <tr class="separator:affbd5a9e992e63ae466ec220f415e5cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c851393473b08c152de53145261f87"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a40c851393473b08c152de53145261f87">mTotalMass</a></td></tr>
@@ -894,6 +978,8 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a80ef43601b26369859895244bea83b37"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a80ef43601b26369859895244bea83b37">mIsImpulseApplied</a></td></tr>
 <tr class="memdesc:a80ef43601b26369859895244bea83b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for status of impulse testing.  <a href="#a80ef43601b26369859895244bea83b37">More...</a><br /></td></tr>
 <tr class="separator:a80ef43601b26369859895244bea83b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a646b88e1f50e5c7b078f350ffc08d6bf"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a646b88e1f50e5c7b078f350ffc08d6bf">mMutex</a></td></tr>
+<tr class="separator:a646b88e1f50e5c7b078f350ffc08d6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classdart_1_1dynamics_1_1MetaSkeleton"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classdart_1_1dynamics_1_1MetaSkeleton')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html">dart::dynamics::MetaSkeleton</a></td></tr>
 <tr class="memitem:a25a31c6b43a3070a7901965ac69de281 inherit pro_attribs_classdart_1_1dynamics_1_1MetaSkeleton"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a1ddbf3d540e1d9ee7398c51a14abe594">NameChangedSignal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a25a31c6b43a3070a7901965ac69de281">mNameChangedSignal</a></td></tr>
 <tr class="separator:a25a31c6b43a3070a7901965ac69de281 inherit pro_attribs_classdart_1_1dynamics_1_1MetaSkeleton"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -917,6 +1003,8 @@ Friends</h2></td></tr>
 <tr class="separator:added7c08f59c0cac1eea44589343b7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68bd66bdc2a02ad9075f39219bcdfe54"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a68bd66bdc2a02ad9075f39219bcdfe54">DegreeOfFreedom</a></td></tr>
 <tr class="separator:a68bd66bdc2a02ad9075f39219bcdfe54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675c233a38e7db8b610228796a2a5591"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a675c233a38e7db8b610228796a2a5591">EndEffector</a></td></tr>
+<tr class="separator:a675c233a38e7db8b610228796a2a5591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 Constructor and Destructor</h2></td></tr>
@@ -932,6 +1020,11 @@ Constructor and Destructor</h2></td></tr>
 <tr class="memitem:aff3e17b2125e5d281a8e3e0353a33bae"><td class="memItemLeft" align="right" valign="top">ConstSkeletonPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aff3e17b2125e5d281a8e3e0353a33bae">getPtr</a> () const </td></tr>
 <tr class="memdesc:aff3e17b2125e5d281a8e3e0353a33bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the shared_ptr that manages this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#aff3e17b2125e5d281a8e3e0353a33bae">More...</a><br /></td></tr>
 <tr class="separator:aff3e17b2125e5d281a8e3e0353a33bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66684ec6fcdb259228f63f7f13714947"><td class="memItemLeft" align="right" valign="top">std::mutex &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a66684ec6fcdb259228f63f7f13714947">getMutex</a> () const </td></tr>
+<tr class="memdesc:a66684ec6fcdb259228f63f7f13714947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the mutex that protects the state of this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>.  <a href="#a66684ec6fcdb259228f63f7f13714947">More...</a><br /></td></tr>
+<tr class="separator:a66684ec6fcdb259228f63f7f13714947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000d9ec51f6c4bb1f32c5ce1ad9bfff7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a000d9ec51f6c4bb1f32c5ce1ad9bfff7">Skeleton</a> (const <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html">Skeleton</a> &amp;)=delete</td></tr>
+<tr class="separator:a000d9ec51f6c4bb1f32c5ce1ad9bfff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a685e2d238dd0a5a1add6c0b61aa92124"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a685e2d238dd0a5a1add6c0b61aa92124">~Skeleton</a> ()</td></tr>
 <tr class="memdesc:a685e2d238dd0a5a1add6c0b61aa92124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a685e2d238dd0a5a1add6c0b61aa92124">More...</a><br /></td></tr>
 <tr class="separator:a685e2d238dd0a5a1add6c0b61aa92124"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -951,6 +1044,30 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>class <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a000d9ec51f6c4bb1f32c5ce1ad9bfff7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dart::dynamics::Skeleton::Skeleton </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html">Skeleton</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a685e2d238dd0a5a1add6c0b61aa92124"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1026,6 +1143,32 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Add a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> to the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> NameManager. </p>
+
+</div>
+</div>
+<a class="anchor" id="a406fad6574a0f03e988bf2a2c1b21498"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dart::dynamics::Skeleton::addEntryToEndEffectorNameMgr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *&#160;</td>
+          <td class="paramname"><em>_ee</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add an <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> to the <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> NameManager. </p>
 
 </div>
 </div>
@@ -1184,6 +1327,23 @@ Additional Inherited Members</h2></td></tr>
 <p>Clear the external forces of the BodyNodes in this <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html" title="MetaSkeleton is a pure abstract base class that provides a common interface for obtaining data (such ...">MetaSkeleton</a>. </p>
 
 <p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a3682740dac6801983295b5bcae9a554e">dart::dynamics::MetaSkeleton</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aee4de0a407cdc0bedfe0e8c463218ad9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dart::dynamics::Skeleton::clearIK </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wipe away the <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>, leaving it as a nullptr. </p>
 
 </div>
 </div>
@@ -1622,6 +1782,24 @@ template&lt;class JointType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="aca9ce72460cb0a86c1ec9fe2c6a0b5fb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::shared_ptr&lt; <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a> &gt; &amp; dart::dynamics::Skeleton::createIK </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+<p>If an IK module already exists in this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>, it will be destroyed and replaced by a brand new one. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8624d1bb8f851066b38a107e8c95acd9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1778,7 +1956,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a71ff8919b063e744dce30d2b0764c4a8"></a>
+<a class="anchor" id="a7385c8472b01d120134a2af40c188a78"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -1786,7 +1964,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
           <td class="memname">void dart::dynamics::Skeleton::enableSelfCollision </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>_enableAdjecentBodies</em> = <code>false</code></td><td>)</td>
+          <td class="paramname"><em>_enableAdjacentBodyCheck</em> = <code>false</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1822,7 +2000,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a8f44e115c36149a87c8f9e6995ffb73d"></a>
+<a class="anchor" id="a69bcf8e161095692f8e960baae037bb8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1832,8 +2010,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#abd5ac0d14d2fd0c60fa633b16723f71a">math::AngularJacobian</a> dart::dynamics::Skeleton::getAngularJacobian </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1857,11 +2035,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the angular Jacobian of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a998d7bac215ae8267cd325e06e515b3b">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ab3d19408ad580c9df1644fcb8c2ce7de">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4a0773a871d79761eb0881a79a72d60a"></a>
+<a class="anchor" id="a323fc3c63b9053f3a2bca654c3f328cf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1871,8 +2049,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#abd5ac0d14d2fd0c60fa633b16723f71a">math::AngularJacobian</a> dart::dynamics::Skeleton::getAngularJacobianDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1896,7 +2074,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the angular Jacobian time derivative of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a3bc99feee27beb0c85cbd416fa45bbf9">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a3c6aafc7051580ddb48e928d935c09a9">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
@@ -2668,6 +2846,78 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ac5656fc64e533dfdf818846e2c868465"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> * dart::dynamics::Skeleton::getEndEffector </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_idx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> whose index is _idx. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3105ba0b5fc7a3670d30423651af70e6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> * dart::dynamics::Skeleton::getEndEffector </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_idx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> whose index is _idx. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0dfb55a28638d77b8ffd322aad446d44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> * dart::dynamics::Skeleton::getEndEffector </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> whose name is _name. </p>
+
+</div>
+</div>
+<a class="anchor" id="a6293832bc689d54975f7dc98c70108e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> * dart::dynamics::Skeleton::getEndEffector </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>_name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> whose name is _name. </p>
+
+</div>
+</div>
 <a class="anchor" id="a2e384ed5e780ad420728274b1c588a27"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2772,6 +3022,43 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get gravity force vector of the <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html" title="MetaSkeleton is a pure abstract base class that provides a common interface for obtaining data (such ...">MetaSkeleton</a>. </p>
 
 <p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a98877f105477ec75d21f3d073b2ac15e">dart::dynamics::MetaSkeleton</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af9e9308fb0e458bd96c899955dfc345a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::shared_ptr&lt; <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a> &gt; &amp; dart::dynamics::Skeleton::getIK </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_createIfNull</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a pointer to a <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+<p>If _createIfNull is true, then the IK module will be generated if one does not already exist. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9ff1c6109376f72f8b0defec51f6bd0c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; const <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a> &gt; dart::dynamics::Skeleton::getIK </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a pointer to a <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+<p>Because this is a const function, a new IK module cannot be created if one does not already exist. </p>
 
 </div>
 </div>
@@ -2982,7 +3269,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a847c6d9f9840822b77c81a0c1c7e24ac"></a>
+<a class="anchor" id="aff119bb9d386b73d6c986a6107e18769"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -2992,8 +3279,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobian </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -3007,11 +3294,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The Jacobian is expressed in the <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a571b3238bba76bdf42fa886b256271d0">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a912cf17de72c50a9bfe31b52f2a1a75e">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3545de762041ba51955e8c257b548e37"></a>
+<a class="anchor" id="a1cb1dee8f9b21cfec7b46c6d7988f015"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3021,8 +3308,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobian </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3046,11 +3333,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ac5d483a1e9b3ff0fe65ccc0234390d05">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a490e4c3d3e67c5b3f55fba6ac627c010">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab63c48b619f66b0b2d20f774bc077cb5"></a>
+<a class="anchor" id="af3f08f4e9e41ba624190e2fb000e2806"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3060,8 +3347,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobian </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3085,11 +3372,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. The Jacobian is expressed in the <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a713b539081a1bcc6ae3a7c7b1d66c994">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a90b3b2cf1a72a981e96111e199cf1772">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a594fdee6a4ad8358cf8cc06c95824bb4"></a>
+<a class="anchor" id="a20e01a54fd19d9efdf2ebd9768ee3c41"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3099,8 +3386,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobian </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3130,11 +3417,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a8918587012516481d8eb036a9c628fca">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a0331bc933f5fe914134918899c060ec9">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a4156d8e3cac215793f5fb899fb21f00e"></a>
+<a class="anchor" id="af7f3c1ff7cef2845fb16ec54bd3129ba"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3144,8 +3431,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobianClassicDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -3159,11 +3446,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The Jacobian is expressed in the World <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a22015203b834d768b335cd71edffc077">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a662748d70921bdfb0156b263f9d10f22">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af1c781694025df436bd0542f0e3177d9"></a>
+<a class="anchor" id="a50aae1b7e4f56ec558f7ab62d976f526"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3173,8 +3460,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobianClassicDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3198,11 +3485,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian time derivative targeting the origin a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#aaea1203edac343600dc2572e07ba3a7d">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a246093a2127b1d4f6a7ed0e60081bb48">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="af8524cbe14682e22227e14646020cd78"></a>
+<a class="anchor" id="a4b1bba7c94f4cf3cfd0cdb770b5af25c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3212,8 +3499,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobianClassicDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3243,11 +3530,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#aeba627c7bfc074ed2f3c34e94058dbed">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a8dd0c06856314d6074533d11b5299d7c">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a81945ae0ee38937de3da9171da4a2298"></a>
+<a class="anchor" id="a6c26bcc60a7ac9f4fb5844d28a1cecd0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3257,8 +3544,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobianSpatialDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -3272,11 +3559,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The Jacobian is expressed in the <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a3ed00d3d6176bd420d9613ae7a2a9d15">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#acb50bb8bed6cfc0a865a02a23f5afd26">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afdc68bb19b7c8d4f5f7fd83436dac707"></a>
+<a class="anchor" id="af027637f1b2e842a1e72bb608c418bf9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3286,8 +3573,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobianSpatialDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3311,11 +3598,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a9c433168c18ad6024f351b49dd10cb15">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a8bcb55f7386ee5eaef17144e94a26c60">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a9b1afc923fb2a198730687b46ff89737"></a>
+<a class="anchor" id="aaa181e4ce162d3014b6e5a28b755ecdb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3325,8 +3612,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobianSpatialDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3350,11 +3637,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. The Jacobian is expressed in the <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a567a1bad853345d6c45471fe302e0c3e">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ae893b9ada7976ac6de688ea1e6412f91">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ab04bc588489c2bb47215ec6340ba3c04"></a>
+<a class="anchor" id="a4a137579162dfa9135697e6db7772f31"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3364,8 +3651,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getJacobianSpatialDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3395,7 +3682,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a7a02079c9e59c2669634673ac415a14e">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#aaff83a1576a0f9a8acd439f25323c4ec">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
@@ -3518,7 +3805,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="ac1257690fa7a52b79c4805cf3232bae0"></a>
+<a class="anchor" id="a667794e8f5180b52c8352433a5b6dd1f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3528,8 +3815,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a> dart::dynamics::Skeleton::getLinearJacobian </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3553,11 +3840,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the linear Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#acb3d50344ab2b9557a3a27ee10db85d0">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a28925ae0bc27d473bf9e6aa8a1431ac5">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a88dd8c3c340fc777f80016e396aad13b"></a>
+<a class="anchor" id="a3eb798ec275b36fc094f1101673505a8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3567,8 +3854,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a> dart::dynamics::Skeleton::getLinearJacobian </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3598,11 +3885,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the linear Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a37fa4ac60ef7ea87aaf1cc144b3250c5">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a55daf00be7b427076cdab6955282c05d">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ae5945265f0763100b374e75d1e9ffac1"></a>
+<a class="anchor" id="a63f1c29d0f2de46678d7998422ef10ea"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3612,8 +3899,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a> dart::dynamics::Skeleton::getLinearJacobianDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3637,11 +3924,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the linear Jacobian (classical) time derivative targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a6473663f34f8d24e1ebd760085531d1c">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a05c24b46eddd0beebd0487641a6ba0c6">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a0365fa39664e937e51079e3f8df81256"></a>
+<a class="anchor" id="ad81f711a874962e9c7b182c3f84a88a9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -3651,8 +3938,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acaf385e0537db2db2df04bf8baf7543b">math::LinearJacobian</a> dart::dynamics::Skeleton::getLinearJacobianDeriv </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3682,7 +3969,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the linear Jacobian (classical) time derivative targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. You can specify a coordinate <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a> to express the Jabocian in. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#aa6894c413f84c8e54c487a2574695941">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a9d98286de6fc56c4700c5ae7d2b22fcd">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
@@ -3795,6 +4082,23 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a66684ec6fcdb259228f63f7f13714947"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex &amp; dart::dynamics::Skeleton::getMutex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the mutex that protects the state of this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a583867ed1a17d3f2397562d68b860a7b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3876,6 +4180,23 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a712df892e919d807eefa78545205992d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t dart::dynamics::Skeleton::getNumEndEffectors </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of EndEffectors on this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9e9219e40953666b7000cde18a834838"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3951,6 +4272,24 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 </div><div class="memdoc">
 
 <p>Get the number of independent trees that this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a> contains. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7798c99048951765a603e8c10aeea979"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::shared_ptr&lt; <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a> &gt; &amp; dart::dynamics::Skeleton::getOrCreateIK </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a pointer to a <a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+<p>The IK module will be generated if one does not already exist. This function is actually the same as getIK(true). </p>
 
 </div>
 </div>
@@ -4186,6 +4525,185 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="ae08e0e2cb25261d57dea950e82c30593"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::pair&lt; Eigen::Vector3d, Eigen::Vector3d &gt; &amp; dart::dynamics::Skeleton::getSupportAxes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the axes that correspond to each component in the support polygon. </p>
+<p>These axes are needed in order to map the points on a support polygon into 3D space. If gravity is along the z-direction, then these axes will simply be &lt;1,0,0&gt; and &lt;0,1,0&gt;. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa9f4c8953fdd439ecdf8703d6f3a871c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::pair&lt; Eigen::Vector3d, Eigen::Vector3d &gt; &amp; dart::dynamics::Skeleton::getSupportAxes </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_treeIdx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Same as <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#ae08e0e2cb25261d57dea950e82c30593" title="Get the axes that correspond to each component in the support polygon. ">getSupportAxes()</a>, but it corresponds to the support polygon of the specified tree within this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a36d65e4ee841d7b982b8089e4637292b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::Vector2d &amp; dart::dynamics::Skeleton::getSupportCentroid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the centroid of the support polygon for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+<p>If the support polygon is an empty set, the components of this vector will be nan. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9ba8b107c44125d0c9e527c7e4c06763"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::Vector2d &amp; dart::dynamics::Skeleton::getSupportCentroid </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_treeIdx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the centroid of the support polygon for a tree in this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+<p>If the support polygon is an empty set, the components of this vector will be nan. </p>
+
+</div>
+</div>
+<a class="anchor" id="adcd8296a00bd4a322e21a1afa72f8a3a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; size_t &gt; &amp; dart::dynamics::Skeleton::getSupportIndices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a list of the <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> indices that correspond to each of the points in the support polygon. </p>
+
+</div>
+</div>
+<a class="anchor" id="a28cc62cfb0f1633f6219e9bc2c92f773"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; size_t &gt; &amp; dart::dynamics::Skeleton::getSupportIndices </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_treeIdx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Same as <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#adcd8296a00bd4a322e21a1afa72f8a3a" title="Get a list of the EndEffector indices that correspond to each of the points in the support polygon...">getSupportIndices()</a>, but it corresponds to the support polygon of the specified tree within this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="aedadd167494fc4d21c9b889408631ecc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d8/d96/namespacedart_1_1math.html#a179187b12bcf5f46512c64ee1b0585a4">math::SupportPolygon</a> &amp; dart::dynamics::Skeleton::getSupportPolygon </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the support polygon of this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>, which is computed based on the gravitational projection of the support geometries of all EndEffectors in this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a> that are currently in support mode. </p>
+
+</div>
+</div>
+<a class="anchor" id="a73cca6756da92eb582692b67b8122528"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d8/d96/namespacedart_1_1math.html#a179187b12bcf5f46512c64ee1b0585a4">math::SupportPolygon</a> &amp; dart::dynamics::Skeleton::getSupportPolygon </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_treeIdx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Same as <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#aedadd167494fc4d21c9b889408631ecc" title="Get the support polygon of this Skeleton, which is computed based on the gravitational projection of ...">getSupportPolygon()</a>, but it will only use EndEffectors within the specified tree within this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a15a3b63667b4b779655cb8945e1d5103"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t dart::dynamics::Skeleton::getSupportVersion </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The version number of a support polygon will be incremented each time the support polygon needs to be recomputed. </p>
+<p>This number can be used to immediately determine whether the support polygon has changed since the last time you asked for it, allowing you to be more efficient in how you handle the data. </p>
+
+</div>
+</div>
+<a class="anchor" id="a56183834fbf636507c0f191cd5d02ec0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t dart::dynamics::Skeleton::getSupportVersion </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_treeIdx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Same as <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html#a15a3b63667b4b779655cb8945e1d5103" title="The version number of a support polygon will be incremented each time the support polygon needs to be...">getSupportVersion()</a>, but it corresponds to the support polygon of the specified tree within this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a3f33156b4ac8a4030cd671f1bb4d1484"></a>
 <div class="memitem">
 <div class="memproto">
@@ -4304,7 +4822,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="a9c8fe42d48240974a750820cfc42422e"></a>
+<a class="anchor" id="a4ecea23890f3cb344510cb4728a02d49"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -4314,8 +4832,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getWorldJacobian </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -4329,11 +4847,11 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian targeting the origin of a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The Jacobian is expressed in the World <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a7b8469b7e65fa3318f2f179480005a8c">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ac1083532af5b277abc53401d978a61d7">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a23732e8aea7880472b7b1ccafa607627"></a>
+<a class="anchor" id="aae49fd0d3ec2f22189d2b2c5e979180b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -4343,8 +4861,8 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#acc30f8840c232e09c8dbaed44de40742">math::Jacobian</a> dart::dynamics::Skeleton::getWorldJacobian </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html">BodyNode</a> *&#160;</td>
-          <td class="paramname"><em>_bodyNode</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../d1/d50/classdart_1_1dynamics_1_1JacobianNode.html">JacobianNode</a> *&#160;</td>
+          <td class="paramname"><em>_node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4368,7 +4886,7 @@ template&lt;class JointType , class NodeType  = BodyNode&gt; </div>
 <p>Get the spatial Jacobian targeting an offset in a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 <p>The _offset is expected in coordinates of the <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. The Jacobian is expressed in the World <a class="el" href="../../db/d38/classdart_1_1dynamics_1_1Frame.html" title="The Frame class serves as the backbone of DART&#39;s kinematic tree structure. ">Frame</a>. </p>
 
-<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#a2bf83720bb407c79ed920eed633bce04">dart::dynamics::MetaSkeleton</a>.</p>
+<p>Implements <a class="el" href="../../d4/d4a/classdart_1_1dynamics_1_1MetaSkeleton.html#ab12b66d6b114cff5fd41eab5682efb86">dart::dynamics::MetaSkeleton</a>.</p>
 
 </div>
 </div>
@@ -4615,9 +5133,6 @@ template&lt;class JointType &gt; </div>
 <a class="anchor" id="a9d4085bdc50c5c7dc6cfcb34cf19d94d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void dart::dynamics::Skeleton::notifyArticulatedInertiaUpdate </td>
@@ -4627,14 +5142,27 @@ template&lt;class JointType &gt; </div>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Notify that the articulated inertia and everything that depends on it needs to be updated. </p>
+
+</div>
+</div>
+<a class="anchor" id="adfec7729ce5d098ad9b96b7c8626bf12"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dart::dynamics::Skeleton::notifySupportUpdate </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_treeIdx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Notify that the support polygon of a tree needs to be updated. </p>
 
 </div>
 </div>
@@ -4713,6 +5241,32 @@ template&lt;class JointType &gt; </div>
 </div><div class="memdoc">
 
 <p>Register a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> with the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. Internal use only. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7839bc805f1b46a04815be5be930c020"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dart::dynamics::Skeleton::registerEndEffector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *&#160;</td>
+          <td class="paramname"><em>_newEndEffector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register an <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> with the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. Internal use only. </p>
 
 </div>
 </div>
@@ -4985,6 +5539,32 @@ template&lt;class JointType &gt; </div>
 </div><div class="memdoc">
 
 <p>Remove a <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> from the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. Internal use only. </p>
+
+</div>
+</div>
+<a class="anchor" id="acca4fff5d2cf94f2e511d6fb2b049455"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dart::dynamics::Skeleton::unregisterEndEffector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> *&#160;</td>
+          <td class="paramname"><em>_oldEndEffector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove an <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a> from the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. Internal use only. </p>
 
 </div>
 </div>
@@ -5742,6 +6322,26 @@ template&lt;class JointType &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a675c233a38e7db8b610228796a2a5591"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a2b27269e818d7b63995be0e0f812bf54"></a>
 <div class="memitem">
 <div class="memproto">
@@ -5825,6 +6425,28 @@ template&lt;size_t &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="ad49c0564cee4f062b3e480286a2640ed"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a>*&gt; dart::dynamics::Skeleton::mEndEffectors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List of EndEffectors in the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a80ef43601b26369859895244bea83b37"></a>
 <div class="memitem">
 <div class="memproto">
@@ -5844,6 +6466,26 @@ template&lt;size_t &gt; </div>
 </div><div class="memdoc">
 
 <p>Flag for status of impulse testing. </p>
+
+</div>
+</div>
+<a class="anchor" id="a646b88e1f50e5c7b078f350ffc08d6bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex dart::dynamics::Skeleton::mMutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -5888,6 +6530,28 @@ template&lt;size_t &gt; </div>
 </div><div class="memdoc">
 
 <p>NameManager for tracking DegreesOfFreedom. </p>
+
+</div>
+</div>
+<a class="anchor" id="addb71646e3798090a43910ad5a125334"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/dc9/classdart_1_1common_1_1NameManager.html">dart::common::NameManager</a>&lt;<a class="el" href="../../db/d3c/classdart_1_1dynamics_1_1EndEffector.html">EndEffector</a>*&gt; dart::dynamics::Skeleton::mNameMgrForEndEffectors</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>NameManager for tracking EndEffectors. </p>
 
 </div>
 </div>
@@ -6065,7 +6729,7 @@ template&lt;size_t &gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="adb24631439fc22244ec175c971e64732"></a>
+<a class="anchor" id="a964a057e1b39784bbf4a5e8afe427469"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -6073,7 +6737,7 @@ template&lt;size_t &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html">DataCache</a>&gt; dart::dynamics::Skeleton::mTreeCache</td>
+          <td class="memname"><a class="el" href="../../d1/d62/namespaceEigen.html#a8dfe4f733de0543cf4067932f2ce7efa">Eigen::aligned_vector</a>&lt;<a class="el" href="../../dc/d9d/structdart_1_1dynamics_1_1Skeleton_1_1DataCache.html">DataCache</a>&gt; dart::dynamics::Skeleton::mTreeCache</td>
         </tr>
       </table>
   </td>
@@ -6121,17 +6785,35 @@ template&lt;size_t &gt; </div>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/dynamics/<a class="el" href="../../d1/ded/Skeleton_8h_source.html">Skeleton.h</a></li>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/dynamics/<a class="el" href="../../d2/d7c/Skeleton_8cpp.html">Skeleton.cpp</a></li>
-</ul>
+<a class="anchor" id="a8652b82c58ad014d057329ccedb91aa0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html">WholeBodyIK</a>&gt; dart::dynamics::Skeleton::mWholeBodyIK</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d5/dfe/classdart_1_1dynamics_1_1WholeBodyIK.html" title="The WholeBodyIK class provides an interface for simultaneously solving all the IK constraints of all ...">WholeBodyIK</a> module for this <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a>. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../d7/d5a/namespacedart_1_1dynamics.html">dynamics</a></li><li class="navelem"><a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html">Skeleton</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:54 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:33 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

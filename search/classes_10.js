@@ -46,5 +46,8 @@ var searchData=
   ['softsimwindow',['SoftSimWindow',['../d9/de6/classdart_1_1gui_1_1SoftSimWindow.html',1,'dart::gui']]],
   ['solver',['Solver',['../d0/d68/classdart_1_1optimizer_1_1Solver.html',1,'dart::optimizer']]],
   ['sub_5fptr',['sub_ptr',['../d5/dfd/classdart_1_1common_1_1sub__ptr.html',1,'dart::common']]],
-  ['subject',['Subject',['../d3/d73/classdart_1_1common_1_1Subject.html',1,'dart::common']]]
+  ['sub_5fptr_3c_20dart_3a_3adynamics_3a_3ainversekinematics_20_3e',['sub_ptr&lt; dart::dynamics::InverseKinematics &gt;',['../d5/dfd/classdart_1_1common_1_1sub__ptr.html',1,'dart::common']]],
+  ['sub_5fptr_3c_20dart_3a_3adynamics_3a_3ajacobiannode_20_3e',['sub_ptr&lt; dart::dynamics::JacobianNode &gt;',['../d5/dfd/classdart_1_1common_1_1sub__ptr.html',1,'dart::common']]],
+  ['subject',['Subject',['../d3/d73/classdart_1_1common_1_1Subject.html',1,'dart::common']]],
+  ['support',['Support',['../d9/d4f/classdart_1_1dynamics_1_1Support.html',1,'dart::dynamics']]]
 ];

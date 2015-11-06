@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>DART: /home/js/DRC/dart_5.0_gazebo/dart/math/Geometry.h File Reference</title>
+<title>DART: /home/js/dev/dart/5.1.1/dart/math/Geometry.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -107,6 +107,8 @@ $(document).ready(function(){initNavTree('d3/d8b/Geometry_8h.html','../../');});
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Geometry.h File Reference</div>  </div>
@@ -123,6 +125,22 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:d8/d96/namespacedart_1_1math"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html">dart::math</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ae600b44172da50dfaf79a6bb02493e9a"><td class="memItemLeft" align="right" valign="top">typedef std::vector&lt; Eigen::Vector3d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#ae600b44172da50dfaf79a6bb02493e9a">dart::math::SupportGeometry</a></td></tr>
+<tr class="separator:ae600b44172da50dfaf79a6bb02493e9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a179187b12bcf5f46512c64ee1b0585a4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d1/d62/namespaceEigen.html#a8dfe4f733de0543cf4067932f2ce7efa">Eigen::aligned_vector</a>&lt; Eigen::Vector2d &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a179187b12bcf5f46512c64ee1b0585a4">dart::math::SupportPolygon</a></td></tr>
+<tr class="separator:a179187b12bcf5f46512c64ee1b0585a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a6738b54f0224620743ddb50c386dfaf9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a6738b54f0224620743ddb50c386dfaf9">dart::math::Intersection_t</a> { <a class="el" href="../../d8/d96/namespacedart_1_1math.html#a6738b54f0224620743ddb50c386dfaf9a092c53833ef135d6d824e61467ac63cb">dart::math::INTERSECTING</a> = 0, 
+<a class="el" href="../../d8/d96/namespacedart_1_1math.html#a6738b54f0224620743ddb50c386dfaf9ae0bd9f4a8d9f0863eafccd58ed9dd75e">dart::math::PARALLEL</a>, 
+<a class="el" href="../../d8/d96/namespacedart_1_1math.html#a6738b54f0224620743ddb50c386dfaf9ad29cba0b7fcfeffda98892d6ac27fa83">dart::math::BEYOND_ENDPOINTS</a>
+ }</td></tr>
+<tr class="memdesc:a6738b54f0224620743ddb50c386dfaf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersection_t is returned by the <a class="el" href="d8/d96/namespacedart_1_1math.html#a7df4e6c71a322095e4265d1bc286d42a" title="Compute the intersection between a line segment that goes from a1 -> a2 and a line segment that goes ...">computeIntersection()</a> function to indicate whether there was a valid intersection between the two line segments.  <a href="../../d8/d96/namespacedart_1_1math.html#a6738b54f0224620743ddb50c386dfaf9">More...</a><br /></td></tr>
+<tr class="separator:a6738b54f0224620743ddb50c386dfaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -226,6 +244,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae84a491564ace03bafae3c722aa34625"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d62/namespaceEigen.html#ac27ace7c50a658d3a07238110fa51a2f">Eigen::Vector6d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#ae84a491564ace03bafae3c722aa34625">dart::math::AdT</a> (const Eigen::Isometry3d &amp;_T, const <a class="el" href="../../d1/d62/namespaceEigen.html#ac27ace7c50a658d3a07238110fa51a2f">Eigen::Vector6d</a> &amp;_V)</td></tr>
 <tr class="memdesc:ae84a491564ace03bafae3c722aa34625"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectify the rotation part so as that it satifies the orthogonality condition.  <a href="#ae84a491564ace03bafae3c722aa34625">More...</a><br /></td></tr>
 <tr class="separator:ae84a491564ace03bafae3c722aa34625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a4d72416c58021ea930b2abfd43bd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d62/namespaceEigen.html#a1690c3b787f33c899925ec8ed093dfdd">Eigen::Matrix6d</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a19a4d72416c58021ea930b2abfd43bd8">dart::math::getAdTMatrix</a> (const Eigen::Isometry3d &amp;T)</td></tr>
+<tr class="memdesc:a19a4d72416c58021ea930b2abfd43bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get linear transformation matrix of Adjoint mapping.  <a href="#a19a4d72416c58021ea930b2abfd43bd8">More...</a><br /></td></tr>
+<tr class="separator:a19a4d72416c58021ea930b2abfd43bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcd54cb5639a2593346270b2c53db123"><td class="memTemplParams" colspan="2">template&lt;typename Derived &gt; </td></tr>
 <tr class="memitem:adcd54cb5639a2593346270b2c53db123"><td class="memTemplItemLeft" align="right" valign="top">Derived::PlainObject&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#adcd54cb5639a2593346270b2c53db123">dart::math::AdTJac</a> (const Eigen::Isometry3d &amp;_T, const Eigen::MatrixBase&lt; Derived &gt; &amp;_J)</td></tr>
 <tr class="memdesc:adcd54cb5639a2593346270b2c53db123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adjoint mapping for dynamic size Jacobian.  <a href="#adcd54cb5639a2593346270b2c53db123">More...</a><br /></td></tr>
@@ -296,6 +317,45 @@ Functions</h2></td></tr>
 <tr class="memitem:a87b8aed61a081a0130e6e24759af13e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a87b8aed61a081a0130e6e24759af13e4">dart::math::verifyTransform</a> (const Eigen::Isometry3d &amp;_T)</td></tr>
 <tr class="memdesc:a87b8aed61a081a0130e6e24759af13e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if determinant of the rotational part of _T is equat to 1 and all the elements are not NaN values.  <a href="#a87b8aed61a081a0130e6e24759af13e4">More...</a><br /></td></tr>
 <tr class="separator:a87b8aed61a081a0130e6e24759af13e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe11a905af9d37de0be1d8ef240e5f9"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename ReturnType &gt; </td></tr>
+<tr class="memitem:aabe11a905af9d37de0be1d8ef240e5f9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#aabe11a905af9d37de0be1d8ef240e5f9">dart::math::extractNullSpace</a> (const Eigen::JacobiSVD&lt; MatrixType &gt; &amp;_SVD, ReturnType &amp;_NS)</td></tr>
+<tr class="separator:aabe11a905af9d37de0be1d8ef240e5f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdcb569c37a9d5877249411ec09b8975"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType , typename ReturnType &gt; </td></tr>
+<tr class="memitem:abdcb569c37a9d5877249411ec09b8975"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#abdcb569c37a9d5877249411ec09b8975">dart::math::computeNullSpace</a> (const MatrixType &amp;_M, ReturnType &amp;_NS)</td></tr>
+<tr class="separator:abdcb569c37a9d5877249411ec09b8975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29ae6cceff278dcf8050c1d898d74ce6"><td class="memItemLeft" align="right" valign="top">SupportPolygon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a29ae6cceff278dcf8050c1d898d74ce6">dart::math::computeSupportPolgyon</a> (const SupportGeometry &amp;_geometry, const Eigen::Vector3d &amp;_axis1=Eigen::Vector3d::UnitX(), const Eigen::Vector3d &amp;_axis2=Eigen::Vector3d::UnitY())</td></tr>
+<tr class="memdesc:a29ae6cceff278dcf8050c1d898d74ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Project the support geometry points onto a plane with the given axes and then compute their convex hull, which will take the form of a polgyon.  <a href="#a29ae6cceff278dcf8050c1d898d74ce6">More...</a><br /></td></tr>
+<tr class="separator:a29ae6cceff278dcf8050c1d898d74ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad25b1327853655ca28f519a2022aca19"><td class="memItemLeft" align="right" valign="top">SupportPolygon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#ad25b1327853655ca28f519a2022aca19">dart::math::computeSupportPolgyon</a> (std::vector&lt; size_t &gt; &amp;_originalIndices, const SupportGeometry &amp;_geometry, const Eigen::Vector3d &amp;_axis1=Eigen::Vector3d::UnitX(), const Eigen::Vector3d &amp;_axis2=Eigen::Vector3d::UnitY())</td></tr>
+<tr class="memdesc:ad25b1327853655ca28f519a2022aca19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as computeSupportPolgyon, except you can pass in a std::vector&lt;size_t&gt; which will have the same size as the returned SupportPolygon, and each entry will contain the original index of each point in the SupportPolygon.  <a href="#ad25b1327853655ca28f519a2022aca19">More...</a><br /></td></tr>
+<tr class="separator:ad25b1327853655ca28f519a2022aca19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51acb5d0b72768b14d41d537f7491ce"><td class="memItemLeft" align="right" valign="top">SupportPolygon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#aa51acb5d0b72768b14d41d537f7491ce">dart::math::computeConvexHull</a> (const SupportPolygon &amp;_points)</td></tr>
+<tr class="memdesc:aa51acb5d0b72768b14d41d537f7491ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the convex hull of a set of 2D points.  <a href="#aa51acb5d0b72768b14d41d537f7491ce">More...</a><br /></td></tr>
+<tr class="separator:aa51acb5d0b72768b14d41d537f7491ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c967c0907e41ffb974db2bfddf4c1a6"><td class="memItemLeft" align="right" valign="top">SupportPolygon&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a8c967c0907e41ffb974db2bfddf4c1a6">dart::math::computeConvexHull</a> (std::vector&lt; size_t &gt; &amp;_originalIndices, const SupportPolygon &amp;_points)</td></tr>
+<tr class="memdesc:a8c967c0907e41ffb974db2bfddf4c1a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the convex hull of a set of 2D points and fills in _originalIndices with the original index of each entry in the returned SupportPolygon.  <a href="#a8c967c0907e41ffb974db2bfddf4c1a6">More...</a><br /></td></tr>
+<tr class="separator:a8c967c0907e41ffb974db2bfddf4c1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7428be3f6b672574f5d88ab0b151679e"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a7428be3f6b672574f5d88ab0b151679e">dart::math::computeCentroidOfHull</a> (const SupportPolygon &amp;_convexHull)</td></tr>
+<tr class="memdesc:a7428be3f6b672574f5d88ab0b151679e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the centroid of a polygon, assuming the polygon is a convex hull.  <a href="#a7428be3f6b672574f5d88ab0b151679e">More...</a><br /></td></tr>
+<tr class="separator:a7428be3f6b672574f5d88ab0b151679e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df4e6c71a322095e4265d1bc286d42a"><td class="memItemLeft" align="right" valign="top">Intersection_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a7df4e6c71a322095e4265d1bc286d42a">dart::math::computeIntersection</a> (Eigen::Vector2d &amp;_intersectionPoint, const Eigen::Vector2d &amp;a1, const Eigen::Vector2d &amp;a2, const Eigen::Vector2d &amp;b1, const Eigen::Vector2d &amp;b2)</td></tr>
+<tr class="memdesc:a7df4e6c71a322095e4265d1bc286d42a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the intersection between a line segment that goes from a1 -&gt; a2 and a line segment that goes from b1 -&gt; b2.  <a href="#a7df4e6c71a322095e4265d1bc286d42a">More...</a><br /></td></tr>
+<tr class="separator:a7df4e6c71a322095e4265d1bc286d42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a0f98be589c708f9506e634eb5df77"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a95a0f98be589c708f9506e634eb5df77">dart::math::cross</a> (const Eigen::Vector2d &amp;_v1, const Eigen::Vector2d &amp;_v2)</td></tr>
+<tr class="memdesc:a95a0f98be589c708f9506e634eb5df77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute a 2D cross product.  <a href="#a95a0f98be589c708f9506e634eb5df77">More...</a><br /></td></tr>
+<tr class="separator:a95a0f98be589c708f9506e634eb5df77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797012fe8e744db0d506962babc459e9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a797012fe8e744db0d506962babc459e9">dart::math::isInsideSupportPolygon</a> (const Eigen::Vector2d &amp;_p, const SupportPolygon &amp;_support, bool _includeEdge=true)</td></tr>
+<tr class="memdesc:a797012fe8e744db0d506962babc459e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the point _p is inside the support polygon.  <a href="#a797012fe8e744db0d506962babc459e9">More...</a><br /></td></tr>
+<tr class="separator:a797012fe8e744db0d506962babc459e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a691f20bdcabbd8698298956308e2d161"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#a691f20bdcabbd8698298956308e2d161">dart::math::computeClosestPointOnLineSegment</a> (const Eigen::Vector2d &amp;_p, const Eigen::Vector2d &amp;_s1, const Eigen::Vector2d &amp;_s2)</td></tr>
+<tr class="memdesc:a691f20bdcabbd8698298956308e2d161"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the point which is closest to _p that also lays on the line segment that goes from _s1 -&gt; _s2.  <a href="#a691f20bdcabbd8698298956308e2d161">More...</a><br /></td></tr>
+<tr class="separator:a691f20bdcabbd8698298956308e2d161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae496bd6bc2539f04e3d896beea4ca076"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#ae496bd6bc2539f04e3d896beea4ca076">dart::math::computeClosestPointOnSupportPolygon</a> (const Eigen::Vector2d &amp;_p, const SupportPolygon &amp;_support)</td></tr>
+<tr class="memdesc:ae496bd6bc2539f04e3d896beea4ca076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the point which is closest to _p that also lays on the edge of the support polygon.  <a href="#ae496bd6bc2539f04e3d896beea4ca076">More...</a><br /></td></tr>
+<tr class="separator:ae496bd6bc2539f04e3d896beea4ca076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac46b22dbd6e5d93f6bce17632d20fe79"><td class="memItemLeft" align="right" valign="top">Eigen::Vector2d&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d96/namespacedart_1_1math.html#ac46b22dbd6e5d93f6bce17632d20fe79">dart::math::computeClosestPointOnSupportPolygon</a> (size_t &amp;_index1, size_t &amp;_index2, const Eigen::Vector2d &amp;_p, const SupportPolygon &amp;_support)</td></tr>
+<tr class="memdesc:ac46b22dbd6e5d93f6bce17632d20fe79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same as closestPointOnSupportPolygon, but also fills in _index1 and _index2 with the indices of the line segment.  <a href="#ac46b22dbd6e5d93f6bce17632d20fe79">More...</a><br /></td></tr>
+<tr class="separator:ac46b22dbd6e5d93f6bce17632d20fe79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -303,7 +363,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_bdca9e024c7189a7f761273aaa65cff0.html">dart</a></li><li class="navelem"><a class="el" href="../../dir_89aa97c1afb8f2f06c6371ad36082490.html">math</a></li><li class="navelem"><a class="el" href="../../d3/d8b/Geometry_8h.html">Geometry.h</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:53 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:32 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

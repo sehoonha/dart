@@ -1,5 +1,14 @@
 var classdart_1_1dynamics_1_1Shape =
 [
+    [ "DataVariance", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a61d01bb71d80b589ee363abd755e9f0f", [
+      [ "STATIC", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a61d01bb71d80b589ee363abd755e9f0fa502f95055f5bf314bf89d827ca9ca209", null ],
+      [ "DYNAMIC_TRANSFORM", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a61d01bb71d80b589ee363abd755e9f0fa2c5d822f3be938e676182409fd0c12b3", null ],
+      [ "DYNAMIC_PRIMITIVE", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a61d01bb71d80b589ee363abd755e9f0fa86dba45230234e3863833e2a1879f413", null ],
+      [ "DYNAMIC_COLOR", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a61d01bb71d80b589ee363abd755e9f0fabadc84c368d769a47990d20a5d1020c8", null ],
+      [ "DYNAMIC_VERTICES", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a61d01bb71d80b589ee363abd755e9f0fa025d94e41df692427a2006cf24b7e0b3", null ],
+      [ "DYNAMIC_ELEMENTS", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a61d01bb71d80b589ee363abd755e9f0fa9193a049bafb05da2687c21150dd4cb8", null ],
+      [ "DYNAMIC", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a61d01bb71d80b589ee363abd755e9f0facab917881ac054365c6c62a35ede15b9", null ]
+    ] ],
     [ "ShapeType", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a52bc86be856e82f6f6d3d86da9cb4b0d", [
       [ "BOX", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a52bc86be856e82f6f6d3d86da9cb4b0da7176c735acd02ef5a1e03bd78a44e502", null ],
       [ "ELLIPSOID", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a52bc86be856e82f6f6d3d86da9cb4b0da3691b628dfab6bb7743f09293b62dbbf", null ],
@@ -11,11 +20,14 @@ var classdart_1_1dynamics_1_1Shape =
     ] ],
     [ "Shape", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a75aa60456007c8a607c0ca5b3066f460", null ],
     [ "~Shape", "db/d1c/classdart_1_1dynamics_1_1Shape.html#aeb636289f25b7ca29ad5701212fd85bd", null ],
+    [ "addDataVariance", "db/d1c/classdart_1_1dynamics_1_1Shape.html#ad0839111649737fa96e7e771eb0c7efb", null ],
+    [ "checkDataVariance", "db/d1c/classdart_1_1dynamics_1_1Shape.html#ae551d28e14c1fc637b85228b0280808e", null ],
     [ "computeInertia", "db/d1c/classdart_1_1dynamics_1_1Shape.html#ad9b50c0c0befade7f7c21b80a7ee574e", null ],
     [ "computeVolume", "db/d1c/classdart_1_1dynamics_1_1Shape.html#aa581749811aa859eb00413c05fda4c55", null ],
     [ "draw", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a69be8755ee56a1785a81159245d54779", null ],
     [ "getBoundingBoxDim", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a9e83cd0732a160c608fb67b1d666bd67", null ],
     [ "getColor", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a3c976e9f3f431935fed64645f7757598", null ],
+    [ "getDataVariance", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a709cc0dc204d0c086f10ac4d1200c10f", null ],
     [ "getID", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a59f9401d81166f53d2f72baa73ac392e", null ],
     [ "getLocalTransform", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a0ddd9a24347fc510ce020a35a37fafaa", null ],
     [ "getOffset", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a19e94d3a019bc76e77478c4b48940c11", null ],
@@ -24,8 +36,14 @@ var classdart_1_1dynamics_1_1Shape =
     [ "getShapeType", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a008111ba607c45955131361d493e053d", null ],
     [ "getVolume", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a0a8824b5ebb8b738ce0431d58e162877", null ],
     [ "initMeshes", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a5eceaa8f57891694c4867c6fabdc0441", null ],
+    [ "isHidden", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a1158f76c0e7794dc54eed4600ca0b63e", null ],
+    [ "refreshData", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a9d3a188f020eb6b01b1472602247c010", null ],
+    [ "removeDataVariance", "db/d1c/classdart_1_1dynamics_1_1Shape.html#aa0685a8a9d886b01dcdcf6e2a121b5bc", null ],
+    [ "setAlpha", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a41155ea94a17916ee89a5931bb12911b", null ],
     [ "setColor", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a3da5d594c646155d6bb9b7589aff84c2", null ],
     [ "setColor", "db/d1c/classdart_1_1dynamics_1_1Shape.html#aaea0f5662e890a37109ec2aba027b10b", null ],
+    [ "setDataVariance", "db/d1c/classdart_1_1dynamics_1_1Shape.html#ad6981d7ba48914e48416e11abf903262", null ],
+    [ "setHidden", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a4f9617279ee6e7e6578c1f3cee92ffd5", null ],
     [ "setLocalTransform", "db/d1c/classdart_1_1dynamics_1_1Shape.html#afa6ae6fa812bb268e35415772fe2f838", null ],
     [ "setOffset", "db/d1c/classdart_1_1dynamics_1_1Shape.html#aa6f8d913f8f6c8bcf32d93c9dd6194fd", null ],
     [ "setRGB", "db/d1c/classdart_1_1dynamics_1_1Shape.html#aeb5179f714bdaa6a504a2191ee9119b1", null ],
@@ -33,8 +51,10 @@ var classdart_1_1dynamics_1_1Shape =
     [ "mBoundingBoxDim", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a806daf43c119d2f4563ca4d5863855d0", null ],
     [ "mColor", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a5592a8e31030dd80c7ad3118c18e3430", null ],
     [ "mCounter", "db/d1c/classdart_1_1dynamics_1_1Shape.html#afa444536c129225a776b011281166508", null ],
+    [ "mHidden", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a27090a2654107ad0b3565e48657d2f0b", null ],
     [ "mID", "db/d1c/classdart_1_1dynamics_1_1Shape.html#adefad047400d9d53ed10a07816c3636e", null ],
     [ "mTransform", "db/d1c/classdart_1_1dynamics_1_1Shape.html#adc7befa7f83453481dae2f89d22c8340", null ],
     [ "mType", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a0c6e8972545c65851285061e11cc6d24", null ],
+    [ "mVariance", "db/d1c/classdart_1_1dynamics_1_1Shape.html#aa4ec0172edc2d98894b5a41228b598a8", null ],
     [ "mVolume", "db/d1c/classdart_1_1dynamics_1_1Shape.html#a0d9eb76ab4c229100cba7ccc833aee0e", null ]
 ];

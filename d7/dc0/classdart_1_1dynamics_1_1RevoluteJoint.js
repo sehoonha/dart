@@ -2,6 +2,7 @@ var classdart_1_1dynamics_1_1RevoluteJoint =
 [
     [ "Properties", "d3/d99/structdart_1_1dynamics_1_1RevoluteJoint_1_1Properties.html", "d3/d99/structdart_1_1dynamics_1_1RevoluteJoint_1_1Properties" ],
     [ "UniqueProperties", "da/de0/structdart_1_1dynamics_1_1RevoluteJoint_1_1UniqueProperties.html", "da/de0/structdart_1_1dynamics_1_1RevoluteJoint_1_1UniqueProperties" ],
+    [ "RevoluteJoint", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#aa5df2585cdcfd9834fcb4d1a8b67fff8", null ],
     [ "~RevoluteJoint", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#abfc419843c6b1f44cb7f98b6f6d50a90", null ],
     [ "RevoluteJoint", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#a5b2de152eeb3e969efd6dc3bc3f4cbe7", null ],
     [ "clone", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#ab810c1a655538d2f3171e08e05fd4a94", null ],
@@ -11,6 +12,7 @@ var classdart_1_1dynamics_1_1RevoluteJoint =
     [ "getRevoluteJointProperties", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#ada5931cf1f977f8cf287504839711c39", null ],
     [ "getStaticType", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#ad569b5a0e79b7ae7478ba51d09fa50b4", null ],
     [ "getType", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#aff4abb1d9f42271db94f6e08cc50502c", null ],
+    [ "isCyclic", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#a6dc2f6717a342469fb099790df176949", null ],
     [ "operator=", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#a182ca74da0f7dce2ce63934ec6e0529d", null ],
     [ "setAxis", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#a6d02f33772be956790e781b058e40f6a", null ],
     [ "setProperties", "d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#ac78238aefd6e1f4063eb7f6b3d45a3f3", null ],

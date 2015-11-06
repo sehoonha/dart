@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -259,6 +259,12 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>DART_DYNAMICS_MAKE_BODYNODEPTR
 : <a class="el" href="dd/d4a/SmartPointer_8h.html#ab97cb6ca79847b58b9e862f916bb3a8a">SmartPointer.h</a>
 </li>
+<li>DART_DYNAMICS_MAKE_IK_PTR
+: <a class="el" href="dd/d4a/SmartPointer_8h.html#a6a7079f2f5fe96fc0d05f315fbdb0e79">SmartPointer.h</a>
+</li>
+<li>DART_DYNAMICS_MAKE_NODEPTR
+: <a class="el" href="dd/d4a/SmartPointer_8h.html#a3e63e076d7030d20e90c41457294d90d">SmartPointer.h</a>
+</li>
 <li>DART_DYNAMICS_MAKE_SHARED_WEAK
 : <a class="el" href="dd/d4a/SmartPointer_8h.html#a3b88c4ed56a52f4428ebe193ef7a8f2e">SmartPointer.h</a>
 </li>
@@ -461,8 +467,9 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>dInfinity
 : <a class="el" href="da/dd5/odeconfig_8h.html#aea12cb583fadeeb9ebb21de90eb2057f">odeconfig.h</a>
 </li>
-<li>dInvertPDMatrix()
-: <a class="el" href="d5/d84/matrix_8cpp.html#af9fdc958f533cb3558154348bde88b64">matrix.cpp</a>
+<li>dInvertPDMatrix
+: <a class="el" href="dd/df4/matrix_8h.html#ab0085c8a682bab26290891f7a387a5a7">matrix.h</a>
+, <a class="el" href="d5/d84/matrix_8cpp.html#af9fdc958f533cb3558154348bde88b64">matrix.cpp</a>
 , <a class="el" href="dd/df4/matrix_8h.html#a726f3b4cf353674b69b35119e845310f">matrix.h</a>
 </li>
 <li>dIsNan
@@ -548,6 +555,7 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>dLDLTAddTL
 : <a class="el" href="dd/df4/matrix_8h.html#ad4a41058fffb63646c797a065881cc57">matrix.h</a>
 , <a class="el" href="d5/d84/matrix_8cpp.html#a9a0237c6f6a2cb44fbdcd05fb88c95a4">matrix.cpp</a>
+, <a class="el" href="dd/df4/matrix_8h.html#add0e90cbd14b48ea6379963f95e2ca98">matrix.h</a>
 </li>
 <li>dLDLTRemove
 : <a class="el" href="dd/df4/matrix_8h.html#afec8d55fd90d61c206db791518858115">matrix.h</a>
@@ -576,18 +584,19 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 , <a class="el" href="d4/d08/misc_8h.html#a93cdbd6b3a827a76588c008ed03fdae9">misc.h</a>
 </li>
 <li>dMaxDifferenceLowerTriangle()
-: <a class="el" href="d7/d5f/misc_8cpp.html#a6b54c2fb1ef1b99b475604e4f9198b00">misc.cpp</a>
-, <a class="el" href="d4/d08/misc_8h.html#a1d55c82aa8cbe85e52f64b65f2cdcabd">misc.h</a>
+: <a class="el" href="d4/d08/misc_8h.html#a1d55c82aa8cbe85e52f64b65f2cdcabd">misc.h</a>
+, <a class="el" href="d7/d5f/misc_8cpp.html#a6b54c2fb1ef1b99b475604e4f9198b00">misc.cpp</a>
 </li>
 <li>dMessage()
-: <a class="el" href="da/d41/error_8h.html#aa0a1f33cf5445295a01f2fd0415ad306">error.h</a>
-, <a class="el" href="dd/db1/error_8cpp.html#a5e90d8eb6ec81e72f49a80310a5a1191">error.cpp</a>
+: <a class="el" href="dd/db1/error_8cpp.html#a5e90d8eb6ec81e72f49a80310a5a1191">error.cpp</a>
+, <a class="el" href="da/d41/error_8h.html#aa0a1f33cf5445295a01f2fd0415ad306">error.h</a>
 </li>
 <li>dMessageFunction
 : <a class="el" href="da/d41/error_8h.html#a0c0ce9cb4f48118d0fea0b9bda6705ce">error.h</a>
 </li>
 <li>dMultiply0()
-: <a class="el" href="d5/d84/matrix_8cpp.html#a78506c02dfe789fec581018876159424">matrix.cpp</a>
+: <a class="el" href="dd/df4/matrix_8h.html#a6b70f2b263ac34fcc5001b0f9863559e">matrix.h</a>
+, <a class="el" href="d5/d84/matrix_8cpp.html#a78506c02dfe789fec581018876159424">matrix.cpp</a>
 , <a class="el" href="dd/df4/matrix_8h.html#a44b996c3b2b29b948ab3c18f826facb5">matrix.h</a>
 </li>
 <li>dMultiply1
@@ -596,7 +605,7 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 </li>
 <li>dMultiply2()
 : <a class="el" href="d5/d84/matrix_8cpp.html#a842d675cc97adfdaedb1f956c69f005c">matrix.cpp</a>
-, <a class="el" href="dd/df4/matrix_8h.html#a4668b2c38390e3ba6abf056efbdc1ad7">matrix.h</a>
+, <a class="el" href="dd/df4/matrix_8h.html#abb69f0a2cc566e4b2a178b90dcda6468">matrix.h</a>
 </li>
 <li>dMULTIPLYOP0_331
 : <a class="el" href="d2/db2/DARTCollide_8cpp.html#acd7c95f0b919f96b818a3793644058f9">DARTCollide.cpp</a>
@@ -626,8 +635,8 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 : <a class="el" href="dc/d54/common_8h.html#adf764cbdea00d65edcd07bb9953ad2b7ac48745dc58041e476045730017202f1b">common.h</a>
 </li>
 <li>dPrintMatrix()
-: <a class="el" href="d7/d5f/misc_8cpp.html#a4d55fa1bb0ffa9a19dc53b6bc2a1d00e">misc.cpp</a>
-, <a class="el" href="d4/d08/misc_8h.html#ae5b3b57ffa2c6cb4f39030038c71ee27">misc.h</a>
+: <a class="el" href="d4/d08/misc_8h.html#ae5b3b57ffa2c6cb4f39030038c71ee27">misc.h</a>
+, <a class="el" href="d7/d5f/misc_8cpp.html#a4d55fa1bb0ffa9a19dc53b6bc2a1d00e">misc.cpp</a>
 </li>
 <li>dQuaternion
 : <a class="el" href="dc/d54/common_8h.html#a738e05127b981cd16967d02eb9de11f5">common.h</a>
@@ -641,16 +650,16 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 , <a class="el" href="d4/d08/misc_8h.html#a387f4c40265912a1edff05a470e71bcf">misc.h</a>
 </li>
 <li>dRandInt()
-: <a class="el" href="d4/d08/misc_8h.html#a83726f03eecb8a05fd3e07624730320c">misc.h</a>
-, <a class="el" href="d7/d5f/misc_8cpp.html#a6c509fb4e134251f819453542517f345">misc.cpp</a>
+: <a class="el" href="d7/d5f/misc_8cpp.html#a6c509fb4e134251f819453542517f345">misc.cpp</a>
+, <a class="el" href="d4/d08/misc_8h.html#a83726f03eecb8a05fd3e07624730320c">misc.h</a>
 </li>
 <li>dRandReal()
-: <a class="el" href="d7/d5f/misc_8cpp.html#a6ce48054965eab1eb27eb99c669618a5">misc.cpp</a>
-, <a class="el" href="d4/d08/misc_8h.html#a0fbeccabc14b8366c3d6dab66432ef60">misc.h</a>
+: <a class="el" href="d4/d08/misc_8h.html#a0fbeccabc14b8366c3d6dab66432ef60">misc.h</a>
+, <a class="el" href="d7/d5f/misc_8cpp.html#a6ce48054965eab1eb27eb99c669618a5">misc.cpp</a>
 </li>
 <li>dRandSetSeed()
-: <a class="el" href="d4/d08/misc_8h.html#a3755efe03d43f651592abfeb233c5d79">misc.h</a>
-, <a class="el" href="d7/d5f/misc_8cpp.html#aa4c173c0117b4407b797140cfbf81353">misc.cpp</a>
+: <a class="el" href="d7/d5f/misc_8cpp.html#aa4c173c0117b4407b797140cfbf81353">misc.cpp</a>
+, <a class="el" href="d4/d08/misc_8h.html#a3755efe03d43f651592abfeb233c5d79">misc.h</a>
 </li>
 <li>dReal
 : <a class="el" href="dc/d54/common_8h.html#a973ec569e405922437be98473d2aa6f8">common.h</a>
@@ -662,14 +671,13 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>dRecipSqrt
 : <a class="el" href="dc/d54/common_8h.html#a3afabe2db377f8fa3c488a2aadf6612a">common.h</a>
 </li>
-<li>dRemoveRowCol
-: <a class="el" href="dd/df4/matrix_8h.html#a1a32d3cb5e94d83de0ca92937368c2da">matrix.h</a>
-, <a class="el" href="d5/d84/matrix_8cpp.html#a394534ef2da5827bc464f8e189edd9e5">matrix.cpp</a>
-, <a class="el" href="dd/df4/matrix_8h.html#ab893db8fd3c204c6794d7722374381e5">matrix.h</a>
+<li>dRemoveRowCol()
+: <a class="el" href="d5/d84/matrix_8cpp.html#a394534ef2da5827bc464f8e189edd9e5">matrix.cpp</a>
+, <a class="el" href="dd/df4/matrix_8h.html#a1a32d3cb5e94d83de0ca92937368c2da">matrix.h</a>
 </li>
 <li>dSetDebugHandler()
-: <a class="el" href="dd/db1/error_8cpp.html#a33d2c72558299fda7b2ddf8e6f687ccd">error.cpp</a>
-, <a class="el" href="da/d41/error_8h.html#a21794b6d29291496b739a4dceeb62007">error.h</a>
+: <a class="el" href="da/d41/error_8h.html#a21794b6d29291496b739a4dceeb62007">error.h</a>
+, <a class="el" href="dd/db1/error_8cpp.html#a33d2c72558299fda7b2ddf8e6f687ccd">error.cpp</a>
 </li>
 <li>dSetErrorHandler()
 : <a class="el" href="dd/db1/error_8cpp.html#acb656dd8d417391b33da7e9698058ab0">error.cpp</a>
@@ -680,11 +688,12 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 , <a class="el" href="dd/db1/error_8cpp.html#acef85e5273815d6dba40800c529e528d">error.cpp</a>
 </li>
 <li>dSetValue()
-: <a class="el" href="d5/d84/matrix_8cpp.html#add067c18d3224aab698a933498ec7a4f">matrix.cpp</a>
-, <a class="el" href="dd/df4/matrix_8h.html#a37c27609a049bfaf4fcec269eca52bc7">matrix.h</a>
+: <a class="el" href="dd/df4/matrix_8h.html#a37c27609a049bfaf4fcec269eca52bc7">matrix.h</a>
+, <a class="el" href="d5/d84/matrix_8cpp.html#add067c18d3224aab698a933498ec7a4f">matrix.cpp</a>
+, <a class="el" href="dd/df4/matrix_8h.html#a2d8ce74721daf1c266ac1648a869b420">matrix.h</a>
 </li>
-<li>dSetZero
-: <a class="el" href="dd/df4/matrix_8h.html#a0a7f1efe28ad003d34657dab5bf04b3d">matrix.h</a>
+<li>dSetZero()
+: <a class="el" href="dd/df4/matrix_8h.html#a8b48847fbc6ae06110ca69471a9acb41">matrix.h</a>
 , <a class="el" href="d5/d84/matrix_8cpp.html#acd978ea0b11a256614a91cd568246f9c">matrix.cpp</a>
 </li>
 <li>dSin
@@ -693,7 +702,6 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>dSolveCholesky()
 : <a class="el" href="dd/df4/matrix_8h.html#aa4c3f814dddc6d4478c187972daf43b6">matrix.h</a>
 , <a class="el" href="d5/d84/matrix_8cpp.html#ad66c59cfddda3da7862f023257f68a81">matrix.cpp</a>
-, <a class="el" href="dd/df4/matrix_8h.html#a789913b4b2b26d6297b19b32d39d970c">matrix.h</a>
 </li>
 <li>dSolveL1
 : <a class="el" href="dd/df4/matrix_8h.html#a5957b632071e41f2269e44a4e9ff9547">matrix.h</a>
@@ -706,17 +714,19 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>dSolveL1_2()
 : <a class="el" href="d9/d3d/fastldlt_8cpp.html#a389dc8c02405a326b932ac5d9e30d503">fastldlt.cpp</a>
 </li>
-<li>dSolveL1T()
-: <a class="el" href="d4/d45/fastltsolve_8cpp.html#aeffbc41179eb90012176d3b2e9bf49d9">fastltsolve.cpp</a>
+<li>dSolveL1T
+: <a class="el" href="dd/df4/matrix_8h.html#a99bd71aa2ab149fb53c737ef13622c97">matrix.h</a>
+, <a class="el" href="d4/d45/fastltsolve_8cpp.html#aeffbc41179eb90012176d3b2e9bf49d9">fastltsolve.cpp</a>
 , <a class="el" href="dd/df4/matrix_8h.html#aea9a561a0de13d08c4bc16ef036dcd03">matrix.h</a>
 </li>
 <li>dSolveLCP()
-: <a class="el" href="df/d8a/lcp_8cpp.html#a77b428335c421ba0a213d31ea96afff6">lcp.cpp</a>
-, <a class="el" href="d8/df5/lcp_8h.html#aef9c4dc3b3e0b474ae06d37ead690d49">lcp.h</a>
+: <a class="el" href="d8/df5/lcp_8h.html#aef9c4dc3b3e0b474ae06d37ead690d49">lcp.h</a>
+, <a class="el" href="df/d8a/lcp_8cpp.html#a77b428335c421ba0a213d31ea96afff6">lcp.cpp</a>
 </li>
 <li>dSolveLDLT()
-: <a class="el" href="d5/d84/matrix_8cpp.html#a2564807150e993368a8cca92580bce67">matrix.cpp</a>
-, <a class="el" href="dd/df4/matrix_8h.html#a8d8c9c1c760d62f5691b5cef2a78af99">matrix.h</a>
+: <a class="el" href="dd/df4/matrix_8h.html#a8d8c9c1c760d62f5691b5cef2a78af99">matrix.h</a>
+, <a class="el" href="d5/d84/matrix_8cpp.html#a2564807150e993368a8cca92580bce67">matrix.cpp</a>
+, <a class="el" href="dd/df4/matrix_8h.html#a08e04002c2759546e297f1f9913b8d82">matrix.h</a>
 </li>
 <li>dSpaceID
 : <a class="el" href="dc/d54/common_8h.html#a3a73c3eaa32ee318ff50cc06cf72c847">common.h</a>
@@ -731,8 +741,8 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 : <a class="el" href="d2/d3f/Console_8h.html#a629c9358594739a393fed2a82f8f8137">Console.h</a>
 </li>
 <li>dTestRand()
-: <a class="el" href="d4/d08/misc_8h.html#adf75cd82dd2111edcd6adcf219ec1978">misc.h</a>
-, <a class="el" href="d7/d5f/misc_8cpp.html#a99653257340e4e1520653a475d4e52ff">misc.cpp</a>
+: <a class="el" href="d7/d5f/misc_8cpp.html#a99653257340e4e1520653a475d4e52ff">misc.cpp</a>
+, <a class="el" href="d4/d08/misc_8h.html#adf75cd82dd2111edcd6adcf219ec1978">misc.h</a>
 </li>
 <li>dTestSolveLCP()
 : <a class="el" href="d8/df5/lcp_8h.html#ad944c6df03fbbfdea992ed94884e610b">lcp.h</a>
@@ -756,9 +766,8 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <li>dVector4
 : <a class="el" href="dc/d54/common_8h.html#a2d352003389649fa4d9b52bd61db2bc9">common.h</a>
 </li>
-<li>dVectorScale
-: <a class="el" href="dd/df4/matrix_8h.html#ae63ea6b7ae615bcc8bed52294622b1ea">matrix.h</a>
-, <a class="el" href="d5/d84/matrix_8cpp.html#a0dca740b9acc4e2fe8a4a2f59c8a3dd9">matrix.cpp</a>
+<li>dVectorScale()
+: <a class="el" href="d5/d84/matrix_8cpp.html#a0dca740b9acc4e2fe8a4a2f59c8a3dd9">matrix.cpp</a>
 , <a class="el" href="dd/df4/matrix_8h.html#a8a8ebc2cb3c108886a550686ba7bbecb">matrix.h</a>
 </li>
 <li>dWorldID
@@ -773,7 +782,7 @@ $(document).ready(function(){initNavTree('globals_d.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:57 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:35 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

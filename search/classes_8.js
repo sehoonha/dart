@@ -6,5 +6,6 @@ var searchData=
   ['inertia',['Inertia',['../d6/d91/classdart_1_1dynamics_1_1Inertia.html',1,'dart::dynamics']]],
   ['integrablesystem',['IntegrableSystem',['../d1/ddb/classdart_1_1integration_1_1IntegrableSystem.html',1,'dart::integration']]],
   ['integrator',['Integrator',['../de/d6a/classdart_1_1integration_1_1Integrator.html',1,'dart::integration']]],
+  ['inversekinematics',['InverseKinematics',['../db/d91/classdart_1_1dynamics_1_1InverseKinematics.html',1,'dart::dynamics']]],
   ['ipoptsolver',['IpoptSolver',['../dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html',1,'dart::optimizer']]]
 ];

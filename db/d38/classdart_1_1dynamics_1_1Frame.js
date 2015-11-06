@@ -1,8 +1,16 @@
 var classdart_1_1dynamics_1_1Frame =
 [
-    [ "Frame", "db/d38/classdart_1_1dynamics_1_1Frame.html#ac3df347a45d070ce29a47362541434e9", null ],
+    [ "ConstructAbstract_t", "db/d38/classdart_1_1dynamics_1_1Frame.html#a5cb1d2564e2836177b7bfa6c3b32dbd3", [
+      [ "ConstructAbstract", "db/d38/classdart_1_1dynamics_1_1Frame.html#a5cb1d2564e2836177b7bfa6c3b32dbd3ab3f1d69a3074c5b221b7c37f7a5bf3e0", null ]
+    ] ],
+    [ "ConstructWorld_t", "db/d38/classdart_1_1dynamics_1_1Frame.html#ae6f548bcdbdb5ec26df7de116fd2cf1f", [
+      [ "ConstructWorld", "db/d38/classdart_1_1dynamics_1_1Frame.html#ae6f548bcdbdb5ec26df7de116fd2cf1fa0f22a2cb742313a96324231a4a1eeedd", null ]
+    ] ],
+    [ "Frame", "db/d38/classdart_1_1dynamics_1_1Frame.html#ad9a0a07845f5042d17e271c7449eff68", null ],
     [ "~Frame", "db/d38/classdart_1_1dynamics_1_1Frame.html#af9603dedf9dcb0cb65f60356fafc6699", null ],
-    [ "Frame", "db/d38/classdart_1_1dynamics_1_1Frame.html#aabc87d5de28139a116fbce4fcf17c85a", null ],
+    [ "Frame", "db/d38/classdart_1_1dynamics_1_1Frame.html#ac3df347a45d070ce29a47362541434e9", null ],
+    [ "Frame", "db/d38/classdart_1_1dynamics_1_1Frame.html#af6371243d3bc9591695ac9b61073fefc", null ],
+    [ "Frame", "db/d38/classdart_1_1dynamics_1_1Frame.html#a62c24d853255cfa765652f6cbcb80d53", null ],
     [ "changeParentFrame", "db/d38/classdart_1_1dynamics_1_1Frame.html#a2ed3bd11ddad0473f2c3687c7606bd91", null ],
     [ "draw", "db/d38/classdart_1_1dynamics_1_1Frame.html#a29aef49d04490515236529e168cf0fd7", null ],
     [ "getAngularAcceleration", "db/d38/classdart_1_1dynamics_1_1Frame.html#af2aea6060c7be8408001d82ad654f062", null ],
@@ -31,6 +39,7 @@ var classdart_1_1dynamics_1_1Frame =
     [ "getSpatialVelocity", "db/d38/classdart_1_1dynamics_1_1Frame.html#aa9072a90944c917e03da4b435d5401ce", null ],
     [ "getSpatialVelocity", "db/d38/classdart_1_1dynamics_1_1Frame.html#a36222eeec6097a502f638e8644d53989", null ],
     [ "getTransform", "db/d38/classdart_1_1dynamics_1_1Frame.html#aa78f1921a5743eaa9af041b1c71a60b8", null ],
+    [ "getTransform", "db/d38/classdart_1_1dynamics_1_1Frame.html#a9befce37ccf4c831ad569538fae2b057", null ],
     [ "getWorldTransform", "db/d38/classdart_1_1dynamics_1_1Frame.html#ae90b9401bcdbdbbbaa4dfe280ce94769", null ],
     [ "isWorld", "db/d38/classdart_1_1dynamics_1_1Frame.html#ad21e049e9bac9c61d69a5865a50852f3", null ],
     [ "notifyAccelerationUpdate", "db/d38/classdart_1_1dynamics_1_1Frame.html#afbaa31c92bfa9c4b6048a6c570818182", null ],

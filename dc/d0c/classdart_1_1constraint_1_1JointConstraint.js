@@ -3,6 +3,8 @@ var classdart_1_1constraint_1_1JointConstraint =
     [ "JointConstraint", "dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#a488264a669e5c98f63ddb749a470ec94", null ],
     [ "JointConstraint", "dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#a9961912ac211ae533036409e9850b20f", null ],
     [ "~JointConstraint", "dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#a60fa5adb65975027310f3a955ea1b1c8", null ],
+    [ "getBodyNode1", "dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#afed7f1ee8390c70707b23b73f80a9d7a", null ],
+    [ "getBodyNode2", "dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#abbf3f3ca0549a6933c1dd5ca7eabce43", null ],
     [ "getConstraintForceMixing", "dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#a823841f350f3775451681ec6ce252365", null ],
     [ "getErrorAllowance", "dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#ab9095ad75f66fa78560ff90477afdab3", null ],
     [ "getErrorReductionParameter", "dc/d0c/classdart_1_1constraint_1_1JointConstraint.html#a1f2313e32006d7ed6c492d233934c2a7", null ],

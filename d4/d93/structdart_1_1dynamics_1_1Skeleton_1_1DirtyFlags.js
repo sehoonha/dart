@@ -10,5 +10,7 @@ var structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags =
     [ "mGravityForces", "d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a7e0b438ddce071bfd39089597ceff22a", null ],
     [ "mInvAugMassMatrix", "d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a1ef56f594bbf12881ee51d044655c41c", null ],
     [ "mInvMassMatrix", "d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#ac87a45026795dde6d6e530ee2c593e70", null ],
-    [ "mMassMatrix", "d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a2de816fbf3da16f642e26b79360d61d2", null ]
+    [ "mMassMatrix", "d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a2de816fbf3da16f642e26b79360d61d2", null ],
+    [ "mSupport", "d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a7547258b9ce46afe8674c53b1e7793e3", null ],
+    [ "mSupportVersion", "d4/d93/structdart_1_1dynamics_1_1Skeleton_1_1DirtyFlags.html#a071c6726ed1f0ffbd4f46d4c8a260866", null ]
 ];

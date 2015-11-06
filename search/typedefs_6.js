@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['hash',['Hash',['../dd/dc0/lodepng_8cpp.html#a13e5b882d7ad0899c101d912bfb2dbf2',1,'lodepng.cpp']]],
-  ['huffmantree',['HuffmanTree',['../dd/dc0/lodepng_8cpp.html#ad705dca4fd163e14e555a6e2e3223af1',1,'lodepng.cpp']]]
+  ['gradientfunction',['GradientFunction',['../d4/d47/namespacedart_1_1optimizer.html#a0b89e9da6eecfd2bddffa178f9c2e9cb',1,'dart::optimizer']]]
 ];

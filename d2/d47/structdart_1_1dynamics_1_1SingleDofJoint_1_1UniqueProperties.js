@@ -9,6 +9,8 @@ var structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties =
     [ "mForceLowerLimit", "d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#acb32fb74721cd5663640a7085c2bbce9", null ],
     [ "mForceUpperLimit", "d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#a9ab93389a7eb789f30c621746689f340", null ],
     [ "mFriction", "d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#a5bfe967c5bc4cdc9cf3d1cd5ad64048a", null ],
+    [ "mInitialPosition", "d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#a0d94d2bade14496d3b94bbd22f406a98", null ],
+    [ "mInitialVelocity", "d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#a2eef0a606e8d17decd688b4858df42f0", null ],
     [ "mPositionLowerLimit", "d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#a8bc43de271d86512a1ffa86cf39179d2", null ],
     [ "mPositionUpperLimit", "d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#acbf3fe5b6150c0af1a4d27f1a236f9d1", null ],
     [ "mPreserveDofName", "d2/d47/structdart_1_1dynamics_1_1SingleDofJoint_1_1UniqueProperties.html#a3a887b67814e4a1179e340dd677c41c3", null ],

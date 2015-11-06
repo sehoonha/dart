@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -108,7 +108,9 @@ $(document).ready(function(){initNavTree('df/d64/classdart_1_1optimizer_1_1DartT
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="../../dd/d41/classdart_1_1optimizer_1_1DartTNLP-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">dart::optimizer::DartTNLP Class Reference</div>  </div>
@@ -130,43 +132,46 @@ Inheritance diagram for dart::optimizer::DartTNLP:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4bf82141c2521b9aa0503840ea7fae55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a4bf82141c2521b9aa0503840ea7fae55">DartTNLP</a> (<a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html">Problem</a> *_problem)</td></tr>
-<tr class="separator:a4bf82141c2521b9aa0503840ea7fae55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bbbf091dca46bea0f3778d7ed41d073"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a5bbbf091dca46bea0f3778d7ed41d073">~DartTNLP</a> ()</td></tr>
 <tr class="separator:a5bbbf091dca46bea0f3778d7ed41d073"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f11d2b431e1da3452a8a6ea595a5a58"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a9f11d2b431e1da3452a8a6ea595a5a58">get_nlp_info</a> (Ipopt::Index &amp;n, Ipopt::Index &amp;m, Ipopt::Index &amp;nnz_jac_g, Ipopt::Index &amp;nnz_h_lag, Ipopt::TNLP::IndexStyleEnum &amp;index_style)</td></tr>
-<tr class="memdesc:a9f11d2b431e1da3452a8a6ea595a5a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return some info about the nlp.  <a href="#a9f11d2b431e1da3452a8a6ea595a5a58">More...</a><br /></td></tr>
-<tr class="separator:a9f11d2b431e1da3452a8a6ea595a5a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2489c0db8da605bdb7e34b0bb9dae6f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#af2489c0db8da605bdb7e34b0bb9dae6f">get_bounds_info</a> (Ipopt::Index n, Ipopt::Number *x_l, Ipopt::Number *x_u, Ipopt::Index m, Ipopt::Number *g_l, Ipopt::Number *g_u)</td></tr>
-<tr class="memdesc:af2489c0db8da605bdb7e34b0bb9dae6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the bounds for my problem.  <a href="#af2489c0db8da605bdb7e34b0bb9dae6f">More...</a><br /></td></tr>
-<tr class="separator:af2489c0db8da605bdb7e34b0bb9dae6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc234a4219deb153a0b7a7c31e23a2c8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#afc234a4219deb153a0b7a7c31e23a2c8">get_starting_point</a> (Ipopt::Index n, bool init_x, Ipopt::Number *x, bool init_z, Ipopt::Number *z_L, Ipopt::Number *z_U, Ipopt::Index m, bool init_lambda, Ipopt::Number *lambda)</td></tr>
-<tr class="memdesc:afc234a4219deb153a0b7a7c31e23a2c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the starting point for the algorithm.  <a href="#afc234a4219deb153a0b7a7c31e23a2c8">More...</a><br /></td></tr>
-<tr class="separator:afc234a4219deb153a0b7a7c31e23a2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9d16c4f5f694f99cd11c293f288e250"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#aa9d16c4f5f694f99cd11c293f288e250">eval_f</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Number &amp;_obj_value)</td></tr>
-<tr class="memdesc:aa9d16c4f5f694f99cd11c293f288e250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the objective value.  <a href="#aa9d16c4f5f694f99cd11c293f288e250">More...</a><br /></td></tr>
-<tr class="separator:aa9d16c4f5f694f99cd11c293f288e250"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73cfbb622796078ec90f97ed72eab433"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a73cfbb622796078ec90f97ed72eab433">eval_grad_f</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Number *_grad_f)</td></tr>
-<tr class="memdesc:a73cfbb622796078ec90f97ed72eab433"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the gradient of the objective.  <a href="#a73cfbb622796078ec90f97ed72eab433">More...</a><br /></td></tr>
-<tr class="separator:a73cfbb622796078ec90f97ed72eab433"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2844439a3e5e0a970750d2bb0d1b44e7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a2844439a3e5e0a970750d2bb0d1b44e7">eval_g</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Index _m, Ipopt::Number *_g)</td></tr>
-<tr class="memdesc:a2844439a3e5e0a970750d2bb0d1b44e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the constraint residuals.  <a href="#a2844439a3e5e0a970750d2bb0d1b44e7">More...</a><br /></td></tr>
-<tr class="separator:a2844439a3e5e0a970750d2bb0d1b44e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0bd53d5a00e320a427eedbb7cef1e59"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#ad0bd53d5a00e320a427eedbb7cef1e59">eval_jac_g</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Index _m, Ipopt::Index _nele_jac, Ipopt::Index *_iRow, Ipopt::Index *_jCol, Ipopt::Number *_values)</td></tr>
-<tr class="memdesc:ad0bd53d5a00e320a427eedbb7cef1e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return: 1) The structure of the jacobian (if "values" is nullptr) 2) The values of the jacobian (if "values" is not nullptr)  <a href="#ad0bd53d5a00e320a427eedbb7cef1e59">More...</a><br /></td></tr>
-<tr class="separator:ad0bd53d5a00e320a427eedbb7cef1e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3ff5c0e928ceddb3e5fa94f63190df"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#aed3ff5c0e928ceddb3e5fa94f63190df">eval_h</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Number _obj_factor, Ipopt::Index _m, const Ipopt::Number *_lambda, bool _new_lambda, Ipopt::Index _nele_hess, Ipopt::Index *_iRow, Ipopt::Index *_jCol, Ipopt::Number *_values)</td></tr>
-<tr class="memdesc:aed3ff5c0e928ceddb3e5fa94f63190df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return: 1) The structure of the hessian of the lagrangian (if "values" is nullptr) 2) The values of the hessian of the lagrangian (if "values" is not nullptr)  <a href="#aed3ff5c0e928ceddb3e5fa94f63190df">More...</a><br /></td></tr>
-<tr class="separator:aed3ff5c0e928ceddb3e5fa94f63190df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a403eb3af71991202abb94b89383b6fff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a403eb3af71991202abb94b89383b6fff">finalize_solution</a> (Ipopt::SolverReturn _status, Ipopt::Index _n, const Ipopt::Number *_x, const Ipopt::Number *_z_L, const Ipopt::Number *_z_U, Ipopt::Index _m, const Ipopt::Number *_g, const Ipopt::Number *_lambda, Ipopt::Number _obj_value, const Ipopt::IpoptData *_ip_data, Ipopt::IpoptCalculatedQuantities *_ip_cq)</td></tr>
-<tr class="memdesc:a403eb3af71991202abb94b89383b6fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called when the algorithm is complete so the TNLP can store/write the solution.  <a href="#a403eb3af71991202abb94b89383b6fff">More...</a><br /></td></tr>
-<tr class="separator:a403eb3af71991202abb94b89383b6fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a420f807cbc8b6c72407aefa8e2609d5d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a420f807cbc8b6c72407aefa8e2609d5d">get_nlp_info</a> (Ipopt::Index &amp;n, Ipopt::Index &amp;m, Ipopt::Index &amp;nnz_jac_g, Ipopt::Index &amp;nnz_h_lag, Ipopt::TNLP::IndexStyleEnum &amp;index_style) override</td></tr>
+<tr class="memdesc:a420f807cbc8b6c72407aefa8e2609d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return some info about the nlp.  <a href="#a420f807cbc8b6c72407aefa8e2609d5d">More...</a><br /></td></tr>
+<tr class="separator:a420f807cbc8b6c72407aefa8e2609d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66fc616b7334e54e73284d1aff004499"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a66fc616b7334e54e73284d1aff004499">get_bounds_info</a> (Ipopt::Index n, Ipopt::Number *x_l, Ipopt::Number *x_u, Ipopt::Index m, Ipopt::Number *g_l, Ipopt::Number *g_u) override</td></tr>
+<tr class="memdesc:a66fc616b7334e54e73284d1aff004499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the bounds for my problem.  <a href="#a66fc616b7334e54e73284d1aff004499">More...</a><br /></td></tr>
+<tr class="separator:a66fc616b7334e54e73284d1aff004499"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eb8a6e43c309bffeb869358856f2265"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a0eb8a6e43c309bffeb869358856f2265">get_starting_point</a> (Ipopt::Index n, bool init_x, Ipopt::Number *x, bool init_z, Ipopt::Number *z_L, Ipopt::Number *z_U, Ipopt::Index m, bool init_lambda, Ipopt::Number *lambda) override</td></tr>
+<tr class="memdesc:a0eb8a6e43c309bffeb869358856f2265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the starting point for the algorithm.  <a href="#a0eb8a6e43c309bffeb869358856f2265">More...</a><br /></td></tr>
+<tr class="separator:a0eb8a6e43c309bffeb869358856f2265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabeb9c4cd9cfae5b955acf63603cbeeb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#aabeb9c4cd9cfae5b955acf63603cbeeb">eval_f</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Number &amp;_obj_value) override</td></tr>
+<tr class="memdesc:aabeb9c4cd9cfae5b955acf63603cbeeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the objective value.  <a href="#aabeb9c4cd9cfae5b955acf63603cbeeb">More...</a><br /></td></tr>
+<tr class="separator:aabeb9c4cd9cfae5b955acf63603cbeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b3f67ef3c47dc020d99b91cac3cdc24"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a3b3f67ef3c47dc020d99b91cac3cdc24">eval_grad_f</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Number *_grad_f) override</td></tr>
+<tr class="memdesc:a3b3f67ef3c47dc020d99b91cac3cdc24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the gradient of the objective.  <a href="#a3b3f67ef3c47dc020d99b91cac3cdc24">More...</a><br /></td></tr>
+<tr class="separator:a3b3f67ef3c47dc020d99b91cac3cdc24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1907394130992b28809496139a7bca5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#ae1907394130992b28809496139a7bca5">eval_g</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Index _m, Ipopt::Number *_g) override</td></tr>
+<tr class="memdesc:ae1907394130992b28809496139a7bca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return the constraint residuals.  <a href="#ae1907394130992b28809496139a7bca5">More...</a><br /></td></tr>
+<tr class="separator:ae1907394130992b28809496139a7bca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba52ede8617a3ad57be2884ab3b2cd3c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#aba52ede8617a3ad57be2884ab3b2cd3c">eval_jac_g</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Index _m, Ipopt::Index _nele_jac, Ipopt::Index *_iRow, Ipopt::Index *_jCol, Ipopt::Number *_values) override</td></tr>
+<tr class="memdesc:aba52ede8617a3ad57be2884ab3b2cd3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return: 1) The structure of the jacobian (if "values" is nullptr) 2) The values of the jacobian (if "values" is not nullptr)  <a href="#aba52ede8617a3ad57be2884ab3b2cd3c">More...</a><br /></td></tr>
+<tr class="separator:aba52ede8617a3ad57be2884ab3b2cd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f8d3bec5dcc01df08c1205a349a1d3d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a8f8d3bec5dcc01df08c1205a349a1d3d">eval_h</a> (Ipopt::Index _n, const Ipopt::Number *_x, bool _new_x, Ipopt::Number _obj_factor, Ipopt::Index _m, const Ipopt::Number *_lambda, bool _new_lambda, Ipopt::Index _nele_hess, Ipopt::Index *_iRow, Ipopt::Index *_jCol, Ipopt::Number *_values) override</td></tr>
+<tr class="memdesc:a8f8d3bec5dcc01df08c1205a349a1d3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to return: 1) The structure of the hessian of the lagrangian (if "values" is nullptr) 2) The values of the hessian of the lagrangian (if "values" is not nullptr)  <a href="#a8f8d3bec5dcc01df08c1205a349a1d3d">More...</a><br /></td></tr>
+<tr class="separator:a8f8d3bec5dcc01df08c1205a349a1d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3451ce9fcd5e194d3a2c1e9023cff327"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a3451ce9fcd5e194d3a2c1e9023cff327">finalize_solution</a> (Ipopt::SolverReturn _status, Ipopt::Index _n, const Ipopt::Number *_x, const Ipopt::Number *_z_L, const Ipopt::Number *_z_U, Ipopt::Index _m, const Ipopt::Number *_g, const Ipopt::Number *_lambda, Ipopt::Number _obj_value, const Ipopt::IpoptData *_ip_data, Ipopt::IpoptCalculatedQuantities *_ip_cq) override</td></tr>
+<tr class="memdesc:a3451ce9fcd5e194d3a2c1e9023cff327"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is called when the algorithm is complete so the TNLP can store/write the solution.  <a href="#a3451ce9fcd5e194d3a2c1e9023cff327">More...</a><br /></td></tr>
+<tr class="separator:a3451ce9fcd5e194d3a2c1e9023cff327"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af6c6434e5f6751fd7af97b9c0a6884cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#af6c6434e5f6751fd7af97b9c0a6884cd">DartTNLP</a> (<a class="el" href="../../dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html">IpoptSolver</a> *_solver)</td></tr>
+<tr class="separator:af6c6434e5f6751fd7af97b9c0a6884cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a0d0bc810a754fe69b6b0d482be7b6210"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html">Problem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a0d0bc810a754fe69b6b0d482be7b6210">mProblem</a></td></tr>
-<tr class="memdesc:a0d0bc810a754fe69b6b0d482be7b6210"><td class="mdescLeft">&#160;</td><td class="mdescRight">DART optimization problem.  <a href="#a0d0bc810a754fe69b6b0d482be7b6210">More...</a><br /></td></tr>
-<tr class="separator:a0d0bc810a754fe69b6b0d482be7b6210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e9e560babbc67d3fb15a6dbbf9cca5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html">IpoptSolver</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#a5e9e560babbc67d3fb15a6dbbf9cca5a">mSolver</a></td></tr>
+<tr class="memdesc:a5e9e560babbc67d3fb15a6dbbf9cca5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">DART optimization problem.  <a href="#a5e9e560babbc67d3fb15a6dbbf9cca5a">More...</a><br /></td></tr>
+<tr class="separator:a5e9e560babbc67d3fb15a6dbbf9cca5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac75b1d438c47a07f6c83c1e904a9fdc6"><td class="memItemLeft" align="right" valign="top">Ipopt::Number&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#ac75b1d438c47a07f6c83c1e904a9fdc6">mObjValue</a></td></tr>
 <tr class="memdesc:ac75b1d438c47a07f6c83c1e904a9fdc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objective value.  <a href="#ac75b1d438c47a07f6c83c1e904a9fdc6">More...</a><br /></td></tr>
 <tr class="separator:ac75b1d438c47a07f6c83c1e904a9fdc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,34 +181,15 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:aa7d9c1124464b1abaf1c0ffee84358a4"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#aa7d9c1124464b1abaf1c0ffee84358a4">mObjHessian</a></td></tr>
 <tr class="memdesc:aa7d9c1124464b1abaf1c0ffee84358a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objective Hessian.  <a href="#aa7d9c1124464b1abaf1c0ffee84358a4">More...</a><br /></td></tr>
 <tr class="separator:aa7d9c1124464b1abaf1c0ffee84358a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:ab7a6727f9083807e04f404d44fb028b3"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html#ab7a6727f9083807e04f404d44fb028b3">IpoptSolver</a></td></tr>
+<tr class="separator:ab7a6727f9083807e04f404d44fb028b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>class <a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html" title="class DartTNLP ">DartTNLP</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a4bf82141c2521b9aa0503840ea7fae55"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">dart::optimizer::DartTNLP::DartTNLP </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html">Problem</a> *&#160;</td>
-          <td class="paramname"><em>_problem</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a5bbbf091dca46bea0f3778d7ed41d073"></a>
 <div class="memitem">
 <div class="memproto">
@@ -227,8 +213,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af6c6434e5f6751fd7af97b9c0a6884cd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dart::optimizer::DartTNLP::DartTNLP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html">IpoptSolver</a> *&#160;</td>
+          <td class="paramname"><em>_solver</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa9d16c4f5f694f99cd11c293f288e250"></a>
+<a class="anchor" id="aabeb9c4cd9cfae5b955acf63603cbeeb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -267,7 +277,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -276,7 +286,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2844439a3e5e0a970750d2bb0d1b44e7"></a>
+<a class="anchor" id="ae1907394130992b28809496139a7bca5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -321,7 +331,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -330,7 +340,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a73cfbb622796078ec90f97ed72eab433"></a>
+<a class="anchor" id="a3b3f67ef3c47dc020d99b91cac3cdc24"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -369,7 +379,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -378,7 +388,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aed3ff5c0e928ceddb3e5fa94f63190df"></a>
+<a class="anchor" id="a8f8d3bec5dcc01df08c1205a349a1d3d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -459,7 +469,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -468,7 +478,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad0bd53d5a00e320a427eedbb7cef1e59"></a>
+<a class="anchor" id="aba52ede8617a3ad57be2884ab3b2cd3c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -531,7 +541,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -540,7 +550,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a403eb3af71991202abb94b89383b6fff"></a>
+<a class="anchor" id="a3451ce9fcd5e194d3a2c1e9023cff327"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -621,7 +631,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -630,7 +640,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af2489c0db8da605bdb7e34b0bb9dae6f"></a>
+<a class="anchor" id="a66fc616b7334e54e73284d1aff004499"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -681,7 +691,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -690,7 +700,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9f11d2b431e1da3452a8a6ea595a5a58"></a>
+<a class="anchor" id="a420f807cbc8b6c72407aefa8e2609d5d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -735,7 +745,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -744,7 +754,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afc234a4219deb153a0b7a7c31e23a2c8"></a>
+<a class="anchor" id="a0eb8a6e43c309bffeb869358856f2265"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -813,12 +823,33 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Method to return the starting point for the algorithm. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="ab7a6727f9083807e04f404d44fb028b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html">IpoptSolver</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -889,7 +920,7 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0d0bc810a754fe69b6b0d482be7b6210"></a>
+<a class="anchor" id="a5e9e560babbc67d3fb15a6dbbf9cca5a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -897,7 +928,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html">Problem</a>* dart::optimizer::DartTNLP::mProblem</td>
+          <td class="memname"><a class="el" href="../../dc/ddb/classdart_1_1optimizer_1_1IpoptSolver.html">IpoptSolver</a>* dart::optimizer::DartTNLP::mSolver</td>
         </tr>
       </table>
   </td>
@@ -911,17 +942,13 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/optimizer/ipopt/<a class="el" href="../../d6/de7/IpoptSolver_8h_source.html">IpoptSolver.h</a></li>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/optimizer/ipopt/<a class="el" href="../../d7/d7b/IpoptSolver_8cpp.html">IpoptSolver.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html">optimizer</a></li><li class="navelem"><a class="el" href="../../df/d64/classdart_1_1optimizer_1_1DartTNLP.html">DartTNLP</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:54 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:34 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

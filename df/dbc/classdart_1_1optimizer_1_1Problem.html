@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -122,12 +122,12 @@ $(document).ready(function(){initNavTree('df/dbc/classdart_1_1optimizer_1_1Probl
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6bb67e0f98695c184f3df2caca46b20c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a6bb67e0f98695c184f3df2caca46b20c">Problem</a> (size_t _dim)</td></tr>
-<tr class="memdesc:a6bb67e0f98695c184f3df2caca46b20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a6bb67e0f98695c184f3df2caca46b20c">More...</a><br /></td></tr>
-<tr class="separator:a6bb67e0f98695c184f3df2caca46b20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1038c1c3d818362be1a0492041978d3c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a1038c1c3d818362be1a0492041978d3c">~Problem</a> ()</td></tr>
-<tr class="memdesc:a1038c1c3d818362be1a0492041978d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a1038c1c3d818362be1a0492041978d3c">More...</a><br /></td></tr>
-<tr class="separator:a1038c1c3d818362be1a0492041978d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d5ed82ac08b515ff69f357d8542e4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a62d5ed82ac08b515ff69f357d8542e4a">Problem</a> (size_t _dim=0)</td></tr>
+<tr class="memdesc:a62d5ed82ac08b515ff69f357d8542e4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a62d5ed82ac08b515ff69f357d8542e4a">More...</a><br /></td></tr>
+<tr class="separator:a62d5ed82ac08b515ff69f357d8542e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55529a9f7ffbc93c65831a0aead18d03"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a55529a9f7ffbc93c65831a0aead18d03">~Problem</a> ()=default</td></tr>
+<tr class="memdesc:a55529a9f7ffbc93c65831a0aead18d03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a55529a9f7ffbc93c65831a0aead18d03">More...</a><br /></td></tr>
+<tr class="separator:a55529a9f7ffbc93c65831a0aead18d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d91d0757b10f49afac3cb1b2dae6195"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a1d91d0757b10f49afac3cb1b2dae6195">setDimension</a> (size_t _dim)</td></tr>
 <tr class="memdesc:a1d91d0757b10f49afac3cb1b2dae6195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set dimension.  <a href="#a1d91d0757b10f49afac3cb1b2dae6195">More...</a><br /></td></tr>
 <tr class="separator:a1d91d0757b10f49afac3cb1b2dae6195"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,6 +140,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8183e5c497241df121934d391d752a0b"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a8183e5c497241df121934d391d752a0b">getInitialGuess</a> () const </td></tr>
 <tr class="memdesc:a8183e5c497241df121934d391d752a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set initial guess for opimization parameters.  <a href="#a8183e5c497241df121934d391d752a0b">More...</a><br /></td></tr>
 <tr class="separator:a8183e5c497241df121934d391d752a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac193f361cbc8bcf9fcd6166448e72f8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ac193f361cbc8bcf9fcd6166448e72f8c">addSeed</a> (const Eigen::VectorXd &amp;_seed)</td></tr>
+<tr class="memdesc:ac193f361cbc8bcf9fcd6166448e72f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a seed for the <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="Abstract class that provides a common interface for different Solvers. ">Solver</a> to use as a hint for the neighborhood of the solution.  <a href="#ac193f361cbc8bcf9fcd6166448e72f8c">More...</a><br /></td></tr>
+<tr class="separator:ac193f361cbc8bcf9fcd6166448e72f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9726914b3fa2db3075c20728e3add56e"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a9726914b3fa2db3075c20728e3add56e">getSeed</a> (size_t _index)</td></tr>
+<tr class="memdesc:a9726914b3fa2db3075c20728e3add56e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a mutable reference of the seed for the specified index.  <a href="#a9726914b3fa2db3075c20728e3add56e">More...</a><br /></td></tr>
+<tr class="separator:a9726914b3fa2db3075c20728e3add56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6cb47a86aaae6d90823bec3df087b7"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a0f6cb47a86aaae6d90823bec3df087b7">getSeed</a> (size_t _index) const </td></tr>
+<tr class="memdesc:a0f6cb47a86aaae6d90823bec3df087b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable version of <a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a9726914b3fa2db3075c20728e3add56e" title="Get a mutable reference of the seed for the specified index. ">getSeed(size_t)</a>  <a href="#a0f6cb47a86aaae6d90823bec3df087b7">More...</a><br /></td></tr>
+<tr class="separator:a0f6cb47a86aaae6d90823bec3df087b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0138cc20fc9b3dece6e6623e0e47041"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::VectorXd &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ae0138cc20fc9b3dece6e6623e0e47041">getSeeds</a> ()</td></tr>
+<tr class="memdesc:ae0138cc20fc9b3dece6e6623e0e47041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a mutable reference to the full vector of seeds that this <a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html" title="class Problem ">Problem</a> currently contains.  <a href="#ae0138cc20fc9b3dece6e6623e0e47041">More...</a><br /></td></tr>
+<tr class="separator:ae0138cc20fc9b3dece6e6623e0e47041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92708e5838235023877c4e668e956a8"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; Eigen::VectorXd &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ad92708e5838235023877c4e668e956a8">getSeeds</a> () const </td></tr>
+<tr class="memdesc:ad92708e5838235023877c4e668e956a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">An immutable version of <a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ae0138cc20fc9b3dece6e6623e0e47041" title="Get a mutable reference to the full vector of seeds that this Problem currently contains. ">getSeeds()</a>  <a href="#ad92708e5838235023877c4e668e956a8">More...</a><br /></td></tr>
+<tr class="separator:ad92708e5838235023877c4e668e956a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5156ed1dd9f2fc8bbf20c3e8b6500e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ac5156ed1dd9f2fc8bbf20c3e8b6500e1">clearAllSeeds</a> ()</td></tr>
+<tr class="memdesc:ac5156ed1dd9f2fc8bbf20c3e8b6500e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the seeds that this <a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html" title="class Problem ">Problem</a> currently contains.  <a href="#ac5156ed1dd9f2fc8bbf20c3e8b6500e1">More...</a><br /></td></tr>
+<tr class="separator:ac5156ed1dd9f2fc8bbf20c3e8b6500e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16160aee4cafd7b4619d673dd30ad9f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a16160aee4cafd7b4619d673dd30ad9f0">setLowerBounds</a> (const Eigen::VectorXd &amp;_lb)</td></tr>
 <tr class="memdesc:a16160aee4cafd7b4619d673dd30ad9f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set lower bounds for optimization parameters.  <a href="#a16160aee4cafd7b4619d673dd30ad9f0">More...</a><br /></td></tr>
 <tr class="separator:a16160aee4cafd7b4619d673dd30ad9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,36 +170,36 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab93784216b85c044d6d2a6a38d36aaca"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ab93784216b85c044d6d2a6a38d36aaca">getUpperBounds</a> () const </td></tr>
 <tr class="memdesc:ab93784216b85c044d6d2a6a38d36aaca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get upper bounds for optimization parameters.  <a href="#ab93784216b85c044d6d2a6a38d36aaca">More...</a><br /></td></tr>
 <tr class="separator:ab93784216b85c044d6d2a6a38d36aaca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef6bd610fc738134b54565fd6b6df952"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#aef6bd610fc738134b54565fd6b6df952">setObjective</a> (<a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *_obj)</td></tr>
-<tr class="memdesc:aef6bd610fc738134b54565fd6b6df952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set minimum objective function.  <a href="#aef6bd610fc738134b54565fd6b6df952">More...</a><br /></td></tr>
-<tr class="separator:aef6bd610fc738134b54565fd6b6df952"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bfb96314ca8e067bb869a9d7dc6f2e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a0bfb96314ca8e067bb869a9d7dc6f2e9">getObjective</a> () const </td></tr>
-<tr class="memdesc:a0bfb96314ca8e067bb869a9d7dc6f2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get objective function.  <a href="#a0bfb96314ca8e067bb869a9d7dc6f2e9">More...</a><br /></td></tr>
-<tr class="separator:a0bfb96314ca8e067bb869a9d7dc6f2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b6dbd0ad02cf416bb16bb99a9775730"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a4b6dbd0ad02cf416bb16bb99a9775730">addEqConstraint</a> (<a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *_eqConst)</td></tr>
-<tr class="memdesc:a4b6dbd0ad02cf416bb16bb99a9775730"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add equality constraint.  <a href="#a4b6dbd0ad02cf416bb16bb99a9775730">More...</a><br /></td></tr>
-<tr class="separator:a4b6dbd0ad02cf416bb16bb99a9775730"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a950bed94347140a6afac66037956595f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a950bed94347140a6afac66037956595f">addIneqConstraint</a> (<a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *_ineqConst)</td></tr>
-<tr class="memdesc:a950bed94347140a6afac66037956595f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add inequality constraint.  <a href="#a950bed94347140a6afac66037956595f">More...</a><br /></td></tr>
-<tr class="separator:a950bed94347140a6afac66037956595f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d21a8188e698db509707fec181fca9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ae9d21a8188e698db509707fec181fca9">setObjective</a> (<a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> _obj)</td></tr>
+<tr class="memdesc:ae9d21a8188e698db509707fec181fca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set minimum objective function.  <a href="#ae9d21a8188e698db509707fec181fca9">More...</a><br /></td></tr>
+<tr class="separator:ae9d21a8188e698db509707fec181fca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af10b216be34ea08421aacacd40a50b46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#af10b216be34ea08421aacacd40a50b46">getObjective</a> () const </td></tr>
+<tr class="memdesc:af10b216be34ea08421aacacd40a50b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get objective function.  <a href="#af10b216be34ea08421aacacd40a50b46">More...</a><br /></td></tr>
+<tr class="separator:af10b216be34ea08421aacacd40a50b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d339af8e30e114bda97458328ba9cae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a7d339af8e30e114bda97458328ba9cae">addEqConstraint</a> (<a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> _eqConst)</td></tr>
+<tr class="memdesc:a7d339af8e30e114bda97458328ba9cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add equality constraint.  <a href="#a7d339af8e30e114bda97458328ba9cae">More...</a><br /></td></tr>
+<tr class="separator:a7d339af8e30e114bda97458328ba9cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00ea5c3e28459bd06f7b3fb13cabfe7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a00ea5c3e28459bd06f7b3fb13cabfe7e">addIneqConstraint</a> (<a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> _ineqConst)</td></tr>
+<tr class="memdesc:a00ea5c3e28459bd06f7b3fb13cabfe7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add inequality constraint.  <a href="#a00ea5c3e28459bd06f7b3fb13cabfe7e">More...</a><br /></td></tr>
+<tr class="separator:a00ea5c3e28459bd06f7b3fb13cabfe7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b6ea83d4d1090a111a570aafd9e1d93"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a7b6ea83d4d1090a111a570aafd9e1d93">getNumEqConstraints</a> () const </td></tr>
 <tr class="memdesc:a7b6ea83d4d1090a111a570aafd9e1d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of equality constraints.  <a href="#a7b6ea83d4d1090a111a570aafd9e1d93">More...</a><br /></td></tr>
 <tr class="separator:a7b6ea83d4d1090a111a570aafd9e1d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdb504c1c408310332454e3fa7416932"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#acdb504c1c408310332454e3fa7416932">getNumIneqConstraints</a> () const </td></tr>
 <tr class="memdesc:acdb504c1c408310332454e3fa7416932"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of inequality constraints.  <a href="#acdb504c1c408310332454e3fa7416932">More...</a><br /></td></tr>
 <tr class="separator:acdb504c1c408310332454e3fa7416932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2170bef529de782caf13c9e8c5c54891"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a2170bef529de782caf13c9e8c5c54891">getEqConstraint</a> (size_t _idx) const </td></tr>
-<tr class="memdesc:a2170bef529de782caf13c9e8c5c54891"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get equality constraint.  <a href="#a2170bef529de782caf13c9e8c5c54891">More...</a><br /></td></tr>
-<tr class="separator:a2170bef529de782caf13c9e8c5c54891"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cdbee48d92365f7c7c978c9e15b9d1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a5cdbee48d92365f7c7c978c9e15b9d1d">getIneqConstraint</a> (size_t _idx) const </td></tr>
-<tr class="memdesc:a5cdbee48d92365f7c7c978c9e15b9d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get inequality constraint.  <a href="#a5cdbee48d92365f7c7c978c9e15b9d1d">More...</a><br /></td></tr>
-<tr class="separator:a5cdbee48d92365f7c7c978c9e15b9d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a594c67517bbfe54c1c32120cb77cc3ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a594c67517bbfe54c1c32120cb77cc3ca">removeEqConstraint</a> (<a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *_eqConst)</td></tr>
-<tr class="memdesc:a594c67517bbfe54c1c32120cb77cc3ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove equality constraint.  <a href="#a594c67517bbfe54c1c32120cb77cc3ca">More...</a><br /></td></tr>
-<tr class="separator:a594c67517bbfe54c1c32120cb77cc3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ada815b88a6ceb7070eb8160f6eec41"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a8ada815b88a6ceb7070eb8160f6eec41">removeIneqConstraint</a> (<a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *_ineqConst)</td></tr>
-<tr class="memdesc:a8ada815b88a6ceb7070eb8160f6eec41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove inequality constraint.  <a href="#a8ada815b88a6ceb7070eb8160f6eec41">More...</a><br /></td></tr>
-<tr class="separator:a8ada815b88a6ceb7070eb8160f6eec41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcfa7990ea329e8dcf73c8586bf3aa1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#afcfa7990ea329e8dcf73c8586bf3aa1a">getEqConstraint</a> (size_t _idx) const </td></tr>
+<tr class="memdesc:afcfa7990ea329e8dcf73c8586bf3aa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get equality constraint.  <a href="#afcfa7990ea329e8dcf73c8586bf3aa1a">More...</a><br /></td></tr>
+<tr class="separator:afcfa7990ea329e8dcf73c8586bf3aa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5747fde66592a051981ae6b4091614ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a5747fde66592a051981ae6b4091614ff">getIneqConstraint</a> (size_t _idx) const </td></tr>
+<tr class="memdesc:a5747fde66592a051981ae6b4091614ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get inequality constraint.  <a href="#a5747fde66592a051981ae6b4091614ff">More...</a><br /></td></tr>
+<tr class="separator:a5747fde66592a051981ae6b4091614ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a1bb550de1be0ab972413db924d6c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a85a1bb550de1be0ab972413db924d6c5">removeEqConstraint</a> (<a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> _eqConst)</td></tr>
+<tr class="memdesc:a85a1bb550de1be0ab972413db924d6c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove equality constraint.  <a href="#a85a1bb550de1be0ab972413db924d6c5">More...</a><br /></td></tr>
+<tr class="separator:a85a1bb550de1be0ab972413db924d6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0390b7ac3b823664996ae42c010cc00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ae0390b7ac3b823664996ae42c010cc00">removeIneqConstraint</a> (<a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> _ineqConst)</td></tr>
+<tr class="memdesc:ae0390b7ac3b823664996ae42c010cc00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove inequality constraint.  <a href="#ae0390b7ac3b823664996ae42c010cc00">More...</a><br /></td></tr>
+<tr class="separator:ae0390b7ac3b823664996ae42c010cc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a35cca066c1781a7a38ed73a6b808a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a2a35cca066c1781a7a38ed73a6b808a4">removeAllEqConstraints</a> ()</td></tr>
 <tr class="memdesc:a2a35cca066c1781a7a38ed73a6b808a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all equality constraints.  <a href="#a2a35cca066c1781a7a38ed73a6b808a4">More...</a><br /></td></tr>
 <tr class="separator:a2a35cca066c1781a7a38ed73a6b808a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,7 +213,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a02f20bc31c21bf502bc7dbd9d06cfda5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optimum value of the objective function.  <a href="#a02f20bc31c21bf502bc7dbd9d06cfda5">More...</a><br /></td></tr>
 <tr class="separator:a02f20bc31c21bf502bc7dbd9d06cfda5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a188897d458238f9c2780b58b1ee132e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a188897d458238f9c2780b58b1ee132e5">setOptimalSolution</a> (const Eigen::VectorXd &amp;_optParam)</td></tr>
-<tr class="memdesc:a188897d458238f9c2780b58b1ee132e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set optimal solution. This function called by <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="class Solver ">Solver</a>.  <a href="#a188897d458238f9c2780b58b1ee132e5">More...</a><br /></td></tr>
+<tr class="memdesc:a188897d458238f9c2780b58b1ee132e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set optimal solution. This function called by <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="Abstract class that provides a common interface for different Solvers. ">Solver</a>.  <a href="#a188897d458238f9c2780b58b1ee132e5">More...</a><br /></td></tr>
 <tr class="separator:a188897d458238f9c2780b58b1ee132e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae4169e7cb4b073f270cd9f90bc8e515"><td class="memItemLeft" align="right" valign="top">const Eigen::VectorXd &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#aae4169e7cb4b073f270cd9f90bc8e515">getOptimalSolution</a> ()</td></tr>
 <tr class="memdesc:aae4169e7cb4b073f270cd9f90bc8e515"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get optimal solution.  <a href="#aae4169e7cb4b073f270cd9f90bc8e515">More...</a><br /></td></tr>
@@ -209,21 +227,24 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a058f35c9e6ca6be6aba8c09526f247e4"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a058f35c9e6ca6be6aba8c09526f247e4">mInitialGuess</a></td></tr>
 <tr class="memdesc:a058f35c9e6ca6be6aba8c09526f247e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initial guess for optimization parameters.  <a href="#a058f35c9e6ca6be6aba8c09526f247e4">More...</a><br /></td></tr>
 <tr class="separator:a058f35c9e6ca6be6aba8c09526f247e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9620456cef740b0af8b8bd348ecbccb6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Eigen::VectorXd &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a9620456cef740b0af8b8bd348ecbccb6">mSeeds</a></td></tr>
+<tr class="memdesc:a9620456cef740b0af8b8bd348ecbccb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional guess hints for the <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="Abstract class that provides a common interface for different Solvers. ">Solver</a>.  <a href="#a9620456cef740b0af8b8bd348ecbccb6">More...</a><br /></td></tr>
+<tr class="separator:a9620456cef740b0af8b8bd348ecbccb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85de78a841ed3ebc768c1ca9a3c56acf"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a85de78a841ed3ebc768c1ca9a3c56acf">mLowerBounds</a></td></tr>
 <tr class="memdesc:a85de78a841ed3ebc768c1ca9a3c56acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lower bounds for optimization parameters.  <a href="#a85de78a841ed3ebc768c1ca9a3c56acf">More...</a><br /></td></tr>
 <tr class="separator:a85de78a841ed3ebc768c1ca9a3c56acf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a7bceb1fa75e9cca3444f2b40af2400"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a9a7bceb1fa75e9cca3444f2b40af2400">mUpperBounds</a></td></tr>
 <tr class="memdesc:a9a7bceb1fa75e9cca3444f2b40af2400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upper bounds for optimization parameters.  <a href="#a9a7bceb1fa75e9cca3444f2b40af2400">More...</a><br /></td></tr>
 <tr class="separator:a9a7bceb1fa75e9cca3444f2b40af2400"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b63c2b44de31387afdb4b8767962236"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a6b63c2b44de31387afdb4b8767962236">mObjective</a></td></tr>
-<tr class="memdesc:a6b63c2b44de31387afdb4b8767962236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objective function.  <a href="#a6b63c2b44de31387afdb4b8767962236">More...</a><br /></td></tr>
-<tr class="separator:a6b63c2b44de31387afdb4b8767962236"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb91e31f72a7ed8a769ab3efd37fdc60"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#aeb91e31f72a7ed8a769ab3efd37fdc60">mEqConstraints</a></td></tr>
-<tr class="memdesc:aeb91e31f72a7ed8a769ab3efd37fdc60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality constraint functions.  <a href="#aeb91e31f72a7ed8a769ab3efd37fdc60">More...</a><br /></td></tr>
-<tr class="separator:aeb91e31f72a7ed8a769ab3efd37fdc60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad47a2b60dfe653d8c3b66fcb4f8643c8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ad47a2b60dfe653d8c3b66fcb4f8643c8">mIneqConstraints</a></td></tr>
-<tr class="memdesc:ad47a2b60dfe653d8c3b66fcb4f8643c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality constraint functions.  <a href="#ad47a2b60dfe653d8c3b66fcb4f8643c8">More...</a><br /></td></tr>
-<tr class="separator:ad47a2b60dfe653d8c3b66fcb4f8643c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba35354993dbf68a061bd2ca593551a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#afba35354993dbf68a061bd2ca593551a">mObjective</a></td></tr>
+<tr class="memdesc:afba35354993dbf68a061bd2ca593551a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objective function.  <a href="#afba35354993dbf68a061bd2ca593551a">More...</a><br /></td></tr>
+<tr class="separator:afba35354993dbf68a061bd2ca593551a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713a7ef206a722ae68fe8e9de9dce83e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a713a7ef206a722ae68fe8e9de9dce83e">mEqConstraints</a></td></tr>
+<tr class="memdesc:a713a7ef206a722ae68fe8e9de9dce83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equality constraint functions.  <a href="#a713a7ef206a722ae68fe8e9de9dce83e">More...</a><br /></td></tr>
+<tr class="separator:a713a7ef206a722ae68fe8e9de9dce83e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61a1858242e0c925f27e9482bb62373"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ae61a1858242e0c925f27e9482bb62373">mIneqConstraints</a></td></tr>
+<tr class="memdesc:ae61a1858242e0c925f27e9482bb62373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inequality constraint functions.  <a href="#ae61a1858242e0c925f27e9482bb62373">More...</a><br /></td></tr>
+<tr class="separator:ae61a1858242e0c925f27e9482bb62373"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a375ff405f430cb2618fa21bc74bc2589"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a375ff405f430cb2618fa21bc74bc2589">mOptimumValue</a></td></tr>
 <tr class="memdesc:a375ff405f430cb2618fa21bc74bc2589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optimal objective value.  <a href="#a375ff405f430cb2618fa21bc74bc2589">More...</a><br /></td></tr>
 <tr class="separator:a375ff405f430cb2618fa21bc74bc2589"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,7 +255,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>class <a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html" title="class Problem ">Problem</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a6bb67e0f98695c184f3df2caca46b20c"></a>
+<a class="anchor" id="a62d5ed82ac08b515ff69f357d8542e4a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -245,7 +266,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">dart::optimizer::Problem::Problem </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>_dim</em></td><td>)</td>
+          <td class="paramname"><em>_dim</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -260,7 +281,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1038c1c3d818362be1a0492041978d3c"></a>
+<a class="anchor" id="a55529a9f7ffbc93c65831a0aead18d03"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -268,7 +289,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">dart::optimizer::Problem::~Problem </td>
+          <td class="memname">virtual dart::optimizer::Problem::~Problem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -276,7 +297,7 @@ Protected Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -286,14 +307,14 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4b6dbd0ad02cf416bb16bb99a9775730"></a>
+<a class="anchor" id="a7d339af8e30e114bda97458328ba9cae"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void dart::optimizer::Problem::addEqConstraint </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&#160;</td>
           <td class="paramname"><em>_eqConst</em></td><td>)</td>
           <td></td>
         </tr>
@@ -304,14 +325,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a950bed94347140a6afac66037956595f"></a>
+<a class="anchor" id="a00ea5c3e28459bd06f7b3fb13cabfe7e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void dart::optimizer::Problem::addIneqConstraint </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&#160;</td>
           <td class="paramname"><em>_ineqConst</em></td><td>)</td>
           <td></td>
         </tr>
@@ -319,6 +340,42 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Add inequality constraint. </p>
+<p>Inequality constraints must evaluate to LESS THAN or equal to zero (within some tolerance) to be satisfied. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac193f361cbc8bcf9fcd6166448e72f8c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dart::optimizer::Problem::addSeed </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>_seed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a seed for the <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="Abstract class that provides a common interface for different Solvers. ">Solver</a> to use as a hint for the neighborhood of the solution. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac5156ed1dd9f2fc8bbf20c3e8b6500e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dart::optimizer::Problem::clearAllSeeds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear the seeds that this <a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html" title="class Problem ">Problem</a> currently contains. </p>
 
 </div>
 </div>
@@ -339,12 +396,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2170bef529de782caf13c9e8c5c54891"></a>
+<a class="anchor" id="afcfa7990ea329e8dcf73c8586bf3aa1a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> * dart::optimizer::Problem::getEqConstraint </td>
+          <td class="memname"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> dart::optimizer::Problem::getEqConstraint </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>_idx</em></td><td>)</td>
@@ -357,12 +414,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5cdbee48d92365f7c7c978c9e15b9d1d"></a>
+<a class="anchor" id="a5747fde66592a051981ae6b4091614ff"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> * dart::optimizer::Problem::getIneqConstraint </td>
+          <td class="memname"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> dart::optimizer::Problem::getIneqConstraint </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>_idx</em></td><td>)</td>
@@ -443,12 +500,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a0bfb96314ca8e067bb869a9d7dc6f2e9"></a>
+<a class="anchor" id="af10b216be34ea08421aacacd40a50b46"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> * dart::optimizer::Problem::getObjective </td>
+          <td class="memname"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> dart::optimizer::Problem::getObjective </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -491,6 +548,77 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Get optimum value of the objective function. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9726914b3fa2db3075c20728e3add56e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::VectorXd &amp; dart::optimizer::Problem::getSeed </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a mutable reference of the seed for the specified index. </p>
+<p>If an out-of-bounds index is provided a warning will print, and a reference to the initial guess will be returned instead. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0f6cb47a86aaae6d90823bec3df087b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::VectorXd &amp; dart::optimizer::Problem::getSeed </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An immutable version of <a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#a9726914b3fa2db3075c20728e3add56e" title="Get a mutable reference of the seed for the specified index. ">getSeed(size_t)</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="ae0138cc20fc9b3dece6e6623e0e47041"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; Eigen::VectorXd &gt; &amp; dart::optimizer::Problem::getSeeds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a mutable reference to the full vector of seeds that this <a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html" title="class Problem ">Problem</a> currently contains. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad92708e5838235023877c4e668e956a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; Eigen::VectorXd &gt; &amp; dart::optimizer::Problem::getSeeds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An immutable version of <a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html#ae0138cc20fc9b3dece6e6623e0e47041" title="Get a mutable reference to the full vector of seeds that this Problem currently contains. ">getSeeds()</a> </p>
 
 </div>
 </div>
@@ -545,14 +673,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a594c67517bbfe54c1c32120cb77cc3ca"></a>
+<a class="anchor" id="a85a1bb550de1be0ab972413db924d6c5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void dart::optimizer::Problem::removeEqConstraint </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&#160;</td>
           <td class="paramname"><em>_eqConst</em></td><td>)</td>
           <td></td>
         </tr>
@@ -563,14 +691,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8ada815b88a6ceb7070eb8160f6eec41"></a>
+<a class="anchor" id="ae0390b7ac3b823664996ae42c010cc00"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void dart::optimizer::Problem::removeIneqConstraint </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&#160;</td>
           <td class="paramname"><em>_ineqConst</em></td><td>)</td>
           <td></td>
         </tr>
@@ -596,6 +724,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set dimension. </p>
+<p>Note: Changing the dimension will clear out the initial guess and any seeds that have been added. </p>
 
 </div>
 </div>
@@ -635,14 +764,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aef6bd610fc738134b54565fd6b6df952"></a>
+<a class="anchor" id="ae9d21a8188e698db509707fec181fca9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void dart::optimizer::Problem::setObjective </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&#160;</td>
           <td class="paramname"><em>_obj</em></td><td>)</td>
           <td></td>
         </tr>
@@ -667,7 +796,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set optimal solution. This function called by <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="class Solver ">Solver</a>. </p>
+<p>Set optimal solution. This function called by <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="Abstract class that provides a common interface for different Solvers. ">Solver</a>. </p>
 
 </div>
 </div>
@@ -686,7 +815,7 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set optimum value of the objective function. </p>
-<p>This function called by <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="class Solver ">Solver</a>. </p>
+<p>This function called by <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="Abstract class that provides a common interface for different Solvers. ">Solver</a>. </p>
 
 </div>
 </div>
@@ -731,7 +860,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aeb91e31f72a7ed8a769ab3efd37fdc60"></a>
+<a class="anchor" id="a713a7ef206a722ae68fe8e9de9dce83e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -739,7 +868,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a>*&gt; dart::optimizer::Problem::mEqConstraints</td>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&gt; dart::optimizer::Problem::mEqConstraints</td>
         </tr>
       </table>
   </td>
@@ -753,7 +882,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad47a2b60dfe653d8c3b66fcb4f8643c8"></a>
+<a class="anchor" id="ae61a1858242e0c925f27e9482bb62373"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -761,7 +890,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a>*&gt; dart::optimizer::Problem::mIneqConstraints</td>
+          <td class="memname">std::vector&lt;<a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a>&gt; dart::optimizer::Problem::mIneqConstraints</td>
         </tr>
       </table>
   </td>
@@ -819,7 +948,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6b63c2b44de31387afdb4b8767962236"></a>
+<a class="anchor" id="afba35354993dbf68a061bd2ca593551a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -827,7 +956,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d9/dae/classdart_1_1optimizer_1_1Function.html">Function</a>* dart::optimizer::Problem::mObjective</td>
+          <td class="memname"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html#a091d108c3f5c8ca77baeae7abe86c31c">FunctionPtr</a> dart::optimizer::Problem::mObjective</td>
         </tr>
       </table>
   </td>
@@ -885,6 +1014,28 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a9620456cef740b0af8b8bd348ecbccb6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Eigen::VectorXd&gt; dart::optimizer::Problem::mSeeds</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Additional guess hints for the <a class="el" href="../../d0/d68/classdart_1_1optimizer_1_1Solver.html" title="Abstract class that provides a common interface for different Solvers. ">Solver</a>. </p>
+
+</div>
+</div>
 <a class="anchor" id="a9a7bceb1fa75e9cca3444f2b40af2400"></a>
 <div class="memitem">
 <div class="memproto">
@@ -907,17 +1058,13 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/optimizer/<a class="el" href="../../d2/d40/Problem_8h_source.html">Problem.h</a></li>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/optimizer/<a class="el" href="../../d9/dfd/Problem_8cpp.html">Problem.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../d4/d47/namespacedart_1_1optimizer.html">optimizer</a></li><li class="navelem"><a class="el" href="../../df/dbc/classdart_1_1optimizer_1_1Problem.html">Problem</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:54 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:34 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

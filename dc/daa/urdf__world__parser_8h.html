@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>DART: /home/js/DRC/dart_5.0_gazebo/dart/utils/urdf/urdf_world_parser.h File Reference</title>
+<title>DART: /home/js/dev/dart/5.1.1/dart/utils/urdf/urdf_world_parser.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('dc/daa/urdf__world__parser_8h.html','.
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -114,19 +115,36 @@ $(document).ready(function(){initNavTree('dc/daa/urdf__world__parser_8h.html','.
 <div class="contents">
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 <code>#include &lt;urdf_world/world.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../da/d26/Uri_8h_source.html">dart/common/Uri.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="../../d3/d14/ResourceRetriever_8h_source.html">dart/common/ResourceRetriever.h</a>&gt;</code><br />
+<code>#include &lt;urdf_model/model.h&gt;</code><br />
+<code>#include &lt;urdf_model/pose.h&gt;</code><br />
+<code>#include &lt;urdf_model/twist.h&gt;</code><br />
 </div>
 <p><a href="../../dc/daa/urdf__world__parser_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/ddf/classdart_1_1utils_1_1urdf__parsing_1_1Entity.html">dart::utils::urdf_parsing::Entity</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">We need a customized version of the <a class="el" href="../../d7/ddf/classdart_1_1utils_1_1urdf__parsing_1_1Entity.html" title="We need a customized version of the Entity class, because we need to keep track of a Skeleton&#39;s uri i...">Entity</a> class, because we need to keep track of a Skeleton's uri in order to correctly handle relative file paths.  <a href="../../d7/ddf/classdart_1_1utils_1_1urdf__parsing_1_1Entity.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d46/classdart_1_1utils_1_1urdf__parsing_1_1World.html">dart::utils::urdf_parsing::World</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:dc/de5/namespaceurdf"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de5/namespaceurdf.html">urdf</a></td></tr>
+<tr class="memitem:d1/d83/namespacedart"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d8/d28/namespacedart_1_1utils"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html">dart::utils</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d0/d4c/namespacedart_1_1utils_1_1urdf__parsing"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4c/namespacedart_1_1utils_1_1urdf__parsing.html">dart::utils::urdf_parsing</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:abceff708e2ae7c4ebee6a002550161f6"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; World &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/de5/namespaceurdf.html#abceff708e2ae7c4ebee6a002550161f6">urdf::parseWorldURDF</a> (const std::string &amp;_xml_string, std::string _root_to_world_path)</td></tr>
-<tr class="memdesc:abceff708e2ae7c4ebee6a002550161f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">parseWorldURDF  <a href="#abceff708e2ae7c4ebee6a002550161f6">More...</a><br /></td></tr>
-<tr class="separator:abceff708e2ae7c4ebee6a002550161f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abda1895a15f2d6dcef7ce9671c1088a1"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; World &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d4c/namespacedart_1_1utils_1_1urdf__parsing.html#abda1895a15f2d6dcef7ce9671c1088a1">dart::utils::urdf_parsing::parseWorldURDF</a> (const std::string &amp;_xml_string, const <a class="el" href="../../d8/d07/structdart_1_1common_1_1Uri.html">dart::common::Uri</a> &amp;_baseUri)</td></tr>
+<tr class="memdesc:abda1895a15f2d6dcef7ce9671c1088a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">parseWorldURDF  <a href="#abda1895a15f2d6dcef7ce9671c1088a1">More...</a><br /></td></tr>
+<tr class="separator:abda1895a15f2d6dcef7ce9671c1088a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -134,7 +152,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_bdca9e024c7189a7f761273aaa65cff0.html">dart</a></li><li class="navelem"><a class="el" href="../../dir_558fb1470c9a14158ce5db1674bc31a0.html">utils</a></li><li class="navelem"><a class="el" href="../../dir_3167900535d36e4d345e8f71f69e35cd.html">urdf</a></li><li class="navelem"><a class="el" href="../../dc/daa/urdf__world__parser_8h.html">urdf_world_parser.h</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:53 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:32 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

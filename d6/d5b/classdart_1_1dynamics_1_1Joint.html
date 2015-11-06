@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -172,6 +172,8 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aaba213b26a47dc4d17fad9dffbda5d8e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#aaba213b26a47dc4d17fad9dffbda5d8e">Joint</a> (const <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html">Joint</a> &amp;)=delete</td></tr>
+<tr class="separator:aaba213b26a47dc4d17fad9dffbda5d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af87d36a8f7e467a1845e33f737a85f5f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#af87d36a8f7e467a1845e33f737a85f5f">~Joint</a> ()</td></tr>
 <tr class="memdesc:af87d36a8f7e467a1845e33f737a85f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#af87d36a8f7e467a1845e33f737a85f5f">More...</a><br /></td></tr>
 <tr class="separator:af87d36a8f7e467a1845e33f737a85f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -241,12 +243,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0cf31e9e9ae066be9835932781dd1888"><td class="memItemLeft" align="right" valign="top">const Eigen::Isometry3d &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a0cf31e9e9ae066be9835932781dd1888">getTransformFromChildBodyNode</a> () const </td></tr>
 <tr class="memdesc:a0cf31e9e9ae066be9835932781dd1888"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get transformation from child body node to this joint.  <a href="#a0cf31e9e9ae066be9835932781dd1888">More...</a><br /></td></tr>
 <tr class="separator:a0cf31e9e9ae066be9835932781dd1888"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3212ca5f7893cfd9a5422ab17df4038b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a3212ca5f7893cfd9a5422ab17df4038b">setPositionLimited</a> (bool _isPositionLimited)</td></tr>
-<tr class="memdesc:a3212ca5f7893cfd9a5422ab17df4038b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to enforce joint position limit.  <a href="#a3212ca5f7893cfd9a5422ab17df4038b">More...</a><br /></td></tr>
-<tr class="separator:a3212ca5f7893cfd9a5422ab17df4038b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19be90af3114561eb28468f98a0b3e25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a19be90af3114561eb28468f98a0b3e25">isPositionLimited</a> () const </td></tr>
-<tr class="memdesc:a19be90af3114561eb28468f98a0b3e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether enforcing joint position limit.  <a href="#a19be90af3114561eb28468f98a0b3e25">More...</a><br /></td></tr>
-<tr class="separator:a19be90af3114561eb28468f98a0b3e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa069a41f8bcac2ded08f5b008e8f3983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#aa069a41f8bcac2ded08f5b008e8f3983">setPositionLimitEnforced</a> (bool _isPositionLimited)</td></tr>
+<tr class="memdesc:aa069a41f8bcac2ded08f5b008e8f3983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to enforce joint position limit.  <a href="#aa069a41f8bcac2ded08f5b008e8f3983">More...</a><br /></td></tr>
+<tr class="separator:aa069a41f8bcac2ded08f5b008e8f3983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a867ca6841b54d0761d4daa1129d014c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a867ca6841b54d0761d4daa1129d014c6">DEPRECATED</a> (5.0) void setPositionLimited(bool _isPositionLimited)</td></tr>
+<tr class="memdesc:a867ca6841b54d0761d4daa1129d014c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated. Replaced by setPositionLimitEnforced.  <a href="#a867ca6841b54d0761d4daa1129d014c6">More...</a><br /></td></tr>
+<tr class="separator:a867ca6841b54d0761d4daa1129d014c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaf2c1c363aab354feef09da7334c134"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#aaaf2c1c363aab354feef09da7334c134">isPositionLimitEnforced</a> () const </td></tr>
+<tr class="memdesc:aaaf2c1c363aab354feef09da7334c134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether enforcing joint position limit.  <a href="#aaaf2c1c363aab354feef09da7334c134">More...</a><br /></td></tr>
+<tr class="separator:aaaf2c1c363aab354feef09da7334c134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb3f9695d527f337f95401a83aa38e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#acdb3f9695d527f337f95401a83aa38e3">DEPRECATED</a> (5.0) bool isPositionLimited() const </td></tr>
+<tr class="memdesc:acdb3f9695d527f337f95401a83aa38e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated. Replaced by isPositionLimitEnforced.  <a href="#acdb3f9695d527f337f95401a83aa38e3">More...</a><br /></td></tr>
+<tr class="separator:acdb3f9695d527f337f95401a83aa38e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc4480e9216556ff93a48345e88c63ef"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#afc4480e9216556ff93a48345e88c63ef">getIndexInSkeleton</a> (size_t _index) const =0</td></tr>
 <tr class="memdesc:afc4480e9216556ff93a48345e88c63ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a unique index in skeleton of a generalized coordinate in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>.  <a href="#afc4480e9216556ff93a48345e88c63ef">More...</a><br /></td></tr>
 <tr class="separator:afc4480e9216556ff93a48345e88c63ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -342,9 +350,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac98858647eab043e2b7e95b4bbf61399"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#ac98858647eab043e2b7e95b4bbf61399">getPositions</a> () const =0</td></tr>
 <tr class="memdesc:ac98858647eab043e2b7e95b4bbf61399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the positions of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>.  <a href="#ac98858647eab043e2b7e95b4bbf61399">More...</a><br /></td></tr>
 <tr class="separator:ac98858647eab043e2b7e95b4bbf61399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74e33663d1175a8ae146237b8f1c6c86"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a74e33663d1175a8ae146237b8f1c6c86">resetPositions</a> ()=0</td></tr>
-<tr class="memdesc:a74e33663d1175a8ae146237b8f1c6c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the positions of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to zero.  <a href="#a74e33663d1175a8ae146237b8f1c6c86">More...</a><br /></td></tr>
-<tr class="separator:a74e33663d1175a8ae146237b8f1c6c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adadee231309b62cd3e3d904f75f2a969"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#adadee231309b62cd3e3d904f75f2a969">setPositionLowerLimit</a> (size_t _index, double _position)=0</td></tr>
 <tr class="memdesc:adadee231309b62cd3e3d904f75f2a969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set lower limit for position.  <a href="#adadee231309b62cd3e3d904f75f2a969">More...</a><br /></td></tr>
 <tr class="separator:adadee231309b62cd3e3d904f75f2a969"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -357,6 +362,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae4dc1c530959156a137ef545f1df3b5a"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#ae4dc1c530959156a137ef545f1df3b5a">getPositionUpperLimit</a> (size_t _index) const =0</td></tr>
 <tr class="memdesc:ae4dc1c530959156a137ef545f1df3b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get upper limit for position.  <a href="#ae4dc1c530959156a137ef545f1df3b5a">More...</a><br /></td></tr>
 <tr class="separator:ae4dc1c530959156a137ef545f1df3b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68a052c76333a0db3c670a3e9367aa09"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a68a052c76333a0db3c670a3e9367aa09">isCyclic</a> (size_t _index) const =0</td></tr>
+<tr class="memdesc:a68a052c76333a0db3c670a3e9367aa09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether a generalized coordinate is cyclic.  <a href="#a68a052c76333a0db3c670a3e9367aa09">More...</a><br /></td></tr>
+<tr class="separator:a68a052c76333a0db3c670a3e9367aa09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6cce3bff1e2617bde00bd6af99757b5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#ae6cce3bff1e2617bde00bd6af99757b5">hasPositionLimit</a> (size_t _index) const =0</td></tr>
+<tr class="memdesc:ae6cce3bff1e2617bde00bd6af99757b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get whether the position of a generalized coordinate has limits.  <a href="#ae6cce3bff1e2617bde00bd6af99757b5">More...</a><br /></td></tr>
+<tr class="separator:ae6cce3bff1e2617bde00bd6af99757b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4e231719646025ab1b90710e5bd064a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#aa4e231719646025ab1b90710e5bd064a">resetPosition</a> (size_t _index)=0</td></tr>
+<tr class="memdesc:aa4e231719646025ab1b90710e5bd064a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of this generalized coordinate to its initial position.  <a href="#aa4e231719646025ab1b90710e5bd064a">More...</a><br /></td></tr>
+<tr class="separator:aa4e231719646025ab1b90710e5bd064a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74e33663d1175a8ae146237b8f1c6c86"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a74e33663d1175a8ae146237b8f1c6c86">resetPositions</a> ()=0</td></tr>
+<tr class="memdesc:a74e33663d1175a8ae146237b8f1c6c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the positions of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to their initial positions.  <a href="#a74e33663d1175a8ae146237b8f1c6c86">More...</a><br /></td></tr>
+<tr class="separator:a74e33663d1175a8ae146237b8f1c6c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24327399266073a1fe621b8ae7541633"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a24327399266073a1fe621b8ae7541633">setInitialPosition</a> (size_t _index, double _initial)=0</td></tr>
+<tr class="memdesc:a24327399266073a1fe621b8ae7541633"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the position that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a74e33663d1175a8ae146237b8f1c6c86" title="Set the positions of all generalized coordinates in this Joint to their initial positions. ">resetPositions()</a> will give to this coordinate.  <a href="#a24327399266073a1fe621b8ae7541633">More...</a><br /></td></tr>
+<tr class="separator:a24327399266073a1fe621b8ae7541633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e3afd5f8654474977f329917f042e8"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#ab2e3afd5f8654474977f329917f042e8">getInitialPosition</a> (size_t _index) const =0</td></tr>
+<tr class="memdesc:ab2e3afd5f8654474977f329917f042e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#aa4e231719646025ab1b90710e5bd064a" title="Set the position of this generalized coordinate to its initial position. ">resetPosition()</a> will give to this coordinate.  <a href="#ab2e3afd5f8654474977f329917f042e8">More...</a><br /></td></tr>
+<tr class="separator:ab2e3afd5f8654474977f329917f042e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae191b1881fa5a7cd02d24400b8a20132"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#ae191b1881fa5a7cd02d24400b8a20132">setInitialPositions</a> (const Eigen::VectorXd &amp;_initial)=0</td></tr>
+<tr class="memdesc:ae191b1881fa5a7cd02d24400b8a20132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the positions that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a74e33663d1175a8ae146237b8f1c6c86" title="Set the positions of all generalized coordinates in this Joint to their initial positions. ">resetPositions()</a> will give to this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>'s coordinates.  <a href="#ae191b1881fa5a7cd02d24400b8a20132">More...</a><br /></td></tr>
+<tr class="separator:ae191b1881fa5a7cd02d24400b8a20132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a06c94d9ccd8809a8983a130f4564e"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a70a06c94d9ccd8809a8983a130f4564e">getInitialPositions</a> () const =0</td></tr>
+<tr class="memdesc:a70a06c94d9ccd8809a8983a130f4564e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the positions that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a74e33663d1175a8ae146237b8f1c6c86" title="Set the positions of all generalized coordinates in this Joint to their initial positions. ">resetPositions()</a> will give to this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>'s coordinates.  <a href="#a70a06c94d9ccd8809a8983a130f4564e">More...</a><br /></td></tr>
+<tr class="separator:a70a06c94d9ccd8809a8983a130f4564e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Velocity</div></td></tr>
 <tr class="memitem:a5fdc9abd2e209b3602e2ca67c7e5b51a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a5fdc9abd2e209b3602e2ca67c7e5b51a">setVelocity</a> (size_t _index, double _velocity)=0</td></tr>
 <tr class="memdesc:a5fdc9abd2e209b3602e2ca67c7e5b51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the velocity of a single generalized coordinate.  <a href="#a5fdc9abd2e209b3602e2ca67c7e5b51a">More...</a><br /></td></tr>
@@ -370,9 +399,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af15a842080b0a58c4c52818c74a85ef0"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#af15a842080b0a58c4c52818c74a85ef0">getVelocities</a> () const =0</td></tr>
 <tr class="memdesc:af15a842080b0a58c4c52818c74a85ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the velocities of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>.  <a href="#af15a842080b0a58c4c52818c74a85ef0">More...</a><br /></td></tr>
 <tr class="separator:af15a842080b0a58c4c52818c74a85ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9357c095f23bd1c298ddede84722394d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a9357c095f23bd1c298ddede84722394d">resetVelocities</a> ()=0</td></tr>
-<tr class="memdesc:a9357c095f23bd1c298ddede84722394d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the velocities of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to zero.  <a href="#a9357c095f23bd1c298ddede84722394d">More...</a><br /></td></tr>
-<tr class="separator:a9357c095f23bd1c298ddede84722394d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae739738cc96d22ed593bf4654dd58d51"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#ae739738cc96d22ed593bf4654dd58d51">setVelocityLowerLimit</a> (size_t _index, double _velocity)=0</td></tr>
 <tr class="memdesc:ae739738cc96d22ed593bf4654dd58d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set lower limit for velocity.  <a href="#ae739738cc96d22ed593bf4654dd58d51">More...</a><br /></td></tr>
 <tr class="separator:ae739738cc96d22ed593bf4654dd58d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -385,6 +411,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13e2b76420a4a0e2d6c1f03f9d1e2a73"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a13e2b76420a4a0e2d6c1f03f9d1e2a73">getVelocityUpperLimit</a> (size_t _index) const =0</td></tr>
 <tr class="memdesc:a13e2b76420a4a0e2d6c1f03f9d1e2a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get upper limit for velocity.  <a href="#a13e2b76420a4a0e2d6c1f03f9d1e2a73">More...</a><br /></td></tr>
 <tr class="separator:a13e2b76420a4a0e2d6c1f03f9d1e2a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f21ad9087bcab34cb17121d200767e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a59f21ad9087bcab34cb17121d200767e">resetVelocity</a> (size_t _index)=0</td></tr>
+<tr class="memdesc:a59f21ad9087bcab34cb17121d200767e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the velocity of a generalized coordinate in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to its initial velocity.  <a href="#a59f21ad9087bcab34cb17121d200767e">More...</a><br /></td></tr>
+<tr class="separator:a59f21ad9087bcab34cb17121d200767e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9357c095f23bd1c298ddede84722394d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a9357c095f23bd1c298ddede84722394d">resetVelocities</a> ()=0</td></tr>
+<tr class="memdesc:a9357c095f23bd1c298ddede84722394d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the velocities of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to their initial velocities.  <a href="#a9357c095f23bd1c298ddede84722394d">More...</a><br /></td></tr>
+<tr class="separator:a9357c095f23bd1c298ddede84722394d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8c6993ff3e17024684df6ba25b2f3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#aca8c6993ff3e17024684df6ba25b2f3e">setInitialVelocity</a> (size_t _index, double _initial)=0</td></tr>
+<tr class="memdesc:aca8c6993ff3e17024684df6ba25b2f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the velocity that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a59f21ad9087bcab34cb17121d200767e" title="Set the velocity of a generalized coordinate in this Joint to its initial velocity. ">resetVelocity()</a> will give to this coordinate.  <a href="#aca8c6993ff3e17024684df6ba25b2f3e">More...</a><br /></td></tr>
+<tr class="separator:aca8c6993ff3e17024684df6ba25b2f3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fb383a14b44593bab493fa033f9e337"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a2fb383a14b44593bab493fa033f9e337">getInitialVelocity</a> (size_t _index) const =0</td></tr>
+<tr class="memdesc:a2fb383a14b44593bab493fa033f9e337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the velocity that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a59f21ad9087bcab34cb17121d200767e" title="Set the velocity of a generalized coordinate in this Joint to its initial velocity. ">resetVelocity()</a> will give to this coordinate.  <a href="#a2fb383a14b44593bab493fa033f9e337">More...</a><br /></td></tr>
+<tr class="separator:a2fb383a14b44593bab493fa033f9e337"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a346966a2b8358721f395610359486f4e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a346966a2b8358721f395610359486f4e">setInitialVelocities</a> (const Eigen::VectorXd &amp;_initial)=0</td></tr>
+<tr class="memdesc:a346966a2b8358721f395610359486f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the velocities that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a9357c095f23bd1c298ddede84722394d" title="Set the velocities of all generalized coordinates in this Joint to their initial velocities. ">resetVelocities()</a> will give to this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>'s coordinates.  <a href="#a346966a2b8358721f395610359486f4e">More...</a><br /></td></tr>
+<tr class="separator:a346966a2b8358721f395610359486f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6917d9b8e35ea21256986e7ffcd67e14"><td class="memItemLeft" align="right" valign="top">virtual Eigen::VectorXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a6917d9b8e35ea21256986e7ffcd67e14">getInitialVelocities</a> () const =0</td></tr>
+<tr class="memdesc:a6917d9b8e35ea21256986e7ffcd67e14"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the velocities that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a9357c095f23bd1c298ddede84722394d" title="Set the velocities of all generalized coordinates in this Joint to their initial velocities. ">resetVelocities()</a> will give to this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>'s coordinates.  <a href="#a6917d9b8e35ea21256986e7ffcd67e14">More...</a><br /></td></tr>
+<tr class="separator:a6917d9b8e35ea21256986e7ffcd67e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Acceleration</div></td></tr>
 <tr class="memitem:a41da04b5ab99b7d3955b683248c423ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a41da04b5ab99b7d3955b683248c423ba">setAcceleration</a> (size_t _index, double _acceleration)=0</td></tr>
 <tr class="memdesc:a41da04b5ab99b7d3955b683248c423ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the acceleration of a single generalized coordinate.  <a href="#a41da04b5ab99b7d3955b683248c423ba">More...</a><br /></td></tr>
@@ -441,6 +485,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a11b47e7aaf37e6bd4488fcccc60eac4b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a11b47e7aaf37e6bd4488fcccc60eac4b">getForceUpperLimit</a> (size_t _index) const =0</td></tr>
 <tr class="memdesc:a11b47e7aaf37e6bd4488fcccc60eac4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get upper limit for force.  <a href="#a11b47e7aaf37e6bd4488fcccc60eac4b">More...</a><br /></td></tr>
 <tr class="separator:a11b47e7aaf37e6bd4488fcccc60eac4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Sanity Check</div></td></tr>
+<tr class="memitem:ac7e837a5bed7d3d123b366953c389fa9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#ac7e837a5bed7d3d123b366953c389fa9">checkSanity</a> (bool _printWarnings=true) const </td></tr>
+<tr class="memdesc:ac7e837a5bed7d3d123b366953c389fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns false if the initial position or initial velocity are outside of limits.  <a href="#ac7e837a5bed7d3d123b366953c389fa9">More...</a><br /></td></tr>
+<tr class="separator:ac7e837a5bed7d3d123b366953c389fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Velocity change</div></td></tr>
 <tr class="memitem:a7f7517a0111d744d0fd38ea58a71ca0c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a7f7517a0111d744d0fd38ea58a71ca0c">setVelocityChange</a> (size_t _index, double _velocityChange)=0</td></tr>
 <tr class="memdesc:a7f7517a0111d744d0fd38ea58a71ca0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a single velocity change.  <a href="#a7f7517a0111d744d0fd38ea58a71ca0c">More...</a><br /></td></tr>
@@ -744,6 +792,30 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aaba213b26a47dc4d17fad9dffbda5d8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dart::dynamics::Joint::Joint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html">Joint</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="af87d36a8f7e467a1845e33f737a85f5f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1190,6 +1262,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ac7e837a5bed7d3d123b366953c389fa9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dart::dynamics::Joint::checkSanity </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_printWarnings</em> = <code>true</code></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns false if the initial position or initial velocity are outside of limits. </p>
+
+</div>
+</div>
 <a class="anchor" id="a79f88baad0ca5a053a6531e3d212e3da"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1214,7 +1304,7 @@ Friends</h2></td></tr>
 <p>Create a clone of this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>. </p>
 <p>This may only be called by the <a class="el" href="../../d3/d19/classdart_1_1dynamics_1_1Skeleton.html" title="class Skeleton ">Skeleton</a> class. </p>
 
-<p>Implemented in <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a6205110329a5206938cb49d663adbcc7">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#ad0f4af3e0ccb333ab0eab97c9f3e4884">dart::dynamics::EulerJoint</a>, <a class="el" href="../../db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#aab1b2fffd11caf29b249f2bed40b3ed2">dart::dynamics::ScrewJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a8259d065fee5ebc71c93c127b91b1d21">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#ab810c1a655538d2f3171e08e05fd4a94">dart::dynamics::RevoluteJoint</a>, <a class="el" href="../../de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a008b6655aa1cfa445eaa784a4ae5fb55">dart::dynamics::PrismaticJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#afe4a1631ae64661cd4f19b718b93cb17">dart::dynamics::BallJoint</a>, <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#aa3dbffdac0691038ac19af3bfa1137ce">dart::dynamics::FreeJoint</a>, <a class="el" href="../../d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#af150db4f7f9c4f009c815fc69acaef2e">dart::dynamics::WeldJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a21e2cab4edac54cfc82a9f098d90fae0">dart::dynamics::TranslationalJoint</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#aa3dbffdac0691038ac19af3bfa1137ce">dart::dynamics::FreeJoint</a>, <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a6205110329a5206938cb49d663adbcc7">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#ad0f4af3e0ccb333ab0eab97c9f3e4884">dart::dynamics::EulerJoint</a>, <a class="el" href="../../db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#aab1b2fffd11caf29b249f2bed40b3ed2">dart::dynamics::ScrewJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a8259d065fee5ebc71c93c127b91b1d21">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#ab810c1a655538d2f3171e08e05fd4a94">dart::dynamics::RevoluteJoint</a>, <a class="el" href="../../de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a008b6655aa1cfa445eaa784a4ae5fb55">dart::dynamics::PrismaticJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#afe4a1631ae64661cd4f19b718b93cb17">dart::dynamics::BallJoint</a>, <a class="el" href="../../d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#af150db4f7f9c4f009c815fc69acaef2e">dart::dynamics::WeldJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a21e2cab4edac54cfc82a9f098d90fae0">dart::dynamics::TranslationalJoint</a>.</p>
 
 </div>
 </div>
@@ -1285,6 +1375,42 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 <p><a class="el" href="../../de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html" title="DegreeOfFreedom class is a proxy class for accessing single degrees of freedom (aka generalized coord...">DegreeOfFreedom</a> should be created by the <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> because the <a class="el" href="../../de/db7/classdart_1_1dynamics_1_1DegreeOfFreedom.html" title="DegreeOfFreedom class is a proxy class for accessing single degrees of freedom (aka generalized coord...">DegreeOfFreedom</a> class has a protected constructor, and the <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> is responsible for memory management of the pointer which is returned. </p>
+
+</div>
+</div>
+<a class="anchor" id="a867ca6841b54d0761d4daa1129d014c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dart::dynamics::Joint::DEPRECATED </td>
+          <td>(</td>
+          <td class="paramtype">5.&#160;</td>
+          <td class="paramname"><em>0</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deprecated. Replaced by setPositionLimitEnforced. </p>
+
+</div>
+</div>
+<a class="anchor" id="acdb3f9695d527f337f95401a83aa38e3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">dart::dynamics::Joint::DEPRECATED </td>
+          <td>(</td>
+          <td class="paramtype">5.&#160;</td>
+          <td class="paramname"><em>0</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deprecated. Replaced by isPositionLimitEnforced. </p>
 
 </div>
 </div>
@@ -1883,6 +2009,116 @@ Friends</h2></td></tr>
 <p>Get a unique index in the kinematic tree of a generalized coordinate in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>. </p>
 
 <p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a179161b249126cbb2043c48fddb393f9">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a179161b249126cbb2043c48fddb393f9">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a179161b249126cbb2043c48fddb393f9">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a179161b249126cbb2043c48fddb393f9">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ad90dba973d53e31c7e719446f432245d">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#aa4180d15287e5954a1c6f832075572f7">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2e3afd5f8654474977f329917f042e8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double dart::dynamics::Joint::getInitialPosition </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the position that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#aa4e231719646025ab1b90710e5bd064a" title="Set the position of this generalized coordinate to its initial position. ">resetPosition()</a> will give to this coordinate. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a4262578db4f2978f17f351c2f51de7df">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a4262578db4f2978f17f351c2f51de7df">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a4262578db4f2978f17f351c2f51de7df">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a4262578db4f2978f17f351c2f51de7df">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ae2971949e42179a9927a02c552357a29">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#abdfcbd3e7c46796ac49ef154033269ea">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a70a06c94d9ccd8809a8983a130f4564e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Eigen::VectorXd dart::dynamics::Joint::getInitialPositions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the positions that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a74e33663d1175a8ae146237b8f1c6c86" title="Set the positions of all generalized coordinates in this Joint to their initial positions. ">resetPositions()</a> will give to this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>'s coordinates. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#addd227452dd8a5e65add41c1756262cb">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#addd227452dd8a5e65add41c1756262cb">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#addd227452dd8a5e65add41c1756262cb">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#addd227452dd8a5e65add41c1756262cb">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ae2a87a61fd5b7b0b1f055fb4a7dc2fa8">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#ad9fbe4e435b4c0c02fd97c04d8925226">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6917d9b8e35ea21256986e7ffcd67e14"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Eigen::VectorXd dart::dynamics::Joint::getInitialVelocities </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the velocities that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a9357c095f23bd1c298ddede84722394d" title="Set the velocities of all generalized coordinates in this Joint to their initial velocities. ">resetVelocities()</a> will give to this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>'s coordinates. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a34c8c9aabd08674a66a87ea6c37ccc7c">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a34c8c9aabd08674a66a87ea6c37ccc7c">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a34c8c9aabd08674a66a87ea6c37ccc7c">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a34c8c9aabd08674a66a87ea6c37ccc7c">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a90c46399114a8e643e6d4e9dbff2bb79">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#af2795eecad5ccb8051f6695f078c0705">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2fb383a14b44593bab493fa033f9e337"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual double dart::dynamics::Joint::getInitialVelocity </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the velocity that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a59f21ad9087bcab34cb17121d200767e" title="Set the velocity of a generalized coordinate in this Joint to its initial velocity. ">resetVelocity()</a> will give to this coordinate. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a6c4f2e641f513bffdcf1c1cace017928">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a6c4f2e641f513bffdcf1c1cace017928">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a6c4f2e641f513bffdcf1c1cace017928">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a6c4f2e641f513bffdcf1c1cace017928">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ae2e58d5c289c19d198787e872dcb1ded">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a892ef30f9449d08d336c14d97b50fc52">dart::dynamics::ZeroDofJoint</a>.</p>
 
 </div>
 </div>
@@ -2786,6 +3022,34 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae6cce3bff1e2617bde00bd6af99757b5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool dart::dynamics::Joint::hasPositionLimit </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get whether the position of a generalized coordinate has limits. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a448bfb5fe02ffeb564d24b09afc7d1b7">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a448bfb5fe02ffeb564d24b09afc7d1b7">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a448bfb5fe02ffeb564d24b09afc7d1b7">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a448bfb5fe02ffeb564d24b09afc7d1b7">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a97590ce1ab9156b016be5a8e2679ac0c">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#ad2ad8bcab237b21540d7f388aa2fd6da">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a4352d854bb6c323cc030e0d067cf6995"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2810,7 +3074,7 @@ Friends</h2></td></tr>
 
 <p>Integrate positions using Euler method. </p>
 
-<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ac700e98c99b1ade0cbf63ab77174a0d7">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ac700e98c99b1ade0cbf63ab77174a0d7">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ac700e98c99b1ade0cbf63ab77174a0d7">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ac700e98c99b1ade0cbf63ab77174a0d7">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a6ae016f315c69a841a484abaa56915f0">dart::dynamics::SingleDofJoint</a>, <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#adb87daeaf9ea818e1033f25f0580efc8">dart::dynamics::ZeroDofJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#ab5b19daf7d07c0f6b699adb0719ad7cd">dart::dynamics::BallJoint</a>, and <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#aa12efb5db61fa61cdf8ec37571ae7e50">dart::dynamics::FreeJoint</a>.</p>
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ac700e98c99b1ade0cbf63ab77174a0d7">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ac700e98c99b1ade0cbf63ab77174a0d7">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ac700e98c99b1ade0cbf63ab77174a0d7">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#ac700e98c99b1ade0cbf63ab77174a0d7">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a6ae016f315c69a841a484abaa56915f0">dart::dynamics::SingleDofJoint</a>, <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#adb87daeaf9ea818e1033f25f0580efc8">dart::dynamics::ZeroDofJoint</a>, <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#aa12efb5db61fa61cdf8ec37571ae7e50">dart::dynamics::FreeJoint</a>, and <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#ab5b19daf7d07c0f6b699adb0719ad7cd">dart::dynamics::BallJoint</a>.</p>
 
 </div>
 </div>
@@ -2839,6 +3103,35 @@ Friends</h2></td></tr>
 <p>Integrate velocities using Euler method. </p>
 
 <p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a8db24e20a58ae3945c98c4680693d04e">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a8db24e20a58ae3945c98c4680693d04e">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a8db24e20a58ae3945c98c4680693d04e">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a8db24e20a58ae3945c98c4680693d04e">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#ae8a5dd16f7d2cf955725715800adbe83">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a3c6ad052126ed830ce0e3b8b6352ab6d">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a68a052c76333a0db3c670a3e9367aa09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool dart::dynamics::Joint::isCyclic </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get whether a generalized coordinate is cyclic. </p>
+<p>Return true if and only if this generalized coordinate has an infinite number of positions that produce the same local transform. Note that, for a multi-DOF joint, producing a cycle may require altering the position of this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>'s other generalized coordinates. </p>
+
+<p>Implemented in <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#ad0e9e94d76d54e9d011b8b2e8b2bd6f4">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a99d63c0cc5f9802531c4b9903edd61f1">dart::dynamics::EulerJoint</a>, <a class="el" href="../../db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a9eee95b28f4b592391cc342da9d86922">dart::dynamics::ScrewJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a7bed71e091dee6d4f3f43c87a776ca55">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a6e882fa5cf367699ba724fd9e2ee1613">dart::dynamics::PrismaticJoint</a>, <a class="el" href="../../d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#a6dc2f6717a342469fb099790df176949">dart::dynamics::RevoluteJoint</a>, <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#ae09c3ea0d1f3c727974b911da5f155cb">dart::dynamics::FreeJoint</a>, <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#ac03e520be322e20bafa830ac00ea2230">dart::dynamics::TranslationalJoint</a>, <a class="el" href="../../d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#a19117c999438dd08a1a55be657d2b313">dart::dynamics::WeldJoint</a>, and <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a656bd6d352378bbda6dc73e296a7e5cd">dart::dynamics::BallJoint</a>.</p>
 
 </div>
 </div>
@@ -2905,12 +3198,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a19be90af3114561eb28468f98a0b3e25"></a>
+<a class="anchor" id="aaaf2c1c363aab354feef09da7334c134"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool dart::dynamics::Joint::isPositionLimited </td>
+          <td class="memname">bool dart::dynamics::Joint::isPositionLimitEnforced </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -3190,6 +3483,34 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aa4e231719646025ab1b90710e5bd064a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dart::dynamics::Joint::resetPosition </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the position of this generalized coordinate to its initial position. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a074314a5fc9e7e217e5c0d0550409d29">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a074314a5fc9e7e217e5c0d0550409d29">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a074314a5fc9e7e217e5c0d0550409d29">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a074314a5fc9e7e217e5c0d0550409d29">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a886309f4f3aa51c1067941169a480c46">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#aef7fc6645ffb0cab15fade57e4f08c5c">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a74e33663d1175a8ae146237b8f1c6c86"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3211,7 +3532,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the positions of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to zero. </p>
+<p>Set the positions of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to their initial positions. </p>
 
 <p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#adc933b3962a5802395350ce3c75c2d34">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#adc933b3962a5802395350ce3c75c2d34">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#adc933b3962a5802395350ce3c75c2d34">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#adc933b3962a5802395350ce3c75c2d34">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a0c66f516b1305fb83dc1f9a2d30ffbd4">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a94ef8ce2c33d54101e943d32e78673ae">dart::dynamics::ZeroDofJoint</a>.</p>
 
@@ -3265,9 +3586,37 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the velocities of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to zero. </p>
+<p>Set the velocities of all generalized coordinates in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to their initial velocities. </p>
 
 <p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#af4f53e6fbf34ad1a6fffb9ea6a687f60">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#af4f53e6fbf34ad1a6fffb9ea6a687f60">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#af4f53e6fbf34ad1a6fffb9ea6a687f60">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#af4f53e6fbf34ad1a6fffb9ea6a687f60">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a96c9416ea371ff7bbecc163c855d5a37">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a92b6c83ec9d4a18163f9e79ce432d6fb">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a59f21ad9087bcab34cb17121d200767e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dart::dynamics::Joint::resetVelocity </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the velocity of a generalized coordinate in this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> to its initial velocity. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#acb6f7ab189ffab40dfcba01331d0329b">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#acb6f7ab189ffab40dfcba01331d0329b">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#acb6f7ab189ffab40dfcba01331d0329b">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#acb6f7ab189ffab40dfcba01331d0329b">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#acaea9faea279bd00847290863fd905ff">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#aa98690e09b711bbfc49b36e45f89c013">dart::dynamics::ZeroDofJoint</a>.</p>
 
 </div>
 </div>
@@ -3838,6 +4187,138 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a24327399266073a1fe621b8ae7541633"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dart::dynamics::Joint::setInitialPosition </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_initial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the position that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a74e33663d1175a8ae146237b8f1c6c86" title="Set the positions of all generalized coordinates in this Joint to their initial positions. ">resetPositions()</a> will give to this coordinate. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a11f6e67224ddcc930524ed0b8730e8fd">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a11f6e67224ddcc930524ed0b8730e8fd">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a11f6e67224ddcc930524ed0b8730e8fd">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a11f6e67224ddcc930524ed0b8730e8fd">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#aa768d6706dd07a6bf2a2579dbf4e12fa">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a998f6978fd76e96a32a02c4aa2dbd95b">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae191b1881fa5a7cd02d24400b8a20132"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dart::dynamics::Joint::setInitialPositions </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>_initial</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the positions that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a74e33663d1175a8ae146237b8f1c6c86" title="Set the positions of all generalized coordinates in this Joint to their initial positions. ">resetPositions()</a> will give to this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>'s coordinates. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a83944e598a597dd3b19abeb7adec3929">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a83944e598a597dd3b19abeb7adec3929">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a83944e598a597dd3b19abeb7adec3929">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a83944e598a597dd3b19abeb7adec3929">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a330c8d0694ecf8c5bcb7c28b1376f1ac">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a29fbbef11009ac32d4568b0771f430a7">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a346966a2b8358721f395610359486f4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dart::dynamics::Joint::setInitialVelocities </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::VectorXd &amp;&#160;</td>
+          <td class="paramname"><em>_initial</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the velocities that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a9357c095f23bd1c298ddede84722394d" title="Set the velocities of all generalized coordinates in this Joint to their initial velocities. ">resetVelocities()</a> will give to this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a>'s coordinates. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a2817ed658653a05b99533ba6f7a03dde">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a2817ed658653a05b99533ba6f7a03dde">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a2817ed658653a05b99533ba6f7a03dde">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a2817ed658653a05b99533ba6f7a03dde">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a2636635f35c0b31ac6fb6b3df7993ffb">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a5bb969da58bd0241d3796ff7e07d268d">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aca8c6993ff3e17024684df6ba25b2f3e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void dart::dynamics::Joint::setInitialVelocity </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>_initial</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Change the velocity that <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a59f21ad9087bcab34cb17121d200767e" title="Set the velocity of a generalized coordinate in this Joint to its initial velocity. ">resetVelocity()</a> will give to this coordinate. </p>
+
+<p>Implemented in <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a959d2e8f15b30fd4498e53cfb00ec8e1">dart::dynamics::MultiDofJoint&lt; DOF &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a959d2e8f15b30fd4498e53cfb00ec8e1">dart::dynamics::MultiDofJoint&lt; 2 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a959d2e8f15b30fd4498e53cfb00ec8e1">dart::dynamics::MultiDofJoint&lt; 3 &gt;</a>, <a class="el" href="../../da/d30/classdart_1_1dynamics_1_1MultiDofJoint.html#a959d2e8f15b30fd4498e53cfb00ec8e1">dart::dynamics::MultiDofJoint&lt; 6 &gt;</a>, <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a999dff16fa75de65ccae66f9177c0dc9">dart::dynamics::SingleDofJoint</a>, and <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#a72137341d60757c52188f65ee034d461">dart::dynamics::ZeroDofJoint</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a69c499c9349bef45138d27f35a7adb1a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -3949,12 +4430,12 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3212ca5f7893cfd9a5422ab17df4038b"></a>
+<a class="anchor" id="aa069a41f8bcac2ded08f5b008e8f3983"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dart::dynamics::Joint::setPositionLimited </td>
+          <td class="memname">void dart::dynamics::Joint::setPositionLimitEnforced </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>_isPositionLimited</em></td><td>)</td>
@@ -4532,7 +5013,7 @@ Friends</h2></td></tr>
 <p>Update the names of the joint's degrees of freedom. </p>
 <p>Used when <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html#a69c499c9349bef45138d27f35a7adb1a" title="Set joint name and return the name. ">setName()</a> is called with _renameDofs set to true. </p>
 
-<p>Implemented in <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a379c3902f9eb0ccebf94cba6122eba6d">dart::dynamics::SingleDofJoint</a>, <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#ac4e9f64834adb930882a7674a51c1495">dart::dynamics::ZeroDofJoint</a>, <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a24f8df559c3ee386d01785a1a8b1eb95">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a9de1af7d61192a90f3987f27a03ca9d0">dart::dynamics::EulerJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a5f3680d7d45dd0ce9bbd367592ea219e">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a87dcd85816aeffd1f1a5aaeedbe07946">dart::dynamics::BallJoint</a>, <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#a2c1bca9df00481db2000d87567bb0a3e">dart::dynamics::FreeJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a9a2d1cccc9e64a1f17885d586c37b599">dart::dynamics::TranslationalJoint</a>.</p>
+<p>Implemented in <a class="el" href="../../d7/d33/classdart_1_1dynamics_1_1SingleDofJoint.html#a379c3902f9eb0ccebf94cba6122eba6d">dart::dynamics::SingleDofJoint</a>, <a class="el" href="../../db/d77/classdart_1_1dynamics_1_1ZeroDofJoint.html#ac4e9f64834adb930882a7674a51c1495">dart::dynamics::ZeroDofJoint</a>, <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#a2c1bca9df00481db2000d87567bb0a3e">dart::dynamics::FreeJoint</a>, <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a24f8df559c3ee386d01785a1a8b1eb95">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a9de1af7d61192a90f3987f27a03ca9d0">dart::dynamics::EulerJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a5f3680d7d45dd0ce9bbd367592ea219e">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a87dcd85816aeffd1f1a5aaeedbe07946">dart::dynamics::BallJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a9a2d1cccc9e64a1f17885d586c37b599">dart::dynamics::TranslationalJoint</a>.</p>
 
 </div>
 </div>
@@ -4796,7 +5277,7 @@ Friends</h2></td></tr>
 <p>local generalized coordinate</p>
 <p>The _mandatory argument can be set to false if the Jacobian update request is due to a change in <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> positions, because not all <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> types have a Local Jacobian that depends on their <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> positions, so a Local Jacobian update would not actually be required. </p>
 
-<p>Implemented in <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a879d031f725ba9687deccf3656b5a4e7">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a42a8233eae871eeb905a8011c95ea30c">dart::dynamics::EulerJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a766bcaeae3c7b8b4a289b436607444dd">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#af1de1a2e1b21f1d9bf9c9374bba61478">dart::dynamics::ScrewJoint</a>, <a class="el" href="../../d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#a305a7972c1de5a6b5e1d11ff239e64b3">dart::dynamics::RevoluteJoint</a>, <a class="el" href="../../de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a63ee001eded02fa0d0c53658b03f7e73">dart::dynamics::PrismaticJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#acf55dcee4eb47ef751f7a2bc4e130682">dart::dynamics::BallJoint</a>, <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#a2c6da3f07daf3ee0128f070da35c4083">dart::dynamics::FreeJoint</a>, <a class="el" href="../../d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#a04f114ec32cf1a6e0d9d040f6081ff69">dart::dynamics::WeldJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a0d9be9d2117bf8a433b0051f7c1c305b">dart::dynamics::TranslationalJoint</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#ae5f35f5e822fa6928ac6655d8e01e7e9">dart::dynamics::FreeJoint</a>, <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a879d031f725ba9687deccf3656b5a4e7">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#a42a8233eae871eeb905a8011c95ea30c">dart::dynamics::EulerJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a766bcaeae3c7b8b4a289b436607444dd">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#af1de1a2e1b21f1d9bf9c9374bba61478">dart::dynamics::ScrewJoint</a>, <a class="el" href="../../d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#a305a7972c1de5a6b5e1d11ff239e64b3">dart::dynamics::RevoluteJoint</a>, <a class="el" href="../../de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a63ee001eded02fa0d0c53658b03f7e73">dart::dynamics::PrismaticJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a5427467c5ed0bb334c7c4171fbdbc12b">dart::dynamics::BallJoint</a>, <a class="el" href="../../d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#a04f114ec32cf1a6e0d9d040f6081ff69">dart::dynamics::WeldJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a0d9be9d2117bf8a433b0051f7c1c305b">dart::dynamics::TranslationalJoint</a>.</p>
 
 </div>
 </div>
@@ -4825,7 +5306,7 @@ Friends</h2></td></tr>
 <p>local generalized coordinate</p>
 <p>If the Local Jacobian Time Derivative of this <a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html" title="class Joint ">Joint</a> is zero, then this function will be a no op. </p>
 
-<p>Implemented in <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a8d4cfe14270c8025c3d8889b3db05490">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#ad15f0b4588bbb97151251bec4e14b0f7">dart::dynamics::EulerJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a90d27a6c1dcc72e5bfc6ccdfa14c0e48">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a83d9f03b51dcc49c814b587ff30e9936">dart::dynamics::ScrewJoint</a>, <a class="el" href="../../d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#ae6bae4b31b96127c54b717d32d6dab52">dart::dynamics::RevoluteJoint</a>, <a class="el" href="../../de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a29a98414b64edb857b5656005bea2c5b">dart::dynamics::PrismaticJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a22d4ae53dc804886129d2cca6181ba83">dart::dynamics::BallJoint</a>, <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#a78f5b937fbacad843bf24d98970b217c">dart::dynamics::FreeJoint</a>, <a class="el" href="../../d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#a85c3ad50dc668522895d893a7e9f3666">dart::dynamics::WeldJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a32a1337715114573adfbe848237cf343">dart::dynamics::TranslationalJoint</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#a78f5b937fbacad843bf24d98970b217c">dart::dynamics::FreeJoint</a>, <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#a8d4cfe14270c8025c3d8889b3db05490">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#ad15f0b4588bbb97151251bec4e14b0f7">dart::dynamics::EulerJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#a90d27a6c1dcc72e5bfc6ccdfa14c0e48">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a83d9f03b51dcc49c814b587ff30e9936">dart::dynamics::ScrewJoint</a>, <a class="el" href="../../d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#ae6bae4b31b96127c54b717d32d6dab52">dart::dynamics::RevoluteJoint</a>, <a class="el" href="../../de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a29a98414b64edb857b5656005bea2c5b">dart::dynamics::PrismaticJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a22d4ae53dc804886129d2cca6181ba83">dart::dynamics::BallJoint</a>, <a class="el" href="../../d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#a85c3ad50dc668522895d893a7e9f3666">dart::dynamics::WeldJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#a32a1337715114573adfbe848237cf343">dart::dynamics::TranslationalJoint</a>.</p>
 
 </div>
 </div>
@@ -4933,7 +5414,7 @@ Friends</h2></td></tr>
 
 <p>Update transformation from parent <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a> to child <a class="el" href="../../d5/d2e/classdart_1_1dynamics_1_1BodyNode.html" title="BodyNode class represents a single node of the skeleton. ">BodyNode</a>. </p>
 
-<p>Implemented in <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#aba4c96b0003f7b0e1df315d32423e797">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#af24329ef13073dae65e4769a0eb6f70f">dart::dynamics::EulerJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#aa4881e539d8747725119dcfb23f7e3af">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a1a0e3ad43d1dfe2eb82593581ce68c48">dart::dynamics::ScrewJoint</a>, <a class="el" href="../../d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#a7e3dc9da536a20ca265d26342265257a">dart::dynamics::RevoluteJoint</a>, <a class="el" href="../../de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a0411effd760fb842af166d93cd1110bd">dart::dynamics::PrismaticJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a110a6977a022df6079912ba76e904c57">dart::dynamics::BallJoint</a>, <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#ae519ce4699c59f8294d541a14a493c7f">dart::dynamics::FreeJoint</a>, <a class="el" href="../../d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#a468a7993ba180f569cc7df69f69747b8">dart::dynamics::WeldJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#aaae11fafbdc1792f984b90918cb47b08">dart::dynamics::TranslationalJoint</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/df1/classdart_1_1dynamics_1_1FreeJoint.html#ae519ce4699c59f8294d541a14a493c7f">dart::dynamics::FreeJoint</a>, <a class="el" href="../../da/d0e/classdart_1_1dynamics_1_1PlanarJoint.html#aba4c96b0003f7b0e1df315d32423e797">dart::dynamics::PlanarJoint</a>, <a class="el" href="../../d2/d87/classdart_1_1dynamics_1_1EulerJoint.html#af24329ef13073dae65e4769a0eb6f70f">dart::dynamics::EulerJoint</a>, <a class="el" href="../../d1/d0e/classdart_1_1dynamics_1_1UniversalJoint.html#aa4881e539d8747725119dcfb23f7e3af">dart::dynamics::UniversalJoint</a>, <a class="el" href="../../db/d9a/classdart_1_1dynamics_1_1ScrewJoint.html#a1a0e3ad43d1dfe2eb82593581ce68c48">dart::dynamics::ScrewJoint</a>, <a class="el" href="../../d7/dc0/classdart_1_1dynamics_1_1RevoluteJoint.html#a7e3dc9da536a20ca265d26342265257a">dart::dynamics::RevoluteJoint</a>, <a class="el" href="../../de/da9/classdart_1_1dynamics_1_1PrismaticJoint.html#a0411effd760fb842af166d93cd1110bd">dart::dynamics::PrismaticJoint</a>, <a class="el" href="../../d7/de3/classdart_1_1dynamics_1_1BallJoint.html#a110a6977a022df6079912ba76e904c57">dart::dynamics::BallJoint</a>, <a class="el" href="../../d8/da2/classdart_1_1dynamics_1_1WeldJoint.html#a468a7993ba180f569cc7df69f69747b8">dart::dynamics::WeldJoint</a>, and <a class="el" href="../../dc/d8d/classdart_1_1dynamics_1_1TranslationalJoint.html#aaae11fafbdc1792f984b90918cb47b08">dart::dynamics::TranslationalJoint</a>.</p>
 
 </div>
 </div>
@@ -5426,17 +5907,13 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/dynamics/<a class="el" href="../../de/d50/Joint_8h_source.html">Joint.h</a></li>
-<li>/home/js/DRC/dart_5.0_gazebo/dart/dynamics/<a class="el" href="../../d6/de6/Joint_8cpp.html">Joint.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d83/namespacedart.html">dart</a></li><li class="navelem"><a class="el" href="../../d7/d5a/namespacedart_1_1dynamics.html">dynamics</a></li><li class="navelem"><a class="el" href="../../d6/d5b/classdart_1_1dynamics_1_1Joint.html">Joint</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:53 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:33 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

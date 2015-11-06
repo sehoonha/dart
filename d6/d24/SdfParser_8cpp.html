@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>DART: /home/js/DRC/dart_5.0_gazebo/dart/utils/sdf/SdfParser.cpp File Reference</title>
+<title>DART: /home/js/dev/dart/5.1.1/dart/utils/sdf/SdfParser.cpp File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -32,7 +32,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">DART
-   &#160;<span id="projectnumber">5.0.1</span>
+   &#160;<span id="projectnumber">5.1.1</span>
    </div>
   </td>
  </tr>
@@ -133,6 +133,8 @@ $(document).ready(function(){initNavTree('d6/d24/SdfParser_8cpp.html','../../');
 <code>#include &quot;<a class="el" href="../../d1/ded/Skeleton_8h_source.html">dart/dynamics/Skeleton.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dd/d5b/World_8h_source.html">dart/simulation/World.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/ded/SkelParser_8h_source.html">dart/utils/SkelParser.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d13/LocalResourceRetriever_8h_source.html">dart/common/LocalResourceRetriever.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../da/d26/Uri_8h_source.html">dart/common/Uri.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d2/d3d/SdfParser_8h_source.html">dart/utils/sdf/SdfParser.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -146,8 +148,8 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:aefcc208cfca7633c72f311da0e4c1ec2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html#aefcc208cfca7633c72f311da0e4c1ec2">dart::utils::reportMissingElement</a> (const std::string &amp;functionName, const std::string &amp;elementName, const std::string &amp;objectType, const std::string &amp;objectName)</td></tr>
 <tr class="separator:aefcc208cfca7633c72f311da0e4c1ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d97e9b9a366c998ae1ce6c1c8def95f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html#a7d97e9b9a366c998ae1ce6c1c8def95f">dart::utils::readAxisElement</a> (tinyxml2::XMLElement *axisElement, const Eigen::Isometry3d &amp;_parentModelFrame, Eigen::Vector3d &amp;axis, double &amp;lower, double &amp;upper, double &amp;damping)</td></tr>
-<tr class="separator:a7d97e9b9a366c998ae1ce6c1c8def95f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa451b1fb5fb5ee8d0b494e70d77f247"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d28/namespacedart_1_1utils.html#aaa451b1fb5fb5ee8d0b494e70d77f247">dart::utils::readAxisElement</a> (tinyxml2::XMLElement *axisElement, const Eigen::Isometry3d &amp;_parentModelFrame, Eigen::Vector3d &amp;axis, double &amp;lower, double &amp;upper, double &amp;initial, double &amp;rest, double &amp;damping)</td></tr>
+<tr class="separator:aaa451b1fb5fb5ee8d0b494e70d77f247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -155,7 +157,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_bdca9e024c7189a7f761273aaa65cff0.html">dart</a></li><li class="navelem"><a class="el" href="../../dir_558fb1470c9a14158ce5db1674bc31a0.html">utils</a></li><li class="navelem"><a class="el" href="../../dir_aac3146568c74976f5f3de3ab0035948.html">sdf</a></li><li class="navelem"><a class="el" href="../../d6/d24/SdfParser_8cpp.html">SdfParser.cpp</a></li>
-    <li class="footer">Generated on Tue Jul 28 2015 02:56:53 for DART by
+    <li class="footer">Generated on Fri Nov 6 2015 10:36:32 for DART by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

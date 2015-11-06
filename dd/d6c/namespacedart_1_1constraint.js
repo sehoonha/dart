@@ -1,5 +1,6 @@
 var namespacedart_1_1constraint =
 [
+    [ "BalanceConstraint", "da/d5b/classdart_1_1constraint_1_1BalanceConstraint.html", "da/d5b/classdart_1_1constraint_1_1BalanceConstraint" ],
     [ "BallJointConstraint", "d9/d4e/classdart_1_1constraint_1_1BallJointConstraint.html", "d9/d4e/classdart_1_1constraint_1_1BallJointConstraint" ],
     [ "ConstrainedGroup", "d6/db4/classdart_1_1constraint_1_1ConstrainedGroup.html", "d6/db4/classdart_1_1constraint_1_1ConstrainedGroup" ],
     [ "ConstraintBase", "df/d29/classdart_1_1constraint_1_1ConstraintBase.html", "df/d29/classdart_1_1constraint_1_1ConstraintBase" ],
