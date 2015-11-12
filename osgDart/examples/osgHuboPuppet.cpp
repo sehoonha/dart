@@ -748,8 +748,9 @@ public:
     mAnyMovement = false;
     mAmplifyMovement = false;
 
-    mSavedState = createClone(mEndpoint, Eigen::Vector4d(0.0, 0.67, 0.66, 0.2));
-    mMidpoint = createClone(mEndpoint, Eigen::Vector4d(0.1, 0.1, 1.0, 0.5));
+//    mSavedState = createClone(mEndpoint, Eigen::Vector4d(0.0, 0.67, 0.66, 0.2));
+    mSavedState = createClone(mEndpoint, Eigen::Vector4d(1.0, 0.55, 0.0, 0.4));
+    mMidpoint = createClone(mEndpoint, Eigen::Vector4d(0.25, 0.25, 1.0, 0.5));
 
     toggleMidpointVisibility(false);
 
@@ -1002,6 +1003,7 @@ public:
         if(!mRawPath.empty())
           mMidpoint->setPositions(mRawPath.back());
 
+        hideHubo(mMidpoint);
         mPlayTrajectory = false;
         return;
       }
@@ -1205,6 +1207,16 @@ public:
           std::cout << mHubo->getDof(i)->getName() << ": "
                     << mHubo->getDof(i)->getPosition() << std::endl;
         return true;
+      }
+
+      if( ea.getKey() == 'o' )
+      {
+        mViewer->record("/home/grey/dump");
+      }
+
+      if( ea.getKey() == 'i' )
+      {
+        mViewer->pauseRecording();
       }
 
       if( ea.getKey() == 't' )
