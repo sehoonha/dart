@@ -36,17 +36,12 @@
 
 #include "dart/dynamics/WeldJoint.h"
 
-#include <string>
-
-#include "dart/math/Helpers.h"
-#include "dart/math/Geometry.h"
-
 namespace dart {
 namespace dynamics {
 
 //==============================================================================
-WeldJoint::Properties::Properties(const Joint::Properties& _properties)
-  : ZeroDofJoint::Properties(_properties)
+WeldJoint::Properties::Properties(const Joint::Properties& properties)
+  : GenericJoint<NullSpace>::Properties(properties)
 {
   // Do nothing
 }
@@ -71,7 +66,7 @@ const std::string& WeldJoint::getStaticType()
 }
 
 //==============================================================================
-bool WeldJoint::isCyclic(size_t _index) const
+bool WeldJoint::isCyclic(size_t /*index*/) const
 {
   return false;
 }
@@ -79,36 +74,49 @@ bool WeldJoint::isCyclic(size_t _index) const
 //==============================================================================
 WeldJoint::Properties WeldJoint::getWeldJointProperties() const
 {
-  return getZeroDofJointProperties();
+  return getGenericJointProperties();
 }
 
 //==============================================================================
-void WeldJoint::setTransformFromParentBodyNode(const Eigen::Isometry3d& _T)
+void WeldJoint::setTransformFromParentBodyNode(const Eigen::Isometry3d& T)
 {
-  Joint::setTransformFromParentBodyNode(_T);
+  Joint::setTransformFromParentBodyNode(T);
 
   mT = mJointP.mT_ParentBodyToJoint * mJointP.mT_ChildBodyToJoint.inverse();
 }
 
 //==============================================================================
-void WeldJoint::setTransformFromChildBodyNode(const Eigen::Isometry3d& _T)
+void WeldJoint::setTransformFromChildBodyNode(const Eigen::Isometry3d& T)
 {
-  Joint::setTransformFromChildBodyNode(_T);
+  Joint::setTransformFromChildBodyNode(T);
 
   mT = mJointP.mT_ParentBodyToJoint * mJointP.mT_ChildBodyToJoint.inverse();
 }
 
 //==============================================================================
-WeldJoint::WeldJoint(const Properties& _properties)
-  : ZeroDofJoint(_properties)
+const GenericJoint::JacobianMatrix WeldJoint::getLocalJacobianStatic(
+    const GenericJoint::Vector& /*positions*/) const
 {
-  setProperties(_properties);
+  return JacobianMatrix();
+}
+
+//==============================================================================
+WeldJoint::WeldJoint(const Properties& properties)
+  : GenericJoint<NullSpace>(properties)
+{
+  setProperties(properties);
 }
 
 //==============================================================================
 Joint* WeldJoint::clone() const
 {
   return new WeldJoint(getWeldJointProperties());
+}
+
+//==============================================================================
+void WeldJoint::updateDegreeOfFreedomNames()
+{
+  // Do nothing
 }
 
 //==============================================================================
@@ -138,7 +146,7 @@ void WeldJoint::updateLocalPrimaryAcceleration() const
 }
 
 //==============================================================================
-void WeldJoint::updateLocalJacobian(bool) const
+void WeldJoint::updateLocalJacobian(bool /*mandatory*/) const
 {
   // Do nothing
 }

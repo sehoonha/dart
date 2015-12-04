@@ -54,9 +54,9 @@ UniversalJoint::UniqueProperties::UniqueProperties(
 
 //==============================================================================
 UniversalJoint::Properties::Properties(
-    const MultiDofJoint::Properties& _multiDofProperties,
+    const GenericJoint<RealVectorSpace<2>>::Properties& _genericProperties,
     const UniversalJoint::UniqueProperties& _universalProperties)
-  : MultiDofJoint::Properties(_multiDofProperties),
+  : GenericJoint<RealVectorSpace<2>>::Properties(_genericProperties),
     UniversalJoint::UniqueProperties(_universalProperties)
 {
   // Do nothing
@@ -71,8 +71,8 @@ UniversalJoint::~UniversalJoint()
 //==============================================================================
 void UniversalJoint::setProperties(const Properties& _properties)
 {
-  MultiDofJoint<2>::setProperties(
-        static_cast<const MultiDofJoint<2>::Properties&>(_properties));
+  GenericJoint<RealVectorSpace<2>>::setProperties(
+        static_cast<const GenericJoint<RealVectorSpace<2>>::Properties&>(_properties));
   setProperties(static_cast<const UniqueProperties&>(_properties));
 }
 
@@ -86,7 +86,7 @@ void UniversalJoint::setProperties(const UniqueProperties& _properties)
 //==============================================================================
 UniversalJoint::Properties UniversalJoint::getUniversalJointProperties() const
 {
-  return Properties(getMultiDofJointProperties(), mUniversalP);
+  return Properties(getGenericJointProperties(), mUniversalP);
 }
 
 //==============================================================================
@@ -160,7 +160,7 @@ const Eigen::Vector3d& UniversalJoint::getAxis2() const
 }
 
 //==============================================================================
-Eigen::Matrix<double, 6, 2> UniversalJoint::getLocalJacobianStatic(
+const UniversalJoint::JacobianMatrix UniversalJoint::getLocalJacobianStatic(
     const Eigen::Vector2d& _positions) const
 {
   Eigen::Matrix<double, 6, 2> J;
@@ -176,7 +176,7 @@ Eigen::Matrix<double, 6, 2> UniversalJoint::getLocalJacobianStatic(
 
 //==============================================================================
 UniversalJoint::UniversalJoint(const Properties& _properties)
-  : MultiDofJoint<2>(_properties)
+  : GenericJoint<RealVectorSpace<2>>(_properties)
 {
   setProperties(_properties);
   updateDegreeOfFreedomNames();

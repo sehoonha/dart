@@ -45,8 +45,8 @@ namespace dart {
 namespace dynamics {
 
 //==============================================================================
-BallJoint::Properties::Properties(const MultiDofJoint<3>::Properties& _properties)
-  : MultiDofJoint<3>::Properties(_properties)
+BallJoint::Properties::Properties(const GenericJointProperties& _properties)
+  : GenericJointProperties(_properties)
 {
   // Do nothing
 }
@@ -80,7 +80,7 @@ bool BallJoint::isCyclic(size_t _index) const
 //==============================================================================
 BallJoint::Properties BallJoint::getBallJointProperties() const
 {
-  return getMultiDofJointProperties();
+  return getGenericJointProperties();
 }
 
 //==============================================================================
@@ -98,10 +98,10 @@ Eigen::Matrix3d BallJoint::convertToRotation(const Eigen::Vector3d& _positions)
 
 //==============================================================================
 BallJoint::BallJoint(const Properties& _properties)
-  : MultiDofJoint<3>(_properties),
+  : GenericJoint<RealVectorSpace<3>>(_properties),
     mR(Eigen::Isometry3d::Identity())
 {
-  mJacobianDeriv = Eigen::Matrix<double, 6, 3>::Zero();
+  mJacobianDeriv = JacobianMatrix::Zero();
 
   setProperties(_properties);
   updateDegreeOfFreedomNames();
@@ -114,7 +114,7 @@ Joint* BallJoint::clone() const
 }
 
 //==============================================================================
-Eigen::Matrix<double, 6, 3> BallJoint::getLocalJacobianStatic(
+const BallJoint::JacobianMatrix BallJoint::getLocalJacobianStatic(
     const Eigen::Vector3d& /*positions*/) const
 {
   return mJacobian;

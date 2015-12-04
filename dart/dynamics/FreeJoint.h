@@ -41,22 +41,23 @@
 
 #include <Eigen/Dense>
 
-#include "dart/dynamics/MultiDofJoint.h"
+#include "dart/dynamics/GenericJoint.h"
+#include "dart/dynamics/ConfigurationSpace.h"
 
 namespace dart {
 namespace dynamics {
 
 /// class FreeJoint
-class FreeJoint : public MultiDofJoint<6>
+class FreeJoint : public GenericJoint<SE3Space>
 {
 public:
 
   friend class Skeleton;
 
-  struct Properties : MultiDofJoint<6>::Properties
+  struct Properties : GenericJoint<SE3Space>::Properties
   {
-    Properties(const MultiDofJoint<6>::Properties& _properties =
-                                                MultiDofJoint<6>::Properties());
+    Properties(const GenericJoint<SE3Space>::Properties& _properties =
+                                                GenericJoint<SE3Space>::Properties());
 
     virtual ~Properties() = default;
   };
@@ -261,7 +262,7 @@ public:
                               const Frame* inCoordinatesOf = Frame::World());
 
   // Documentation inherited
-  Eigen::Matrix6d getLocalJacobianStatic(
+  const Eigen::Matrix6d getLocalJacobianStatic(
       const Eigen::Vector6d& _positions) const override;
 
   // Documentation inherited
@@ -276,7 +277,7 @@ protected:
   // Documentation inherited
   Joint* clone() const override;
 
-  using MultiDofJoint::getLocalJacobianStatic;
+  using GenericJoint<SE3Space>::getLocalJacobianStatic;
 
   // Documentation inherited
   void integratePositions(double _dt) override;

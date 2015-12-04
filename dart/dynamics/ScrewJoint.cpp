@@ -56,9 +56,9 @@ ScrewJoint::UniqueProperties::UniqueProperties(
 
 //==============================================================================
 ScrewJoint::Properties::Properties(
-    const SingleDofJoint::Properties& _singleDofProperties,
+    const GenericJoint<RealSpace>::Properties& _singleDofProperties,
     const ScrewJoint::UniqueProperties& _screwProperties)
-  : SingleDofJoint::Properties(_singleDofProperties),
+  : GenericJoint<RealSpace>::Properties(_singleDofProperties),
     ScrewJoint::UniqueProperties(_screwProperties)
 {
   // Do nothing
@@ -73,8 +73,8 @@ ScrewJoint::~ScrewJoint()
 //==============================================================================
 void ScrewJoint::setProperties(const Properties& _properties)
 {
-  SingleDofJoint::setProperties(
-        static_cast<const SingleDofJoint::Properties&>(_properties));
+  GenericJoint<RealSpace>::setProperties(
+        static_cast<const GenericJoint<RealSpace>::Properties&>(_properties));
   setProperties(static_cast<const UniqueProperties&>(_properties));
 }
 
@@ -88,7 +88,7 @@ void ScrewJoint::setProperties(const UniqueProperties& _properties)
 //==============================================================================
 ScrewJoint::Properties ScrewJoint::getScrewJointProperties() const
 {
-  return Properties(getSingleDofJointProperties(), mScrewP);
+  return Properties(getGenericJointProperties(), mScrewP);
 }
 
 //==============================================================================
@@ -162,8 +162,23 @@ double ScrewJoint::getPitch() const
 }
 
 //==============================================================================
+const ScrewJoint::JacobianMatrix ScrewJoint::getLocalJacobianStatic(
+    const Vector& /*positions*/) const
+{
+  Eigen::Vector6d S;
+  S.head<3>() = mScrewP.mAxis;
+  S.tail<3>() = mScrewP.mAxis * mScrewP.mPitch / DART_2PI;
+
+  JacobianMatrix jacobian = math::AdT(mJointP.mT_ChildBodyToJoint, S);
+
+  assert(!math::isNan(jacobian));
+
+  return jacobian;
+}
+
+//==============================================================================
 ScrewJoint::ScrewJoint(const Properties& _properties)
-  : SingleDofJoint(_properties)
+  : GenericJoint<RealSpace>(_properties)
 {
   setProperties(_properties);
 }
@@ -175,13 +190,21 @@ Joint* ScrewJoint::clone() const
 }
 
 //==============================================================================
+void ScrewJoint::updateDegreeOfFreedomNames()
+{
+  // Same name as the joint it belongs to.
+  if (!mDofs[0]->isNamePreserved())
+    mDofs[0]->setName(mJointP.mName, false);
+}
+
+//==============================================================================
 void ScrewJoint::updateLocalTransform() const
 {
   Eigen::Vector6d S = Eigen::Vector6d::Zero();
   S.head<3>() = mScrewP.mAxis;
   S.tail<3>() = mScrewP.mAxis*mScrewP.mPitch/DART_2PI;
   mT = mJointP.mT_ParentBodyToJoint
-       * math::expMap(S * getPositionStatic())
+       * math::expMap(S * getPositionsStatic())
        * mJointP.mT_ChildBodyToJoint.inverse();
   assert(math::verifyTransform(mT));
 }
@@ -190,13 +213,7 @@ void ScrewJoint::updateLocalTransform() const
 void ScrewJoint::updateLocalJacobian(bool _mandatory) const
 {
   if(_mandatory)
-  {
-    Eigen::Vector6d S = Eigen::Vector6d::Zero();
-    S.head<3>() = mScrewP.mAxis;
-    S.tail<3>() = mScrewP.mAxis*mScrewP.mPitch/DART_2PI;
-    mJacobian = math::AdT(mJointP.mT_ChildBodyToJoint, S);
-    assert(!math::isNan(mJacobian));
-  }
+    mJacobian = getLocalJacobianStatic(getPositionsStatic());
 }
 
 //==============================================================================

@@ -824,8 +824,7 @@ public:
   friend class BodyNode;
   friend class SoftBodyNode;
   friend class Joint;
-  friend class SingleDofJoint;
-  template<size_t> friend class MultiDofJoint;
+  template<typename> friend class GenericJoint;
   friend class DegreeOfFreedom;
   friend class EndEffector;
 

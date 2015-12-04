@@ -126,9 +126,9 @@ void PlanarJoint::UniqueProperties::setArbitraryPlane(
 
 //==============================================================================
 PlanarJoint::Properties::Properties(
-    const MultiDofJoint<3>::Properties& _multiDofProperties,
+    const GenericJoint<RealVectorSpace<3>>::Properties& _genericProperties,
     const PlanarJoint::UniqueProperties& _planarProperties)
-  : MultiDofJoint<3>::Properties(_multiDofProperties),
+  : GenericJoint<RealVectorSpace<3>>::Properties(_genericProperties),
     PlanarJoint::UniqueProperties(_planarProperties)
 {
   // Do nothing
@@ -143,8 +143,8 @@ PlanarJoint::~PlanarJoint()
 //==============================================================================
 void PlanarJoint::setProperties(const Properties& _properties)
 {
-  MultiDofJoint<3>::setProperties(
-        static_cast<const MultiDofJoint<3>::Properties&>(_properties));
+  GenericJoint<RealVectorSpace<3>>::setProperties(
+        static_cast<const GenericJoint<RealVectorSpace<3>>::Properties&>(_properties));
   setProperties(static_cast<const UniqueProperties&>(_properties));
 }
 
@@ -171,7 +171,7 @@ void PlanarJoint::setProperties(const UniqueProperties& _properties)
 //==============================================================================
 PlanarJoint::Properties PlanarJoint::getPlanarJointProperties() const
 {
-  return Properties(getMultiDofJointProperties(), mPlanarP);
+  return Properties(getGenericJointProperties(), mPlanarP);
 }
 
 //==============================================================================
@@ -285,7 +285,7 @@ const Eigen::Vector3d& PlanarJoint::getTranslationalAxis2() const
 }
 
 //==============================================================================
-Eigen::Matrix<double, 6, 3> PlanarJoint::getLocalJacobianStatic(
+const PlanarJoint::JacobianMatrix PlanarJoint::getLocalJacobianStatic(
     const Eigen::Vector3d& _positions) const
 {
   Eigen::Matrix<double, 6, 3> J = Eigen::Matrix<double, 6, 3>::Zero();
@@ -307,7 +307,7 @@ Eigen::Matrix<double, 6, 3> PlanarJoint::getLocalJacobianStatic(
 
 //==============================================================================
 PlanarJoint::PlanarJoint(const Properties& _properties)
-  : MultiDofJoint<3>(_properties)
+  : GenericJoint<RealVectorSpace<3>>(_properties)
 {
   setProperties(_properties);
   updateDegreeOfFreedomNames();

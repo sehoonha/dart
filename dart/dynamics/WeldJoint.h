@@ -41,21 +41,22 @@
 
 #include <Eigen/Dense>
 
-#include "dart/dynamics/ZeroDofJoint.h"
+#include "dart/dynamics/GenericJoint.h"
+#include "dart/dynamics/ConfigurationSpace.h"
 
 namespace dart {
 namespace dynamics {
 
 /// class WeldJoint
-class WeldJoint : public ZeroDofJoint
+class WeldJoint : public GenericJoint<NullSpace>
 {
 public:
 
   friend class Skeleton;
 
-  struct Properties : ZeroDofJoint::Properties
+  struct Properties : GenericJoint<NullSpace>::Properties
   {
-    Properties(const Joint::Properties& _properties = Joint::Properties());
+    Properties(const Joint::Properties& properties = Joint::Properties());
     virtual ~Properties() = default;
   };
 
@@ -74,13 +75,17 @@ public:
   static const std::string& getStaticType();
 
   // Documentation inherited
-  virtual bool isCyclic(size_t _index) const override;
+  bool isCyclic(size_t index) const override;
 
   // Documentation inherited
-  virtual void setTransformFromParentBodyNode(const Eigen::Isometry3d& _T) override;
+  void setTransformFromParentBodyNode(const Eigen::Isometry3d& T) override;
 
   // Documentation inherited
-  virtual void setTransformFromChildBodyNode(const Eigen::Isometry3d& _T) override;
+  void setTransformFromChildBodyNode(const Eigen::Isometry3d& T) override;
+
+  // Documentation inherited
+  const JacobianMatrix getLocalJacobianStatic(
+      const Vector& positions) const override;
 
 protected:
 
@@ -88,29 +93,32 @@ protected:
   WeldJoint(const Properties& _properties);
 
   // Documentation inherited
-  virtual Joint* clone() const override;
+  Joint* clone() const override;
+
+  // Documentation inherited
+  void updateDegreeOfFreedomNames() override;
 
   //----------------------------------------------------------------------------
   // Recursive algorithms
   //----------------------------------------------------------------------------
 
   // Documentation inherited
-  virtual void updateLocalTransform() const override;
+  void updateLocalTransform() const override;
 
   // Documentation inherited
-  virtual void updateLocalSpatialVelocity() const override;
+  void updateLocalSpatialVelocity() const override;
 
   // Documentation inherited
-  virtual void updateLocalSpatialAcceleration() const override;
+  void updateLocalSpatialAcceleration() const override;
 
   // Documentation inherited
-  virtual void updateLocalPrimaryAcceleration() const override;
+  void updateLocalPrimaryAcceleration() const override;
 
   // Documentation inherited
-  virtual void updateLocalJacobian(bool =true) const override;
+  void updateLocalJacobian(bool mandatory = true) const override;
 
   // Documentation inherited
-  virtual void updateLocalJacobianTimeDeriv() const override;
+  void updateLocalJacobianTimeDeriv() const override;
 
 public:
   // To get byte-aligned Eigen vectors

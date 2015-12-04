@@ -39,22 +39,23 @@
 
 #include <Eigen/Dense>
 
-#include "dart/dynamics/MultiDofJoint.h"
+#include "dart/dynamics/GenericJoint.h"
+#include "dart/dynamics/ConfigurationSpace.h"
 
 namespace dart {
 namespace dynamics {
 
 /// class BallJoint
-class BallJoint : public MultiDofJoint<3>
+class BallJoint : public GenericJoint<RealVectorSpace<3>>
 {
 public:
 
   friend class Skeleton;
 
-  struct Properties : MultiDofJoint<3>::Properties
+  struct Properties : GenericJointProperties
   {
-    Properties(const MultiDofJoint<3>::Properties& _properties =
-                                                MultiDofJoint<3>::Properties());
+    Properties(
+        const GenericJointProperties& _properties = GenericJointProperties());
     virtual ~Properties() = default;
   };
 
@@ -92,7 +93,7 @@ public:
   static Eigen::Matrix3d convertToRotation(const Eigen::Vector3d& _positions);
 
   // Documentation inherited
-  Eigen::Matrix<double, 6, 3> getLocalJacobianStatic(
+  const JacobianMatrix getLocalJacobianStatic(
       const Eigen::Vector3d& _positions) const override;
 
   // Documentation inherited
@@ -107,7 +108,7 @@ protected:
   // Documentation inherited
   Joint* clone() const override;
 
-  using MultiDofJoint::getLocalJacobianStatic;
+  using GenericJoint<RealVectorSpace<3>>::getLocalJacobianStatic;
 
   // Documentation inherited
   void integratePositions(double _dt) override;

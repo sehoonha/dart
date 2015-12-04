@@ -46,8 +46,8 @@ namespace dynamics {
 
 //==============================================================================
 FreeJoint::Properties::Properties(
-    const MultiDofJoint<6>::Properties& _properties)
-  : MultiDofJoint<6>::Properties(_properties)
+    const GenericJoint<SE3Space>::Properties& _properties)
+  : GenericJoint<SE3Space>::Properties(_properties)
 {
   // Do nothing
 }
@@ -61,26 +61,20 @@ FreeJoint::~FreeJoint()
 //==============================================================================
 FreeJoint::Properties FreeJoint::getFreeJointProperties() const
 {
-  return getMultiDofJointProperties();
+  return getGenericJointProperties();
 }
 
 //==============================================================================
 Eigen::Vector6d FreeJoint::convertToPositions(const Eigen::Isometry3d& _tf)
 {
-  Eigen::Vector6d x;
-  x.head<3>() = math::logMap(_tf.linear());
-  x.tail<3>() = _tf.translation();
-  return x;
+  return detail::mapToEuclideanPoint<SE3Space>(_tf);
 }
 
 //==============================================================================
 Eigen::Isometry3d FreeJoint::convertToTransform(
     const Eigen::Vector6d& _positions)
 {
-  Eigen::Isometry3d tf(Eigen::Isometry3d::Identity());
-  tf.linear() = math::expMapRot(_positions.head<3>());
-  tf.translation() = _positions.tail<3>();
-  return tf;
+  return detail::mapToManifoldPoint<SE3Space>(_positions);
 }
 
 //==============================================================================
@@ -507,7 +501,7 @@ void FreeJoint::setAngularAcceleration(
 }
 
 //==============================================================================
-Eigen::Matrix6d FreeJoint::getLocalJacobianStatic(
+const Eigen::Matrix6d FreeJoint::getLocalJacobianStatic(
     const Eigen::Vector6d& /*positions*/) const
 {
   return mJacobian;
@@ -526,7 +520,7 @@ Eigen::Vector6d FreeJoint::getPositionDifferencesStatic(
 
 //==============================================================================
 FreeJoint::FreeJoint(const Properties& _properties)
-  : MultiDofJoint<6>(_properties),
+  : GenericJoint<SE3Space>(_properties),
     mQ(Eigen::Isometry3d::Identity())
 {
   mJacobianDeriv = Eigen::Matrix6d::Zero();

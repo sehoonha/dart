@@ -39,22 +39,23 @@
 
 #include <string>
 
-#include "dart/dynamics/MultiDofJoint.h"
+#include "dart/dynamics/GenericJoint.h"
+#include "dart/dynamics/ConfigurationSpace.h"
 
 namespace dart {
 namespace dynamics {
 
 /// class TranslationalJoint
-class TranslationalJoint : public MultiDofJoint<3>
+class TranslationalJoint : public GenericJoint<RealVectorSpace<3>>
 {
 public:
 
   friend class Skeleton;
 
-  struct Properties : MultiDofJoint<3>::Properties
+  struct Properties : GenericJoint<RealVectorSpace<3>>::Properties
   {
-    Properties(const MultiDofJoint<3>::Properties& _properties =
-        MultiDofJoint<3>::Properties());
+    Properties(const GenericJoint<RealVectorSpace<3>>::Properties& _properties =
+        GenericJoint<RealVectorSpace<3>>::Properties());
 
     virtual ~Properties() = default;
   };
@@ -76,7 +77,7 @@ public:
   // Documentation inherited
   virtual bool isCyclic(size_t _index) const override;
 
-  Eigen::Matrix<double, 6, 3> getLocalJacobianStatic(
+  const JacobianMatrix getLocalJacobianStatic(
       const Eigen::Vector3d& _positions) const override;
 
 protected:
@@ -87,7 +88,7 @@ protected:
   // Documentation inherited
   virtual Joint* clone() const override;
 
-  using MultiDofJoint::getLocalJacobianStatic;
+  using GenericJoint<RealVectorSpace<3>>::getLocalJacobianStatic;
 
   // Documentation inherited
   virtual void updateDegreeOfFreedomNames() override;

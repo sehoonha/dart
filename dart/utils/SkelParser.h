@@ -50,8 +50,6 @@
 #include "dart/dynamics/Skeleton.h"
 #include "dart/dynamics/BodyNode.h"
 #include "dart/dynamics/Joint.h"
-#include "dart/dynamics/SingleDofJoint.h"
-#include "dart/dynamics/MultiDofJoint.h"
 #include "dart/simulation/World.h"
 
 namespace dart {

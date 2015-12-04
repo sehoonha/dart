@@ -54,9 +54,9 @@ PrismaticJoint::UniqueProperties::UniqueProperties(const Eigen::Vector3d& _axis)
 
 //==============================================================================
 PrismaticJoint::Properties::Properties(
-    const SingleDofJoint::Properties& _singleDofProperties,
+    const GenericJoint<RealSpace>::Properties& _singleDofProperties,
     const PrismaticJoint::UniqueProperties& _prismaticProperties)
-  : SingleDofJoint::Properties(_singleDofProperties),
+  : GenericJoint<RealSpace>::Properties(_singleDofProperties),
     PrismaticJoint::UniqueProperties(_prismaticProperties)
 {
   // Do nothing
@@ -71,8 +71,8 @@ PrismaticJoint::~PrismaticJoint()
 //==============================================================================
 void PrismaticJoint::setProperties(const Properties& _properties)
 {
-  SingleDofJoint::setProperties(
-        static_cast<const SingleDofJoint::Properties&>(_properties));
+  GenericJoint<RealSpace>::setProperties(
+        static_cast<const GenericJoint<RealSpace>::Properties&>(_properties));
   setProperties(static_cast<const UniqueProperties&>(_properties));
 }
 
@@ -85,7 +85,7 @@ void PrismaticJoint::setProperties(const UniqueProperties& _properties)
 //==============================================================================
 PrismaticJoint::Properties PrismaticJoint::getPrismaticJointProperties() const
 {
-  return Properties(getSingleDofJointProperties(), mPrismaticP);
+  return Properties(getGenericJointProperties(), mPrismaticP);
 }
 
 //==============================================================================
@@ -147,8 +147,21 @@ const Eigen::Vector3d& PrismaticJoint::getAxis() const
 }
 
 //==============================================================================
+const PrismaticJoint::JacobianMatrix PrismaticJoint::getLocalJacobianStatic(
+    const Vector& /*positions*/) const
+{
+  JacobianMatrix jacobian
+      = math::AdTLinear(mJointP.mT_ChildBodyToJoint, mPrismaticP.mAxis);
+
+  // Verification
+  assert(!math::isNan(jacobian));
+
+  return jacobian;
+}
+
+//==============================================================================
 PrismaticJoint::PrismaticJoint(const Properties& _properties)
-  : SingleDofJoint(_properties)
+  : GenericJoint<RealSpace>(_properties)
 {
   setProperties(_properties);
   updateDegreeOfFreedomNames();
@@ -161,10 +174,18 @@ Joint* PrismaticJoint::clone() const
 }
 
 //==============================================================================
+void PrismaticJoint::updateDegreeOfFreedomNames()
+{
+  // Same name as the joint it belongs to.
+  if (!mDofs[0]->isNamePreserved())
+    mDofs[0]->setName(mJointP.mName, false);
+}
+
+//==============================================================================
 void PrismaticJoint::updateLocalTransform() const
 {
   mT = mJointP.mT_ParentBodyToJoint
-       * Eigen::Translation3d(mPrismaticP.mAxis * getPositionStatic())
+      * Eigen::Translation3d(mPrismaticP.mAxis * getPositionsStatic())
        * mJointP.mT_ChildBodyToJoint.inverse();
 
   // Verification
@@ -175,12 +196,7 @@ void PrismaticJoint::updateLocalTransform() const
 void PrismaticJoint::updateLocalJacobian(bool _mandatory) const
 {
   if(_mandatory)
-  {
-    mJacobian = math::AdTLinear(mJointP.mT_ChildBodyToJoint, mPrismaticP.mAxis);
-
-    // Verification
-    assert(!math::isNan(mJacobian));
-  }
+    mJacobian = getLocalJacobianStatic(getPositionsStatic());
 }
 
 //==============================================================================

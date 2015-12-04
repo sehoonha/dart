@@ -41,13 +41,14 @@
 
 #include <Eigen/Dense>
 
-#include "dart/dynamics/SingleDofJoint.h"
+#include "dart/dynamics/GenericJoint.h"
+#include "dart/dynamics/ConfigurationSpace.h"
 
 namespace dart {
 namespace dynamics {
 
 /// class ScrewJoint
-class ScrewJoint : public SingleDofJoint
+class ScrewJoint : public GenericJoint<RealSpace>
 {
 public:
 
@@ -67,12 +68,12 @@ public:
     virtual ~UniqueProperties() = default;
   };
 
-  struct Properties : SingleDofJoint::Properties,
+  struct Properties : GenericJoint<RealSpace>::Properties,
                       ScrewJoint::UniqueProperties
   {
     Properties(
-        const SingleDofJoint::Properties& _singleDofProperties =
-                                              SingleDofJoint::Properties(),
+        const GenericJoint<RealSpace>::Properties& _singleDofProperties =
+                                              GenericJoint<RealSpace>::Properties(),
         const ScrewJoint::UniqueProperties& _screwProperties =
                                               ScrewJoint::UniqueProperties());
     virtual ~Properties() = default;
@@ -122,6 +123,10 @@ public:
   ///
   double getPitch() const;
 
+  // Documentation inherited
+  const JacobianMatrix getLocalJacobianStatic(
+      const Vector& positions) const override;
+
 protected:
 
   /// Constructor called by Skeleton class
@@ -129,6 +134,9 @@ protected:
 
   // Documentation inherited
   virtual Joint* clone() const override;
+
+  // Documentation inherited
+  void updateDegreeOfFreedomNames() override;
 
   // Documentation inherited
   virtual void updateLocalTransform() const override;

@@ -939,11 +939,11 @@ dynamics::RevoluteJoint::Properties SdfParser::readRevoluteJoint(
 
     readAxisElement(axisElement, _parentModelFrame,
                     newRevoluteJoint.mAxis,
-                    newRevoluteJoint.mPositionLowerLimit,
-                    newRevoluteJoint.mPositionUpperLimit,
-                    newRevoluteJoint.mInitialPosition,
-                    newRevoluteJoint.mRestPosition,
-                    newRevoluteJoint.mDampingCoefficient);
+                    newRevoluteJoint.mPositionLowerLimits[0],
+                    newRevoluteJoint.mPositionUpperLimits[0],
+                    newRevoluteJoint.mInitialPositions[0],
+                    newRevoluteJoint.mRestPositions[0],
+                    newRevoluteJoint.mDampingCoefficients[0]);
   }
   else
   {
@@ -971,11 +971,11 @@ dynamics::PrismaticJoint::Properties SdfParser::readPrismaticJoint(
 
     readAxisElement(axisElement, _parentModelFrame,
                     newPrismaticJoint.mAxis,
-                    newPrismaticJoint.mPositionLowerLimit,
-                    newPrismaticJoint.mPositionUpperLimit,
-                    newPrismaticJoint.mInitialPosition,
-                    newPrismaticJoint.mRestPosition,
-                    newPrismaticJoint.mDampingCoefficient);
+                    newPrismaticJoint.mPositionLowerLimits[0],
+                    newPrismaticJoint.mPositionUpperLimits[0],
+                    newPrismaticJoint.mInitialPositions[0],
+                    newPrismaticJoint.mRestPositions[0],
+                    newPrismaticJoint.mDampingCoefficients[0]);
   }
   else
   {
@@ -1003,11 +1003,11 @@ dynamics::ScrewJoint::Properties SdfParser::readScrewJoint(
 
     readAxisElement(axisElement, _parentModelFrame,
                     newScrewJoint.mAxis,
-                    newScrewJoint.mPositionLowerLimit,
-                    newScrewJoint.mPositionUpperLimit,
-                    newScrewJoint.mInitialPosition,
-                    newScrewJoint.mRestPosition,
-                    newScrewJoint.mDampingCoefficient);
+                    newScrewJoint.mPositionLowerLimits[0],
+                    newScrewJoint.mPositionUpperLimits[0],
+                    newScrewJoint.mInitialPositions[0],
+                    newScrewJoint.mRestPositions[0],
+                    newScrewJoint.mDampingCoefficients[0]);
   }
   else
   {

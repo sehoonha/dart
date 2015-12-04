@@ -55,9 +55,9 @@ EulerJoint::UniqueProperties::UniqueProperties(AxisOrder _axisOrder)
 
 //==============================================================================
 EulerJoint::Properties::Properties(
-    const MultiDofJoint<3>::Properties& _multiDofProperties,
+    const GenericJoint<RealVectorSpace<3>>::Properties& _genericProperties,
     const EulerJoint::UniqueProperties& _eulerJointProperties)
-  : MultiDofJoint<3>::Properties(_multiDofProperties),
+  : GenericJoint<RealVectorSpace<3>>::Properties(_genericProperties),
     EulerJoint::UniqueProperties(_eulerJointProperties)
 {
   // Do nothing
@@ -71,8 +71,8 @@ EulerJoint::~EulerJoint()
 //==============================================================================
 void EulerJoint::setProperties(const Properties& _properties)
 {
-  MultiDofJoint<3>::setProperties(
-        static_cast<const MultiDofJoint<3>::Properties&>(_properties));
+  GenericJoint<RealVectorSpace<3>>::setProperties(
+        static_cast<const GenericJoint<RealVectorSpace<3>>::Properties&>(_properties));
   setProperties(static_cast<const UniqueProperties&>(_properties));
 }
 
@@ -85,7 +85,7 @@ void EulerJoint::setProperties(const UniqueProperties& _properties)
 //==============================================================================
 EulerJoint::Properties EulerJoint::getEulerJointProperties() const
 {
-  return EulerJoint::Properties(getMultiDofJointProperties(), mEulerP);
+  return EulerJoint::Properties(getGenericJointProperties(), mEulerP);
 }
 
 //==============================================================================
@@ -188,7 +188,7 @@ Eigen::Matrix3d EulerJoint::convertToRotation(const Eigen::Vector3d& _positions)
 }
 
 //==============================================================================
-Eigen::Matrix<double, 6, 3> EulerJoint::getLocalJacobianStatic(
+const EulerJoint::JacobianMatrix EulerJoint::getLocalJacobianStatic(
     const Eigen::Vector3d& _positions) const
 {
   Eigen::Matrix<double, 6, 3> J;
@@ -297,7 +297,7 @@ Eigen::Matrix<double, 6, 3> EulerJoint::getLocalJacobianStatic(
 
 //==============================================================================
 EulerJoint::EulerJoint(const Properties& _properties)
-  : MultiDofJoint<3>(_properties)
+  : GenericJoint<RealVectorSpace<3>>(_properties)
 {
   setProperties(_properties);
   updateDegreeOfFreedomNames();

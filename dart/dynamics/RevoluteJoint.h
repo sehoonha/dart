@@ -41,13 +41,14 @@
 
 #include <Eigen/Dense>
 
-#include "dart/dynamics/SingleDofJoint.h"
+#include "dart/dynamics/GenericJoint.h"
+#include "dart/dynamics/ConfigurationSpace.h"
 
 namespace dart {
 namespace dynamics {
 
 /// class RevoluteJoint
-class RevoluteJoint : public SingleDofJoint
+class RevoluteJoint : public GenericJoint<RealSpace>
 {
 public:
 
@@ -62,14 +63,12 @@ public:
     virtual ~UniqueProperties() = default;
   };
 
-  struct Properties : SingleDofJoint::Properties,
-                      RevoluteJoint::UniqueProperties
+  struct Properties : GenericJointProperties, RevoluteJoint::UniqueProperties
   {
-    Properties(
-        const SingleDofJoint::Properties& _singleDofJointProperties=
-                                            SingleDofJoint::Properties(),
-        const RevoluteJoint::UniqueProperties& _revoluteProperties =
-                                            RevoluteJoint::UniqueProperties());
+    Properties(const GenericJointProperties& singleDofJointProperties
+                 = GenericJointProperties(),
+               const RevoluteJoint::UniqueProperties& revoluteProperties
+                 = RevoluteJoint::UniqueProperties());
 
     virtual ~Properties() = default;
   };
@@ -112,22 +111,29 @@ public:
   ///
   const Eigen::Vector3d& getAxis() const;
 
+  // Documentation inherited
+  const JacobianMatrix getLocalJacobianStatic(
+      const Vector& positions) const override;
+
 protected:
 
   /// Constructor called by Skeleton class
   RevoluteJoint(const Properties& _properties);
 
   // Documentation inherited
-  virtual Joint* clone() const override;
+  Joint* clone() const override;
 
   // Documentation inherited
-  virtual void updateLocalTransform() const override;
+  void updateDegreeOfFreedomNames() override;
 
   // Documentation inherited
-  virtual void updateLocalJacobian(bool _mandatory=true) const override;
+  void updateLocalTransform() const override;
 
   // Documentation inherited
-  virtual void updateLocalJacobianTimeDeriv() const override;
+  void updateLocalJacobian(bool _mandatory=true) const override;
+
+  // Documentation inherited
+  void updateLocalJacobianTimeDeriv() const override;
 
 protected:
 

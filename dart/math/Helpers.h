@@ -46,6 +46,7 @@
 #include <ctime>
 #include <iomanip>
 #include <iostream>
+#include <type_traits>
 
 // External Libraries
 #include <Eigen/Dense>
@@ -153,19 +154,51 @@ inline double round2(double _x) {
     return static_cast<double>(gintx + 1.0);
 }
 
-template <typename T>
-inline T clip(const T& val, const T& lower, const T& upper)
+namespace detail
 {
-  return std::max(lower, std::min(val, upper));
-}
 
-template <typename DerivedA, typename DerivedB>
-inline typename DerivedA::PlainObject clip(
-    const Eigen::MatrixBase<DerivedA>& val,
-    const Eigen::MatrixBase<DerivedB>& lower,
-    const Eigen::MatrixBase<DerivedB>& upper)
+// SFINAE test that determines whether T is an Eigen matrix.
+template <typename T>
+class is_eigen_matrix
 {
-  return lower.cwiseMax(val.cwiseMin(upper));
+protected:
+  // Note that these functions are never defined.
+  template <typename Derived>
+  static std::true_type is_eigen_matrix_test(const Eigen::MatrixBase<Derived>&);
+  static std::false_type is_eigen_matrix_test(...);
+
+public:
+  using type = decltype(is_eigen_matrix_test(std::declval<T>()));
+  enum { value = type::value };
+};
+
+// Primary template
+template <typename T, typename U, typename Enable = void>
+struct ClipImpl
+{
+  static inline T clip(const T& val, const U& lower, const U& upper)
+  {
+    return std::max(lower, std::min(val, upper));
+  }
+};
+
+// This specialization only exists when T is or inherits an Eigen::MatrixBase.
+template <typename T, typename U>
+struct ClipImpl<T, U, typename std::enable_if<
+    is_eigen_matrix<T>::value && is_eigen_matrix<U>::value>::type>
+{
+  static inline T clip(const T& val, const U& lower, const U& upper)
+  {
+    return lower.cwiseMax(val.cwiseMin(upper));
+  }
+};
+
+} // namespace detail
+
+template <typename T, typename U>
+inline T clip(const T& val, const U& lower, const U& upper)
+{
+  return detail::ClipImpl<T, U>::clip(val, lower, upper);
 }
 
 inline bool isEqual(double _x, double _y) {

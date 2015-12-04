@@ -39,7 +39,8 @@
 
 #include <string>
 
-#include "dart/dynamics/MultiDofJoint.h"
+#include "dart/dynamics/GenericJoint.h"
+#include "dart/dynamics/ConfigurationSpace.h"
 
 namespace dart {
 namespace dynamics {
@@ -50,7 +51,7 @@ namespace dynamics {
 /// First and second coordiantes represent translation along first and second
 /// translational axese, respectively. Third coordinate represents rotation
 /// along rotational axis.
-class PlanarJoint : public MultiDofJoint<3>
+class PlanarJoint : public GenericJoint<RealVectorSpace<3>>
 {
 public:
 
@@ -111,10 +112,10 @@ public:
                            const Eigen::Vector3d& _transAxis2);
   };
 
-  struct Properties : MultiDofJoint<3>::Properties, PlanarJoint::UniqueProperties
+  struct Properties : GenericJoint<RealVectorSpace<3>>::Properties, PlanarJoint::UniqueProperties
   {
-    Properties(const MultiDofJoint<3>::Properties& _multiDofProperties =
-                                              MultiDofJoint<3>::Properties(),
+    Properties(const GenericJoint<RealVectorSpace<3>>::Properties& _genericProperties =
+                                              GenericJoint<RealVectorSpace<3>>::Properties(),
                const PlanarJoint::UniqueProperties& _planarProperties =
                                               PlanarJoint::UniqueProperties());
 
@@ -189,7 +190,7 @@ public:
   const Eigen::Vector3d& getTranslationalAxis2() const;
 
   // Documentation inherited
-  Eigen::Matrix<double, 6, 3> getLocalJacobianStatic(
+  const JacobianMatrix getLocalJacobianStatic(
       const Eigen::Vector3d& _positions) const override;
 
 protected:
@@ -200,7 +201,7 @@ protected:
   // Documentation inherited
   virtual Joint* clone() const override;
 
-  using MultiDofJoint::getLocalJacobianStatic;
+  using GenericJoint<RealVectorSpace<3>>::getLocalJacobianStatic;
 
   /// Set the names of this joint's DegreesOfFreedom. Used during construction
   /// and when the Plane type is changed.

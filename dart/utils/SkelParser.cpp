@@ -1130,8 +1130,8 @@ static void setDofLimitAttributes(tinyxml2::XMLElement* _dofElement,
 }
 
 //==============================================================================
-// This structure exists to allow a common interface for setting values in both
-// SingleDofJoint::Properties and MultiDofJoint::Properties
+// This structure exists to allow a common interface for setting values in
+// GenericJoint::Properties
 struct DofProxy
 {
   size_t index;
@@ -1160,44 +1160,6 @@ struct DofProxy
 
   bool* preserveName;
   std::string* name;
-
-  DofProxy(dynamics::SingleDofJoint::Properties& properties,
-           SkelParser::SkelJoint& joint, size_t _index,
-           const std::string& jointName)
-    : index(_index),
-      valid(true),
-
-      lowerPosition(&properties.mPositionLowerLimit),
-      upperPosition(&properties.mPositionUpperLimit),
-      initalPosition(&properties.mInitialPosition),
-
-      lowerVelocity(&properties.mVelocityLowerLimit),
-      upperVelocity(&properties.mVelocityUpperLimit),
-      initialVelocity(&properties.mInitialVelocity),
-
-      lowerAcceleration(&properties.mAccelerationLowerLimit),
-      upperAcceleration(&properties.mAccelerationUpperLimit),
-      initialAcceleration(&joint.acceleration.data()[0]),
-
-      lowerForce(&properties.mForceLowerLimit),
-      upperForce(&properties.mForceUpperLimit),
-      initialForce(&joint.force.data()[0]),
-
-      springStiffness(&properties.mSpringStiffness),
-      restPosition(&properties.mRestPosition),
-      dampingCoefficient(&properties.mDampingCoefficient),
-      friction(&properties.mFriction),
-
-      preserveName(&properties.mPreserveDofName),
-      name(&properties.mDofName)
-  {
-    if(index > 0)
-    {
-      dterr << "[SkelParser] Joint named [" << jointName << "] has a dof "
-            << "element (" << index << ") which is out of bounds (max 0)\n";
-      valid = false;
-    }
-  }
 
   template <typename PropertyType>
   DofProxy(PropertyType& properties,
@@ -1513,7 +1475,7 @@ SkelParser::JointPropPtr SkelParser::readRevoluteJoint(
     assert(0);
   }
 
-  readJointDynamicsAndLimit<dynamics::SingleDofJoint::Properties>(
+  readJointDynamicsAndLimit<dynamics::GenericJoint<dynamics::RealSpace>::Properties>(
         _jointElement, properties, _joint, _name, 1);
 
   //--------------------------------------------------------------------------
@@ -1524,7 +1486,7 @@ SkelParser::JointPropPtr SkelParser::readRevoluteJoint(
     Eigen::VectorXd ipos = Eigen::VectorXd(1);
     ipos << init_pos;
     _joint.position = ipos;
-    properties.mInitialPosition = ipos[0];
+    properties.mInitialPositions[0] = ipos[0];
   }
 
   //--------------------------------------------------------------------------
@@ -1535,10 +1497,10 @@ SkelParser::JointPropPtr SkelParser::readRevoluteJoint(
     Eigen::VectorXd ivel = Eigen::VectorXd(1);
     ivel << init_vel;
     _joint.velocity = ivel;
-    properties.mInitialVelocity = ivel[0];
+    properties.mInitialVelocities[0] = ivel[0];
   }
 
-  readAllDegreesOfFreedom<dynamics::SingleDofJoint::Properties>(
+  readAllDegreesOfFreedom<dynamics::GenericJoint<dynamics::RealSpace>::Properties>(
         _jointElement, properties, _joint, _name, 1);
 
   return Eigen::make_aligned_shared<dynamics::RevoluteJoint::Properties>(
@@ -1572,7 +1534,7 @@ SkelParser::JointPropPtr SkelParser::readPrismaticJoint(
     assert(0);
   }
 
-  readJointDynamicsAndLimit<dynamics::SingleDofJoint::Properties>(
+  readJointDynamicsAndLimit<dynamics::GenericJoint<dynamics::RealSpace>::Properties>(
         _jointElement, properties, _joint, _name, 1);
 
   //--------------------------------------------------------------------------
@@ -1583,7 +1545,7 @@ SkelParser::JointPropPtr SkelParser::readPrismaticJoint(
     Eigen::VectorXd ipos = Eigen::VectorXd(1);
     ipos << init_pos;
     _joint.position = ipos;
-    properties.mInitialPosition = ipos[0];
+    properties.mInitialPositions[0] = ipos[0];
   }
 
   //--------------------------------------------------------------------------
@@ -1594,10 +1556,10 @@ SkelParser::JointPropPtr SkelParser::readPrismaticJoint(
     Eigen::VectorXd ivel = Eigen::VectorXd(1);
     ivel << init_vel;
     _joint.velocity = ivel;
-    properties.mInitialVelocity = ivel[0];
+    properties.mInitialVelocities[0] = ivel[0];
   }
 
-  readAllDegreesOfFreedom<dynamics::SingleDofJoint::Properties>(
+  readAllDegreesOfFreedom<dynamics::GenericJoint<dynamics::RealSpace>::Properties>(
         _jointElement, properties, _joint, _name, 1);
 
   return Eigen::make_aligned_shared<dynamics::PrismaticJoint::Properties>(
@@ -1638,7 +1600,7 @@ SkelParser::JointPropPtr SkelParser::readScrewJoint(
     assert(0);
   }
 
-  readJointDynamicsAndLimit<dynamics::SingleDofJoint::Properties>(
+  readJointDynamicsAndLimit<dynamics::GenericJoint<dynamics::RealSpace>::Properties>(
         _jointElement, properties, _joint, _name, 1);
 
   //--------------------------------------------------------------------------
@@ -1649,7 +1611,7 @@ SkelParser::JointPropPtr SkelParser::readScrewJoint(
     Eigen::VectorXd ipos = Eigen::VectorXd(1);
     ipos << init_pos;
     _joint.position = ipos;
-    properties.mInitialPosition = ipos[0];
+    properties.mInitialPositions[0] = ipos[0];
   }
 
   //--------------------------------------------------------------------------
@@ -1660,10 +1622,10 @@ SkelParser::JointPropPtr SkelParser::readScrewJoint(
     Eigen::VectorXd ivel = Eigen::VectorXd(1);
     ivel << init_vel;
     _joint.velocity = ivel;
-    properties.mInitialVelocity = ivel[0];
+    properties.mInitialVelocities[0] = ivel[0];
   }
 
-  readAllDegreesOfFreedom<dynamics::SingleDofJoint::Properties>(
+  readAllDegreesOfFreedom<dynamics::GenericJoint<dynamics::RealSpace>::Properties>(
         _jointElement, properties, _joint, _name, 1);
 
   return Eigen::make_aligned_shared<dynamics::ScrewJoint::Properties>(

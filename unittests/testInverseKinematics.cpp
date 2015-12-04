@@ -59,7 +59,7 @@ SkeletonPtr createFreeFloatingTwoLinkRobot(Vector3d dim1,
   node.mColShapes.push_back(shape);
 
   BodyNode* parent_node = robot->createJointAndBodyNodePair<FreeJoint>(nullptr,
-    MultiDofJoint<6>::Properties(std::string("joint1")), node).second;
+    GenericJoint<SE3Space>::Properties(std::string("joint1")), node).second;
 
   // Create the second link
   node = BodyNode::Properties(std::string("link2"));

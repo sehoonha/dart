@@ -41,13 +41,14 @@
 
 #include <Eigen/Dense>
 
-#include "dart/dynamics/MultiDofJoint.h"
+#include "dart/dynamics/GenericJoint.h"
+#include "dart/dynamics/ConfigurationSpace.h"
 
 namespace dart {
 namespace dynamics {
 
 /// class UniversalJoint
-class UniversalJoint : public MultiDofJoint<2>
+class UniversalJoint : public GenericJoint<RealVectorSpace<2>>
 {
 public:
 
@@ -63,11 +64,11 @@ public:
     virtual ~UniqueProperties() = default;
   };
 
-  struct Properties : MultiDofJoint<2>::Properties,
+  struct Properties : GenericJoint<RealVectorSpace<2>>::Properties,
                       UniversalJoint::UniqueProperties
   {
-    Properties(const MultiDofJoint<2>::Properties& _multiDofProperties =
-                                            MultiDofJoint<2>::Properties(),
+    Properties(const GenericJoint<RealVectorSpace<2>>::Properties& _genericProperties =
+                                            GenericJoint<RealVectorSpace<2>>::Properties(),
                const UniversalJoint::UniqueProperties& _universalProperties =
                                             UniversalJoint::UniqueProperties());
     virtual ~Properties() = default;
@@ -118,7 +119,7 @@ public:
   const Eigen::Vector3d& getAxis2() const;
 
   // Documentation inherited
-  Eigen::Matrix<double, 6, 2> getLocalJacobianStatic(
+  const JacobianMatrix getLocalJacobianStatic(
       const Eigen::Vector2d& _positions) const override;
 
 protected:
@@ -129,7 +130,7 @@ protected:
   // Documentation inherited
   virtual Joint* clone() const override;
 
-  using MultiDofJoint::getLocalJacobianStatic;
+  using GenericJoint<RealVectorSpace<2>>::getLocalJacobianStatic;
 
   // Documentation inherited
   virtual void updateDegreeOfFreedomNames() override;

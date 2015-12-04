@@ -55,10 +55,10 @@ RevoluteJoint::UniqueProperties::UniqueProperties(const Eigen::Vector3d& _axis)
 
 //==============================================================================
 RevoluteJoint::Properties::Properties(
-    const SingleDofJoint::Properties& _singleDofJointProperties,
-    const RevoluteJoint::UniqueProperties& _revoluteProperties)
-  : SingleDofJoint::Properties(_singleDofJointProperties),
-    RevoluteJoint::UniqueProperties(_revoluteProperties)
+    const GenericJoint<RealSpace>::Properties& singleDofJointProperties,
+    const RevoluteJoint::UniqueProperties& revoluteProperties)
+  : GenericJoint<RealSpace>::Properties(singleDofJointProperties),
+    RevoluteJoint::UniqueProperties(revoluteProperties)
 {
   // Do nothing
 }
@@ -72,8 +72,8 @@ RevoluteJoint::~RevoluteJoint()
 //==============================================================================
 void RevoluteJoint::setProperties(const Properties& _properties)
 {
-  SingleDofJoint::setProperties(
-        static_cast<const SingleDofJoint::Properties&>(_properties));
+  GenericJoint<RealSpace>::setProperties(
+        static_cast<const GenericJoint<RealSpace>::Properties&>(_properties));
   setProperties(static_cast<const UniqueProperties&>(_properties));
 }
 
@@ -86,7 +86,7 @@ void RevoluteJoint::setProperties(const UniqueProperties& _properties)
 //==============================================================================
 RevoluteJoint::Properties RevoluteJoint::getRevoluteJointProperties() const
 {
-  return Properties(getSingleDofJointProperties(), mRevoluteP);
+  return Properties(getGenericJointProperties(), mRevoluteP);
 }
 
 //==============================================================================
@@ -148,8 +148,20 @@ const Eigen::Vector3d& RevoluteJoint::getAxis() const
 }
 
 //==============================================================================
+const RevoluteJoint::JacobianMatrix RevoluteJoint::getLocalJacobianStatic(
+    const Vector& /*positions*/) const
+{
+  JacobianMatrix jacobian
+      = math::AdTAngular(mJointP.mT_ChildBodyToJoint, mRevoluteP.mAxis);
+  // Verification
+  assert(!math::isNan(jacobian));
+
+  return jacobian;
+}
+
+//==============================================================================
 RevoluteJoint::RevoluteJoint(const Properties& _properties)
-  : SingleDofJoint(_properties)
+  : GenericJoint<RealSpace>(_properties)
 {
   setProperties(_properties);
   updateDegreeOfFreedomNames();
@@ -162,10 +174,18 @@ Joint* RevoluteJoint::clone() const
 }
 
 //==============================================================================
+void RevoluteJoint::updateDegreeOfFreedomNames()
+{
+  // Same name as the joint it belongs to.
+  if (!mDofs[0]->isNamePreserved())
+    mDofs[0]->setName(mJointP.mName, false);
+}
+
+//==============================================================================
 void RevoluteJoint::updateLocalTransform() const
 {
   mT = mJointP.mT_ParentBodyToJoint
-       * math::expAngular(mRevoluteP.mAxis * getPositionStatic())
+      * math::expAngular(mRevoluteP.mAxis * getPositionsStatic())
        * mJointP.mT_ChildBodyToJoint.inverse();
 
   // Verification
@@ -176,12 +196,7 @@ void RevoluteJoint::updateLocalTransform() const
 void RevoluteJoint::updateLocalJacobian(bool _mandatory) const
 {
   if(_mandatory)
-  {
-    mJacobian = math::AdTAngular(mJointP.mT_ChildBodyToJoint, mRevoluteP.mAxis);
-
-    // Verification
-    assert(!math::isNan(mJacobian));
-  }
+    mJacobian = getLocalJacobianStatic(getPositionsStatic());
 }
 
 //==============================================================================

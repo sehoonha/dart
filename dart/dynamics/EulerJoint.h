@@ -39,13 +39,14 @@
 
 #include <string>
 
-#include "dart/dynamics/MultiDofJoint.h"
+#include "dart/dynamics/GenericJoint.h"
+#include "dart/dynamics/ConfigurationSpace.h"
 
 namespace dart {
 namespace dynamics {
 
 /// class EulerJoint
-class EulerJoint : public MultiDofJoint<3>
+class EulerJoint : public GenericJoint<RealVectorSpace<3>>
 {
 public:
 
@@ -69,12 +70,12 @@ public:
     virtual ~UniqueProperties() = default;
   };
 
-  struct Properties : MultiDofJoint<3>::Properties, EulerJoint::UniqueProperties
+  struct Properties : GenericJoint<RealVectorSpace<3>>::Properties, EulerJoint::UniqueProperties
   {
     /// Composed constructor
     Properties(
-        const MultiDofJoint<3>::Properties& _multiDofProperties =
-                                                MultiDofJoint<3>::Properties(),
+        const GenericJoint<RealVectorSpace<3>>::Properties& _genericProperties =
+                                                GenericJoint<RealVectorSpace<3>>::Properties(),
         const EulerJoint::UniqueProperties& _eulerJointProperties =
                                                 EulerJoint::UniqueProperties());
 
@@ -170,7 +171,7 @@ public:
   Eigen::Matrix3d convertToRotation(const Eigen::Vector3d& _positions) const;
 
   // Documentation inherited
-  Eigen::Matrix<double, 6, 3> getLocalJacobianStatic(
+  const JacobianMatrix getLocalJacobianStatic(
       const Eigen::Vector3d& _positions) const override;
 
 protected:
@@ -181,7 +182,7 @@ protected:
   // Documentation inherited
   virtual Joint* clone() const override;
 
-  using MultiDofJoint::getLocalJacobianStatic;
+  using GenericJoint<RealVectorSpace<3>>::getLocalJacobianStatic;
 
   /// Set the names of this joint's DegreesOfFreedom. Used during construction
   /// and when axis order is changed.

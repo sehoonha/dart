@@ -46,8 +46,8 @@ namespace dynamics {
 
 //==============================================================================
 TranslationalJoint::Properties::Properties(
-    const MultiDofJoint<3>::Properties& _properties)
-  : MultiDofJoint<3>::Properties(_properties)
+    const GenericJoint<RealVectorSpace<3>>::Properties& _properties)
+  : GenericJoint<RealVectorSpace<3>>::Properties(_properties)
 {
   // Do nothing
 }
@@ -59,7 +59,8 @@ TranslationalJoint::~TranslationalJoint()
 }
 
 //==============================================================================
-Eigen::Matrix<double, 6, 3> TranslationalJoint::getLocalJacobianStatic(
+const TranslationalJoint::JacobianMatrix
+TranslationalJoint::getLocalJacobianStatic(
     const Eigen::Vector3d& /*_positions*/) const
 {
   // The Jacobian is always constant w.r.t. the generalized coordinates.
@@ -67,14 +68,15 @@ Eigen::Matrix<double, 6, 3> TranslationalJoint::getLocalJacobianStatic(
 }
 
 //==============================================================================
-TranslationalJoint::Properties TranslationalJoint::getTranslationalJointProperties() const
+TranslationalJoint::Properties
+TranslationalJoint::getTranslationalJointProperties() const
 {
-  return getMultiDofJointProperties();
+  return getGenericJointProperties();
 }
 
 //==============================================================================
 TranslationalJoint::TranslationalJoint(const Properties& _properties)
-  : MultiDofJoint<3>(_properties)
+  : GenericJoint<RealVectorSpace<3>>(_properties)
 {
   setProperties(_properties);
   updateDegreeOfFreedomNames();
