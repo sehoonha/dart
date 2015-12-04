@@ -1567,7 +1567,7 @@ Eigen::Vector2d computeCentroidOfHull(const SupportPolygon& _convexHull)
     Intersection_t result =
         computeIntersection(intersect, p0, midp12, p2, midp01);
 
-    if(INTERSECTING != result)
+    if(BEYOND_ENDPOINTS == result)
     {
       double a1 = atan2( (p1-p0)[1], (p1-p0)[0] )*180.0/M_PI;
       double a2 = atan2( (p2-p0)[1], (p2-p0)[0] )*180.0/M_PI;
@@ -1950,6 +1950,18 @@ Eigen::Vector2d computeClosestPointOnSupportPolygon(size_t& _index1, size_t& _in
 
   return result;
 }
+
+BoundingBox::BoundingBox() :
+        mMin(0, 0, 0), mMax(0, 0, 0)
+{
+
+}
+BoundingBox::BoundingBox(const Eigen::Vector3d& min, const Eigen::Vector3d& max) :
+        mMin(min), mMax(max)
+{
+
+}
+
 
 }  // namespace math
 }  // namespace dart
