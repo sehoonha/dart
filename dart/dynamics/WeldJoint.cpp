@@ -94,7 +94,7 @@ void WeldJoint::setTransformFromChildBodyNode(const Eigen::Isometry3d& T)
 }
 
 //==============================================================================
-const GenericJoint::JacobianMatrix WeldJoint::getLocalJacobianStatic(
+const WeldJoint::JacobianMatrix WeldJoint::getLocalJacobianStatic(
     const GenericJoint::Vector& /*positions*/) const
 {
   return JacobianMatrix();
