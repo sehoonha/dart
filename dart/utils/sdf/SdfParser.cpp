@@ -252,6 +252,9 @@ dynamics::FreeJoint::Properties readFreeJoint(
     const Eigen::Isometry3d& parentModelFrame,
     const std::string& name);
 
+common::ResourceRetrieverPtr getRetriever(
+    const common::ResourceRetrieverPtr& retriever);
+
 } // anonymous namespace
 
 
@@ -265,9 +268,12 @@ simulation::WorldPtr readSdfFile(
 }
 
 //==============================================================================
-simulation::WorldPtr readWorld(const common::Uri& fileUri,
-                               const common::ResourceRetrieverPtr& retriever)
+simulation::WorldPtr readWorld(
+    const common::Uri& fileUri,
+    const common::ResourceRetrieverPtr& nullOrRetriever)
 {
+  const auto retriever = getRetriever(nullOrRetriever);
+
   //--------------------------------------------------------------------------
   // Load xml and create Document
   tinyxml2::XMLDocument _dartFile;
@@ -318,8 +324,11 @@ simulation::WorldPtr readWorld(const common::Uri& fileUri,
 
 //==============================================================================
 dynamics::SkeletonPtr readSkeleton(
-    const common::Uri& fileUri, const common::ResourceRetrieverPtr& retriever)
+    const common::Uri& fileUri,
+    const common::ResourceRetrieverPtr& nullOrRetriever)
 {
+  const auto retriever = getRetriever(nullOrRetriever);
+
   //--------------------------------------------------------------------------
   // Load xml and create Document
   tinyxml2::XMLDocument _dartFile;
@@ -1505,6 +1514,16 @@ dynamics::FreeJoint::Properties readFreeJoint(
     const std::string&)
 {
   return dynamics::FreeJoint::Properties();
+}
+
+//==============================================================================
+common::ResourceRetrieverPtr getRetriever(
+  const common::ResourceRetrieverPtr& retriever)
+{
+  if(retriever)
+    return retriever;
+  else
+    return std::make_shared<common::LocalResourceRetriever>();
 }
 
 } // anonymouse
