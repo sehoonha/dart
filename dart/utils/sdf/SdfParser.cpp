@@ -665,6 +665,10 @@ std::pair<dynamics::Joint*,dynamics::BodyNode*> createJointAndNodePair(
     return skeleton->createJointAndBodyNodePair<dynamics::FreeJoint>(parent,
           static_cast<const dynamics::FreeJoint::Properties&>(*joint.properties),
           static_cast<const typename NodeType::Properties&>(*node.properties));
+  else if (std::string("fixed") == type)
+    return skeleton->createJointAndBodyNodePair<dynamics::WeldJoint>(parent,
+          static_cast<const dynamics::WeldJoint::Properties&>(*joint.properties),
+          static_cast<const typename NodeType::Properties&>(*node.properties));
 
   dterr << "[SdfParser::createJointAndNodePair] Unsupported Joint type encountered: "
         << type << ". Please report this as a bug! We will now quit parsing.\n";
@@ -1238,6 +1242,10 @@ SDFJoint readJoint(tinyxml2::XMLElement* _jointElement,
     newJoint.properties =
         Eigen::make_aligned_shared<dynamics::BallJoint::Properties>(
           readBallJoint(_jointElement, parentModelFrame, name));
+  if (type == std::string("fixed"))
+    newJoint.properties =
+        Eigen::make_aligned_shared<dynamics::BallJoint::Properties>(
+          readWeldJoint(_jointElement, parentModelFrame, name));
 
   newJoint.type = type;
 
