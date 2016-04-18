@@ -1032,9 +1032,14 @@ void readVisualizationShapeNode(
     const std::string& skelPath,
     const common::ResourceRetrieverPtr& retriever)
 {
+  std::string name = bodyNode->getName() + " - visual shape";
+  if (hasAttribute(vizShapeNodeEle, "name")) {
+    name = getAttributeString(vizShapeNodeEle, "name");
+  }
   dynamics::ShapeNode* newShapeNode
       = readShapeNode(bodyNode, vizShapeNodeEle,
-                      bodyNode->getName() + " - visual shape",
+                      // bodyNode->getName() + " - visual shape",
+                      name,
                       skelPath, retriever);
 
   newShapeNode->createVisualAddon();
